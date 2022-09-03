@@ -1,0 +1,76 @@
+// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+//
+// The variables you want to modify
+// $font-size-root: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&display=swap');
+
+$color-primary-root: #23295d;
+$color-secondary-gray-root: #303030;
+$color-dark-gray-root: #1d1d1d;
+$color-light-gray-root: #dadada;
+$color-news-gray-root: #afafaf;
+$color-secondary-root: #c1a843;
+$color-secondary-dark-root: #ebb848;
+$color-font-light-root: #ffffff;
+$color-font-dark-root: #202b3f;
+$color-gray-input: #f4f2f2;
+$btn-cms-gray: #edf2f7;
+$card-bg-color: #d9d9d9;
+
+html {
+  font-family: 'Barlow', sans-serif;
+}
+
+$width: 768px;
+
+@mixin mobile {
+  @media (max-width: #{$width}) {
+    @content;
+  }
+}
+
+//custom classs
+.v-btn--rounded {
+  border-radius: 20px;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.theme--dark.v-footer {
+  background-color: transparent !important;
+}
+
+.custom-linear-gradient-left {
+  background: linear-gradient(
+    81.7deg,
+    #303030 13.43%,
+    rgba(217, 217, 217, 0) 40.05%
+  );
+}
+.about-us-cover-linear-gradient {
+  background: linear-gradient(0deg, rgba(7, 7, 7, 0.3), rgba(7, 7, 7, 0.3));
+}
+.media-card-linear-gradient {
+  background: linear-gradient(
+    0deg,
+    #2a266b 0%,
+    rgba(131, 131, 131, 0.508068) 69.27%,
+    rgba(217, 217, 217, 0) 100%
+  );
+}
+
+.home-carousel-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(33, 33, 33, 0) 60%,
+    rgba(48, 48, 48, 0.56) 70%,
+    #303030 100%
+  );
+}
+
+.nikki-group-gradient {
+  background: linear-gradient(0.71deg, #303030 10%, rgba(48, 48, 48, 0) 50%);
+}
