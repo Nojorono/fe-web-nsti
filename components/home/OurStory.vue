@@ -13,9 +13,11 @@
           <h1>OUR STORY</h1>
           <br />
           <h3>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta
-            ducimus eius est et impedit ipsum officiis quas voluptatibus.
-            Aspernatur autem eos facere id itaque officiis,
+            PT Nikki Super Tobacco Indonesia was established on November 11,
+            1990 and is a cigarette manufacturer from Kudus, known as the city
+            of kretek. PT Nikki Super Tobacco Indonesia is one of the leading
+            cigarette manufacturers in Central Java with a national market
+            reach.
           </h3>
         </div>
       </div>
@@ -49,10 +51,10 @@ export default {
 
     .text-container {
       position: absolute;
-      right: 25rem;
-      top: 20rem;
+      right: 21rem;
+      top: 18rem;
       font-family: 'Barlow', sans-serif;
-      width: 23.5rem;
+      width: 30rem;
 
       h1 {
         font-weight: 800;

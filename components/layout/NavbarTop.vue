@@ -18,11 +18,21 @@
         About Us
         <div class="dropdown-menu-hover-content">
           <ul class="nobull about-us-ul">
-            <nuxt-link to="#">Company Overview</nuxt-link>
-            <nuxt-link to="#">Timeline</nuxt-link>
-            <nuxt-link to="#">Visi & Misi</nuxt-link>
-            <nuxt-link to="#">Core values</nuxt-link>
-            <nuxt-link to="#">Our Management</nuxt-link>
+            <span @click="funcScrollTo('#about-us-overview', 'about-us')"
+              >Company Overview</span
+            >
+            <span @click="funcScrollTo('#about-us-milestone', 'about-us')"
+              >Milestone</span
+            >
+            <span @click="funcScrollTo('#about-us-visi-misi', 'about-us')"
+              >Vision & Mission</span
+            >
+            <span @click="funcScrollTo('#about-us-values', 'about-us')"
+              >Core Values</span
+            >
+            <span @click="funcScrollTo('#about-us-management', 'about-us')"
+              >Our Management</span
+            >
           </ul>
         </div>
       </nuxt-link>
@@ -33,9 +43,13 @@
         Export
         <div class="dropdown-menu-hover-content">
           <ul class="nobull about-us-ul">
-            <nuxt-link to="#">Tembakau Ekspor</nuxt-link>
-            <nuxt-link to="#">Keunggulan Tembakau Ekspor</nuxt-link>
-            <nuxt-link to="#">Kontak</nuxt-link>
+            <nuxt-link to="#export-heritage"
+              >Indonesia Finest Heritage</nuxt-link
+            >
+            <nuxt-link to="#export-quality-tobacco"
+              >Global Quality Tobacco</nuxt-link
+            >
+            <nuxt-link to="#export-contact">Contact</nuxt-link>
           </ul>
         </div>
       </nuxt-link>
@@ -56,8 +70,8 @@
         <div class="dropdown-menu-hover-content">
           <ul class="nobull about-us-ul">
             <nuxt-link to="#">Life at Nikki Super</nuxt-link>
-            <nuxt-link to="#">Job opportunities</nuxt-link>
-            <nuxt-link to="#">learn & grow with us</nuxt-link>
+            <nuxt-link to="#">Job Opportunities</nuxt-link>
+            <nuxt-link to="#">Learn & Grow With Us</nuxt-link>
           </ul>
         </div>
       </nuxt-link>
@@ -130,19 +144,20 @@ export default {
     }
   },
   methods: {
-    funcScrollTo(href) {
-      if (this.$route.path !== '/') {
-        this.$router.push('/')
-        setTimeout(() => {
-          document.querySelector(href).scrollIntoView({
-            behavior: 'smooth',
-          })
-        }, 500)
-      } else {
+    funcScrollTo(href, page) {
+      this.$router.push(page)
+      setTimeout(() => {
+        // const element = document.querySelector(href)
+        // const headerOffset = 1000
+        // const elementPosition = element.getBoundingClientRect().top
+        // const offsetPosition =
+        //   elementPosition + window.pageYOffset - headerOffset
         document.querySelector(href).scrollIntoView({
+          // top: offsetPosition,
           behavior: 'smooth',
+          block: 'center',
         })
-      }
+      }, 500)
     },
   },
 }

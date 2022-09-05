@@ -24,6 +24,7 @@
       </v-carousel>
     </v-col>
     <v-col
+      id="about-us-overview"
       cols="12"
       class="d-flex justify-center flex-column ma-0 py-10 px-16 overview-container"
     >
@@ -52,34 +53,36 @@
         </div>
       </div>
     </v-col>
-    <v-row>
-      <v-img
+    <v-row id="about-us-milestone" justify="center" align="center">
+      <img
         :src="require('assets/images/timeline.png')"
-        max-height="auto"
-        max-width="auto"
+        height="100%"
+        width="100%"
       />
     </v-row>
     <v-row
+      id="about-us-visi-misi"
       justify="center"
       align="center"
       class="ma-16 pa-0 defaultGolden--text text-center visi-misi"
     >
       <v-col cols="6" class="padding-inner visi">
-        <h1>VISI</h1>
+        <h1>VISION</h1>
         <h3 class="fontLight--text">
           Achieving success that benefits Owners, Management, Employees,
           Consumers and Business Partners.
         </h3>
       </v-col>
       <v-col cols="6" class="padding-inner misi">
-        <h1>MISI</h1>
+        <h1>MISSION</h1>
         <h3 class="fontLight--text">
           Producing prime product quality in the exclusive cigarette market
           competition, as well as producing continuous innovation.
         </h3>
       </v-col>
     </v-row>
-    <v-row>
+
+    <v-row id="about-us-values">
       <div class="defaultGolden--text core-values">
         <h1>CORE VALUES</h1>
       </div>
@@ -89,31 +92,53 @@
         max-width="auto"
       />
     </v-row>
-    <div class="head-of-nikki">
+    <div id="about-us-management" class="head-of-nikki">
       <h1 class="defaultGolden--text">OUR MANAGEMENT</h1>
-      <div class="profile-card-container">
-        <v-img
-          :src="require('assets/images/profile pendiri.svg')"
-          max-height="70%"
-          max-width="70%"
-        />
-        <v-img
-          :src="require('assets/images/profile pendiri.svg')"
-          max-height="70%"
-          max-width="70%"
-        />
-      </div>
+      <!--      <div class="profile-card-container">-->
+      <!--        <v-img-->
+      <!--          :src="require('assets/images/profile pendiri.svg')"-->
+      <!--          max-height="70%"-->
+      <!--          max-width="70%"-->
+      <!--        />-->
+      <!--        <v-img-->
+      <!--          :src="require('assets/images/profile pendiri.svg')"-->
+      <!--          max-height="70%"-->
+      <!--          max-width="70%"-->
+      <!--        />-->
+      <!--      </div>-->
+      <vueper-slides
+        class="no-shadow"
+        :visible-slides="2"
+        slide-multiple
+        :gap="3"
+        :slide-ratio="1 / 3.5"
+        :dragging-distance="200"
+        :bullets="false"
+      >
+        <vueper-slide
+          v-for="(slide, i) in profilePendiri"
+          :key="i"
+          :image="slide.img"
+        >
+        </vueper-slide>
+      </vueper-slides>
     </div>
   </v-row>
 </template>
 
 <script>
+import { VueperSlides, VueperSlide } from 'vueperslides'
 export default {
   name: 'AboutUs',
-  components: {},
+  components: { VueperSlides, VueperSlide },
   data() {
     return {
       content: [],
+      profilePendiri: [
+        { img: require('assets/images/pendiri-SOFFAN HARYANTO.png') },
+        { img: require('assets/images/pendiri-JOHANES ANDRIAN.png') },
+        { img: require('assets/images/pendiri-EKO NOVIANTO.png') },
+      ],
       cover: [
         { img: require('assets/images/nikki-outside-factory.png') },
         { img: require('assets/images/nikki-workers.png') },
@@ -179,8 +204,9 @@ export default {
 }
 
 .head-of-nikki {
-  width: 100%;
+  width: 92%;
   margin: 4rem 2.5rem;
+  //height: 600px;
   h1 {
     font-weight: 700;
     font-size: 5em;

@@ -14,9 +14,8 @@
             <h1>LIFE AT OUR COMPANY</h1>
             <br />
             <h3>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta
-              ducimus eius est et impedit ipsum officiis quas voluptatibus.
-              Aspernatur autem eos facere id itaque officiis,
+              We open opportunities for experienced workers to join us according
+              to their knowledge, abilities, and experience.
             </h3>
           </div>
         </div>

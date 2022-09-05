@@ -1,13 +1,25 @@
 <template>
   <v-col col="11" class="my-15 d-flex justify-center">
     <div class="media-wrapper">
-      <div class="media-header d-flex justify-start">
+      <div class="media-header d-flex justify-space-between align-center">
         <h1 class="defaultGolden--text">MEDIA & PUBLICATION</h1>
+        <template v-if="$route.fullPath === '/'">
+          <v-btn
+            rounded
+            x-large
+            class="defaultGolden fontDark--text font-weight-bold d-flex mr-15"
+            to="/media-and-publication"
+          >
+            EXplore more
+          </v-btn>
+        </template>
       </div>
 
       <div class="card-container d-flex flex-wrap justify-center align-center">
         <div
-          v-for="(card, i) in mediaCardList.slice(0, 6)"
+          v-for="(card, i) in $route.fullPath === '/'
+            ? mediaCardList.slice(0, 3)
+            : mediaCardList.slice(0, 3)"
           :key="i"
           class="media-card ma-10"
           @click="
@@ -112,7 +124,7 @@ export default {
 <style lang="scss" scoped>
 .media-wrapper {
   width: 100rem;
-  height: 1080px;
+  height: 540px;
   max-width: 100rem;
   .media-header {
     h1 {
@@ -126,8 +138,8 @@ export default {
   font-family: 'Barlow', sans-serif;
   font-weight: 500;
   aspect-ratio: 1 / 1;
-  width: 23.75rem;
-  height: 23.75rem;
+  width: 24rem;
+  height: 24rem;
   position: relative;
   .zoom-transition {
     transition: width 300ms, height 300ms;

@@ -62,6 +62,19 @@
           </v-btn>
         </div>
       </div>
+      <div class="pagination">
+        <img
+          src="~/assets/images/paginate-left.svg"
+          alt="button previous pagination"
+        />
+        <div v-for="i in pages" :key="i" class="number cursor-pointer">
+          {{ i }}
+        </div>
+        <img
+          src="~/assets/images/paginate-right.svg"
+          alt="button next pagination"
+        />
+      </div>
     </v-col>
     <v-col cols="12" class="pa-10 review-container">
       <div class="learn-title defaultGolden--text d-flex justify-center mb-10">
@@ -110,6 +123,7 @@ export default {
   components: { VueperSlides, VueperSlide },
   data() {
     return {
+      pages: 5,
       reviewsList: [
         {
           review:
@@ -279,6 +293,28 @@ export default {
           }
         }
       }
+    }
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    .number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2.04082px solid $color-secondary-root;
+      border-radius: 6px;
+      width: 65.31px;
+      height: 65.31px;
+      margin: 0 0.5rem;
+      color: $color-secondary-root;
+    }
+
+    img {
+      margin: 0 0.5rem;
     }
   }
 }

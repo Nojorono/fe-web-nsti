@@ -7,7 +7,9 @@
         src="~/assets/images/paginate-left.svg"
         alt="button previous pagination"
       />
-      <div v-for="i in pages" :key="i" class="number">{{ i }}</div>
+      <div v-for="i in pages" :key="i" class="number cursor-pointer">
+        {{ i }}
+      </div>
       <img
         src="~/assets/images/paginate-right.svg"
         alt="button next pagination"
@@ -22,14 +24,14 @@ import card from '@/components/home/MediaAndPublication.vue'
 export default {
   name: 'MediaAndPublication',
   components: { card },
-  head() {
-    return {
-      title: 'Media And Publication',
-    }
-  },
   data() {
     return {
       pages: 5,
+    }
+  },
+  head() {
+    return {
+      title: 'Media And Publication',
     }
   },
   mounted() {},

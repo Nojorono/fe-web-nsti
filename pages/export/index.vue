@@ -1,9 +1,11 @@
 <template>
   <v-row justify="center" align="center" class="ma-0 pa-0">
-    <h1 class="defaultGolden--text export-heading">EXPORT</h1>
+    <h1 class="defaultGolden--text export-heading mt-10">EXPORT</h1>
     <v-col cols="12" class="export-container ma-0 pa-0">
       <div class="card-content">
-        <h1 class="defaultGray--text" id="tembakau-exkpor">TEMBAKAU EKSPOR</h1>
+        <h1 id="export-heritage" class="defaultGray--text">
+          INDONESIA FINEST HERITAGE
+        </h1>
         <p class="defaultGray--text">
           Tobacco is one of Indonesia's natural wealth heritage which is widely
           appreciated by foreign countries. The quality of Indonesian tobacco
@@ -30,8 +32,8 @@
       </div>
     </v-col>
     <v-col
+      id="export-quality-tobacco"
       cols="12"
-      id="keunggulan-tembakau-ekspor"
       class="export-container-2 ma-0 pa-0"
     >
       <div class="image-container-2 ma-0 pa-0">
@@ -50,7 +52,7 @@
         />
       </div>
       <div class="card-content-2">
-        <h1 class="white--text">KEUNGGULAN TEMBAKAU EKSPOR</h1>
+        <h1 class="white--text">GLOBAL QUALITY TOBACCO</h1>
         <p class="white--text">
           Tobacco blend, which is formulated from the best quality tobacco and
           cloves, produces a distinctive Indonesian taste. Tobacco blend from PT
@@ -59,7 +61,7 @@
       </div>
     </v-col>
     <v-col cols="12" class="mt-15 ma-0 pa-0">
-      <div class="contact-us-export defaultGolden--text" id="kontak-ekspor">
+      <div id="export-contact" class="contact-us-export defaultGolden--text">
         <div class="contact-us-title">
           <h1 class="">CONTACT US</h1>
           <p>For more information about export</p>
