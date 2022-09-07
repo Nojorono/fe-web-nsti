@@ -1,6 +1,6 @@
 <template>
   <v-row justify="center" align="center" class="career-container">
-    <v-col cols="12" class="ma-0 pa-0 carousel-container">
+    <v-col id="career-life-at" cols="12" class="ma-0 pa-0 carousel-container">
       <v-carousel
         cycle
         :show-arrows="false"
@@ -31,7 +31,7 @@
       </div>
     </v-col>
 
-    <v-col cols="12" class="job-opportunities px-10">
+    <v-col id="career-opportunities" cols="12" class="job-opportunities px-10">
       <div
         class="d-flex justify-center defaultGolden--text my-5 job-opportunities-title"
       >
@@ -76,35 +76,37 @@
         />
       </div>
     </v-col>
-    <v-col cols="12" class="pa-10 review-container">
+    <v-col id="career-learn-grow" cols="12" class="pa-10 review-container">
       <div class="learn-title defaultGolden--text d-flex justify-center mb-10">
         <h1>LEARN AND GROW WITH US</h1>
       </div>
       <vueper-slides
         class="no-shadow"
-        :visible-slides="3.5"
-        slide-multiple
+        :visible-slides="3"
         :gap="3"
         :bullets="false"
         :arrows="false"
         :slide-ratio="1 / 3"
-        :dragging-distance="200"
+        :dragging-distance="70"
         :breakpoints="{ 800: { visibleSlides: 2, slideMultiple: 2 } }"
       >
         <vueper-slide v-for="(review, i) in reviewsList" :key="i">
           <template #content>
-            <div class="review-card px-10 py-15 text-center overflow-auto">
+            <div class="review-card px-10 py-10 text-center overflow-auto">
               <div
-                class="d-flex flex-column align-center justify-space-between"
+                class="review-card-innner d-flex flex-column align-center justify-space-between"
               >
-                <p class="mb-5">{{ review.review }}</p>
-                <img
-                  :src="review.profileImg"
-                  alt="review profile picture"
-                  width="20%"
-                  height="auto"
-                />
-                <p class="mt-10">{{ review.position }}</p>
+                <p class="mb-5 review-text">{{ review.review }}</p>
+                <div class="review-bottom-container">
+                  <img
+                    :src="review.profileImg"
+                    alt="review profile picture"
+                    width="140px"
+                    height="auto"
+                  />
+                  <p class="review-name">{{ review.name }}</p>
+                  <p class="review-position">{{ review.position }}</p>
+                </div>
               </div>
             </div>
           </template>
@@ -127,44 +129,23 @@ export default {
       reviewsList: [
         {
           review:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque commodi deleniti earum eius illum in ipsam quasi, ratione veritatis?',
-          profileImg: require('assets/images/reviewImg.png'),
+            '“To do a great job the only way is to love what you do, proud to be a part of Nikki Super Kudus.”',
+          profileImg: require('assets/images/review-pp-2.png'),
+          name: 'Sri Pujiatmi',
           position: 'Analyst Risk & Controls',
         },
         {
           review:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque commodi deleniti earum eius illum in ipsam quasi, ratione veritatis?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque commodi deleniti earum eius illum in ipsam quasi, ratione veritatis?',
-          profileImg: require('assets/images/reviewImg.png'),
+            '“The values of Family, Togetherness, and Solidarity that exist in Nikki Super Kudus are the key to success for all employees and the company.”',
+          profileImg: require('assets/images/review-pp-1.png'),
+          name: 'Hesti Triyanto',
           position: 'Analyst Risk & Controls',
         },
         {
           review:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque commodi deleniti earum eius illum in ipsam quasi, ratione veritatis?',
-          profileImg: require('assets/images/reviewImg.png'),
-          position: 'Analyst Risk & Controls',
-        },
-        {
-          review:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque commodi deleniti earum eius illum in ipsam quasi, ratione veritatis?',
-          profileImg: require('assets/images/reviewImg.png'),
-          position: 'Analyst Risk & Controls',
-        },
-        {
-          review:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque commodi deleniti earum eius illum in ipsam quasi, ratione veritatis?',
-          profileImg: require('assets/images/reviewImg.png'),
-          position: 'Analyst Risk & Controls',
-        },
-        {
-          review:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque commodi deleniti earum eius illum in ipsam quasi, ratione veritatis?',
-          profileImg: require('assets/images/reviewImg.png'),
-          position: 'Analyst Risk & Controls',
-        },
-        {
-          review:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque commodi deleniti earum eius illum in ipsam quasi, ratione veritatis?',
-          profileImg: require('assets/images/reviewImg.png'),
+            '“Growing and Developing with Nikki Super Kudus is an invaluable Blessing and Pride for me and my family.”',
+          profileImg: require('assets/images/review-pp-3.png'),
+          name: 'Pungky Nugroho',
           position: 'Analyst Risk & Controls',
         },
       ],
@@ -173,10 +154,10 @@ export default {
           img: require('assets/images/man-in-factory.png'),
         },
         {
-          img: require('assets/images/career-factory.png'),
+          img: require('assets/images/career-3.png'),
         },
         {
-          img: require('assets/images/career-making-cigar.png'),
+          img: require('assets/images/career-2.png'),
         },
       ],
       jobList: [
@@ -280,7 +261,7 @@ export default {
   .joblist {
     .joblist-card {
       width: 505px;
-      background: $color-primary-root;
+      background: rgba(41, 48, 110, 0.5);
       border-radius: 10px;
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
       .joblist-text {
@@ -319,7 +300,7 @@ export default {
   }
 }
 .review-container {
-  background: $color-primary-root;
+  background: rgba(41, 48, 110, 0.5);
   .learn-title {
     h1 {
       font-size: 4em;
@@ -328,9 +309,34 @@ export default {
     }
   }
   .review-card {
-    background: #29306e;
+    background: rgba(41, 48, 110, 0.5);
     border-radius: 10px;
+    font-family: 'Barlow', sans-serif;
     height: 100%;
+    .review-card-innner {
+      height: 100%;
+    }
+    div {
+      .review-text {
+        height: 10rem;
+        font-weight: 500;
+        font-size: 1.4em;
+      }
+      .review-bottom-container {
+        padding-top: 1rem;
+        .review-name {
+          font-weight: 700;
+          font-size: 24px;
+        }
+        .review-position {
+          font-weight: 400;
+          font-size: 20px;
+        }
+      }
+      img {
+        border-radius: 50%;
+      }
+    }
   }
 }
 </style>

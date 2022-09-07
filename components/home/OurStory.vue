@@ -1,13 +1,17 @@
 <template>
-  <v-col cols="12" class="pa-0">
+  <v-col cols="12" class="pa-0 ma-0">
     <div class="our-story-container">
-      <v-img
-        :src="require('assets/images/smelling-coffee.png')"
-        max-width="100%"
-        max-height="900"
-        alt="coffee beans smelling"
-        class="smelling-coffee"
-      />
+      <div class='smelling-coffee'>
+        <img
+          lazy
+          :src="require('assets/images/smelling-coffee.png')"
+          width="120%"
+          height="100%"
+          alt="coffee beans smelling"
+          class=""
+        />
+      </div>
+
       <div class="wrapper">
         <div class="text-container">
           <h1>OUR STORY</h1>
@@ -35,10 +39,16 @@ export default {
 <style lang="scss" scoped>
 .our-story-container {
   position: relative;
+  margin-top: -12px;
   width: 100%;
   height: 100%;
 
   .smelling-coffee {
+    height: 900px;
+    width: 100%;
+    img{
+      object-fit: cover;
+    }
   }
   .wrapper {
     position: absolute;

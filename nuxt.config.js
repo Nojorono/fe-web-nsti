@@ -47,7 +47,26 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    ['nuxt-i18n', {
+      locales: [
+        {
+          name: 'Indonesia',
+          code: 'id',
+          iso: 'id-ID',
+          file: 'id-ID.js'
+        },
+        {
+          name: 'English',
+          code: 'en',
+          iso: 'en-US',
+          file: 'en-US.js'
+        },
+      ],
+      langDir: 'lang/',
+      defaultLocale: 'en',
+    }]
+  ],
 
   router: {
     // Run the middleware/initMiddleware.js on every page

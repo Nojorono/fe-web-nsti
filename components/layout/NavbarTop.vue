@@ -43,13 +43,15 @@
         Export
         <div class="dropdown-menu-hover-content">
           <ul class="nobull about-us-ul">
-            <nuxt-link to="#export-heritage"
-              >Indonesia Finest Heritage</nuxt-link
+            <span @click="funcScrollTo('#export-heritage', 'export')"
+              >Indonesia Finest Heritage</span
             >
-            <nuxt-link to="#export-quality-tobacco"
-              >Global Quality Tobacco</nuxt-link
+            <span @click="funcScrollTo('#export-quality-tobacco', 'export')"
+              >Global Quality Tobacco</span
             >
-            <nuxt-link to="#export-contact">Contact</nuxt-link>
+            <span @click="funcScrollTo('#export-contact', 'export')"
+              >Contact</span
+            >
           </ul>
         </div>
       </nuxt-link>
@@ -69,9 +71,15 @@
         Career
         <div class="dropdown-menu-hover-content">
           <ul class="nobull about-us-ul">
-            <nuxt-link to="#">Life at Nikki Super</nuxt-link>
-            <nuxt-link to="#">Job Opportunities</nuxt-link>
-            <nuxt-link to="#">Learn & Grow With Us</nuxt-link>
+            <span @click="funcScrollTo('#career-life-at', 'career')"
+              >Life at Nikki Super</span
+            >
+            <span @click="funcScrollTo('#career-opportunities', 'career')"
+              >Job Opportunities</span
+            >
+            <span @click="funcScrollTo('#career-learn-grow', 'career')"
+              >Learn & Grow With Us</span
+            >
           </ul>
         </div>
       </nuxt-link>

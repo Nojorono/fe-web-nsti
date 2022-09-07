@@ -94,18 +94,6 @@
     </v-row>
     <div id="about-us-management" class="head-of-nikki">
       <h1 class="defaultGolden--text">OUR MANAGEMENT</h1>
-      <!--      <div class="profile-card-container">-->
-      <!--        <v-img-->
-      <!--          :src="require('assets/images/profile pendiri.svg')"-->
-      <!--          max-height="70%"-->
-      <!--          max-width="70%"-->
-      <!--        />-->
-      <!--        <v-img-->
-      <!--          :src="require('assets/images/profile pendiri.svg')"-->
-      <!--          max-height="70%"-->
-      <!--          max-width="70%"-->
-      <!--        />-->
-      <!--      </div>-->
       <vueper-slides
         class="no-shadow"
         :visible-slides="2"

@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[28],{668:function(n,e,t){"use strict";t.r(e);t(22),t(58);var o={name:"ContentManagement",mounted:function(){this.$router.replace("/content-management/sign-in")}},c=t(45),component=Object(c.a)(o,undefined,undefined,!1,null,null,null);e.default=component.exports}}]);

@@ -9,6 +9,7 @@ const _0c8647d2 = () => interopDefault(import('..\\pages\\career\\index.vue' /* 
 const _4d355eec = () => interopDefault(import('..\\pages\\contact-us\\index.vue' /* webpackChunkName: "pages/contact-us/index" */))
 const _3095575e = () => interopDefault(import('..\\pages\\content-management\\index.vue' /* webpackChunkName: "pages/content-management/index" */))
 const _2a293221 = () => interopDefault(import('..\\pages\\export\\index.vue' /* webpackChunkName: "pages/export/index" */))
+const _532694d5 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 const _153d9eb2 = () => interopDefault(import('..\\pages\\media-and-publication\\index.vue' /* webpackChunkName: "pages/media-and-publication/index" */))
 const _b7f0509e = () => interopDefault(import('..\\pages\\products\\index.vue' /* webpackChunkName: "pages/products/index" */))
 const _bb769180 = () => interopDefault(import('..\\pages\\content-management\\about-us\\index.vue' /* webpackChunkName: "pages/content-management/about-us/index" */))
@@ -26,7 +27,6 @@ const _7f625d84 = () => interopDefault(import('..\\pages\\content-management\\ca
 const _2ff18127 = () => interopDefault(import('..\\pages\\content-management\\media-and-publication\\edit\\_id.vue' /* webpackChunkName: "pages/content-management/media-and-publication/edit/_id" */))
 const _19835198 = () => interopDefault(import('..\\pages\\content-management\\products\\edit\\_id.vue' /* webpackChunkName: "pages/content-management/products/edit/_id" */))
 const _234a94e9 = () => interopDefault(import('..\\pages\\media-and-publication\\detail\\_id.vue' /* webpackChunkName: "pages/media-and-publication/detail/_id" */))
-const _532694d5 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -42,95 +42,187 @@ export const routerOptions = {
   routes: [{
     path: "/about-us",
     component: _387ccbf7,
-    name: "about-us"
+    name: "about-us___en"
   }, {
     path: "/career",
     component: _0c8647d2,
-    name: "career"
+    name: "career___en"
   }, {
     path: "/contact-us",
     component: _4d355eec,
-    name: "contact-us"
+    name: "contact-us___en"
   }, {
     path: "/content-management",
     component: _3095575e,
-    name: "content-management"
+    name: "content-management___en"
   }, {
     path: "/export",
     component: _2a293221,
-    name: "export"
+    name: "export___en"
+  }, {
+    path: "/id",
+    component: _532694d5,
+    name: "index___id"
   }, {
     path: "/media-and-publication",
     component: _153d9eb2,
-    name: "media-and-publication"
+    name: "media-and-publication___en"
   }, {
     path: "/products",
     component: _b7f0509e,
-    name: "products"
+    name: "products___en"
   }, {
     path: "/content-management/about-us",
     component: _bb769180,
-    name: "content-management-about-us"
+    name: "content-management-about-us___en"
   }, {
     path: "/content-management/career",
     component: _842df4c0,
-    name: "content-management-career"
+    name: "content-management-career___en"
   }, {
     path: "/content-management/media-and-publication",
     component: _072a1209,
-    name: "content-management-media-and-publication"
+    name: "content-management-media-and-publication___en"
   }, {
     path: "/content-management/products",
     component: _0dcfc2fa,
-    name: "content-management-products"
+    name: "content-management-products___en"
   }, {
     path: "/content-management/sign-in",
     component: _74cfde21,
-    name: "content-management-sign-in"
+    name: "content-management-sign-in___en"
   }, {
     path: "/content-management/sign-up",
     component: _9b51122a,
-    name: "content-management-sign-up"
+    name: "content-management-sign-up___en"
+  }, {
+    path: "/id/about-us",
+    component: _387ccbf7,
+    name: "about-us___id"
+  }, {
+    path: "/id/career",
+    component: _0c8647d2,
+    name: "career___id"
+  }, {
+    path: "/id/contact-us",
+    component: _4d355eec,
+    name: "contact-us___id"
+  }, {
+    path: "/id/content-management",
+    component: _3095575e,
+    name: "content-management___id"
+  }, {
+    path: "/id/export",
+    component: _2a293221,
+    name: "export___id"
+  }, {
+    path: "/id/media-and-publication",
+    component: _153d9eb2,
+    name: "media-and-publication___id"
+  }, {
+    path: "/id/products",
+    component: _b7f0509e,
+    name: "products___id"
   }, {
     path: "/content-management/about-us/add-new",
     component: _6b5553e0,
-    name: "content-management-about-us-add-new"
+    name: "content-management-about-us-add-new___en"
   }, {
     path: "/content-management/career/add-new",
     component: _24333180,
-    name: "content-management-career-add-new"
+    name: "content-management-career-add-new___en"
   }, {
     path: "/content-management/media-and-publication/add-new",
     component: _577f0b37,
-    name: "content-management-media-and-publication-add-new"
+    name: "content-management-media-and-publication-add-new___en"
   }, {
     path: "/content-management/products/add-new",
     component: _7162d966,
-    name: "content-management-products-add-new"
+    name: "content-management-products-add-new___en"
+  }, {
+    path: "/id/content-management/about-us",
+    component: _bb769180,
+    name: "content-management-about-us___id"
+  }, {
+    path: "/id/content-management/career",
+    component: _842df4c0,
+    name: "content-management-career___id"
+  }, {
+    path: "/id/content-management/media-and-publication",
+    component: _072a1209,
+    name: "content-management-media-and-publication___id"
+  }, {
+    path: "/id/content-management/products",
+    component: _0dcfc2fa,
+    name: "content-management-products___id"
+  }, {
+    path: "/id/content-management/sign-in",
+    component: _74cfde21,
+    name: "content-management-sign-in___id"
+  }, {
+    path: "/id/content-management/sign-up",
+    component: _9b51122a,
+    name: "content-management-sign-up___id"
+  }, {
+    path: "/id/content-management/about-us/add-new",
+    component: _6b5553e0,
+    name: "content-management-about-us-add-new___id"
+  }, {
+    path: "/id/content-management/career/add-new",
+    component: _24333180,
+    name: "content-management-career-add-new___id"
+  }, {
+    path: "/id/content-management/media-and-publication/add-new",
+    component: _577f0b37,
+    name: "content-management-media-and-publication-add-new___id"
+  }, {
+    path: "/id/content-management/products/add-new",
+    component: _7162d966,
+    name: "content-management-products-add-new___id"
+  }, {
+    path: "/id/content-management/about-us/edit/:id?",
+    component: _738e9a44,
+    name: "content-management-about-us-edit-id___id"
+  }, {
+    path: "/id/content-management/career/edit/:id",
+    component: _7f625d84,
+    name: "content-management-career-edit-id___id"
+  }, {
+    path: "/id/content-management/media-and-publication/edit/:id?",
+    component: _2ff18127,
+    name: "content-management-media-and-publication-edit-id___id"
+  }, {
+    path: "/id/content-management/products/edit/:id",
+    component: _19835198,
+    name: "content-management-products-edit-id___id"
   }, {
     path: "/content-management/about-us/edit/:id?",
     component: _738e9a44,
-    name: "content-management-about-us-edit-id"
+    name: "content-management-about-us-edit-id___en"
   }, {
     path: "/content-management/career/edit/:id",
     component: _7f625d84,
-    name: "content-management-career-edit-id"
+    name: "content-management-career-edit-id___en"
   }, {
     path: "/content-management/media-and-publication/edit/:id?",
     component: _2ff18127,
-    name: "content-management-media-and-publication-edit-id"
+    name: "content-management-media-and-publication-edit-id___en"
   }, {
     path: "/content-management/products/edit/:id",
     component: _19835198,
-    name: "content-management-products-edit-id"
+    name: "content-management-products-edit-id___en"
+  }, {
+    path: "/id/media-and-publication/detail/:id?",
+    component: _234a94e9,
+    name: "media-and-publication-detail-id___id"
   }, {
     path: "/media-and-publication/detail/:id?",
     component: _234a94e9,
-    name: "media-and-publication-detail-id"
+    name: "media-and-publication-detail-id___en"
   }, {
     path: "/",
     component: _532694d5,
-    name: "index"
+    name: "index___en"
   }],
 
   fallback: false

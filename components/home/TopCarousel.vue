@@ -6,39 +6,42 @@
     hide-delimiters
     interval="5000"
     height="766"
-    class="carousel-parent mt-0 mb-0 pa-0"
+    class="carousel-parent ma-0 pa-0"
   >
     <v-carousel-item v-for="(img, i) in image" :key="i">
       <v-sheet color="defaultGray" height="100%" tile>
         <v-row class="fill-height" align="center" justify="center">
           <v-img :src="img.img" max-height="100%" />
-          <!--                      content-class="home-carousel-gradient"
--->
         </v-row>
+        <v-row class="text-overlay mt-10">
+          <v-col cols="6" sm="1" md="1" lg="6" class="about-us defaultGolden--text">
+            <div class="about-us-container">
+              <h2>{{img.text}}</h2>
+              <br />
+              <v-btn
+                rounded
+                x-large
+                class="defaultGolden fontDark--text font-weight-bold"
+                :to="img.to"
+              >
+               {{img.btnText}}
+              </v-btn>
+            </div>
+          </v-col>
+          <v-col cols="6" sm="1" md="1" lg="6" class="our-motto d-none">
+          </v-col>
+        </v-row>
+
       </v-sheet>
     </v-carousel-item>
     <v-row class="text-overlay mt-10">
       <v-col cols="6" sm="1" md="1" lg="6" class="about-us defaultGolden--text">
-        <div class="about-us-container">
-          <h1>LOREM IPSUM</h1>
-          <br />
-          <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-          <br />
-          <v-btn
-            rounded
-            x-large
-            class="defaultGolden fontDark--text font-weight-bold"
-            to="/about-us"
-          >
-            More About Us
-          </v-btn>
+        <div class="about-us-container d-none" >
         </div>
       </v-col>
       <v-col cols="6" sm="1" md="1" lg="6" class="our-motto">
         <div class="motto-container">
           <h1>BERANI BUKA JALAN</h1>
-          <!--          <br />-->
-          <!--          <h3>MAKIN NYALI MAKIN JADI</h3>-->
         </div>
       </v-col>
     </v-row>
@@ -53,13 +56,22 @@ export default {
       model: 0,
       image: [
         {
-          img: require('assets/images/motorcyle-nikki.png'),
+          img: require('assets/images/carousel-home-1.png'),
+          text: 'PT Nikki Super Tobacco Indonesia is one of the leading cigarette manufacturers in Central Java with a national market reach.',
+          btnText: 'More About Us',
+          to: '/about-us'
         },
         {
-          img: require('assets/images/jared-rice.jpg'),
+          img: require('assets/images/carousel-home-2.png'),
+          text: 'The quality and innovative taste of cigarettes is the main focus of PT Nikki Super Tobacco Indonesia\'s products.',
+          btnText: 'Explore Product',
+          to: '/product'
         },
         {
-          img: require('assets/images/bmx.jpg'),
+          img: require('assets/images/carousel-home-3.png'),
+          text: 'Each employee\'s contribution is considered as an asset that plays an important role in the development and progress of the company.',
+          btnText: 'join Us',
+          to: '/career'
         },
       ],
     }
@@ -72,12 +84,14 @@ export default {
   position: relative;
   .text-overlay {
     position: absolute;
+    top: 0;
   }
 }
 
 .text-overlay {
   height: 100%;
   width: 100%;
+  z-index: 10;
 
   //left text
   .about-us {
@@ -101,7 +115,6 @@ export default {
       }
       width: 37rem;
     }
-    //text-align: center;
     display: flex;
     justify-content: center;
     flex-direction: column;

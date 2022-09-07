@@ -16,18 +16,14 @@
       </div>
 
       <div class="card-container d-flex flex-wrap justify-center align-center">
-        <div
+        <nuxt-link
           v-for="(card, i) in $route.fullPath === '/'
             ? mediaCardList.slice(0, 3)
             : mediaCardList.slice(0, 3)"
           :key="i"
           class="media-card ma-10"
-          @click="
-            $router.push({
-              name: 'media-and-publication-detail-id',
-              params: { id: card.id },
-            })
-          "
+          :to="'/media-and-publication/detail/' + card.id"
+
         >
           <div class="zoom-transition defaultGolden--text cursor-pointer">
             <v-img
@@ -41,7 +37,7 @@
               <h3 class="">Read More ></h3>
             </div>
           </div>
-        </div>
+        </nuxt-link>
       </div>
     </div>
   </v-col>

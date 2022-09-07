@@ -1,11 +1,11 @@
 <template>
   <v-row justify="center" align="center" class="ma-0 pa-0">
-    <h1 class="defaultGolden--text export-heading mt-10">EXPORT</h1>
+    <h1 id="export-heritage" class="defaultGolden--text export-heading mt-10">
+      EXPORT
+    </h1>
     <v-col cols="12" class="export-container ma-0 pa-0">
       <div class="card-content">
-        <h1 id="export-heritage" class="defaultGray--text">
-          INDONESIA FINEST HERITAGE
-        </h1>
+        <h1 class="defaultGray--text">INDONESIA FINEST HERITAGE</h1>
         <p class="defaultGray--text">
           Tobacco is one of Indonesia's natural wealth heritage which is widely
           appreciated by foreign countries. The quality of Indonesian tobacco
