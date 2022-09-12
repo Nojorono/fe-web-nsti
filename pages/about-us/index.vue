@@ -28,27 +28,15 @@
       cols="12"
       class="d-flex justify-center flex-column ma-0 py-10 px-16 overview-container"
     >
-      <h1 class="defaultGolden--text overview-title">OVERVIEW</h1>
+      <h1 class="defaultGolden--text overview-title">{{$t('abouUs.title')}}</h1>
       <div class="d-flex justify-center mt-10">
         <div class="overview-text">
           <p>
-            PT Nikki Super Tobacco Indonesia was established on November 11,
-            1990 and is a cigarette manufacturer from Kudus, known as the city
-            of kretek. PT Nikki Super Tobacco Indonesia is one of the leading
-            cigarette manufacturers in Central Java with a national market
-            reach.
+            {{$t('abouUs.subText1')}}
           </p>
           <br />
           <p>
-            The quality and taste of cigarettes are the main focus of PT Nikki
-            Super Tobacco Indonesia's products. This is manifested in the form
-            of a variety of product innovations that always adapt to the
-            dynamics of market trends. Using the latest technology support,
-            machine-made kretek cigarettes were created with regular, bold, and
-            mild categories, namely Jazy Mild, Jazy Bold, Nikki Super, Nikki
-            Filter Black, and Top Mild. PT Nikki Super Tobacco Indonesia is also
-            included in the labor-intensive sector that produces several
-            hand-rolled kretek cigarettes, namely Marathon and Wali.
+            {{$t('abouUs.subText2')}}
           </p>
         </div>
       </div>
@@ -117,6 +105,12 @@
 <script>
 import { VueperSlides, VueperSlide } from 'vueperslides'
 export default {
+  nuxtI18n: {
+    paths: {
+      id: '/about-us',
+      en: '/about-us'
+    }
+  },
   name: 'AboutUs',
   components: { VueperSlides, VueperSlide },
   data() {

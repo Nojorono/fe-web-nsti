@@ -14,14 +14,10 @@
 
       <div class="wrapper">
         <div class="text-container">
-          <h1>OUR STORY</h1>
+          <h1>{{$t('home.ourStory.title')}}</h1>
           <br />
           <h3>
-            PT Nikki Super Tobacco Indonesia was established on November 11,
-            1990 and is a cigarette manufacturer from Kudus, known as the city
-            of kretek. PT Nikki Super Tobacco Indonesia is one of the leading
-            cigarette manufacturers in Central Java with a national market
-            reach.
+            {{$t('home.ourStory.text')}}
           </h3>
         </div>
       </div>

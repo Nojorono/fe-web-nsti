@@ -27,6 +27,12 @@ export default {
     CareerAt,
     ContactUs,
   },
+  nuxtI18n: {
+    paths: {
+      id: '/',
+      en: '/'
+    }
+  },
   head() {
     return {
       title: 'Home',

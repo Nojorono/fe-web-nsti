@@ -91,7 +91,7 @@ export default {
 .text-overlay {
   height: 100%;
   width: 100%;
-  z-index: 10;
+  z-index: 2;
 
   //left text
   .about-us {

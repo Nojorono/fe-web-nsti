@@ -99,12 +99,11 @@
     <div class="lang-swichter defaultGolden--text">
       <template v-if="language === 'ID'">
         <span class="cursor-pointer fontLight--text">ID</span> |
-        <span class="cursor-pointer" @click="language = 'EN'"> EN </span>
+        <span class="cursor-pointer" @click="onChangeLang('Id')"> EN </span>
       </template>
       <template v-else-if="language === 'EN'">
-        <span class="cursor-pointer" @click="language = 'ID'"> ID </span> |<span
+        <span class="cursor-pointer" @click="onChangeLang('en')"> ID </span> |<span
           class="fontLight--text cursor-pointer"
-          @click="language === 'ID'"
         >
           EN
         </span>
@@ -152,6 +151,10 @@ export default {
     }
   },
   methods: {
+    onChangeLang(event) {
+      console.log(this.switchLocalePath(event))
+      this.$router.replace(this.switchLocalePath(event));
+    },
     funcScrollTo(href, page) {
       this.$router.push(page)
       setTimeout(() => {
