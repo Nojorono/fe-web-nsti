@@ -2,7 +2,7 @@
   <v-col col="11" class="my-15 d-flex justify-center">
     <div class="media-wrapper">
       <div class="media-header d-flex justify-space-between align-center">
-        <h1 class="defaultGolden--text">MEDIA & PUBLICATION</h1>
+        <h1 class="defaultGolden--text">{{ $t('home.media.title') }}</h1>
         <template v-if="$route.fullPath === '/'">
           <v-btn
             rounded
@@ -10,7 +10,7 @@
             class="defaultGolden fontDark--text font-weight-bold d-flex mr-15"
             to="/media-and-publication"
           >
-            EXplore more
+            {{ $t('home.media.btn') }}
           </v-btn>
         </template>
       </div>

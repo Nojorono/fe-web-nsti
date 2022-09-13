@@ -1,9 +1,19 @@
 export default {
   home: {
     topCarousel: {
-      one: '',
-      two: '',
-      three: '',
+      one: {
+        text: 'PT Nikki Super Tobacco Indonesia merupakan salah satu produsen sigaret terkemuka di Jawa Tengah dengan jangkauan pasar nasional.',
+        btn: 'Tentang kami'
+      },
+      two: {
+        text: 'Kualitas dan rasa sigaret yang inovatif menjadi fokus utama produk-produk PT Nikki Super Tobacco Indonesia. ',
+        btn: 'Produk Kami'
+
+      },
+      three: {
+        text: 'Kontribusi setiap karyawan diperhitungkan sebagai aset yang memberikan sumbangsih terhadap perkembangan dan kemajuan perusahaan.',
+        btn: 'bergabung dengan kami'
+      },
     },
     ourStory: {
       title: 'KISAH KAMI',

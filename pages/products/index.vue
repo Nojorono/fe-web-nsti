@@ -1,5 +1,5 @@
 <template>
-  <div>masuk pak eko</div>
+  <div>Products</div>
 </template>
 
 <script>

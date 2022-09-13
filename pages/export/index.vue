@@ -1,19 +1,13 @@
 <template>
   <v-row justify="center" align="center" class="ma-0 pa-0">
     <h1 id="export-heritage" class="defaultGolden--text export-heading mt-10">
-      EXPORT
+      {{ $t('home.export.title') }}
     </h1>
     <v-col cols="12" class="export-container ma-0 pa-0">
       <div class="card-content">
-        <h1 class="defaultGray--text">INDONESIA FINEST HERITAGE</h1>
+        <h1 class="defaultGray--text">{{ $t('home.export.heritage') }}</h1>
         <p class="defaultGray--text">
-          Tobacco is one of Indonesia's natural wealth heritage which is widely
-          appreciated by foreign countries. The quality of Indonesian tobacco
-          which is considered superior makes Indonesia one of the world's
-          largest tobacco markets. As the pride of Indonesia's cultural
-          heritage, PT Nikki Super Tobacco Indonesia is also expanding its local
-          Indonesian products in the international arena and is ready to enliven
-          foreign markets through local tobacco exports.
+          {{ $t('home.export.subHeritage') }}
         </p>
       </div>
       <div class="triangle">
@@ -52,29 +46,27 @@
         />
       </div>
       <div class="card-content-2">
-        <h1 class="white--text">GLOBAL QUALITY TOBACCO</h1>
+        <h1 class="white--text"> {{ $t('home.export.global') }}</h1>
         <p class="white--text">
-          Tobacco blend, which is formulated from the best quality tobacco and
-          cloves, produces a distinctive Indonesian taste. Tobacco blend from PT
-          Nikki Super Tobacco Indonesia is a leading export commodity.
+          {{ $t('home.export.subGlobal') }}
         </p>
       </div>
     </v-col>
     <v-col cols="12" class="mt-15 ma-0 pa-0">
       <div id="export-contact" class="contact-us-export defaultGolden--text">
         <div class="contact-us-title">
-          <h1 class="">CONTACT US</h1>
-          <p>For more information about export</p>
+          <h1 class=""> {{ $t('home.export.contact.title') }}</h1>
+          <p>{{ $t('home.export.contact.sub') }}</p>
         </div>
         <div class="contact-details">
           <div class="detail-child-phone">
-            <h2>PHONE NUMBER</h2>
-            <p><a href="tel:+62291445035">+62 291 445035</a></p>
+            <h2>{{ $t('home.export.contact.phone') }}</h2>
+            <p><a href="tel:+62291445035">{{ $t('home.export.contact.number') }}</a></p>
           </div>
           <div class="detail-child-email">
-            <h2>EMAIL</h2>
+            <h2>{{ $t('home.export.contact.email') }}</h2>
             <p>
-              <a href="mailto: info@nikkisuper.co.id">info@nikkisuper.co.id</a>
+              <a href="mailto: info@nikkisuper.co.id">{{ $t('home.export.contact.emailLink') }}</a>
             </p>
           </div>
         </div>

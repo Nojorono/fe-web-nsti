@@ -15,23 +15,23 @@
         class="dropdown-menu nav-child text-decoration-none"
         :to="'/about-us'"
       >
-        About Us
+        {{$t('navbar.about.title')}}
         <div class="dropdown-menu-hover-content">
           <ul class="nobull about-us-ul">
             <span @click="funcScrollTo('#about-us-overview', 'about-us')"
-              >Company Overview</span
+              >{{$t('navbar.about.overview')}}</span
             >
             <span @click="funcScrollTo('#about-us-milestone', 'about-us')"
-              >Milestone</span
+              >{{$t('navbar.about.milestone')}}</span
             >
             <span @click="funcScrollTo('#about-us-visi-misi', 'about-us')"
-              >Vision & Mission</span
+              >{{$t('navbar.about.vision')}}</span
             >
             <span @click="funcScrollTo('#about-us-values', 'about-us')"
-              >Core Values</span
+              >{{$t('navbar.about.core')}}</span
             >
             <span @click="funcScrollTo('#about-us-management', 'about-us')"
-              >Our Management</span
+              >{{$t('navbar.about.management')}}</span
             >
           </ul>
         </div>
@@ -40,51 +40,54 @@
         class="dropdown-menu nav-child text-decoration-none"
         :to="'/export'"
       >
-        Export
+        {{$t('navbar.export.title')}}
         <div class="dropdown-menu-hover-content">
           <ul class="nobull about-us-ul">
             <span @click="funcScrollTo('#export-heritage', 'export')"
-              >Indonesia Finest Heritage</span
+              > {{$t('navbar.export.heritage')}}</span
             >
             <span @click="funcScrollTo('#export-quality-tobacco', 'export')"
-              >Global Quality Tobacco</span
+              > {{$t('navbar.export.global')}}</span
             >
             <span @click="funcScrollTo('#export-contact', 'export')"
-              >Contact</span
+              > {{$t('navbar.export.contact')}}</span
             >
           </ul>
         </div>
       </nuxt-link>
       <nuxt-link class="nav-child text-decoration-none" :to="'/products'">
-        products
+        {{$t('navbar.products')}}
       </nuxt-link>
       <nuxt-link
         class="nav-child text-decoration-none"
         :to="'/media-and-publication'"
       >
-        Media & Publication
+        {{$t('navbar.media')}}
       </nuxt-link>
       <nuxt-link
         class="dropdown-menu nav-child text-decoration-none"
         :to="'/career'"
       >
-        Career
+        {{$t('navbar.career.title')}}
         <div class="dropdown-menu-hover-content">
           <ul class="nobull about-us-ul">
             <span @click="funcScrollTo('#career-life-at', 'career')"
-              >Life at Nikki Super</span
+              > {{$t('navbar.career.life')}}
+</span
             >
             <span @click="funcScrollTo('#career-opportunities', 'career')"
-              >Job Opportunities</span
+              > {{$t('navbar.career.job')}}
+</span
             >
             <span @click="funcScrollTo('#career-learn-grow', 'career')"
-              >Learn & Grow With Us</span
+              > {{$t('navbar.career.learn')}}
+</span
             >
           </ul>
         </div>
       </nuxt-link>
       <nuxt-link class="nav-child text-decoration-none" :to="'/contact-us'">
-        Contact
+        {{$t('navbar.contact')}}
       </nuxt-link>
     </div>
     <div class="search-bar">
@@ -92,18 +95,18 @@
       <input
         v-model="searchInput"
         type="text"
-        placeholder="Search"
+        :placeholder="$t('navbar.search')"
         class="input-search"
       />
     </div>
     <div class="lang-swichter defaultGolden--text">
-      <template v-if="language === 'ID'">
+      <template v-if="$i18n.locale === 'id'">
         <span class="cursor-pointer fontLight--text">ID</span> |
-        <span class="cursor-pointer" @click="onChangeLang('Id')"> EN </span>
+        <span class="cursor-pointer" @click="onChangeLang('en')"> EN </span>
       </template>
-      <template v-else-if="language === 'EN'">
-        <span class="cursor-pointer" @click="onChangeLang('en')"> ID </span> |<span
-          class="fontLight--text cursor-pointer"
+      <template v-else-if="$i18n.locale === 'en'">
+        <span class="cursor-pointer "  @click="onChangeLang('id')"> ID </span> |<span
+          class=" cursor-pointer fontLight--text"
         >
           EN
         </span>
@@ -120,7 +123,6 @@ export default {
   name: 'NavBarTop',
   data() {
     return {
-      language: 'EN',
       searchInput: '',
       navList: [
         {
@@ -128,23 +130,23 @@ export default {
           href: '/about-us',
         },
         {
-          title: 'Export',
+          title: '',
           href: '/export',
         },
         {
-          title: 'products',
+          title: '',
           href: '#products',
         },
         {
-          title: 'Media & Publication',
+          title: '',
           href: '#media-and-publication',
         },
         {
-          title: 'Career',
+          title: '',
           href: '/career',
         },
         {
-          title: 'Contact',
+          title: '',
           href: '/contact-us',
         },
       ],
@@ -152,7 +154,6 @@ export default {
   },
   methods: {
     onChangeLang(event) {
-      console.log(this.switchLocalePath(event))
       this.$router.replace(this.switchLocalePath(event));
     },
     funcScrollTo(href, page) {

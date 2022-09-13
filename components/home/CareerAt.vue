@@ -11,11 +11,10 @@
         />
         <div class="wrapper">
           <div class="text-container">
-            <h1>LIFE AT OUR COMPANY</h1>
+            <h1>{{ $t('home.lifeAt.title') }}</h1>
             <br />
             <h3>
-              We open opportunities for experienced workers to join us according
-              to their knowledge, abilities, and experience.
+              {{ $t('home.lifeAt.subTitle') }}
             </h3>
           </div>
         </div>
@@ -34,13 +33,13 @@ export default {
 <style lang="scss" scoped>
 .background-fill {
   position: relative;
-  height: 100%;
-  width: 100%;
+  height: 804px;
+  width: 1916px;
   .our-company-container {
     .wrapper {
       position: absolute;
       top: 0;
-      right: -20rem;
+      right: -10rem;
       width: 100%;
       height: 100%;
       background: url('assets/images/our-story-transparent.svg') no-repeat

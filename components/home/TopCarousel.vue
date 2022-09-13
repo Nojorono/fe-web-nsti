@@ -57,20 +57,20 @@ export default {
       image: [
         {
           img: require('assets/images/carousel-home-1.png'),
-          text: 'PT Nikki Super Tobacco Indonesia is one of the leading cigarette manufacturers in Central Java with a national market reach.',
-          btnText: 'More About Us',
+          text: this.$t('home.topCarousel.one.text'),
+          btnText: this.$t('home.topCarousel.one.btn'),
           to: '/about-us'
         },
         {
           img: require('assets/images/carousel-home-2.png'),
-          text: 'The quality and innovative taste of cigarettes is the main focus of PT Nikki Super Tobacco Indonesia\'s products.',
-          btnText: 'Explore Product',
+          text: this.$t('home.topCarousel.one.text'),
+          btnText:  this.$t('home.topCarousel.one.btn'),
           to: '/product'
         },
         {
           img: require('assets/images/carousel-home-3.png'),
-          text: 'Each employee\'s contribution is considered as an asset that plays an important role in the development and progress of the company.',
-          btnText: 'join Us',
+          text: this.$t('home.topCarousel.one.text'),
+          btnText: this.$t('home.topCarousel.one.btn'),
           to: '/career'
         },
       ],
