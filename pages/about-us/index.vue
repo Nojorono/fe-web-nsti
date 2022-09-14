@@ -28,15 +28,15 @@
       cols="12"
       class="d-flex justify-center flex-column ma-0 py-10 px-16 overview-container"
     >
-      <h1 class="defaultGolden--text overview-title">{{$t('abouUs.title')}}</h1>
+      <h1 class="defaultGolden--text overview-title">{{$t('aboutUs.heading')}}</h1>
       <div class="d-flex justify-center mt-10">
         <div class="overview-text">
           <p>
-            {{$t('abouUs.subText1')}}
+            {{$t('aboutUs.subText1')}}
           </p>
           <br />
           <p>
-            {{$t('abouUs.subText2')}}
+            {{$t('aboutUs.subText2')}}
           </p>
         </div>
       </div>
@@ -70,16 +70,26 @@
       </v-col>
     </v-row>
 
-    <v-row id="about-us-values">
+    <div id="about-us-values" class='about-us-our-values'>
       <div class="defaultGolden--text core-values">
         <h1>CORE VALUES</h1>
       </div>
-      <v-img
-        :src="require('assets/images/morality.png')"
-        max-height="auto"
-        max-width="auto"
-      />
-    </v-row>
+      <vueper-slides
+        infinite
+        pauseOnHover
+        autoplay
+        class="no-shadow"
+        :bullets="false"
+        :arrows="false"
+      >
+        <vueper-slide
+          v-for="(slide, i) in values"
+          :key="i"
+          :image="slide.img"
+        >
+        </vueper-slide>
+      </vueper-slides>
+    </div>
     <div id="about-us-management" class="head-of-nikki">
       <h1 class="defaultGolden--text">OUR MANAGEMENT</h1>
       <vueper-slides
@@ -126,6 +136,15 @@ export default {
         { img: require('assets/images/nikki-workers.png') },
         { img: require('assets/images/nikki-tools.png') },
       ],
+      values: [
+        { img: require('assets/images/morality.png') },
+        { img: require('assets/images/humble.png') },
+        { img: require('assets/images/trust.png') },
+        { img: require('assets/images/cooperation.png') },
+        { img: require('assets/images/consistent.png') },
+        { img: require('assets/images/loyalty.png') },
+        { img: require('assets/images/hardwork.png') },
+      ]
     }
   },
   head() {
@@ -185,6 +204,10 @@ export default {
   }
 }
 
+.about-us-our-values{
+  min-height: 759px;
+  width: 100%;
+}
 .head-of-nikki {
   width: 92%;
   margin: 4rem 2.5rem;
