@@ -19,14 +19,10 @@
       </v-carousel>
       <div class="text-overlay defaultGolden--text">
         <div class="overlay-title">
-          <h1>LIFE AT NIKKI SUPER</h1>
+          <h1>{{$t('career.title')}}</h1>
         </div>
         <p class="overlay-subtext">
-          We value every candidate who proactively demonstrates their ability
-          and confidence to enroll in our company. The contribution of each
-          employee is calculated as an asset that contributes to the development
-          and progress of the company. It's time to start the journey to achieve
-          a successful life and career.
+          {{$t('career.subTitle')}}
         </p>
       </div>
     </v-col>
@@ -35,7 +31,7 @@
       <div
         class="d-flex justify-center defaultGolden--text my-5 job-opportunities-title"
       >
-        <h1>JOB OPPORTUNITIES</h1>
+        <h1>{{$t('career.opportunities')}}</h1>
       </div>
       <div class="joblist d-flex flex-wrap">
         <div
@@ -48,7 +44,7 @@
               {{ job.title }}
             </h2>
             <div class="joblist-sub my-3">
-              <h3>location : {{ job.location }}</h3>
+              <h3>{{$t('career.location')}} : {{ job.location }}</h3>
             </div>
           </div>
           <v-btn
@@ -58,7 +54,7 @@
             :href="job.link"
             target="_blank"
           >
-            APPLY
+            {{$t('career.apply')}}
           </v-btn>
         </div>
       </div>
@@ -78,7 +74,7 @@
     </v-col>
     <v-col id="career-learn-grow" cols="12" class="pa-10 review-container">
       <div class="learn-title defaultGolden--text d-flex justify-center mb-10">
-        <h1>LEARN AND GROW WITH US</h1>
+        <h1>{{$t('career.learnNgrow')}}</h1>
       </div>
       <vueper-slides
         class="no-shadow"
@@ -129,24 +125,25 @@ export default {
       reviewsList: [
         {
           review:
-            '“To do a great job the only way is to love what you do, proud to be a part of Nikki Super Kudus.”',
+            this.$t('career.reviewer1.comment'),
           profileImg: require('assets/images/review-pp-2.png'),
           name: 'Sri Pujiatmi',
-          position: 'Analyst Risk & Controls',
+          position: this.$t('career.reviewer1.position'),
+
         },
         {
           review:
-            '“The values of Family, Togetherness, and Solidarity that exist in Nikki Super Kudus are the key to success for all employees and the company.”',
+            this.$t('career.reviewer2.comment'),
           profileImg: require('assets/images/review-pp-1.png'),
           name: 'Hesti Triyanto',
-          position: 'Analyst Risk & Controls',
+          position:  this.$t('career.reviewer2.position'),
         },
         {
           review:
-            '“Growing and Developing with Nikki Super Kudus is an invaluable Blessing and Pride for me and my family.”',
+            this.$t('career.reviewer1.comment'),
           profileImg: require('assets/images/review-pp-3.png'),
           name: 'Pungky Nugroho',
-          position: 'Analyst Risk & Controls',
+          position:  this.$t('career.reviewer3.position'),
         },
       ],
       image: [

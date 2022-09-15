@@ -1,13 +1,13 @@
 <template>
   <v-row justify="center" align="center" class="ma-0 pa-0">
     <h1 id="export-heritage" class="defaultGolden--text export-heading mt-10">
-      {{ $t('home.export.title') }}
+      {{ $t('export.title') }}
     </h1>
     <v-col cols="12" class="export-container ma-0 pa-0">
       <div class="card-content">
-        <h1 class="defaultGray--text">{{ $t('home.export.heritage') }}</h1>
+        <h1 class="defaultGray--text">{{ $t('export.heritage') }}</h1>
         <p class="defaultGray--text">
-          {{ $t('home.export.subHeritage') }}
+          {{ $t('export.subHeritage') }}
         </p>
       </div>
       <div class="triangle">
@@ -46,27 +46,27 @@
         />
       </div>
       <div class="card-content-2">
-        <h1 class="white--text"> {{ $t('home.export.global') }}</h1>
+        <h1 class="white--text"> {{ $t('export.global') }}</h1>
         <p class="white--text">
-          {{ $t('home.export.subGlobal') }}
+          {{ $t('export.subGlobal') }}
         </p>
       </div>
     </v-col>
     <v-col cols="12" class="mt-15 ma-0 pa-0">
       <div id="export-contact" class="contact-us-export defaultGolden--text">
         <div class="contact-us-title">
-          <h1 class=""> {{ $t('home.export.contact.title') }}</h1>
-          <p>{{ $t('home.export.contact.sub') }}</p>
+          <h1 class=""> {{ $t('export.contact.title') }}</h1>
+          <p>{{ $t('export.contact.sub') }}</p>
         </div>
         <div class="contact-details">
           <div class="detail-child-phone">
-            <h2>{{ $t('home.export.contact.phone') }}</h2>
-            <p><a href="tel:+62291445035">{{ $t('home.export.contact.number') }}</a></p>
+            <h2>{{ $t('export.contact.phone') }}</h2>
+            <p><a href="tel:+62291445035">{{ $t('export.contact.number') }}</a></p>
           </div>
           <div class="detail-child-email">
-            <h2>{{ $t('home.export.contact.email') }}</h2>
+            <h2>{{ $t('export.contact.email') }}</h2>
             <p>
-              <a href="mailto: info@nikkisuper.co.id">{{ $t('home.export.contact.emailLink') }}</a>
+              <a href="mailto: info@nikkisuper.co.id">{{ $t('export.contact.emailLink') }}</a>
             </p>
           </div>
         </div>

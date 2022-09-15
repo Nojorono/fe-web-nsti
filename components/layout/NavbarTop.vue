@@ -124,32 +124,6 @@ export default {
   data() {
     return {
       searchInput: '',
-      navList: [
-        {
-          title: 'About Us',
-          href: '/about-us',
-        },
-        {
-          title: '',
-          href: '/export',
-        },
-        {
-          title: '',
-          href: '#products',
-        },
-        {
-          title: '',
-          href: '#media-and-publication',
-        },
-        {
-          title: '',
-          href: '/career',
-        },
-        {
-          title: '',
-          href: '/contact-us',
-        },
-      ],
     }
   },
   methods: {

@@ -1,6 +1,6 @@
 <template>
   <v-col class="product-parent-wrapper ma-0 pa-0 mt-15 mb-15" cols="12">
-    <h1>PRODUCTS</h1>
+    <h1>{{$t('home.products.title')}}</h1>
     <div class="produts-navigation">
       <div class="vue-slider ma-auto pt-10">
         <div class="slider-nav d-lg-flex justify-end mb-5">

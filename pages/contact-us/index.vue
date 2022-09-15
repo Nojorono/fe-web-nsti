@@ -4,27 +4,6 @@
     align="center"
     class="connext-with-us-container defaultGray--text"
   >
-    <!--    <v-col cols="4" class="pl-10">-->
-    <!--      <div class="connect-title">-->
-    <!--        <h1>CONNECT</h1>-->
-    <!--        <h1>WITH US</h1>-->
-    <!--      </div>-->
-    <!--      <div class="sub-wrapper d-flex flex-column justify-space-between pr-15">-->
-    <!--        <div class="connect-sub-office">-->
-    <!--          <h3>OFFICE</h3>-->
-    <!--          <h4>JL. Jendral Sudirman No. 86B, Kudus, Jawa Tengah 59311</h4>-->
-    <!--        </div>-->
-    <!--        <div class="connect-sub-factory">-->
-    <!--          <h3>FACTORY</h3>-->
-    <!--          <h4>JL. Jendral Sudirman No. 86B, Kudus, Jawa Tengah 59311</h4>-->
-    <!--        </div>-->
-    <!--        <div class="connect-sub-email">-->
-    <!--          <h3>Email</h3>-->
-    <!--          <h4>info@nikkisuper.com</h4>-->
-    <!--        </div>-->
-    <!--      </div>-->
-    <!--    </v-col>-->
-
     <div class="container-contact">
       <div class="img-content">
         <v-img
@@ -42,25 +21,25 @@
         </div>
         <div class="text-content">
           <div class="connect-title">
-            <h1>CONNECT</h1>
-            <h1>WITH US</h1>
+            <h1> </h1>
+            <h1>{{$t('contact.title2')}}</h1>
           </div>
           <div
             class="sub-wrapper d-flex flex-column justify-space-between pa-0"
           >
             <div class="connect-sub-office">
-              <h3>ADDRESS</h3>
+              <h3>{{$t('contact.address')}}</h3>
               <h4>
-                Jl. Lingkar Utara KM 4 Bacin, Kec. BAE Kudus, Jawa Tengah 59325
+                {{$t('contact.addressFull')}}
               </h4>
             </div>
             <div class="connect-sub-factory">
-              <h2>PHONE NUMBER</h2>
-              <a href="tel:+62291445035">+62 291 445035</a>
+              <h2>{{$t('contact.phone')}}</h2>
+              <a href="tel:+62291445035">{{$t('contact.phoneFull')}}</a>
             </div>
             <div class="connect-sub-email">
-              <h3>EMAIL</h3>
-              <a href="mailto: info@nikkisuper.co.id">info@nikkisuper.co.id</a>
+              <h3>{{$t('contact.email')}}</h3>
+              <a href="mailto: info@nikkisuper.co.id">{{$t('contact.emailFull')}}</a>
             </div>
           </div>
         </div>
@@ -87,7 +66,6 @@ export default {
   .img-content {
     position: relative;
     top: 0;
-    //right: 0;
     width: 100%;
   }
   .right-content {
@@ -101,7 +79,6 @@ export default {
     position: absolute;
     top: 12rem;
     right: 0;
-    //width: 100%;
   }
 }
 
@@ -130,7 +107,7 @@ export default {
     font-weight: 500;
     font-size: 1.3em;
     text-decoration: none;
-    color: $color-primary-root;
+    color: $color-primary-root !important;
   }
 }
 </style>

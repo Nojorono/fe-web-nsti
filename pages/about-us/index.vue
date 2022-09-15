@@ -28,7 +28,7 @@
       cols="12"
       class="d-flex justify-center flex-column ma-0 py-10 px-16 overview-container"
     >
-      <h1 class="defaultGolden--text overview-title">{{$t('aboutUs.heading')}}</h1>
+      <h1 class="defaultGolden--text overview-title">{{$t('aboutUs.title')}}</h1>
       <div class="d-flex justify-center mt-10">
         <div class="overview-text">
           <p>
@@ -42,11 +42,20 @@
       </div>
     </v-col>
     <v-row id="about-us-milestone" justify="center" align="center">
+      <template v-if="$i18n.locale === 'en'" >
       <img
         :src="require('assets/images/timeline.png')"
         height="100%"
         width="100%"
       />
+      </template>
+      <template v-if="$i18n.locale === 'id'">
+        <img
+          :src="require('assets/images/liniwaktu.png')"
+          height="100%"
+          width="100%"
+        />
+      </template>
     </v-row>
     <v-row
       id="about-us-visi-misi"
@@ -55,24 +64,21 @@
       class="ma-16 pa-0 defaultGolden--text text-center visi-misi"
     >
       <v-col cols="6" class="padding-inner visi">
-        <h1>VISION</h1>
+        <h1>{{$t('aboutUs.vissionTitle')}}</h1>
         <h3 class="fontLight--text">
-          Achieving success that benefits Owners, Management, Employees,
-          Consumers and Business Partners.
+          {{$t('aboutUs.vissionSub')}}
         </h3>
       </v-col>
       <v-col cols="6" class="padding-inner misi">
-        <h1>MISSION</h1>
+        <h1>{{$t('aboutUs.missionTitle')}}</h1>
         <h3 class="fontLight--text">
-          Producing prime product quality in the exclusive cigarette market
-          competition, as well as producing continuous innovation.
+          {{$t('aboutUs.missionSub')}}
         </h3>
       </v-col>
     </v-row>
-
     <div id="about-us-values" class='about-us-our-values'>
       <div class="defaultGolden--text core-values">
-        <h1>CORE VALUES</h1>
+        <h1>{{$t('aboutUs.coreValues')}}</h1>
       </div>
       <vueper-slides
         infinite
@@ -83,7 +89,7 @@
         :arrows="false"
       >
         <vueper-slide
-          v-for="(slide, i) in values"
+          v-for="(slide, i) in $i18n.locale === 'en' ? values : nilaiNilai"
           :key="i"
           :image="slide.img"
         >
@@ -91,7 +97,7 @@
       </vueper-slides>
     </div>
     <div id="about-us-management" class="head-of-nikki">
-      <h1 class="defaultGolden--text">OUR MANAGEMENT</h1>
+      <h1 class="defaultGolden--text">{{$t('aboutUs.coreValues')}}</h1>
       <vueper-slides
         class="no-shadow"
         :visible-slides="2"
@@ -102,7 +108,7 @@
         :bullets="false"
       >
         <vueper-slide
-          v-for="(slide, i) in profilePendiri"
+          v-for="(slide, i) in $i18n.locale === 'en' ? profilePendiri : profilePendiriID"
           :key="i"
           :image="slide.img"
         >
@@ -131,10 +137,15 @@ export default {
         { img: require('assets/images/pendiri-JOHANES ANDRIAN.png') },
         { img: require('assets/images/pendiri-EKO NOVIANTO.png') },
       ],
+      profilePendiriID: [
+        { img: require('assets/images/soffan-id.png') },
+        { img: require('assets/images/johanes-id.png') },
+        { img: require('assets/images/eko-id.png') },
+      ],
       cover: [
-        { img: require('assets/images/nikki-outside-factory.png') },
-        { img: require('assets/images/nikki-workers.png') },
-        { img: require('assets/images/nikki-tools.png') },
+        { img: require('assets/images/about-us-1.png') },
+        { img: require('assets/images/about-us-2.png') },
+        { img: require('assets/images/about-us-3.png') },
       ],
       values: [
         { img: require('assets/images/morality.png') },
@@ -144,7 +155,19 @@ export default {
         { img: require('assets/images/consistent.png') },
         { img: require('assets/images/loyalty.png') },
         { img: require('assets/images/hardwork.png') },
+      ],
+      nilaiNilai: [
+        { img: require('assets/images/moralitas.png') },
+        { img: require('assets/images/rendahhati.png') },
+        { img: require('assets/images/kepercayaan.png') },
+        { img: require('assets/images/kerjasama.png') },
+        { img: require('assets/images/konsisten.png') },
+        { img: require('assets/images/kesetiaan.png') },
+        { img: require('assets/images/kerjakeras.png') },
       ]
+
+
+
     }
   },
   head() {
@@ -152,7 +175,6 @@ export default {
       title: 'About Us',
     }
   },
-  mounted() {},
 }
 </script>
 
