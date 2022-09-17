@@ -116,7 +116,7 @@
         width="800px"
       >
         <div class='modal-card'>
-          <div class="d-flex">
+          <div class="d-flex justify-end">
             <v-icon dark @click="dialog=false">
             mdi-window-close
           </v-icon>

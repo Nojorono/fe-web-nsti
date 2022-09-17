@@ -92,7 +92,7 @@ export default {
   },
 
   media: {
-    // title:
+    title: 'PRODUCTS'
   },
   aboutUs: {
     title: 'OVERVIEW',

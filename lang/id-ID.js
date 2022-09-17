@@ -85,7 +85,7 @@ export default {
   },
 
   media: {
-    // title:
+    title: 'PRODUK'
   },
   aboutUs: {
     title: 'TENTANG KAMI',

@@ -142,11 +142,6 @@ export default {
           font-size: 3em;
         }
       }
-      //h3 {
-      //  font-family: 'Barlow', sans-serif;
-      //  font-weight: 600;
-      //  font-size: 2.3em;
-      //}
     }
   }
 }

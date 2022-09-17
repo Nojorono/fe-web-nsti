@@ -33,6 +33,7 @@ export default {
   plugins: [
     { src: '~/plugins/vue-fragment.js' },
     { src: '~/plugins/vuetify.js' },
+    { src: '~/plugins/carousel3d.js' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
