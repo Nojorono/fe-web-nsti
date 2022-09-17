@@ -4,8 +4,8 @@ require('dotenv').config()
 export default {
   mode: 'spa',
   server: {
-    port: process.env.NUXT_ENV_PORT,
-    host: process.env.NUXT_ENV_HOST,
+    port: 8001,
+    host: process.env.NUXT_ENV_HOST || 'localhost',
   },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,

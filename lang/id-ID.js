@@ -23,7 +23,7 @@ export default {
       learn: 'Belajar & Tumbuh Bersama Kami'
     },
     contact: 'Kontak',
-    search: 'Cari'
+    search: 'cari'
   },
   home: {
     topCarousel: {
@@ -54,7 +54,7 @@ export default {
     },
     lifeAt: {
       title: 'kehidupan di nikki super',
-      subTitle: 'We open opportunities for experienced workers to join us according to their knowledge, abilities, and experience.'
+      subTitle: 'Kami membuka peluang bagi yang berpengalaman untuk bergabung bersama kami berdasarkan pengetahuan, kemampuan dan pengalaman.'
     },
     contact: {
       title: 'TERHUBUNG DENGAN KAMI',

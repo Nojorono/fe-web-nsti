@@ -21,7 +21,7 @@
         </div>
         <div class="text-content">
           <div class="connect-title">
-            <h1> </h1>
+            <h1>{{$t('contact.title1')}} </h1>
             <h1>{{$t('contact.title2')}}</h1>
           </div>
           <div

@@ -51,8 +51,9 @@
             rounded
             x-large
             class="defaultGolden fontDark--text font-weight-bold d-flex"
-            :href="job.link"
-            target="_blank"
+            block
+            @click='dialog= true'
+
           >
             {{$t('career.apply')}}
           </v-btn>
@@ -109,6 +110,34 @@
         </vueper-slide>
       </vueper-slides>
     </v-col>
+    <v-row justify="center">
+      <v-dialog
+        v-model="dialog"
+        width="800px"
+      >
+        <div class='modal-card'>
+          <div class="d-flex">
+            <v-icon dark @click="dialog=false">
+            mdi-window-close
+          </v-icon>
+          </div>
+          <div class='content' v-html="content">
+
+          </div>
+          <div>
+            <v-btn
+              rounded
+              x-large
+              class="defaultGray defaultGolden--text font-weight-bold d-flex"
+              href="mailto: info@nikkisuper.co.id"
+            >
+              {{$t('career.apply')}}
+            </v-btn>
+          </div>
+
+        </div>
+      </v-dialog>
+    </v-row>
   </v-row>
 </template>
 
@@ -121,6 +150,8 @@ export default {
   components: { VueperSlides, VueperSlide },
   data() {
     return {
+      content: '',
+      dialog: false,
       pages: 5,
       reviewsList: [
         {
@@ -216,6 +247,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.modal-card{
+  padding: 1rem;
+  min-height: 90vh;
+  background: $color-news-gray-root;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .content{
+    min-width: 90%;
+  }
+}
 .career-container {
   font-family: 'Barlow', sans-serif;
 }

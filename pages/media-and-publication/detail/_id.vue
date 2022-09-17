@@ -90,8 +90,6 @@ export default {
   },
   mounted() {
     this.fetchMediaDetail(this.$route.params.id)
-    console.log(this.$route, '========')
-
   },
   methods: {
     ...mapActions(['fetchMediaDetail']),

@@ -8,7 +8,7 @@
             rounded
             x-large
             class="defaultGolden fontDark--text font-weight-bold d-flex mr-15"
-            to="/media-and-publication"
+            :to="$i18n.locale === 'id' ? '/id/media-and-publication' : '/en/media-and-publication'"
           >
             {{ $t('home.media.btn') }}
           </v-btn>
@@ -22,7 +22,8 @@
             : mediaCardList.slice(0, 3)"
           :key="i"
           class="media-card ma-10"
-          :to="'/media-and-publication/detail/' + card.id"
+
+          :to="$i18n.locale === 'id' ? '/id/media-and-publication/detail/' + card.id : '/media-and-publication/detail/' + card.id"
 
         >
           <div class="zoom-transition defaultGolden--text cursor-pointer">
