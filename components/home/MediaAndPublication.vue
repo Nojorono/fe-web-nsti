@@ -3,7 +3,7 @@
     <div class="media-wrapper">
       <div class="media-header d-flex justify-space-between align-center">
         <h1 class="defaultGolden--text">{{ $t('home.media.title') }}</h1>
-        <template v-if="$route.fullPath === '/'">
+        <template v-if="$route.fullPath === '/' || $route.fullPath === '/id'">
           <v-btn
             rounded
             x-large

@@ -53,7 +53,7 @@ export default {
       btn:'Jelajahi Media'
     },
     lifeAt: {
-      title: 'kehidupan di nikki super',
+      title: 'KEHIDUPAN DI NIKKI SUPER',
       subTitle: 'Kami membuka peluang bagi yang berpengalaman untuk bergabung bersama kami berdasarkan pengetahuan, kemampuan dan pengalaman.'
     },
     contact: {
@@ -100,7 +100,7 @@ export default {
 
   },
   career: {
-    title: 'kehidupan di NIKKI SUPER',
+    title: 'KEHIDUPAN DI NIKKI SUPER',
     subTitle: 'Kami menghargai setiap kandidat yang secara proaktif menunjukkan kemampuan dan kepercayaan diri mereka untuk mendaftar di perusahaan kami. Kontribusi setiap karyawan diperhitungkan sebagai aset yang memberikan sumbangsih terhadap perkembangan dan kemajuan perusahaan. Saatnya memulai perjalanan untuk mencapai kehidupan dan karier yang sukses.',
     opportunities: 'Lowongan Pekerjaan',
     location: 'Lokasi',

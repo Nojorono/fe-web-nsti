@@ -1,4 +1,7 @@
 {
+  "ProductsCarousel": {
+    "description": "Auto imported from components/ProductsCarousel.vue"
+  },
   "CmsCardCms": {
     "description": "Auto imported from components/cms/CardCms.vue"
   },

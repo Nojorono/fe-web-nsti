@@ -1,19 +1,20 @@
-export const CmsCardCms = () => import('../..\\components\\cms\\CardCms.vue' /* webpackChunkName: "components/cms-card-cms" */).then(c => wrapFunctional(c.default || c))
-export const CmsCareerCard = () => import('../..\\components\\cms\\CareerCard.vue' /* webpackChunkName: "components/cms-career-card" */).then(c => wrapFunctional(c.default || c))
-export const CmsContentCard = () => import('../..\\components\\cms\\ContentCard.vue' /* webpackChunkName: "components/cms-content-card" */).then(c => wrapFunctional(c.default || c))
-export const CmsEmptyCard = () => import('../..\\components\\cms\\EmptyCard.vue' /* webpackChunkName: "components/cms-empty-card" */).then(c => wrapFunctional(c.default || c))
-export const CmsFormAdd = () => import('../..\\components\\cms\\formAdd.vue' /* webpackChunkName: "components/cms-form-add" */).then(c => wrapFunctional(c.default || c))
-export const CmsHeading = () => import('../..\\components\\cms\\Heading.vue' /* webpackChunkName: "components/cms-heading" */).then(c => wrapFunctional(c.default || c))
-export const CmsNavBarCms = () => import('../..\\components\\cms\\NavBarCms.vue' /* webpackChunkName: "components/cms-nav-bar-cms" */).then(c => wrapFunctional(c.default || c))
-export const CmsSideBar = () => import('../..\\components\\cms\\SideBar.vue' /* webpackChunkName: "components/cms-side-bar" */).then(c => wrapFunctional(c.default || c))
-export const HomeCareerAt = () => import('../..\\components\\home\\CareerAt.vue' /* webpackChunkName: "components/home-career-at" */).then(c => wrapFunctional(c.default || c))
-export const HomeContactUs = () => import('../..\\components\\home\\ContactUs.vue' /* webpackChunkName: "components/home-contact-us" */).then(c => wrapFunctional(c.default || c))
-export const HomeMediaAndPublication = () => import('../..\\components\\home\\MediaAndPublication.vue' /* webpackChunkName: "components/home-media-and-publication" */).then(c => wrapFunctional(c.default || c))
-export const HomeMyProducts = () => import('../..\\components\\home\\MyProducts.vue' /* webpackChunkName: "components/home-my-products" */).then(c => wrapFunctional(c.default || c))
-export const HomeOurStory = () => import('../..\\components\\home\\OurStory.vue' /* webpackChunkName: "components/home-our-story" */).then(c => wrapFunctional(c.default || c))
-export const HomeTopCarousel = () => import('../..\\components\\home\\TopCarousel.vue' /* webpackChunkName: "components/home-top-carousel" */).then(c => wrapFunctional(c.default || c))
-export const LayoutFooterBottom = () => import('../..\\components\\layout\\FooterBottom.vue' /* webpackChunkName: "components/layout-footer-bottom" */).then(c => wrapFunctional(c.default || c))
-export const LayoutNavbarTop = () => import('../..\\components\\layout\\NavbarTop.vue' /* webpackChunkName: "components/layout-navbar-top" */).then(c => wrapFunctional(c.default || c))
+export { default as ProductsCarousel } from '../..\\components\\ProductsCarousel.vue'
+export { default as CmsCardCms } from '../..\\components\\cms\\CardCms.vue'
+export { default as CmsCareerCard } from '../..\\components\\cms\\CareerCard.vue'
+export { default as CmsContentCard } from '../..\\components\\cms\\ContentCard.vue'
+export { default as CmsEmptyCard } from '../..\\components\\cms\\EmptyCard.vue'
+export { default as CmsFormAdd } from '../..\\components\\cms\\formAdd.vue'
+export { default as CmsHeading } from '../..\\components\\cms\\Heading.vue'
+export { default as CmsNavBarCms } from '../..\\components\\cms\\NavBarCms.vue'
+export { default as CmsSideBar } from '../..\\components\\cms\\SideBar.vue'
+export { default as HomeCareerAt } from '../..\\components\\home\\CareerAt.vue'
+export { default as HomeContactUs } from '../..\\components\\home\\ContactUs.vue'
+export { default as HomeMediaAndPublication } from '../..\\components\\home\\MediaAndPublication.vue'
+export { default as HomeMyProducts } from '../..\\components\\home\\MyProducts.vue'
+export { default as HomeOurStory } from '../..\\components\\home\\OurStory.vue'
+export { default as HomeTopCarousel } from '../..\\components\\home\\TopCarousel.vue'
+export { default as LayoutFooterBottom } from '../..\\components\\layout\\FooterBottom.vue'
+export { default as LayoutNavbarTop } from '../..\\components\\layout\\NavbarTop.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
