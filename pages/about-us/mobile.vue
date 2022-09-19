@@ -43,11 +43,11 @@
     </v-col>
     <v-row id="about-us-milestone" justify="center" align="center">
       <template v-if="$i18n.locale === 'en'" >
-      <img
-        :src="require('assets/images/timeline.png')"
-        height="100%"
-        width="100%"
-      />
+        <img
+          :src="require('assets/images/timeline.png')"
+          height="100%"
+          width="100%"
+        />
       </template>
       <template v-if="$i18n.locale === 'id'">
         <img
@@ -122,6 +122,7 @@
 import { VueperSlides, VueperSlide } from 'vueperslides'
 export default {
   name: 'AboutUs',
+  layout: 'mobileLayout',
   components: { VueperSlides, VueperSlide },
   data() {
     return {
@@ -169,9 +170,6 @@ export default {
       title: 'About Us',
     }
   },
-  mounted() {
-    // console.log(this.$store.state.mobile.device)
-  }
 }
 </script>
 
@@ -230,7 +228,6 @@ export default {
 .head-of-nikki {
   width: 92%;
   margin: 4rem 2.5rem;
-  //height: 600px;
   h1 {
     font-weight: 700;
     font-size: 5em;

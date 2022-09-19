@@ -23,6 +23,8 @@ import { mapActions, mapGetters } from 'vuex'
 import EmptyCard from '@/components/cms/EmptyCard'
 import CareerCard from '@/components/cms/CareerCard.vue'
 export default {
+  layout: 'cmsLayout',
+
   name: 'CmsCareer',
   components: { CareerCard, EmptyCard },
   data() {

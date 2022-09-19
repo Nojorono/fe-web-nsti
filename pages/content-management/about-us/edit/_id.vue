@@ -16,6 +16,8 @@ import CmsHeading from '@/components/cms/Heading'
 import FormAdd from '@/components/cms/formAdd'
 export default {
   name: 'EditAboutUs',
+  layout: 'cmsLayout',
+
   components: {
     FormAdd,
     CmsHeading,

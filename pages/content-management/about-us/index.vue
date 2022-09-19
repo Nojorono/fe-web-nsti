@@ -23,6 +23,8 @@ import EmptyCard from '@/components/cms/EmptyCard'
 import CardListCms from '@/components/cms/CardCms'
 export default {
   // middleware: 'authentication',
+
+  layout: 'cmsLayout',
   name: 'CmsAboutUs',
   components: { CardListCms, EmptyCard },
   data() {

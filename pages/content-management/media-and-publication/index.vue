@@ -26,6 +26,8 @@ import CardListCms from '@/components/cms/CardCms'
 export default {
   // middleware: 'authentication',
   name: 'CmsMediaAndPublication',
+  layout: 'cmsLayout',
+
   components: { CardListCms, EmptyCard },
   data() {
     return {

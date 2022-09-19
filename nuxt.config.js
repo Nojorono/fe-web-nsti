@@ -34,6 +34,7 @@ export default {
     { src: '~/plugins/vue-fragment.js' },
     { src: '~/plugins/vuetify.js' },
     { src: '~/plugins/carousel3d.js' },
+    { src: '~/plugins/device.js' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -72,6 +73,18 @@ export default {
   router: {
     // Run the middleware/initMiddleware.js on every page
     // middleware: 'authentication',
+    router: {
+      // extendRoutes(routes, resolve) {
+      //   return [
+      //     {
+      //       name: 'about-us-mobile',
+      //       path: '/about-us', // <--- change this
+      //       component: resolve(__dirname, 'pages/about-us/mobile.vue'),
+      //       chunkName: 'pages/about/index'
+      //     },
+      //   ]
+      // }
+    }
   },
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {

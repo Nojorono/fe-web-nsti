@@ -1,27 +1,28 @@
 <template>
   <v-app dark>
-    <NavBarTop />
+<!--    <NavBarTop />-->
     <v-main>
       <v-container fluid class="max-width">
         <Nuxt class="non-cms-nuxt" />
       </v-container>
     </v-main>
     <v-footer class="ma-0 pa-0" absolute app>
-      <FooterBottom />
+<!--      <FooterBottom />-->
     </v-footer>
   </v-app>
 </template>
 
 <script>
-import FooterBottom from '@/components/layout/FooterBottom.vue'
-import NavBarTop from '@/components/layout/NavbarTop'
+// import FooterBottom from '@/components/layout/FooterBottom.vue'
+// import NavBarTop from '@/components/layout/NavbarTop'
 
 export default {
-  name: 'DefaultLayout',
+  name: 'MobileLayout',
   components: {
-    FooterBottom,
-    NavBarTop,
+    // FooterBottom,
+    // NavBarTop,
   },
+
 }
 </script>
 

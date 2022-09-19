@@ -35,6 +35,8 @@ import { mapActions } from 'vuex'
 import CmsHeading from '@/components/cms/Heading'
 export default {
   name: 'AddNewCareer',
+  layout: 'cmsLayout',
+
   components: {
     CmsHeading,
   },

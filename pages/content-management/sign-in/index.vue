@@ -15,7 +15,7 @@
     <div class="sign-in d-flex flex-column sign-in-width">
       <h1 class="fontDark--text">Sign In</h1>
       <div class="email my-2">
-        <label class="ml-1 font-weight-medium" for="lname">Email</label>
+        <label class="ml-1 font-weight-medium fontDark--text" for="lname">Email</label>
         <input
           id="email"
           v-model="email"
@@ -26,7 +26,7 @@
       </div>
       <div class="my-2">
         <div class="password">
-          <label class="ml-1 font-weight-medium" for="password">Password</label>
+          <label class="ml-1 font-weight-medium fontDark--text" for="password">Password</label>
           <input
             id="password"
             v-model="password"
@@ -58,6 +58,8 @@ import { mapActions } from 'vuex'
 
 export default {
   name: 'CmsSignIn',
+  layout: 'cmsNotLoggedIn',
+
   data() {
     return {
       email: '',
@@ -67,20 +69,23 @@ export default {
   methods: {
     ...mapActions(['login']),
     clickLogin() {
-      const payload = {
-        email: this.email,
-        password: this.password,
-      }
-      this.login(payload)
-        .then((_) => {
-          console.log('masuk then')
-          this.$router.push({
-            path: '/content-management/products',
-          })
-        })
-        .catch((e) => {
-          alert('gagal')
-        })
+      this.$router.push({
+        path: '/content-management/products',
+      })
+      // const payload = {
+      //   email: this.email,
+      //   password: this.password,
+      // }
+      // this.login(payload)
+      //   .then((_) => {
+      //     console.log('masuk then')
+      //     this.$router.push({
+      //       path: '/content-management/products',
+      //     })
+      //   })
+      //   .catch((e) => {
+      //     alert('gagal')
+      //   })
     },
   },
   head() {

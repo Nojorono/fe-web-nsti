@@ -56,6 +56,13 @@
     "_name": "_b7f0509e"
   },
   {
+    "name": "about-us-mobile___en",
+    "path": "/about-us/mobile",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\about-us\\\\mobile.vue",
+    "chunkName": "pages/about-us/mobile",
+    "_name": "_2ec9aa4d"
+  },
+  {
     "name": "content-management-about-us___en",
     "path": "/content-management/about-us",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\about-us\\\\index.vue",
@@ -173,6 +180,13 @@
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\products\\\\add-new\\\\index.vue",
     "chunkName": "pages/content-management/products/add-new/index",
     "_name": "_7162d966"
+  },
+  {
+    "name": "about-us-mobile___id",
+    "path": "/id/about-us/mobile",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\about-us\\\\mobile.vue",
+    "chunkName": "pages/about-us/mobile",
+    "_name": "_2ec9aa4d"
   },
   {
     "name": "content-management-about-us___id",
