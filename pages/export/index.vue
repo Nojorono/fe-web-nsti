@@ -46,7 +46,7 @@
         />
       </div>
       <div class="card-content-2">
-        <h1 class="white--text"> {{ $t('export.global') }}</h1>
+        <h1 class="white--text">{{ $t('export.global') }}</h1>
         <p class="white--text">
           {{ $t('export.subGlobal') }}
         </p>
@@ -55,18 +55,22 @@
     <v-col cols="12" class="mt-15 ma-0 pa-0">
       <div id="export-contact" class="contact-us-export defaultGolden--text">
         <div class="contact-us-title">
-          <h1 class=""> {{ $t('export.contact.title') }}</h1>
+          <h1 class="">{{ $t('export.contact.title') }}</h1>
           <p>{{ $t('export.contact.sub') }}</p>
         </div>
         <div class="contact-details">
           <div class="detail-child-phone">
             <h2>{{ $t('export.contact.phone') }}</h2>
-            <p><a href="tel:+62291445035">{{ $t('export.contact.number') }}</a></p>
+            <p>
+              <a href="tel:+62291445035">{{ $t('export.contact.number') }}</a>
+            </p>
           </div>
           <div class="detail-child-email">
             <h2>{{ $t('export.contact.email') }}</h2>
             <p>
-              <a href="mailto: info@nikkisuper.co.id">{{ $t('export.contact.emailLink') }}</a>
+              <a href="mailto: info@nikkisuper.co.id">{{
+                $t('export.contact.emailLink')
+              }}</a>
             </p>
           </div>
         </div>
@@ -108,7 +112,7 @@ export default {
     position: absolute;
     left: 0;
     z-index: 3;
-    width: 40%;
+    width: 45%;
     height: 100%;
     padding: 9rem 5rem;
     h1 {

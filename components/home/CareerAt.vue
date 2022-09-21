@@ -2,13 +2,16 @@
   <v-col col="12" class="my-15 mx-0 pa-0">
     <div class="background-fill">
       <div class="our-company-container">
-        <v-img
-          :src="require('assets/images/History-nikki.png')"
-          max-width="100%"
-          max-height="100%"
-          alt="nikki history"
-          class="smelling-coffee"
-        />
+        <div class="life-at-img">
+          <img
+            :src="require('assets/images/History-nikki.png')"
+            width="100%"
+            height="100%"
+            alt="nikki history"
+            class=""
+          />
+        </div>
+
         <div class="wrapper">
           <div class="text-container">
             <h1>{{ $t('home.lifeAt.title') }}</h1>
@@ -36,19 +39,26 @@ export default {
   height: 804px;
   width: 1916px;
   .our-company-container {
+    width: 100vw;
+    .life-at-img {
+      height: 800px;
+      width: 100%;
+      img {
+        object-fit: cover;
+      }
+    }
     .wrapper {
       position: absolute;
       top: 0;
-      right: -10rem;
       width: 100%;
       height: 100%;
       background: url('assets/images/our-story-transparent.svg') no-repeat
         no-repeat right top;
-      padding-bottom: 5rem;
+      //padding-bottom: 5rem;
 
       .text-container {
         position: absolute;
-        right: 30rem;
+        left: 62vw;
         top: 10rem;
         font-family: 'Barlow', sans-serif;
         width: 23.5rem;

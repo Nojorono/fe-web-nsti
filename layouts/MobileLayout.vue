@@ -1,13 +1,13 @@
 <template>
   <v-app dark>
-<!--    <NavBarTop />-->
+    <!--    <NavBarTop />-->
     <v-main>
       <v-container fluid class="max-width">
         <Nuxt class="non-cms-nuxt" />
       </v-container>
     </v-main>
     <v-footer class="ma-0 pa-0" absolute app>
-<!--      <FooterBottom />-->
+      <!--      <FooterBottom />-->
     </v-footer>
   </v-app>
 </template>
@@ -22,7 +22,6 @@ export default {
     // FooterBottom,
     // NavBarTop,
   },
-
 }
 </script>
 

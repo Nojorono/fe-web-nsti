@@ -25,9 +25,9 @@ import EmptyCard from '@/components/cms/EmptyCard'
 import CardListCms from '@/components/cms/CardCms'
 export default {
   name: 'CmsAboutUs',
-  layout: 'cmsLayout',
 
   components: { CardListCms, EmptyCard },
+  layout: 'cmsLayout',
   data() {
     return {
       ProductsList: [

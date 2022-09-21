@@ -26,7 +26,7 @@ export default {
   components: { card },
   data() {
     return {
-      pages: 5,
+      pages: 1,
     }
   },
   head() {

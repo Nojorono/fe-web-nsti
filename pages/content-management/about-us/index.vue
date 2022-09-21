@@ -22,11 +22,11 @@
 import EmptyCard from '@/components/cms/EmptyCard'
 import CardListCms from '@/components/cms/CardCms'
 export default {
+  name: 'CmsAboutUs',
+  components: { CardListCms, EmptyCard },
   // middleware: 'authentication',
 
   layout: 'cmsLayout',
-  name: 'CmsAboutUs',
-  components: { CardListCms, EmptyCard },
   data() {
     return {
       aboutUsList: [],

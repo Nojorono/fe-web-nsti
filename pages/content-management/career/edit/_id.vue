@@ -35,11 +35,11 @@ import { mapActions, mapGetters } from 'vuex'
 import CmsHeading from '@/components/cms/Heading'
 export default {
   name: 'EditCareer',
-  layout: 'cmsLayout',
 
   components: {
     CmsHeading,
   },
+  layout: 'cmsLayout',
   props: {},
   data() {
     return {

@@ -16,21 +16,29 @@
       <h1 class="fontDark--text">Create Account</h1>
       <div class="d-flex justify-end mt -5 mb-2">
         <div class="fName mr-2 half-input-width">
-          <label class="ml-1 font-weight-medium fontDark--text" for="fName">First Name</label>
+          <label class="ml-1 font-weight-medium fontDark--text" for="fName"
+            >First Name</label
+          >
           <input id="fName" v-model="fName" type="text" class="input-text" />
         </div>
         <div class="lName ml-2 half-input-width">
-          <label class="ml-1 font-weight-medium fontDark--text" for="lname">Last Name</label>
+          <label class="ml-1 font-weight-medium fontDark--text" for="lname"
+            >Last Name</label
+          >
           <input id="lname" v-model="lName" type="text" class="input-text" />
         </div>
       </div>
       <div class="email my-2">
-        <label class="ml-1 font-weight-medium fontDark--text" for="email">Email</label>
+        <label class="ml-1 font-weight-medium fontDark--text" for="email"
+          >Email</label
+        >
         <input id="email" v-model="email" type="email" class="input-text" />
       </div>
       <div class="d-flex my-2">
         <div class="password mr-2 half-input-width">
-          <label class="ml-1 font-weight-medium fontDark--text" for="password">Password</label>
+          <label class="ml-1 font-weight-medium fontDark--text" for="password"
+            >Password</label
+          >
           <input
             id="password"
             v-model="password"
@@ -40,7 +48,10 @@
           />
         </div>
         <div class="confirm-password ml-2 half-input-width">
-          <label class="ml-1 font-weight-medium fontDark--text" for="confirm-password">
+          <label
+            class="ml-1 font-weight-medium fontDark--text"
+            for="confirm-password"
+          >
             Confirm Password
           </label>
           <input id="confirm-password" type="password" class="input-text" />
@@ -105,7 +116,6 @@
 export default {
   name: 'CmsSignUp',
   layout: 'cmsNotLoggedIn',
-
 
   data() {
     return {

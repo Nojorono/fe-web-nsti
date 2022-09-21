@@ -1,13 +1,13 @@
 <template>
-<!--  v-if="isCms && isSingInUp" -->
-<!--  <v-app >-->
-<!--    <v-main>-->
-<!--      <v-container fluid class="max-width ma-0 pa-0">-->
-<!--        <Nuxt />-->
-<!--      </v-container>-->
-<!--    </v-main>-->
-<!--  </v-app>-->
-<!--  v-else -->
+  <!--  v-if="isCms && isSingInUp" -->
+  <!--  <v-app >-->
+  <!--    <v-main>-->
+  <!--      <v-container fluid class="max-width ma-0 pa-0">-->
+  <!--        <Nuxt />-->
+  <!--      </v-container>-->
+  <!--    </v-main>-->
+  <!--  </v-app>-->
+  <!--  v-else -->
   <v-app light>
     <NavBarCms />
     <div class="d-flex">
@@ -26,7 +26,7 @@ import NavBarCms from '@/components/cms/NavBarCms.vue'
 import SideBar from '@/components/cms/SideBar.vue'
 
 export default {
-  name: 'cmsLayout',
+  name: 'CmsLayout',
   components: {
     NavBarCms,
     SideBar,

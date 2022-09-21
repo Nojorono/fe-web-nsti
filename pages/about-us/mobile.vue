@@ -28,21 +28,23 @@
       cols="12"
       class="d-flex justify-center flex-column ma-0 py-10 px-16 overview-container"
     >
-      <h1 class="defaultGolden--text overview-title">{{$t('aboutUs.title')}}</h1>
+      <h1 class="defaultGolden--text overview-title">
+        {{ $t('aboutUs.title') }}
+      </h1>
       <div class="d-flex justify-center mt-10">
         <div class="overview-text">
           <p>
-            {{$t('aboutUs.subText1')}}
+            {{ $t('aboutUs.subText1') }}
           </p>
           <br />
           <p>
-            {{$t('aboutUs.subText2')}}
+            {{ $t('aboutUs.subText2') }}
           </p>
         </div>
       </div>
     </v-col>
     <v-row id="about-us-milestone" justify="center" align="center">
-      <template v-if="$i18n.locale === 'en'" >
+      <template v-if="$i18n.locale === 'en'">
         <img
           :src="require('assets/images/timeline.png')"
           height="100%"
@@ -64,25 +66,25 @@
       class="ma-16 pa-0 defaultGolden--text text-center visi-misi"
     >
       <v-col cols="6" class="padding-inner visi">
-        <h1>{{$t('aboutUs.vissionTitle')}}</h1>
+        <h1>{{ $t('aboutUs.vissionTitle') }}</h1>
         <h3 class="fontLight--text">
-          {{$t('aboutUs.vissionSub')}}
+          {{ $t('aboutUs.vissionSub') }}
         </h3>
       </v-col>
       <v-col cols="6" class="padding-inner misi">
-        <h1>{{$t('aboutUs.missionTitle')}}</h1>
+        <h1>{{ $t('aboutUs.missionTitle') }}</h1>
         <h3 class="fontLight--text">
-          {{$t('aboutUs.missionSub')}}
+          {{ $t('aboutUs.missionSub') }}
         </h3>
       </v-col>
     </v-row>
-    <div id="about-us-values" class='about-us-our-values'>
+    <div id="about-us-values" class="about-us-our-values">
       <div class="defaultGolden--text core-values">
-        <h1>{{$t('aboutUs.coreValues')}}</h1>
+        <h1>{{ $t('aboutUs.coreValues') }}</h1>
       </div>
       <vueper-slides
         infinite
-        pauseOnHover
+        pause-on-hover
         autoplay
         class="no-shadow"
         :bullets="false"
@@ -97,7 +99,7 @@
       </vueper-slides>
     </div>
     <div id="about-us-management" class="head-of-nikki">
-      <h1 class="defaultGolden--text">{{$t('aboutUs.management')}}</h1>
+      <h1 class="defaultGolden--text">{{ $t('aboutUs.management') }}</h1>
       <vueper-slides
         class="no-shadow"
         :visible-slides="2"
@@ -108,7 +110,9 @@
         :bullets="false"
       >
         <vueper-slide
-          v-for="(slide, i) in $i18n.locale === 'en' ? profilePendiri : profilePendiriID"
+          v-for="(slide, i) in $i18n.locale === 'en'
+            ? profilePendiri
+            : profilePendiriID"
           :key="i"
           :image="slide.img"
         >
@@ -122,8 +126,8 @@
 import { VueperSlides, VueperSlide } from 'vueperslides'
 export default {
   name: 'AboutUs',
-  layout: 'mobileLayout',
   components: { VueperSlides, VueperSlide },
+  layout: 'mobileLayout',
   data() {
     return {
       content: [],
@@ -159,10 +163,7 @@ export default {
         { img: require('assets/images/konsisten.png') },
         { img: require('assets/images/kesetiaan.png') },
         { img: require('assets/images/kerjakeras.png') },
-      ]
-
-
-
+      ],
     }
   },
   head() {
@@ -221,7 +222,7 @@ export default {
   }
 }
 
-.about-us-our-values{
+.about-us-our-values {
   min-height: 759px;
   width: 100%;
 }

@@ -1,7 +1,7 @@
 <template>
   <v-col cols="12" class="pa-0 ma-0">
     <div class="our-story-container">
-      <div class='smelling-coffee'>
+      <div class="smelling-coffee">
         <img
           lazy
           :src="require('assets/images/smelling-coffee.png')"
@@ -14,10 +14,10 @@
 
       <div class="wrapper">
         <div class="text-container">
-          <h1>{{$t('home.ourStory.title')}}</h1>
+          <h1>{{ $t('home.ourStory.title') }}</h1>
           <br />
           <h3>
-            {{$t('home.ourStory.text')}}
+            {{ $t('home.ourStory.text') }}
           </h3>
         </div>
       </div>
@@ -42,7 +42,7 @@ export default {
   .smelling-coffee {
     height: 900px;
     width: 100%;
-    img{
+    img {
       object-fit: cover;
     }
   }

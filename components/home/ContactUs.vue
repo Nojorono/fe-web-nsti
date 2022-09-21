@@ -11,13 +11,17 @@
             </p>
           </div>
           <div class="detail-child-phone">
-            <h2> {{ $t('home.contact.no') }}</h2>
-            <p><a href="tel:+62291445035">{{ $t('home.contact.noDigit') }}</a></p>
+            <h2>{{ $t('home.contact.no') }}</h2>
+            <p>
+              <a href="tel:+62291445035">{{ $t('home.contact.noDigit') }}</a>
+            </p>
           </div>
           <div class="detail-child-email">
             <h2>{{ $t('home.contact.email') }}</h2>
             <p>
-              <a href="mailto: info@nikkisuper.co.id">{{ $t('home.contact.emailLengkap') }}</a>
+              <a href="mailto: info@nikkisuper.co.id">{{
+                $t('home.contact.emailLengkap')
+              }}</a>
             </p>
           </div>
         </div>

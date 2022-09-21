@@ -1,21 +1,18 @@
 <template>
-    <v-app light>
-      <v-main>
-        <v-container fluid class="max-width ma-0 pa-0">
-          <Nuxt />
-        </v-container>
-      </v-main>
-    </v-app>
+  <v-app light>
+    <v-main>
+      <v-container fluid class="max-width ma-0 pa-0">
+        <Nuxt />
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-
 export default {
-  components: {
-  },
+  components: {},
   data() {
-    return {
-    }
+    return {}
   },
 }
 </script>

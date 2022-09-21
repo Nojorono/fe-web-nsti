@@ -12,6 +12,17 @@ const createStore = () => {
       cms,
       mobile,
     },
+    actions: {
+      async nuxtServerInit(
+        { state, commit, dispatch },
+        { req, redirect, query, route, isMobile }
+      ) {
+         if(isMobile) {
+           await commit('mobile/setDevice', 'mwebsite')
+           console.log(isMobile, '=================')
+         }
+      },
+    },
   })
 }
 

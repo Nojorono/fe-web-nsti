@@ -8,7 +8,7 @@
     height="766"
     class="carousel-parent ma-0 pa-0"
   >
-    <v-carousel-item v-for="(img, i) in image" :key="i" >
+    <v-carousel-item v-for="(img, i) in image" :key="i">
       <v-sheet color="defaultGray" height="100%" tile>
         <v-row class="fill-height" align="center" justify="center">
           <v-img :src="img.img" max-height="100%" />
@@ -17,9 +17,9 @@
     </v-carousel-item>
     <v-row class="text-overlay mt-10">
       <v-col cols="6" sm="1" md="1" lg="6" class="about-us defaultGolden--text">
-        <div class="about-us-container" >
+        <div class="about-us-container">
           <div class="about-us-container">
-            <h2>{{image[currentIndex].text}}</h2>
+            <h2>{{ image[currentIndex].text }}</h2>
             <br />
             <v-btn
               rounded
@@ -27,7 +27,7 @@
               class="defaultGolden fontDark--text font-weight-bold"
               :to="image[currentIndex].to"
             >
-              {{image[currentIndex].btnText}}
+              {{ image[currentIndex].btnText }}
             </v-btn>
           </div>
         </div>
@@ -52,26 +52,24 @@ export default {
           img: require('assets/images/carousel-home-1.png'),
           text: this.$t('home.topCarousel.one.text'),
           btnText: this.$t('home.topCarousel.one.btn'),
-          to: this.$i18n.locale === 'id' ? '/id/about-us' : '/about-us'
+          to: this.$i18n.locale === 'id' ? '/id/about-us' : '/about-us',
         },
         {
           img: require('assets/images/carousel-home-2.png'),
           text: this.$t('home.topCarousel.two.text'),
-          btnText:  this.$t('home.topCarousel.two.btn'),
-          to:  this.$i18n.locale === 'id' ? '/id/products' : '/products'
+          btnText: this.$t('home.topCarousel.two.btn'),
+          to: this.$i18n.locale === 'id' ? '/id/products' : '/products',
         },
         {
           img: require('assets/images/carousel-home-3.png'),
           text: this.$t('home.topCarousel.three.text'),
           btnText: this.$t('home.topCarousel.three.btn'),
-          to:  this.$i18n.locale === 'id' ? '/id/career' : '/career'
+          to: this.$i18n.locale === 'id' ? '/id/career' : '/career',
         },
       ],
     }
   },
-  methods: {
-
-  },
+  methods: {},
 }
 </script>
 

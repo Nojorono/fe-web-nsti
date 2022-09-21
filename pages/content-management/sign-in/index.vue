@@ -15,7 +15,9 @@
     <div class="sign-in d-flex flex-column sign-in-width">
       <h1 class="fontDark--text">Sign In</h1>
       <div class="email my-2">
-        <label class="ml-1 font-weight-medium fontDark--text" for="lname">Email</label>
+        <label class="ml-1 font-weight-medium fontDark--text" for="lname"
+          >Email</label
+        >
         <input
           id="email"
           v-model="email"
@@ -26,7 +28,9 @@
       </div>
       <div class="my-2">
         <div class="password">
-          <label class="ml-1 font-weight-medium fontDark--text" for="password">Password</label>
+          <label class="ml-1 font-weight-medium fontDark--text" for="password"
+            >Password</label
+          >
           <input
             id="password"
             v-model="password"

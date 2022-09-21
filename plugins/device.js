@@ -7,7 +7,7 @@
 //   const isTablet = md.tablet() !== null || md.mobile() === 'UnknownTablet'
 //   const isDesktop = !isMobile && !isTablet
 //
-//   store.commit('setDevice', {
+//   store.commit('mobile/setDevice', {
 //     isMobile,
 //     isTablet,
 //     isDesktop,

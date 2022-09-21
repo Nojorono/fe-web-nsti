@@ -18,12 +18,12 @@ import CmsHeading from '@/components/cms/Heading'
 import FormAdd from '@/components/cms/formAdd'
 export default {
   name: 'AddNewMediaAndPublication',
-  layout: 'cmsLayout',
 
   components: {
     FormAdd,
     CmsHeading,
   },
+  layout: 'cmsLayout',
   props: {},
   data() {
     return {

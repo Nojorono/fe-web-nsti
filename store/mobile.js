@@ -1,11 +1,10 @@
-
 export default {
   state: {
-    device: {}
+    device: {},
   },
   mutations: {
-    setDevice(state, value){
+    setDevice(state, value) {
       state.device = value
-    }
-  }
+    },
+  },
 }

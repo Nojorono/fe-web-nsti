@@ -19,10 +19,10 @@
       </v-carousel>
       <div class="text-overlay defaultGolden--text">
         <div class="overlay-title">
-          <h1>{{$t('career.title')}}</h1>
+          <h1>{{ $t('career.title') }}</h1>
         </div>
         <p class="overlay-subtext">
-          {{$t('career.subTitle')}}
+          {{ $t('career.subTitle') }}
         </p>
       </div>
     </v-col>
@@ -31,7 +31,7 @@
       <div
         class="d-flex justify-center defaultGolden--text my-5 job-opportunities-title"
       >
-        <h1>{{$t('career.opportunities')}}</h1>
+        <h1>{{ $t('career.opportunities') }}</h1>
       </div>
       <div class="joblist d-flex flex-wrap">
         <div
@@ -44,7 +44,7 @@
               {{ job.title }}
             </h2>
             <div class="joblist-sub my-3">
-              <h3>{{$t('career.location')}} : {{ job.location }}</h3>
+              <h3>{{ $t('career.location') }} : {{ job.location }}</h3>
             </div>
           </div>
           <v-btn
@@ -52,10 +52,9 @@
             x-large
             class="defaultGolden fontDark--text font-weight-bold d-flex"
             block
-            @click='dialog= true'
-
+            @click="onClickApply(job.htmlContent)"
           >
-            {{$t('career.apply')}}
+            {{ $t('career.apply') }}
           </v-btn>
         </div>
       </div>
@@ -63,11 +62,13 @@
         <img
           src="~/assets/images/paginate-left.svg"
           alt="button previous pagination"
+          class="cursor-pointer"
         />
         <div v-for="i in pages" :key="i" class="number cursor-pointer">
           {{ i }}
         </div>
         <img
+          class="cursor-pointer"
           src="~/assets/images/paginate-right.svg"
           alt="button next pagination"
         />
@@ -75,7 +76,7 @@
     </v-col>
     <v-col id="career-learn-grow" cols="12" class="pa-10 review-container">
       <div class="learn-title defaultGolden--text d-flex justify-center mb-10">
-        <h1>{{$t('career.learnNgrow')}}</h1>
+        <h1>{{ $t('career.learnNgrow') }}</h1>
       </div>
       <vueper-slides
         class="no-shadow"
@@ -109,21 +110,16 @@
           </template>
         </vueper-slide>
       </vueper-slides>
+      <div></div>
     </v-col>
+    <!--    dialog-->
     <v-row justify="center">
-      <v-dialog
-        v-model="dialog"
-        width="800px"
-      >
-        <div class='modal-card'>
+      <v-dialog v-model="dialog" width="800px ">
+        <div class="modal-card">
           <div class="d-flex justify-end">
-            <v-icon dark @click="dialog=false">
-            mdi-window-close
-          </v-icon>
+            <v-icon dark @click="dialog = false"> mdi-window-close </v-icon>
           </div>
-          <div class='content' v-html="content">
-
-          </div>
+          <div class="content" v-html="content"></div>
           <div>
             <v-btn
               rounded
@@ -131,10 +127,9 @@
               class="defaultGray defaultGolden--text font-weight-bold d-flex"
               href="mailto: info@nikkisuper.co.id"
             >
-              {{$t('career.apply')}}
+              {{ $t('career.apply') }}
             </v-btn>
           </div>
-
         </div>
       </v-dialog>
     </v-row>
@@ -152,29 +147,25 @@ export default {
     return {
       content: '',
       dialog: false,
-      pages: 5,
+      pages: 1,
       reviewsList: [
         {
-          review:
-            this.$t('career.reviewer1.comment'),
+          review: this.$t('career.reviewer1.comment'),
           profileImg: require('assets/images/review-pp-2.png'),
           name: 'Sri Pujiatmi',
           position: this.$t('career.reviewer1.position'),
-
         },
         {
-          review:
-            this.$t('career.reviewer2.comment'),
+          review: this.$t('career.reviewer2.comment'),
           profileImg: require('assets/images/review-pp-1.png'),
           name: 'Hesti Triyanto',
-          position:  this.$t('career.reviewer2.position'),
+          position: this.$t('career.reviewer2.position'),
         },
         {
-          review:
-            this.$t('career.reviewer1.comment'),
+          review: this.$t('career.reviewer3.comment'),
           profileImg: require('assets/images/review-pp-3.png'),
           name: 'Pungky Nugroho',
-          position:  this.$t('career.reviewer3.position'),
+          position: this.$t('career.reviewer3.position'),
         },
       ],
       image: [
@@ -190,40 +181,110 @@ export default {
       ],
       jobList: [
         {
-          title: 'Manager IT Solution Architect',
-          level: 'Fresh Graduate',
-          location: 'Jakarta, Indonesia',
-          link: 'https://www.linkedin.com',
+          title: 'Production Staff',
+          location: 'Kudus, Indonesia',
+          htmlContent: `<h1>Job Description:</h1>
+            <p> Supervisor & person in charge of SKM/SKT and BLENDING production units</p>
+            <ul>
+              <li>Manage the production work system of SKM/SKT and BLENDING units.</li>
+              <li>Ensure production activities are carried out according to SOPs and run smoothly.</li>
+              <li>Ensure the quality of production according to the standards that have been set.</li>
+              <li>Perform routine control and evaluation of the results of production work.</li>
+              <li>Ensure that there are no work accidents in all work areas of factories, warehouses, and offices, and ensure that work processes are carried out properly to prevent work accidents.</li>
+              <li>Fostering employees and developing the quality of human resources.</li>
+              <li>Execute the 5R or 5S program according to the agreed rules.</li>
+              <li>Ensure good communication with the production team, QC, Engineering, and PPIC.</li>
+              <li>Make production performance reports.</li>
+            </ul>
+            <br>
+            <h3>Requirements:</h3>
+            <ul>
+              <li>\tIndonesian Citizen (WNI)</li>
+              <li>\tMale / Female physically and mentally healthy, maximum age 30 years old</li>
+              <li>\tMinimum education Strata 1 ( S1 )</li>
+              <li>Preference will be given to those with work experience</li>
+              <li>\tCan work in a team and individually</li>
+              <li>Profile photo 4x6 ( 2 sheets )</li>
+              <li>\tPhotcopy of ID Card and Family Card</li>
+              <li>Photocopy of the latest Diploma Certificate</li>
+              <li>Curriculum Vitae </li>
+              <li> Certificate of Good Behavior (SKCK) from the local Police</li>
+            </ul>
+            <br>
+            <h3>Notes:</h3>
+            <ul>
+              <li>\tDeadline for application is December 20, 2022.</li>
+              <li>Please include a telephone number that can be contacted.</li>
+            </ul>`,
         },
         {
-          title: 'Manager IT Solution Architect',
-          level: 'Fresh Graduate',
+          title: 'Machine Technician',
           location: 'Jakarta, Indonesia',
-          link: 'https://www.linkedin.com',
+          htmlContent: `<h1>Job Description:</h1>
+            <ul>
+              <li>Responsible for the SKM Making/Packing machine at PT Nikki Super Tobacco Indonesia.</li>
+              <li>Carry out repairs, maintenance, development, and innovations to maintain good packing machine performance.</li>
+              <li> Ensure that the safety features of machines and equipment work properly and make improvements when necessary.</li>
+              <li> Ensuring that there are no work accidents in all work areas of factories, warehouses, and offices, as well as ensuring that work processes are carried out properly to prevent work accidents.</li>
+              <li> Monitoring the performance of the SKM Making/Packing machine and its supporting equipment, as well as evaluating and taking corrective actions.</li>
+              <li> Execute the 5R or 5S program according to the agreed rules.</li>
+              <li>Ensure good communication with the production team, QC, Engineering, and PPIC</li>
+              <li>Make reports on the performance of machines and supporting equipment</li>
+            </ul>
+            <br>
+            <h3>Requirements:</h3>
+            <ul>
+              <li>\tIndonesian Citizen (WNI)</li>
+              <li>\tMale / Female physically and mentally healthy, maximum age 30 years old</li>
+              <li>Education Vocational High School/DIII Mechanical Engineering Major</li>
+              <li>Preference will be given to those with work experience</li>
+              <li>\tCan work in a team and individually</li>
+              <li>Profile photo 4x6 ( 2 sheets )</li>
+              <li>\tPhotcopy of ID Card and Family Card</li>
+              <li>Photocopy of the latest Diploma Certificate</li>
+              <li>Curriculum Vitae </li>
+              <li> Certificate of Good Behavior (SKCK) from the local Police</li>
+            </ul>
+            <br>
+            <h3>Notes:</h3>
+            <ul>
+              <li>\tDeadline for application is December 20, 2022.</li>
+              <li>Please include a telephone number that can be contacted.</li>
+            </ul>`,
         },
         {
-          title: 'Manager IT Solution Architect',
-          level: 'Fresh Graduate',
+          title: 'Electric Technician',
           location: 'Jakarta, Indonesia',
-          link: 'https://www.linkedin.com',
-        },
-        {
-          title: 'Manager IT Solution Architect',
-          level: 'Fresh Graduate',
-          location: 'Jakarta, Indonesia',
-          link: 'https://www.linkedin.com',
-        },
-        {
-          title: 'Manager IT Solution Architect',
-          level: 'Fresh Graduate',
-          location: 'Jakarta, Indonesia',
-          link: 'https://www.linkedin.com',
-        },
-        {
-          title: 'Manager IT Solution Architect',
-          level: 'Fresh Graduate',
-          location: ' Jakarta, Indonesia',
-          link: 'https://www.linkedin.com',
+          htmlContent: `<h1>Job Description:</h1>
+            <ul>
+              <li> Responsible for the Genset/Compressor/Vacuum Pump utility facilities at PT Nikki Super Tobacco Indonesia.</li>
+              <li>Carry out repairs, maintenance, development, and innovations to maintain good engine performance in the utility section.</li>
+              <li> Ensuring the safety features of machines and equipment work properly and making improvements when necessary.</li>
+              <li> Ensuring that there are no work accidents in all work areas of factories, warehouses, and offices, as well as ensuring that work processes are carried out properly to prevent work accidents.</li>
+              <li> Execute the 5R or 5S program according to the agreed rules.</li>
+              <li>Ensure good communication with the production team, QC, Engineering, and PPIC.</li>
+              <li>Make reports on the performance of utility machines in the scope of work.</li>
+            </ul>
+            <br>
+            <h3>Requirements:</h3>
+            <ul>
+              <li>\tIndonesian Citizen (WNI)</li>
+              <li>\tMale / Female physically and mentally healthy, maximum age 30 years old</li>
+              <li> Education Vocational High School/DIII Electrical Engineering Major</li>
+              <li>Preference will be given to those with work experience</li>
+              <li>\tCan work in a team and individually</li>
+              <li>Profile photo 4x6 ( 2 sheets )</li>
+              <li>\tPhotcopy of ID Card and Family Card</li>
+              <li>Photocopy of the latest Diploma Certificate</li>
+              <li>Curriculum Vitae </li>
+              <li> Certificate of Good Behavior (SKCK) from the local Police</li>
+            </ul>
+            <br>
+            <h3>Notes:</h3>
+            <ul>
+              <li>\tDeadline for application is December 20, 2022.</li>
+              <li>Please include a telephone number that can be contacted.</li>
+            </ul>`,
         },
       ],
     }
@@ -242,20 +303,26 @@ export default {
   },
   methods: {
     ...mapActions(['fetchAllCareer']),
+    onClickApply(html) {
+      this.dialog = true
+      this.content = html
+    },
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.modal-card{
+.modal-card {
   padding: 1rem;
   min-height: 90vh;
   background: $color-news-gray-root;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  .content{
+  .content {
+    color: $color-primary-root;
     min-width: 90%;
+    padding: 3rem;
   }
 }
 .career-container {

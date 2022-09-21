@@ -2,7 +2,7 @@ import colors from 'vuetify/es5/util/colors'
 require('dotenv').config()
 
 export default {
-  mode: 'spa',
+  mode: 'universal',
   server: {
     port: 8001,
     host: process.env.NUXT_ENV_HOST || 'localhost',
@@ -50,24 +50,27 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    ['nuxt-i18n', {
-      locales: [
-        {
-          name: 'Indonesia',
-          code: 'id',
-          iso: 'id-ID',
-          file: 'id-ID.js'
-        },
-        {
-          name: 'English',
-          code: 'en',
-          iso: 'en-US',
-          file: 'en-US.js'
-        },
-      ],
-      langDir: 'lang/',
-      defaultLocale: 'en',
-    }]
+    [
+      'nuxt-i18n',
+      {
+        locales: [
+          {
+            name: 'Indonesia',
+            code: 'id',
+            iso: 'id-ID',
+            file: 'id-ID.js',
+          },
+          {
+            name: 'English',
+            code: 'en',
+            iso: 'en-US',
+            file: 'en-US.js',
+          },
+        ],
+        langDir: 'lang/',
+        defaultLocale: 'en',
+      },
+    ],
   ],
 
   router: {
@@ -84,7 +87,7 @@ export default {
       //     },
       //   ]
       // }
-    }
+    },
   },
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
