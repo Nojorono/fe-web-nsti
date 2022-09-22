@@ -32,6 +32,9 @@ export default {
       title: 'Home',
     }
   },
+  mounted() {
+    console.log(this.isMobile())
+  }
 }
 </script>
 

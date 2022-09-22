@@ -47,6 +47,12 @@
   "LayoutFooterBottom": {
     "description": "Auto imported from components/layout/FooterBottom.vue"
   },
+  "LayoutFooterMobile": {
+    "description": "Auto imported from components/layout/FooterMobile.vue"
+  },
+  "LayoutNavBarMobile": {
+    "description": "Auto imported from components/layout/NavBarMobile.vue"
+  },
   "LayoutNavbarTop": {
     "description": "Auto imported from components/layout/NavbarTop.vue"
   }

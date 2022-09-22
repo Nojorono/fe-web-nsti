@@ -11,9 +11,8 @@ import '..\\node_modules\\vuetify\\dist\\vuetify.css'
 import _7a1c169d from '..\\layouts\\cmsLayout.vue'
 import _2cdf46a7 from '..\\layouts\\cmsNotLoggedIn.vue'
 import _6f6c098b from '..\\layouts\\default.vue'
-import _35f19582 from '..\\layouts\\MobileLayout.vue'
 
-const layouts = { "_cmsLayout": sanitizeComponent(_7a1c169d),"_cmsNotLoggedIn": sanitizeComponent(_2cdf46a7),"_default": sanitizeComponent(_6f6c098b),"_MobileLayout": sanitizeComponent(_35f19582) }
+const layouts = { "_cmsLayout": sanitizeComponent(_7a1c169d),"_cmsNotLoggedIn": sanitizeComponent(_2cdf46a7),"_default": sanitizeComponent(_6f6c098b) }
 
 export default {
   render (h, props) {

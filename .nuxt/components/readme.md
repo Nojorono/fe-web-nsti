@@ -22,4 +22,6 @@ You can directly use them in pages and other components without the need to impo
 - `<HomeOurStory>` | `<home-our-story>` (components/home/OurStory.vue)
 - `<HomeTopCarousel>` | `<home-top-carousel>` (components/home/TopCarousel.vue)
 - `<LayoutFooterBottom>` | `<layout-footer-bottom>` (components/layout/FooterBottom.vue)
+- `<LayoutFooterMobile>` | `<layout-footer-mobile>` (components/layout/FooterMobile.vue)
+- `<LayoutNavBarMobile>` | `<layout-nav-bar-mobile>` (components/layout/NavBarMobile.vue)
 - `<LayoutNavbarTop>` | `<layout-navbar-top>` (components/layout/NavbarTop.vue)

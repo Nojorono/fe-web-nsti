@@ -14,6 +14,8 @@ export { default as HomeMyProducts } from '../..\\components\\home\\MyProducts.v
 export { default as HomeOurStory } from '../..\\components\\home\\OurStory.vue'
 export { default as HomeTopCarousel } from '../..\\components\\home\\TopCarousel.vue'
 export { default as LayoutFooterBottom } from '../..\\components\\layout\\FooterBottom.vue'
+export { default as LayoutFooterMobile } from '../..\\components\\layout\\FooterMobile.vue'
+export { default as LayoutNavBarMobile } from '../..\\components\\layout\\NavBarMobile.vue'
 export { default as LayoutNavbarTop } from '../..\\components\\layout\\NavbarTop.vue'
 
 // nuxt/nuxt.js#8607

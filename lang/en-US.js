@@ -128,17 +128,17 @@ export default {
     reviewer1: {
       comment:
         '“To do a great job the only way is to love what you do, proud to be a part of Nikki Super Kudus.”',
-      position: 'Analyst Risk & Controls',
+      position: 'Tobacco & Clove Stock Control',
     },
     reviewer2: {
       comment:
         '“The values of Family, Togetherness, and Solidarity that exist in Nikki Super Kudus are the key to success for all employees and the company.”',
-      position: 'Analyst Risk & Controls',
+      position: 'Finance & Accounting Supervisor',
     },
     reviewer3: {
       comment:
         '“Growing and Developing with Nikki Super Kudus is an invaluable Blessing and Pride for me and my family.”',
-      position: 'Analyst Risk & Controls',
+      position: 'Production Supervisor',
     },
   },
   contact: {

@@ -2,7 +2,7 @@ import colors from 'vuetify/es5/util/colors'
 require('dotenv').config()
 
 export default {
-  mode: 'universal',
+  mode: 'spa',
   server: {
     port: 8001,
     host: process.env.NUXT_ENV_HOST || 'localhost',
@@ -34,7 +34,6 @@ export default {
     { src: '~/plugins/vue-fragment.js' },
     { src: '~/plugins/vuetify.js' },
     { src: '~/plugins/carousel3d.js' },
-    { src: '~/plugins/device.js' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

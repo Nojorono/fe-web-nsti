@@ -13,8 +13,12 @@
 </template>
 
 <script>
+import vue from 'vue'
 import FooterBottom from '@/components/layout/FooterBottom.vue'
 import NavBarTop from '@/components/layout/NavbarTop'
+
+import mixinDetictingMobile from '@/mixins/mixinDetictingMobile'
+vue.mixin(mixinDetictingMobile)
 
 export default {
   name: 'DefaultLayout',

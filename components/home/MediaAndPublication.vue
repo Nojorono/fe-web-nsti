@@ -11,7 +11,7 @@
             :to="
               $i18n.locale === 'id'
                 ? '/id/media-and-publication'
-                : '/en/media-and-publication'
+                : '/media-and-publication'
             "
           >
             {{ $t('home.media.btn') }}

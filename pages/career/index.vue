@@ -125,7 +125,7 @@
               rounded
               x-large
               class="defaultGray defaultGolden--text font-weight-bold d-flex"
-              href="mailto: info@nikkisuper.co.id"
+              href="mailto: karir@nikkisuper.co.id"
             >
               {{ $t('career.apply') }}
             </v-btn>
@@ -300,6 +300,7 @@ export default {
   },
   mounted() {
     this.fetchAllCareer()
+    console.log(this.isMobile())
   },
   methods: {
     ...mapActions(['fetchAllCareer']),
