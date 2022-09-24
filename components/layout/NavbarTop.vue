@@ -1,6 +1,6 @@
 <template>
   <div>
-    <template v-if="!isMobile()">
+<!--    <template v-if="!isMobileCheck()">-->
       <div v-if="$i18n.locale === 'id'" class="nav-bar-top">
         <div class="nav-img-container">
           <v-img
@@ -228,18 +228,20 @@
           <img src="~/assets/images/burgerbtn.svg" alt="burger btn" />
         </div>
       </div>
-    </template>
-    <template  v-else-if="isMobile()">
-      <nav-bar-mobile />
-    </template>
+<!--    </template>-->
+<!--    <template  v-else-if="isMobileCheck()">-->
+<!--      <nav-bar-mobile />-->
+<!--    </template>-->
   </div>
 </template>
 
 <script>
-import NavBarMobile from '@/components/layout/NavBarMobile'
+// import NavBarMobile from '@/components/layout/NavBarMobile'
 export default {
   name: 'NavBarTop',
-  components: { NavBarMobile },
+  components: {
+    // NavBarMobile
+  },
   data() {
     return {
       searchInput: '',

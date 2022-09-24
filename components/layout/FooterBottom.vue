@@ -23,6 +23,8 @@
 <script>
 export default {
   name: 'FooterBootom',
+  components: {},
+
 }
 </script>
 

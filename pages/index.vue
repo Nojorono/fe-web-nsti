@@ -1,11 +1,17 @@
 <template>
   <v-row justify="center" align="center">
+    <template v-if="!isMobileCheck()">
+
     <TopCarousel id="home" />
     <OurStory id="about-us" />
     <MyProducts id="products" />
     <MediaAndPublication id="media-and-publication" />
     <CareerAt id="career" />
     <ContactUs id="contact-us" />
+    </template>
+    <template v-else-if="isMobileCheck()">
+      <div>masuk pak eko</div>
+    </template>
   </v-row>
 </template>
 
@@ -33,7 +39,7 @@ export default {
     }
   },
   mounted() {
-    console.log(this.isMobile())
+    // console.log(this.isMobileCheck())
   }
 }
 </script>

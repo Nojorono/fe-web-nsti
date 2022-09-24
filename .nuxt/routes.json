@@ -2,337 +2,337 @@
   {
     "name": "about-us___en",
     "path": "/about-us",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/about-us/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\about-us\\\\index.vue",
     "chunkName": "pages/about-us/index",
-    "_name": "_9a56b910"
+    "_name": "_387ccbf7"
   },
   {
     "name": "career___en",
     "path": "/career",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/career/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\career\\\\index.vue",
     "chunkName": "pages/career/index",
-    "_name": "_adff6c50"
+    "_name": "_0c8647d2"
   },
   {
     "name": "contact-us___en",
     "path": "/contact-us",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/contact-us/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\contact-us\\\\index.vue",
     "chunkName": "pages/contact-us/index",
-    "_name": "_2e362605"
+    "_name": "_4d355eec"
   },
   {
     "name": "content-management___en",
     "path": "/content-management",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\index.vue",
     "chunkName": "pages/content-management/index",
-    "_name": "_81b06a9e"
+    "_name": "_3095575e"
   },
   {
     "name": "export___en",
     "path": "/export",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/export/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\export\\\\index.vue",
     "chunkName": "pages/export/index",
-    "_name": "_cbe7eae4"
+    "_name": "_2a293221"
   },
   {
     "name": "index___id",
     "path": "/id",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_dd426aea"
+    "_name": "_532694d5"
   },
   {
     "name": "media-and-publication___en",
     "path": "/media-and-publication",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/media-and-publication/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\media-and-publication\\\\index.vue",
     "chunkName": "pages/media-and-publication/index",
-    "_name": "_d326c0ee"
+    "_name": "_153d9eb2"
   },
   {
     "name": "products___en",
     "path": "/products",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/products/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\products\\\\index.vue",
     "chunkName": "pages/products/index",
-    "_name": "_743c387e"
+    "_name": "_b7f0509e"
   },
   {
     "name": "about-us-mobile___en",
     "path": "/about-us/mobile",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/about-us/mobile.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\about-us\\\\mobile.vue",
     "chunkName": "pages/about-us/mobile",
-    "_name": "_01267a28"
+    "_name": "_2ec9aa4d"
   },
   {
     "name": "content-management-about-us___en",
     "path": "/content-management/about-us",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/about-us/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\about-us\\\\index.vue",
     "chunkName": "pages/content-management/about-us/index",
-    "_name": "_3a126e12"
+    "_name": "_bb769180"
   },
   {
     "name": "content-management-career___en",
     "path": "/content-management/career",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/career/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\career\\\\index.vue",
     "chunkName": "pages/content-management/career/index",
-    "_name": "_faf81a1c"
+    "_name": "_842df4c0"
   },
   {
     "name": "content-management-media-and-publication___en",
     "path": "/content-management/media-and-publication",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/media-and-publication/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\media-and-publication\\\\index.vue",
     "chunkName": "pages/content-management/media-and-publication/index",
-    "_name": "_5ad25f2f"
+    "_name": "_072a1209"
   },
   {
     "name": "content-management-products___en",
     "path": "/content-management/products",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/products/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\products\\\\index.vue",
     "chunkName": "pages/content-management/products/index",
-    "_name": "_090bf9d0"
+    "_name": "_0dcfc2fa"
   },
   {
     "name": "content-management-sign-in___en",
     "path": "/content-management/sign-in",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/sign-in/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\sign-in\\\\index.vue",
     "chunkName": "pages/content-management/sign-in/index",
-    "_name": "_a9518552"
+    "_name": "_74cfde21"
   },
   {
     "name": "content-management-sign-up___en",
     "path": "/content-management/sign-up",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/sign-up/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\sign-up\\\\index.vue",
     "chunkName": "pages/content-management/sign-up/index",
-    "_name": "_3174634d"
+    "_name": "_9b51122a"
   },
   {
     "name": "about-us___id",
     "path": "/id/about-us",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/about-us/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\about-us\\\\index.vue",
     "chunkName": "pages/about-us/index",
-    "_name": "_9a56b910"
+    "_name": "_387ccbf7"
   },
   {
     "name": "career___id",
     "path": "/id/career",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/career/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\career\\\\index.vue",
     "chunkName": "pages/career/index",
-    "_name": "_adff6c50"
+    "_name": "_0c8647d2"
   },
   {
     "name": "contact-us___id",
     "path": "/id/contact-us",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/contact-us/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\contact-us\\\\index.vue",
     "chunkName": "pages/contact-us/index",
-    "_name": "_2e362605"
+    "_name": "_4d355eec"
   },
   {
     "name": "content-management___id",
     "path": "/id/content-management",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\index.vue",
     "chunkName": "pages/content-management/index",
-    "_name": "_81b06a9e"
+    "_name": "_3095575e"
   },
   {
     "name": "export___id",
     "path": "/id/export",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/export/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\export\\\\index.vue",
     "chunkName": "pages/export/index",
-    "_name": "_cbe7eae4"
+    "_name": "_2a293221"
   },
   {
     "name": "media-and-publication___id",
     "path": "/id/media-and-publication",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/media-and-publication/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\media-and-publication\\\\index.vue",
     "chunkName": "pages/media-and-publication/index",
-    "_name": "_d326c0ee"
+    "_name": "_153d9eb2"
   },
   {
     "name": "products___id",
     "path": "/id/products",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/products/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\products\\\\index.vue",
     "chunkName": "pages/products/index",
-    "_name": "_743c387e"
+    "_name": "_b7f0509e"
   },
   {
     "name": "content-management-about-us-add-new___en",
     "path": "/content-management/about-us/add-new",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/about-us/add-new/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\about-us\\\\add-new\\\\index.vue",
     "chunkName": "pages/content-management/about-us/add-new/index",
-    "_name": "_e2902f92"
+    "_name": "_6b5553e0"
   },
   {
     "name": "content-management-career-add-new___en",
     "path": "/content-management/career/add-new",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/career/add-new/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\career\\\\add-new\\\\index.vue",
     "chunkName": "pages/content-management/career/add-new/index",
-    "_name": "_4972e5d2"
+    "_name": "_24333180"
   },
   {
     "name": "content-management-media-and-publication-add-new___en",
     "path": "/content-management/media-and-publication/add-new",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/media-and-publication/add-new/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\media-and-publication\\\\add-new\\\\index.vue",
     "chunkName": "pages/content-management/media-and-publication/add-new/index",
-    "_name": "_8e912758"
+    "_name": "_577f0b37"
   },
   {
     "name": "content-management-products-add-new___en",
     "path": "/content-management/products/add-new",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/products/add-new/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\products\\\\add-new\\\\index.vue",
     "chunkName": "pages/content-management/products/add-new/index",
-    "_name": "_4755173d"
+    "_name": "_7162d966"
   },
   {
     "name": "about-us-mobile___id",
     "path": "/id/about-us/mobile",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/about-us/mobile.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\about-us\\\\mobile.vue",
     "chunkName": "pages/about-us/mobile",
-    "_name": "_01267a28"
+    "_name": "_2ec9aa4d"
   },
   {
     "name": "content-management-about-us___id",
     "path": "/id/content-management/about-us",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/about-us/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\about-us\\\\index.vue",
     "chunkName": "pages/content-management/about-us/index",
-    "_name": "_3a126e12"
+    "_name": "_bb769180"
   },
   {
     "name": "content-management-career___id",
     "path": "/id/content-management/career",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/career/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\career\\\\index.vue",
     "chunkName": "pages/content-management/career/index",
-    "_name": "_faf81a1c"
+    "_name": "_842df4c0"
   },
   {
     "name": "content-management-media-and-publication___id",
     "path": "/id/content-management/media-and-publication",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/media-and-publication/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\media-and-publication\\\\index.vue",
     "chunkName": "pages/content-management/media-and-publication/index",
-    "_name": "_5ad25f2f"
+    "_name": "_072a1209"
   },
   {
     "name": "content-management-products___id",
     "path": "/id/content-management/products",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/products/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\products\\\\index.vue",
     "chunkName": "pages/content-management/products/index",
-    "_name": "_090bf9d0"
+    "_name": "_0dcfc2fa"
   },
   {
     "name": "content-management-sign-in___id",
     "path": "/id/content-management/sign-in",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/sign-in/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\sign-in\\\\index.vue",
     "chunkName": "pages/content-management/sign-in/index",
-    "_name": "_a9518552"
+    "_name": "_74cfde21"
   },
   {
     "name": "content-management-sign-up___id",
     "path": "/id/content-management/sign-up",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/sign-up/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\sign-up\\\\index.vue",
     "chunkName": "pages/content-management/sign-up/index",
-    "_name": "_3174634d"
+    "_name": "_9b51122a"
   },
   {
     "name": "content-management-about-us-add-new___id",
     "path": "/id/content-management/about-us/add-new",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/about-us/add-new/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\about-us\\\\add-new\\\\index.vue",
     "chunkName": "pages/content-management/about-us/add-new/index",
-    "_name": "_e2902f92"
+    "_name": "_6b5553e0"
   },
   {
     "name": "content-management-career-add-new___id",
     "path": "/id/content-management/career/add-new",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/career/add-new/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\career\\\\add-new\\\\index.vue",
     "chunkName": "pages/content-management/career/add-new/index",
-    "_name": "_4972e5d2"
+    "_name": "_24333180"
   },
   {
     "name": "content-management-media-and-publication-add-new___id",
     "path": "/id/content-management/media-and-publication/add-new",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/media-and-publication/add-new/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\media-and-publication\\\\add-new\\\\index.vue",
     "chunkName": "pages/content-management/media-and-publication/add-new/index",
-    "_name": "_8e912758"
+    "_name": "_577f0b37"
   },
   {
     "name": "content-management-products-add-new___id",
     "path": "/id/content-management/products/add-new",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/products/add-new/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\products\\\\add-new\\\\index.vue",
     "chunkName": "pages/content-management/products/add-new/index",
-    "_name": "_4755173d"
+    "_name": "_7162d966"
   },
   {
     "name": "content-management-about-us-edit-id___id",
     "path": "/id/content-management/about-us/edit/:id?",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/about-us/edit/_id.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\about-us\\\\edit\\\\_id.vue",
     "chunkName": "pages/content-management/about-us/edit/_id",
-    "_name": "_53ce28b6"
+    "_name": "_738e9a44"
   },
   {
     "name": "content-management-career-edit-id___id",
     "path": "/id/content-management/career/edit/:id",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/career/edit/_id.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\career\\\\edit\\\\_id.vue",
     "chunkName": "pages/content-management/career/edit/_id",
-    "_name": "_286ebac5"
+    "_name": "_7f625d84"
   },
   {
     "name": "content-management-media-and-publication-edit-id___id",
     "path": "/id/content-management/media-and-publication/edit/:id?",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/media-and-publication/edit/_id.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\media-and-publication\\\\edit\\\\_id.vue",
     "chunkName": "pages/content-management/media-and-publication/edit/_id",
-    "_name": "_12d6ed30"
+    "_name": "_2ff18127"
   },
   {
     "name": "content-management-products-edit-id___id",
     "path": "/id/content-management/products/edit/:id",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/products/edit/_id.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\products\\\\edit\\\\_id.vue",
     "chunkName": "pages/content-management/products/edit/_id",
-    "_name": "_e9e01e42"
+    "_name": "_19835198"
   },
   {
     "name": "content-management-about-us-edit-id___en",
     "path": "/content-management/about-us/edit/:id?",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/about-us/edit/_id.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\about-us\\\\edit\\\\_id.vue",
     "chunkName": "pages/content-management/about-us/edit/_id",
-    "_name": "_53ce28b6"
+    "_name": "_738e9a44"
   },
   {
     "name": "content-management-career-edit-id___en",
     "path": "/content-management/career/edit/:id",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/career/edit/_id.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\career\\\\edit\\\\_id.vue",
     "chunkName": "pages/content-management/career/edit/_id",
-    "_name": "_286ebac5"
+    "_name": "_7f625d84"
   },
   {
     "name": "content-management-media-and-publication-edit-id___en",
     "path": "/content-management/media-and-publication/edit/:id?",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/media-and-publication/edit/_id.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\media-and-publication\\\\edit\\\\_id.vue",
     "chunkName": "pages/content-management/media-and-publication/edit/_id",
-    "_name": "_12d6ed30"
+    "_name": "_2ff18127"
   },
   {
     "name": "content-management-products-edit-id___en",
     "path": "/content-management/products/edit/:id",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/content-management/products/edit/_id.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\products\\\\edit\\\\_id.vue",
     "chunkName": "pages/content-management/products/edit/_id",
-    "_name": "_e9e01e42"
+    "_name": "_19835198"
   },
   {
     "name": "media-and-publication-detail-id___id",
     "path": "/id/media-and-publication/detail/:id?",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/media-and-publication/detail/_id.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\media-and-publication\\\\detail\\\\_id.vue",
     "chunkName": "pages/media-and-publication/detail/_id",
-    "_name": "_6e7209d5"
+    "_name": "_234a94e9"
   },
   {
     "name": "media-and-publication-detail-id___en",
     "path": "/media-and-publication/detail/:id?",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/media-and-publication/detail/_id.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\media-and-publication\\\\detail\\\\_id.vue",
     "chunkName": "pages/media-and-publication/detail/_id",
-    "_name": "_6e7209d5"
+    "_name": "_234a94e9"
   },
   {
     "name": "index___en",
     "path": "/",
-    "component": "/Users/faridjuliano/Documents/nikkiClient/pages/index.vue",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_dd426aea"
+    "_name": "_532694d5"
   }
 ]

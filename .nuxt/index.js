@@ -5,7 +5,7 @@ import ClientOnly from 'vue-client-only'
 import NoSsr from 'vue-no-ssr'
 import { createRouter } from './router.js'
 import NuxtChild from './components/nuxt-child.js'
-import NuxtError from '../layouts/error.vue'
+import NuxtError from '..\\layouts\\error.vue'
 import Nuxt from './components/nuxt.js'
 import App from './App.js'
 import { setContext, getLocation, getRouteData, normalizeError } from './utils'
@@ -13,14 +13,14 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_75c80d1d from 'nuxt_plugin_plugin_75c80d1d' // Source: ./components/plugin.js (mode: 'all')
-import nuxt_plugin_plugin_6562d81e from 'nuxt_plugin_plugin_6562d81e' // Source: ./vuetify/plugin.js (mode: 'all')
-import nuxt_plugin_pluginutils_4a1daee8 from 'nuxt_plugin_pluginutils_4a1daee8' // Source: ./nuxt-i18n/plugin.utils.js (mode: 'all')
-import nuxt_plugin_pluginrouting_2123bb9a from 'nuxt_plugin_pluginrouting_2123bb9a' // Source: ./nuxt-i18n/plugin.routing.js (mode: 'all')
-import nuxt_plugin_pluginmain_4b4a2e1c from 'nuxt_plugin_pluginmain_4b4a2e1c' // Source: ./nuxt-i18n/plugin.main.js (mode: 'all')
-import nuxt_plugin_vuefragment_a152fcac from 'nuxt_plugin_vuefragment_a152fcac' // Source: ../plugins/vue-fragment.js (mode: 'all')
-import nuxt_plugin_vuetify_d6afc2c2 from 'nuxt_plugin_vuetify_d6afc2c2' // Source: ../plugins/vuetify.js (mode: 'all')
-import nuxt_plugin_carousel3d_533e0cb0 from 'nuxt_plugin_carousel3d_533e0cb0' // Source: ../plugins/carousel3d.js (mode: 'all')
+import nuxt_plugin_plugin_47a4bd84 from 'nuxt_plugin_plugin_47a4bd84' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_plugin_1c6c5914 from 'nuxt_plugin_plugin_1c6c5914' // Source: .\\vuetify\\plugin.js (mode: 'all')
+import nuxt_plugin_pluginutils_89124ba6 from 'nuxt_plugin_pluginutils_89124ba6' // Source: .\\nuxt-i18n\\plugin.utils.js (mode: 'all')
+import nuxt_plugin_pluginrouting_6f299038 from 'nuxt_plugin_pluginrouting_6f299038' // Source: .\\nuxt-i18n\\plugin.routing.js (mode: 'all')
+import nuxt_plugin_pluginmain_362c0637 from 'nuxt_plugin_pluginmain_362c0637' // Source: .\\nuxt-i18n\\plugin.main.js (mode: 'all')
+import nuxt_plugin_vuefragment_a152fcac from 'nuxt_plugin_vuefragment_a152fcac' // Source: ..\\plugins\\vue-fragment.js (mode: 'all')
+import nuxt_plugin_vuetify_d6afc2c2 from 'nuxt_plugin_vuetify_d6afc2c2' // Source: ..\\plugins\\vuetify.js (mode: 'all')
+import nuxt_plugin_carousel3d_533e0cb0 from 'nuxt_plugin_carousel3d_533e0cb0' // Source: ..\\plugins\\carousel3d.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -214,24 +214,24 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_75c80d1d === 'function') {
-    await nuxt_plugin_plugin_75c80d1d(app.context, inject)
+  if (typeof nuxt_plugin_plugin_47a4bd84 === 'function') {
+    await nuxt_plugin_plugin_47a4bd84(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_plugin_6562d81e === 'function') {
-    await nuxt_plugin_plugin_6562d81e(app.context, inject)
+  if (typeof nuxt_plugin_plugin_1c6c5914 === 'function') {
+    await nuxt_plugin_plugin_1c6c5914(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginutils_4a1daee8 === 'function') {
-    await nuxt_plugin_pluginutils_4a1daee8(app.context, inject)
+  if (typeof nuxt_plugin_pluginutils_89124ba6 === 'function') {
+    await nuxt_plugin_pluginutils_89124ba6(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginrouting_2123bb9a === 'function') {
-    await nuxt_plugin_pluginrouting_2123bb9a(app.context, inject)
+  if (typeof nuxt_plugin_pluginrouting_6f299038 === 'function') {
+    await nuxt_plugin_pluginrouting_6f299038(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginmain_4b4a2e1c === 'function') {
-    await nuxt_plugin_pluginmain_4b4a2e1c(app.context, inject)
+  if (typeof nuxt_plugin_pluginmain_362c0637 === 'function') {
+    await nuxt_plugin_pluginmain_362c0637(app.context, inject)
   }
 
   if (typeof nuxt_plugin_vuefragment_a152fcac === 'function') {

@@ -10,21 +10,47 @@
         @click="$router.push('/')"
       />
     </div>
-    <div class='burder-btn'>
-      <img @click="isShow = !isShow" src="~/assets/images/burgerbtn.svg" alt="burger btn" width="16" height="12" />
+<!--    <div class='burder-btn'>-->
+<!--      <img @click="isShow = !isShow" src="~/assets/images/burgerbtn.svg" alt="burger btn" width="16" height="12" />-->
+<!--    </div>-->
+<!--    <div :class="isShow ? 'menu active' : 'menu' ">-->
+<!--      <ul>-->
+<!--        <li v-for="(item, i) in $i18n.locale === 'id' ? listId : listEn" :key="i" >-->
+<!--          <nuxt-link :to="item.to"> {{item.title}} </nuxt-link>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--      <div class="triagle-separator">-->
+<!--        <img src="~/assets/images/Vector-3.png" alt="separator" width="299px"-->
+<!--             height="92px">-->
+<!--      </div>-->
+<!--    </div>-->
+    <div class="burder-btn">
+      <img @click.stop="drawer = !drawer" src="~/assets/images/burgerbtn.svg" alt="burger btn" width="16" height="12" />
     </div>
-    <div :class="isShow ? 'menu active' : 'menu' ">
-      <ul>
-        <li v-for="(item, i) in $i18n.locale === 'id' ? listId : listEn" :key="i" >
-          <nuxt-link :to="item.to"> {{item.title}} </nuxt-link>
-        </li>
-      </ul>
+    <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      right
+      temporary
+      class="menu"
+      width="100vw"
+    >
+    <ul>
+      <div class="close-btn cursor-pointer d-flex justify-end">
+        <img
+          :src="require('assets/images/Icon-close.svg')"
+          @click="drawer = false"
+        />
+      </div>
+      <li v-for="(item, i) in $i18n.locale === 'id' ? listId : listEn" :key="i" >
+        <nuxt-link :to="item.to"> {{item.title}} </nuxt-link>
+      </li>
+    </ul>
       <div class="triagle-separator">
         <img src="~/assets/images/Vector-3.png" alt="separator" width="299px"
              height="92px">
       </div>
-    </div>
-
+    </v-navigation-drawer>
   </div>
 </template>
 
@@ -33,6 +59,8 @@ export default {
   name: 'NavBarMobile',
   data() {
     return {
+      drawer: false,
+      group: null,
       searchInput: '',
       isShow: false,
       listId: [
@@ -97,24 +125,14 @@ export default {
       ]
     }
   },
+  watch: {
+    group () {
+      this.drawer = false
+    },
+  },
   methods: {
     onChangeLang(event) {
       this.$router.replace(this.switchLocalePath(event))
-    },
-    funcScrollTo(href, page) {
-      this.$router.push(page)
-      setTimeout(() => {
-        // const element = document.querySelector(href)
-        // const headerOffset = 1000
-        // const elementPosition = element.getBoundingClientRect().top
-        // const offsetPosition =
-        //   elementPosition + window.pageYOffset - headerOffset
-        document.querySelector(href).scrollIntoView({
-          // top: offsetPosition,
-          behavior: 'smooth',
-          block: 'center',
-        })
-      }, 500)
     },
   },
 }
@@ -127,24 +145,15 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  .nav-img-container {
-
-  }
   .menu {
     background-color: $color-primary-root;
     background-image: url('assets/images/grain.png');
     background-repeat: repeat, repeat;
-    width:100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: 10px;
     z-index: 5;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    transition: all 0.7s ease-in-out;
     ul{
       padding: 3rem 2rem 1rem 2rem;
 
@@ -161,9 +170,6 @@ export default {
           text-decoration: none;
         }
       }
-    }
-    &.active {
-      right: 0;
     }
     .triagle-separator{
       float: left;

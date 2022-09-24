@@ -1,7 +1,7 @@
 // eslint-disable-next-line
 const mixinDetictingMobile = {
   methods: {
-    isMobile() {
+    isMobileCheck() {
       let check = false;
       (function (a) {
         if (

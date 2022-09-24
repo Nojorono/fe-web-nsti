@@ -33,11 +33,11 @@
       >
         <h1>{{ $t('career.opportunities') }}</h1>
       </div>
-      <div class="joblist d-flex flex-wrap">
+      <div class="joblist d-flex flex-wrap justify-center">
         <div
           v-for="(job, i) in jobList"
           :key="i"
-          class="joblist-card my-5 mx-3 px-10 py-5"
+          class="joblist-card my-5 mx-3 px-10 py-5 "
         >
           <div class="joblist-text">
             <h2>
@@ -300,7 +300,7 @@ export default {
   },
   mounted() {
     this.fetchAllCareer()
-    console.log(this.isMobile())
+    console.log(this.isMobileCheck())
   },
   methods: {
     ...mapActions(['fetchAllCareer']),
