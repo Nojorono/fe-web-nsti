@@ -8,7 +8,7 @@ const VUEX_PROPERTIES = ['state', 'getters', 'actions', 'mutations']
 let store = {};
 
 (function updateModules () {
-  store = normalizeRoot(require('..\\store\\index.js'), 'store/index.js')
+  store = normalizeRoot(require('../store/index.js'), 'store/index.js')
 
   // If store is an exported method = classic mode (deprecated)
 
@@ -19,21 +19,21 @@ let store = {};
   // Enforce store modules
   store.modules = store.modules || {}
 
-  resolveStoreModules(require('..\\store\\cms.js'), 'cms.js')
-  resolveStoreModules(require('..\\store\\home.js'), 'home.js')
-  resolveStoreModules(require('..\\store\\logReg.js'), 'logReg.js')
-  resolveStoreModules(require('..\\store\\template.js'), 'template.js')
+  resolveStoreModules(require('../store/cms.js'), 'cms.js')
+  resolveStoreModules(require('../store/home.js'), 'home.js')
+  resolveStoreModules(require('../store/logReg.js'), 'logReg.js')
+  resolveStoreModules(require('../store/template.js'), 'template.js')
 
   // If the environment supports hot reloading...
 
   if (process.client && module.hot) {
     // Whenever any Vuex module is updated...
     module.hot.accept([
-      '..\\store\\cms.js',
-      '..\\store\\home.js',
-      '..\\store\\index.js',
-      '..\\store\\logReg.js',
-      '..\\store\\template.js',
+      '../store/cms.js',
+      '../store/home.js',
+      '../store/index.js',
+      '../store/logReg.js',
+      '../store/template.js',
     ], () => {
       // Update `root.modules` with the latest definitions.
       updateModules()

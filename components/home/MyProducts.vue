@@ -90,7 +90,7 @@ export default {
   }
 }
 .carousel-container {
-  padding: 1rem 6rem;
+  padding: 1rem 3rem;
 }
 //not used, bust still cool code
 .produts-navigation {

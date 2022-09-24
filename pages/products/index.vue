@@ -57,6 +57,6 @@ export default {
       letter-spacing: 0.1em;
     }
   }
-  padding: 1rem 5rem;
+  padding: 1rem 3rem;
 }
 </style>

@@ -200,7 +200,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: app.router.options.base,
-      env: {"NUXT_ENV_BASE_URL":"http://localhost:3000/","NUXT_ENV_ENVIRONMENT_SERVER":"STAGING","NUXT_ENV_HOST":"localhost","NUXT_ENV_PORT":"4444"}
+      env: {"NUXT_ENV_ENVIRONMENT_SERVER":"STAGING","NUXT_ENV_PORT":"4444","NUXT_ENV_HOST":"localhost","NUXT_ENV_BASE_URL":"http://localhost:3000/"}
     }
     // Only set once
 

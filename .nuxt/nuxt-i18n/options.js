@@ -1,5 +1,5 @@
-import locale2431a480 from '../..\\lang\\id-ID.js'
-import locale6010b66b from '../..\\lang\\en-US.js'
+import locale2431a480 from '../../lang/id-ID.js'
+import locale6010b66b from '../../lang/en-US.js'
 
 export const Constants = {
   COMPONENT_OPTIONS_KEY: "nuxtI18n",
@@ -20,7 +20,7 @@ export const options = {
   sortRoutes: true,
   strategy: "prefix_except_default",
   lazy: false,
-  langDir: "F:\\nikkiClient\\lang",
+  langDir: "/Users/faridjuliano/Documents/nikkiClient/lang",
   rootRedirect: null,
   detectBrowserLanguage: {"alwaysRedirect":false,"cookieCrossOrigin":false,"cookieDomain":null,"cookieKey":"i18n_redirected","cookieSecure":false,"fallbackLocale":"","onlyOnNoPrefix":false,"onlyOnRoot":false,"useCookie":true},
   differentDomains: false,

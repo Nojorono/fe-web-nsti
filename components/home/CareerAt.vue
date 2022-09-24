@@ -58,7 +58,7 @@ export default {
 
       .text-container {
         position: absolute;
-        left: 62vw;
+        left: 53%;
         top: 10rem;
         font-family: 'Barlow', sans-serif;
         width: 23.5rem;

@@ -14,9 +14,6 @@
   "CmsEmptyCard": {
     "description": "Auto imported from components/cms/EmptyCard.vue"
   },
-  "CmsFormAdd": {
-    "description": "Auto imported from components/cms/formAdd.vue"
-  },
   "CmsHeading": {
     "description": "Auto imported from components/cms/Heading.vue"
   },
@@ -25,6 +22,9 @@
   },
   "CmsSideBar": {
     "description": "Auto imported from components/cms/SideBar.vue"
+  },
+  "CmsFormAdd": {
+    "description": "Auto imported from components/cms/formAdd.vue"
   },
   "HomeCareerAt": {
     "description": "Auto imported from components/home/CareerAt.vue"

@@ -9,7 +9,7 @@
       :controls-next-html="''"
       :controls-width="40"
       :controls-height="60"
-      :space="400"
+      :space="350"
       :display="5"
       :inverse-scaling="350"
     >

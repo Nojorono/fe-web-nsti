@@ -37,7 +37,7 @@
         <div
           v-for="(job, i) in jobList"
           :key="i"
-          class="joblist-card ma-5 px-10 py-5"
+          class="joblist-card my-5 mx-3 px-10 py-5"
         >
           <div class="joblist-text">
             <h2>
@@ -90,7 +90,7 @@
       >
         <vueper-slide v-for="(review, i) in reviewsList" :key="i">
           <template #content>
-            <div class="review-card px-10 py-10 text-center overflow-auto">
+            <div class="review-card px-10 py-10 text-center">
               <div
                 class="review-card-innner d-flex flex-column align-center justify-space-between"
               >
@@ -367,7 +367,7 @@ export default {
   }
   .joblist {
     .joblist-card {
-      width: 505px;
+      width: 437px;
       background: rgba(41, 48, 110, 0.5);
       border-radius: 10px;
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -419,15 +419,13 @@ export default {
     background: rgba(41, 48, 110, 0.5);
     border-radius: 10px;
     font-family: 'Barlow', sans-serif;
-    height: 100%;
+    height: 31rem;
     .review-card-innner {
       height: 100%;
-    }
-    div {
       .review-text {
-        height: 10rem;
         font-weight: 500;
         font-size: 1.4em;
+        overflow-y: auto;
       }
       .review-bottom-container {
         padding-top: 1rem;
