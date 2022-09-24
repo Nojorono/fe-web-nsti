@@ -1,5 +1,5 @@
 <template>
-  <v-app dark v-if="!isMobileCheck()">
+  <v-app v-if="!isMobileCheck()" dark>
     <NavBarTop />
     <v-main>
       <v-container fluid class="max-width">
@@ -8,23 +8,23 @@
     </v-main>
     <v-footer class="ma-0 pa-0" absolute app>
       <template v-if="!isMobileCheck()">
-       <FooterBottom />
+        <FooterBottom />
       </template>
       <template v-else-if="isMobileCheck()">
         <FooterBootomMobile />
       </template>
     </v-footer>
   </v-app>
-  <v-app dark  v-else-if="isMobileCheck()">
-    <nav-bar-mobile ></nav-bar-mobile>
+  <v-app v-else-if="isMobileCheck()" dark>
+    <nav-bar-mobile></nav-bar-mobile>
     <v-main>
-      <v-container fliud>
+      <v-container fluid app>
         <Nuxt />
       </v-container>
     </v-main>
-<!--    <v-footer class="ma-0 pa-0" absolute app>-->
-<!--        <FooterBootomMobile />-->
-<!--    </v-footer>-->
+    <v-footer class="ma-0 pa-0" absolute app>
+      <FooterBootomMobile />
+    </v-footer>
   </v-app>
 </template>
 
@@ -44,19 +44,22 @@ export default {
     NavBarMobile,
     FooterBottom,
     NavBarTop,
-    FooterBootomMobile
+    FooterBootomMobile,
   },
 }
 </script>
 
 <style lang="scss" scoped>
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
 .max-width {
   max-width: 1920px;
   padding: 0;
 }
-.mobile {
-
- }
 .theme--dark.v-application {
   background-color: $color-primary-root;
   background-image: url('assets/images/grain.png');

@@ -19,6 +19,7 @@ const _072a1209 = () => interopDefault(import('..\\pages\\content-management\\me
 const _0dcfc2fa = () => interopDefault(import('..\\pages\\content-management\\products\\index.vue' /* webpackChunkName: "pages/content-management/products/index" */))
 const _74cfde21 = () => interopDefault(import('..\\pages\\content-management\\sign-in\\index.vue' /* webpackChunkName: "pages/content-management/sign-in/index" */))
 const _9b51122a = () => interopDefault(import('..\\pages\\content-management\\sign-up\\index.vue' /* webpackChunkName: "pages/content-management/sign-up/index" */))
+const _045d2cd2 = () => interopDefault(import('..\\pages\\export\\ExportMobile.vue' /* webpackChunkName: "pages/export/ExportMobile" */))
 const _6b5553e0 = () => interopDefault(import('..\\pages\\content-management\\about-us\\add-new\\index.vue' /* webpackChunkName: "pages/content-management/about-us/add-new/index" */))
 const _24333180 = () => interopDefault(import('..\\pages\\content-management\\career\\add-new\\index.vue' /* webpackChunkName: "pages/content-management/career/add-new/index" */))
 const _577f0b37 = () => interopDefault(import('..\\pages\\content-management\\media-and-publication\\add-new\\index.vue' /* webpackChunkName: "pages/content-management/media-and-publication/add-new/index" */))
@@ -101,6 +102,10 @@ export const routerOptions = {
     component: _9b51122a,
     name: "content-management-sign-up___en"
   }, {
+    path: "/export/ExportMobile",
+    component: _045d2cd2,
+    name: "export-ExportMobile___en"
+  }, {
     path: "/id/about-us",
     component: _387ccbf7,
     name: "about-us___id"
@@ -172,6 +177,10 @@ export const routerOptions = {
     path: "/id/content-management/sign-up",
     component: _9b51122a,
     name: "content-management-sign-up___id"
+  }, {
+    path: "/id/export/ExportMobile",
+    component: _045d2cd2,
+    name: "export-ExportMobile___id"
   }, {
     path: "/id/content-management/about-us/add-new",
     component: _6b5553e0,

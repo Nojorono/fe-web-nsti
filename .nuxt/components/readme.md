@@ -25,3 +25,4 @@ You can directly use them in pages and other components without the need to impo
 - `<LayoutFooterMobile>` | `<layout-footer-mobile>` (components/layout/FooterMobile.vue)
 - `<LayoutNavBarMobile>` | `<layout-nav-bar-mobile>` (components/layout/NavBarMobile.vue)
 - `<LayoutNavbarTop>` | `<layout-navbar-top>` (components/layout/NavbarTop.vue)
+- `<HomeMobileTopCarouselMobile>` | `<home-mobile-top-carousel-mobile>` (components/home/mobile/TopCarouselMobile.vue)

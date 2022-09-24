@@ -69,22 +69,20 @@
             <h2>{{ $t('export.contact.email') }}</h2>
             <p>
               <a href="mailto: info@nikkisuper.co.id">{{
-                $t('export.contact.emailLink')
-              }}</a>
+                  $t('export.contact.emailLink')
+                }}</a>
             </p>
           </div>
         </div>
       </div>
     </v-col>
   </v-row>
-  <ExportMobile  v-else/>
+
 </template>
 
 <script>
-import ExportMobile from '@/pages/export/ExportMobile'
 export default {
-  name: 'Export',
-  components: { ExportMobile },
+  name: 'ExportMobile',
   head() {
     return {
       title: 'Export',

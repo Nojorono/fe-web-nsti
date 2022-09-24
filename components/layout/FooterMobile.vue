@@ -1,7 +1,19 @@
 <template>
-  <div>
-    masuk
-  </div>
+  <v-col class="footer-bottom ma-0 pa-0 defaultGolden--text">
+    <div class="footer-bottom-top">
+      <p>Terms & Conditions</p>
+      <v-img
+        :src="require('assets/images/Ellipse.svg')"
+        max-height="3px"
+        max-width="3px"
+        class="v-img"
+      />
+      <p>Privacy Policy</p>
+    </div>
+    <div class="footer-bottom-bottom">
+      <p>&copy; Future. All rights reserved</p>
+    </div>
+  </v-col>
 </template>
 
 <script>
@@ -15,21 +27,24 @@ export default {
   background: $color-primary-root;
   border-top: 5px solid $color-secondary-dark-root;
   font-family: 'Barlow', sans-serif;
-  .footer-inner {
-    padding: 2rem;
+  font-size: 9px;
+  .v-img {
+    margin: 0 0.5rem;
+  }
+  &-top {
     display: flex;
-    justify-content: flex-start;
+    align-content: center;
     align-items: center;
-    margin-left: 5rem;
-    P {
-      padding-top: 0.7rem;
-      font-weight: 400;
-      font-size: 1.3em;
-      letter-spacing: 0.05em;
-    }
-    .v-img {
-      margin: 0 2rem;
-    }
+    text-align: center;
+    justify-content: center;
+    font-size: inherit;
+  }
+  &-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: inherit;
+
   }
 }
 </style>

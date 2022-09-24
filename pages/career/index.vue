@@ -37,7 +37,7 @@
         <div
           v-for="(job, i) in jobList"
           :key="i"
-          class="joblist-card my-5 mx-3 px-10 py-5 "
+          class="joblist-card my-5 mx-3 px-10 py-5"
         >
           <div class="joblist-text">
             <h2>

@@ -55,5 +55,8 @@
   },
   "LayoutNavbarTop": {
     "description": "Auto imported from components/layout/NavbarTop.vue"
+  },
+  "HomeMobileTopCarouselMobile": {
+    "description": "Auto imported from components/home/mobile/TopCarouselMobile.vue"
   }
 }

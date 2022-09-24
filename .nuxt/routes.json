@@ -105,6 +105,13 @@
     "_name": "_9b51122a"
   },
   {
+    "name": "export-ExportMobile___en",
+    "path": "/export/ExportMobile",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\export\\\\ExportMobile.vue",
+    "chunkName": "pages/export/ExportMobile",
+    "_name": "_045d2cd2"
+  },
+  {
     "name": "about-us___id",
     "path": "/id/about-us",
     "component": "F:\\\\nikkiClient\\\\pages\\\\about-us\\\\index.vue",
@@ -229,6 +236,13 @@
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\sign-up\\\\index.vue",
     "chunkName": "pages/content-management/sign-up/index",
     "_name": "_9b51122a"
+  },
+  {
+    "name": "export-ExportMobile___id",
+    "path": "/id/export/ExportMobile",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\export\\\\ExportMobile.vue",
+    "chunkName": "pages/export/ExportMobile",
+    "_name": "_045d2cd2"
   },
   {
     "name": "content-management-about-us-add-new___id",

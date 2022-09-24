@@ -1,16 +1,15 @@
 <template>
   <v-row justify="center" align="center">
     <template v-if="!isMobileCheck()">
-
-    <TopCarousel id="home" />
-    <OurStory id="about-us" />
-    <MyProducts id="products" />
-    <MediaAndPublication id="media-and-publication" />
-    <CareerAt id="career" />
-    <ContactUs id="contact-us" />
+      <TopCarousel id="home" />
+      <OurStory id="about-us" />
+      <MyProducts id="products" />
+      <MediaAndPublication id="media-and-publication" />
+      <CareerAt id="career" />
+      <ContactUs id="contact-us" />
     </template>
     <template v-else-if="isMobileCheck()">
-      <div>masuk pak eko</div>
+      <top-carousel-mobile/>
     </template>
   </v-row>
 </template>
@@ -22,10 +21,12 @@ import MyProducts from '@/components/home/MyProducts.vue'
 import MediaAndPublication from '@/components/home/MediaAndPublication.vue'
 import CareerAt from '@/components/home/CareerAt.vue'
 import ContactUs from '@/components/home/ContactUs.vue'
+import TopCarouselMobile from '@/components/home/mobile/TopCarouselMobile'
 
 export default {
   name: 'Home',
   components: {
+    TopCarouselMobile,
     TopCarousel,
     OurStory,
     MyProducts,
@@ -40,7 +41,7 @@ export default {
   },
   mounted() {
     // console.log(this.isMobileCheck())
-  }
+  },
 }
 </script>
 
