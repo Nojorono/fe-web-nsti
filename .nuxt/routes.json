@@ -3,300 +3,364 @@
     "name": "about-us___en",
     "path": "/about-us",
     "component": "F:\\\\nikkiClient\\\\pages\\\\about-us\\\\index.vue",
-    "chunkName": "pages/about-us/index"
+    "chunkName": "pages/about-us/index",
+    "_name": "_387ccbf7"
   },
   {
     "name": "career___en",
     "path": "/career",
     "component": "F:\\\\nikkiClient\\\\pages\\\\career\\\\index.vue",
-    "chunkName": "pages/career/index"
+    "chunkName": "pages/career/index",
+    "_name": "_0c8647d2"
   },
   {
     "name": "contact-us___en",
     "path": "/contact-us",
     "component": "F:\\\\nikkiClient\\\\pages\\\\contact-us\\\\index.vue",
-    "chunkName": "pages/contact-us/index"
+    "chunkName": "pages/contact-us/index",
+    "_name": "_4d355eec"
   },
   {
     "name": "content-management___en",
     "path": "/content-management",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\index.vue",
-    "chunkName": "pages/content-management/index"
+    "chunkName": "pages/content-management/index",
+    "_name": "_3095575e"
   },
   {
     "name": "export___en",
     "path": "/export",
     "component": "F:\\\\nikkiClient\\\\pages\\\\export\\\\index.vue",
-    "chunkName": "pages/export/index"
+    "chunkName": "pages/export/index",
+    "_name": "_2a293221"
   },
   {
     "name": "index___id",
     "path": "/id",
     "component": "F:\\\\nikkiClient\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_532694d5"
   },
   {
     "name": "media-and-publication___en",
     "path": "/media-and-publication",
     "component": "F:\\\\nikkiClient\\\\pages\\\\media-and-publication\\\\index.vue",
-    "chunkName": "pages/media-and-publication/index"
+    "chunkName": "pages/media-and-publication/index",
+    "_name": "_153d9eb2"
   },
   {
     "name": "products___en",
     "path": "/products",
     "component": "F:\\\\nikkiClient\\\\pages\\\\products\\\\index.vue",
-    "chunkName": "pages/products/index"
+    "chunkName": "pages/products/index",
+    "_name": "_b7f0509e"
   },
   {
-    "name": "about-us-mobile___en",
-    "path": "/about-us/mobile",
-    "component": "F:\\\\nikkiClient\\\\pages\\\\about-us\\\\mobile.vue",
-    "chunkName": "pages/about-us/mobile"
+    "name": "about-us-AboutUsMobile___en",
+    "path": "/about-us/AboutUsMobile",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\about-us\\\\AboutUsMobile.vue",
+    "chunkName": "pages/about-us/AboutUsMobile",
+    "_name": "_bae50fdc"
   },
   {
     "name": "content-management-about-us___en",
     "path": "/content-management/about-us",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\about-us\\\\index.vue",
-    "chunkName": "pages/content-management/about-us/index"
+    "chunkName": "pages/content-management/about-us/index",
+    "_name": "_bb769180"
   },
   {
     "name": "content-management-career___en",
     "path": "/content-management/career",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\career\\\\index.vue",
-    "chunkName": "pages/content-management/career/index"
+    "chunkName": "pages/content-management/career/index",
+    "_name": "_842df4c0"
   },
   {
     "name": "content-management-media-and-publication___en",
     "path": "/content-management/media-and-publication",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\media-and-publication\\\\index.vue",
-    "chunkName": "pages/content-management/media-and-publication/index"
+    "chunkName": "pages/content-management/media-and-publication/index",
+    "_name": "_072a1209"
   },
   {
     "name": "content-management-products___en",
     "path": "/content-management/products",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\products\\\\index.vue",
-    "chunkName": "pages/content-management/products/index"
+    "chunkName": "pages/content-management/products/index",
+    "_name": "_0dcfc2fa"
   },
   {
     "name": "content-management-sign-in___en",
     "path": "/content-management/sign-in",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\sign-in\\\\index.vue",
-    "chunkName": "pages/content-management/sign-in/index"
+    "chunkName": "pages/content-management/sign-in/index",
+    "_name": "_74cfde21"
   },
   {
     "name": "content-management-sign-up___en",
     "path": "/content-management/sign-up",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\sign-up\\\\index.vue",
-    "chunkName": "pages/content-management/sign-up/index"
+    "chunkName": "pages/content-management/sign-up/index",
+    "_name": "_9b51122a"
   },
   {
     "name": "export-ExportMobile___en",
     "path": "/export/ExportMobile",
     "component": "F:\\\\nikkiClient\\\\pages\\\\export\\\\ExportMobile.vue",
-    "chunkName": "pages/export/ExportMobile"
+    "chunkName": "pages/export/ExportMobile",
+    "_name": "_045d2cd2"
   },
   {
     "name": "about-us___id",
     "path": "/id/about-us",
     "component": "F:\\\\nikkiClient\\\\pages\\\\about-us\\\\index.vue",
-    "chunkName": "pages/about-us/index"
+    "chunkName": "pages/about-us/index",
+    "_name": "_387ccbf7"
   },
   {
     "name": "career___id",
     "path": "/id/career",
     "component": "F:\\\\nikkiClient\\\\pages\\\\career\\\\index.vue",
-    "chunkName": "pages/career/index"
+    "chunkName": "pages/career/index",
+    "_name": "_0c8647d2"
   },
   {
     "name": "contact-us___id",
     "path": "/id/contact-us",
     "component": "F:\\\\nikkiClient\\\\pages\\\\contact-us\\\\index.vue",
-    "chunkName": "pages/contact-us/index"
+    "chunkName": "pages/contact-us/index",
+    "_name": "_4d355eec"
   },
   {
     "name": "content-management___id",
     "path": "/id/content-management",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\index.vue",
-    "chunkName": "pages/content-management/index"
+    "chunkName": "pages/content-management/index",
+    "_name": "_3095575e"
   },
   {
     "name": "export___id",
     "path": "/id/export",
     "component": "F:\\\\nikkiClient\\\\pages\\\\export\\\\index.vue",
-    "chunkName": "pages/export/index"
+    "chunkName": "pages/export/index",
+    "_name": "_2a293221"
   },
   {
     "name": "media-and-publication___id",
     "path": "/id/media-and-publication",
     "component": "F:\\\\nikkiClient\\\\pages\\\\media-and-publication\\\\index.vue",
-    "chunkName": "pages/media-and-publication/index"
+    "chunkName": "pages/media-and-publication/index",
+    "_name": "_153d9eb2"
   },
   {
     "name": "products___id",
     "path": "/id/products",
     "component": "F:\\\\nikkiClient\\\\pages\\\\products\\\\index.vue",
-    "chunkName": "pages/products/index"
+    "chunkName": "pages/products/index",
+    "_name": "_b7f0509e"
+  },
+  {
+    "name": "products-ProductsMobile___en",
+    "path": "/products/ProductsMobile",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\products\\\\ProductsMobile.vue",
+    "chunkName": "pages/products/ProductsMobile",
+    "_name": "_0a296977"
   },
   {
     "name": "content-management-about-us-add-new___en",
     "path": "/content-management/about-us/add-new",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\about-us\\\\add-new\\\\index.vue",
-    "chunkName": "pages/content-management/about-us/add-new/index"
+    "chunkName": "pages/content-management/about-us/add-new/index",
+    "_name": "_6b5553e0"
   },
   {
     "name": "content-management-career-add-new___en",
     "path": "/content-management/career/add-new",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\career\\\\add-new\\\\index.vue",
-    "chunkName": "pages/content-management/career/add-new/index"
+    "chunkName": "pages/content-management/career/add-new/index",
+    "_name": "_24333180"
   },
   {
     "name": "content-management-media-and-publication-add-new___en",
     "path": "/content-management/media-and-publication/add-new",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\media-and-publication\\\\add-new\\\\index.vue",
-    "chunkName": "pages/content-management/media-and-publication/add-new/index"
+    "chunkName": "pages/content-management/media-and-publication/add-new/index",
+    "_name": "_577f0b37"
   },
   {
     "name": "content-management-products-add-new___en",
     "path": "/content-management/products/add-new",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\products\\\\add-new\\\\index.vue",
-    "chunkName": "pages/content-management/products/add-new/index"
+    "chunkName": "pages/content-management/products/add-new/index",
+    "_name": "_7162d966"
   },
   {
-    "name": "about-us-mobile___id",
-    "path": "/id/about-us/mobile",
-    "component": "F:\\\\nikkiClient\\\\pages\\\\about-us\\\\mobile.vue",
-    "chunkName": "pages/about-us/mobile"
+    "name": "about-us-AboutUsMobile___id",
+    "path": "/id/about-us/AboutUsMobile",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\about-us\\\\AboutUsMobile.vue",
+    "chunkName": "pages/about-us/AboutUsMobile",
+    "_name": "_bae50fdc"
   },
   {
     "name": "content-management-about-us___id",
     "path": "/id/content-management/about-us",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\about-us\\\\index.vue",
-    "chunkName": "pages/content-management/about-us/index"
+    "chunkName": "pages/content-management/about-us/index",
+    "_name": "_bb769180"
   },
   {
     "name": "content-management-career___id",
     "path": "/id/content-management/career",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\career\\\\index.vue",
-    "chunkName": "pages/content-management/career/index"
+    "chunkName": "pages/content-management/career/index",
+    "_name": "_842df4c0"
   },
   {
     "name": "content-management-media-and-publication___id",
     "path": "/id/content-management/media-and-publication",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\media-and-publication\\\\index.vue",
-    "chunkName": "pages/content-management/media-and-publication/index"
+    "chunkName": "pages/content-management/media-and-publication/index",
+    "_name": "_072a1209"
   },
   {
     "name": "content-management-products___id",
     "path": "/id/content-management/products",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\products\\\\index.vue",
-    "chunkName": "pages/content-management/products/index"
+    "chunkName": "pages/content-management/products/index",
+    "_name": "_0dcfc2fa"
   },
   {
     "name": "content-management-sign-in___id",
     "path": "/id/content-management/sign-in",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\sign-in\\\\index.vue",
-    "chunkName": "pages/content-management/sign-in/index"
+    "chunkName": "pages/content-management/sign-in/index",
+    "_name": "_74cfde21"
   },
   {
     "name": "content-management-sign-up___id",
     "path": "/id/content-management/sign-up",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\sign-up\\\\index.vue",
-    "chunkName": "pages/content-management/sign-up/index"
+    "chunkName": "pages/content-management/sign-up/index",
+    "_name": "_9b51122a"
   },
   {
     "name": "export-ExportMobile___id",
     "path": "/id/export/ExportMobile",
     "component": "F:\\\\nikkiClient\\\\pages\\\\export\\\\ExportMobile.vue",
-    "chunkName": "pages/export/ExportMobile"
+    "chunkName": "pages/export/ExportMobile",
+    "_name": "_045d2cd2"
+  },
+  {
+    "name": "products-ProductsMobile___id",
+    "path": "/id/products/ProductsMobile",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\products\\\\ProductsMobile.vue",
+    "chunkName": "pages/products/ProductsMobile",
+    "_name": "_0a296977"
   },
   {
     "name": "content-management-about-us-add-new___id",
     "path": "/id/content-management/about-us/add-new",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\about-us\\\\add-new\\\\index.vue",
-    "chunkName": "pages/content-management/about-us/add-new/index"
+    "chunkName": "pages/content-management/about-us/add-new/index",
+    "_name": "_6b5553e0"
   },
   {
     "name": "content-management-career-add-new___id",
     "path": "/id/content-management/career/add-new",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\career\\\\add-new\\\\index.vue",
-    "chunkName": "pages/content-management/career/add-new/index"
+    "chunkName": "pages/content-management/career/add-new/index",
+    "_name": "_24333180"
   },
   {
     "name": "content-management-media-and-publication-add-new___id",
     "path": "/id/content-management/media-and-publication/add-new",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\media-and-publication\\\\add-new\\\\index.vue",
-    "chunkName": "pages/content-management/media-and-publication/add-new/index"
+    "chunkName": "pages/content-management/media-and-publication/add-new/index",
+    "_name": "_577f0b37"
   },
   {
     "name": "content-management-products-add-new___id",
     "path": "/id/content-management/products/add-new",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\products\\\\add-new\\\\index.vue",
-    "chunkName": "pages/content-management/products/add-new/index"
+    "chunkName": "pages/content-management/products/add-new/index",
+    "_name": "_7162d966"
   },
   {
     "name": "content-management-about-us-edit-id___id",
     "path": "/id/content-management/about-us/edit/:id?",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\about-us\\\\edit\\\\_id.vue",
-    "chunkName": "pages/content-management/about-us/edit/_id"
+    "chunkName": "pages/content-management/about-us/edit/_id",
+    "_name": "_738e9a44"
   },
   {
     "name": "content-management-career-edit-id___id",
     "path": "/id/content-management/career/edit/:id",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\career\\\\edit\\\\_id.vue",
-    "chunkName": "pages/content-management/career/edit/_id"
+    "chunkName": "pages/content-management/career/edit/_id",
+    "_name": "_7f625d84"
   },
   {
     "name": "content-management-media-and-publication-edit-id___id",
     "path": "/id/content-management/media-and-publication/edit/:id?",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\media-and-publication\\\\edit\\\\_id.vue",
-    "chunkName": "pages/content-management/media-and-publication/edit/_id"
+    "chunkName": "pages/content-management/media-and-publication/edit/_id",
+    "_name": "_2ff18127"
   },
   {
     "name": "content-management-products-edit-id___id",
     "path": "/id/content-management/products/edit/:id",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\products\\\\edit\\\\_id.vue",
-    "chunkName": "pages/content-management/products/edit/_id"
+    "chunkName": "pages/content-management/products/edit/_id",
+    "_name": "_19835198"
   },
   {
     "name": "content-management-about-us-edit-id___en",
     "path": "/content-management/about-us/edit/:id?",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\about-us\\\\edit\\\\_id.vue",
-    "chunkName": "pages/content-management/about-us/edit/_id"
+    "chunkName": "pages/content-management/about-us/edit/_id",
+    "_name": "_738e9a44"
   },
   {
     "name": "content-management-career-edit-id___en",
     "path": "/content-management/career/edit/:id",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\career\\\\edit\\\\_id.vue",
-    "chunkName": "pages/content-management/career/edit/_id"
+    "chunkName": "pages/content-management/career/edit/_id",
+    "_name": "_7f625d84"
   },
   {
     "name": "content-management-media-and-publication-edit-id___en",
     "path": "/content-management/media-and-publication/edit/:id?",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\media-and-publication\\\\edit\\\\_id.vue",
-    "chunkName": "pages/content-management/media-and-publication/edit/_id"
+    "chunkName": "pages/content-management/media-and-publication/edit/_id",
+    "_name": "_2ff18127"
   },
   {
     "name": "content-management-products-edit-id___en",
     "path": "/content-management/products/edit/:id",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\products\\\\edit\\\\_id.vue",
-    "chunkName": "pages/content-management/products/edit/_id"
+    "chunkName": "pages/content-management/products/edit/_id",
+    "_name": "_19835198"
   },
   {
     "name": "media-and-publication-detail-id___id",
     "path": "/id/media-and-publication/detail/:id?",
     "component": "F:\\\\nikkiClient\\\\pages\\\\media-and-publication\\\\detail\\\\_id.vue",
-    "chunkName": "pages/media-and-publication/detail/_id"
+    "chunkName": "pages/media-and-publication/detail/_id",
+    "_name": "_234a94e9"
   },
   {
     "name": "media-and-publication-detail-id___en",
     "path": "/media-and-publication/detail/:id?",
     "component": "F:\\\\nikkiClient\\\\pages\\\\media-and-publication\\\\detail\\\\_id.vue",
-    "chunkName": "pages/media-and-publication/detail/_id"
+    "chunkName": "pages/media-and-publication/detail/_id",
+    "_name": "_234a94e9"
   },
   {
     "name": "index___en",
     "path": "/",
     "component": "F:\\\\nikkiClient\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_532694d5"
   }
 ]

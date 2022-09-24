@@ -1,5 +1,5 @@
 <template>
-  <v-row justify="center" align="center" class="about-us-container">
+  <v-row  v-if="!isMobileCheck()" justify="center" align="center" class="about-us-container">
     <v-col cols="12" class="ma-0 pa-0">
       <v-carousel
         cycle
@@ -120,13 +120,15 @@
       </vueper-slides>
     </div>
   </v-row>
+  <about-us-mobile  v-else />
 </template>
 
 <script>
 import { VueperSlides, VueperSlide } from 'vueperslides'
+import AboutUsMobile from '@/pages/about-us/AboutUsMobile'
 export default {
   name: 'AboutUs',
-  components: { VueperSlides, VueperSlide },
+  components: { AboutUsMobile, VueperSlides, VueperSlide },
   data() {
     return {
       content: [],

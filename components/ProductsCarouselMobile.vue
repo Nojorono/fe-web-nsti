@@ -1,8 +1,8 @@
 <template>
   <div>
     <carousel-3d
-      :width="507"
-      :height="550"
+      :width="230"
+      :height="260"
       :perspective="0"
       :controls-visible="true"
       :controls-prev-html="''"
@@ -10,7 +10,7 @@
       :controls-width="40"
       :controls-height="60"
       :space="350"
-      :display="5"
+      :display="1"
       :inverse-scaling="350"
     >
       <slide v-for="(slide, i) in slides" :key="slide.id" :index="i">
@@ -29,19 +29,13 @@
     <v-dialog
       v-model="dialogProduct"
       transition="fade-transition"
-      width="75vw"
+      width="100vw"
       content-class="elevation-0"
     >
       <div class="dialog-product">
-        <div class="defaultGolden--text dialog-container d-flex align-start">
+        <div class="defaultGolden--text dialog-container d-flex align-center">
           <div class="dialog-img-container">
-            <img :src="linkPopup" height="616.57px" />
-          </div>
-          <div class="close-btn cursor-pointer d-flex justify-start">
-            <img
-              :src="require('assets/images/Icon-close.svg')"
-              @click="dialogProduct = false"
-            />
+            <img :src="linkPopup" height="auto" width="100%" />
           </div>
         </div>
       </div>
@@ -50,7 +44,7 @@
 </template>
 <script>
 export default {
-  name: 'ProductsCarousel',
+  name: 'ProductsCarouselMobile',
   props: {
     slides: {
       default: () => [],

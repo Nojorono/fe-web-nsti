@@ -2,6 +2,27 @@
   "ProductsCarousel": {
     "description": "Auto imported from components/ProductsCarousel.vue"
   },
+  "ProductsCarouselMobile": {
+    "description": "Auto imported from components/ProductsCarouselMobile.vue"
+  },
+  "HomeCareerAt": {
+    "description": "Auto imported from components/home/CareerAt.vue"
+  },
+  "HomeContactUs": {
+    "description": "Auto imported from components/home/ContactUs.vue"
+  },
+  "HomeMediaAndPublication": {
+    "description": "Auto imported from components/home/MediaAndPublication.vue"
+  },
+  "HomeMyProducts": {
+    "description": "Auto imported from components/home/MyProducts.vue"
+  },
+  "HomeOurStory": {
+    "description": "Auto imported from components/home/OurStory.vue"
+  },
+  "HomeTopCarousel": {
+    "description": "Auto imported from components/home/TopCarousel.vue"
+  },
   "CmsCardCms": {
     "description": "Auto imported from components/cms/CardCms.vue"
   },
@@ -25,24 +46,6 @@
   },
   "CmsSideBar": {
     "description": "Auto imported from components/cms/SideBar.vue"
-  },
-  "HomeCareerAt": {
-    "description": "Auto imported from components/home/CareerAt.vue"
-  },
-  "HomeContactUs": {
-    "description": "Auto imported from components/home/ContactUs.vue"
-  },
-  "HomeMediaAndPublication": {
-    "description": "Auto imported from components/home/MediaAndPublication.vue"
-  },
-  "HomeMyProducts": {
-    "description": "Auto imported from components/home/MyProducts.vue"
-  },
-  "HomeOurStory": {
-    "description": "Auto imported from components/home/OurStory.vue"
-  },
-  "HomeTopCarousel": {
-    "description": "Auto imported from components/home/TopCarousel.vue"
   },
   "LayoutFooterBottom": {
     "description": "Auto imported from components/layout/FooterBottom.vue"

@@ -1,20 +1,20 @@
 <template>
-  <div class="products-container" v-if="!isMobileCheck()">
+  <div class="products-container-mobile ">
     <div class="title-container">
       <h1 class="defaultGolden--text">{{ $t('media.title') }}</h1>
     </div>
-    <ProductsCarousel :slides="productList"></ProductsCarousel>
+    <div class="carousel-container">
+      <products-carousel-mobile :slides="productList"/>
+    </div>
   </div>
-  <products-mobile v-else />
+
 </template>
 <script>
-import ProductsCarousel from '@/components/ProductsCarousel.vue'
-import ProductsMobile from '@/pages/products/ProductsMobile'
+import ProductsCarouselMobile from '@/components/ProductsCarouselMobile.vue'
 export default {
-  name: 'Products',
+  name: 'ProductsMobile',
   components: {
-    ProductsMobile,
-    ProductsCarousel,
+    ProductsCarouselMobile,
   },
   data() {
     return {
@@ -50,16 +50,27 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.products-container {
+.products-container-mobile {
+  background: $color-primary-root;
+  width: 100%;
+  .carousel-container{
+    height: 76vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+
+
+  }
   .title-container {
+  padding: 1rem 3rem;
     h1 {
       font-family: 'Barlow', sans-serif;
       font-style: normal;
       font-weight: 800;
-      font-size: 90px;
+      font-size: 30px;
       letter-spacing: 0.1em;
     }
   }
-  padding: 1rem 3rem;
 }
 </style>

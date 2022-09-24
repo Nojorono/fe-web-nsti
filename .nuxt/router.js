@@ -12,7 +12,7 @@ const _2a293221 = () => interopDefault(import('..\\pages\\export\\index.vue' /* 
 const _532694d5 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 const _153d9eb2 = () => interopDefault(import('..\\pages\\media-and-publication\\index.vue' /* webpackChunkName: "pages/media-and-publication/index" */))
 const _b7f0509e = () => interopDefault(import('..\\pages\\products\\index.vue' /* webpackChunkName: "pages/products/index" */))
-const _2ec9aa4d = () => interopDefault(import('..\\pages\\about-us\\mobile.vue' /* webpackChunkName: "pages/about-us/mobile" */))
+const _bae50fdc = () => interopDefault(import('..\\pages\\about-us\\AboutUsMobile.vue' /* webpackChunkName: "pages/about-us/AboutUsMobile" */))
 const _bb769180 = () => interopDefault(import('..\\pages\\content-management\\about-us\\index.vue' /* webpackChunkName: "pages/content-management/about-us/index" */))
 const _842df4c0 = () => interopDefault(import('..\\pages\\content-management\\career\\index.vue' /* webpackChunkName: "pages/content-management/career/index" */))
 const _072a1209 = () => interopDefault(import('..\\pages\\content-management\\media-and-publication\\index.vue' /* webpackChunkName: "pages/content-management/media-and-publication/index" */))
@@ -20,6 +20,7 @@ const _0dcfc2fa = () => interopDefault(import('..\\pages\\content-management\\pr
 const _74cfde21 = () => interopDefault(import('..\\pages\\content-management\\sign-in\\index.vue' /* webpackChunkName: "pages/content-management/sign-in/index" */))
 const _9b51122a = () => interopDefault(import('..\\pages\\content-management\\sign-up\\index.vue' /* webpackChunkName: "pages/content-management/sign-up/index" */))
 const _045d2cd2 = () => interopDefault(import('..\\pages\\export\\ExportMobile.vue' /* webpackChunkName: "pages/export/ExportMobile" */))
+const _0a296977 = () => interopDefault(import('..\\pages\\products\\ProductsMobile.vue' /* webpackChunkName: "pages/products/ProductsMobile" */))
 const _6b5553e0 = () => interopDefault(import('..\\pages\\content-management\\about-us\\add-new\\index.vue' /* webpackChunkName: "pages/content-management/about-us/add-new/index" */))
 const _24333180 = () => interopDefault(import('..\\pages\\content-management\\career\\add-new\\index.vue' /* webpackChunkName: "pages/content-management/career/add-new/index" */))
 const _577f0b37 = () => interopDefault(import('..\\pages\\content-management\\media-and-publication\\add-new\\index.vue' /* webpackChunkName: "pages/content-management/media-and-publication/add-new/index" */))
@@ -74,9 +75,9 @@ export const routerOptions = {
     component: _b7f0509e,
     name: "products___en"
   }, {
-    path: "/about-us/mobile",
-    component: _2ec9aa4d,
-    name: "about-us-mobile___en"
+    path: "/about-us/AboutUsMobile",
+    component: _bae50fdc,
+    name: "about-us-AboutUsMobile___en"
   }, {
     path: "/content-management/about-us",
     component: _bb769180,
@@ -134,6 +135,10 @@ export const routerOptions = {
     component: _b7f0509e,
     name: "products___id"
   }, {
+    path: "/products/ProductsMobile",
+    component: _0a296977,
+    name: "products-ProductsMobile___en"
+  }, {
     path: "/content-management/about-us/add-new",
     component: _6b5553e0,
     name: "content-management-about-us-add-new___en"
@@ -150,9 +155,9 @@ export const routerOptions = {
     component: _7162d966,
     name: "content-management-products-add-new___en"
   }, {
-    path: "/id/about-us/mobile",
-    component: _2ec9aa4d,
-    name: "about-us-mobile___id"
+    path: "/id/about-us/AboutUsMobile",
+    component: _bae50fdc,
+    name: "about-us-AboutUsMobile___id"
   }, {
     path: "/id/content-management/about-us",
     component: _bb769180,
@@ -181,6 +186,10 @@ export const routerOptions = {
     path: "/id/export/ExportMobile",
     component: _045d2cd2,
     name: "export-ExportMobile___id"
+  }, {
+    path: "/id/products/ProductsMobile",
+    component: _0a296977,
+    name: "products-ProductsMobile___id"
   }, {
     path: "/id/content-management/about-us/add-new",
     component: _6b5553e0,

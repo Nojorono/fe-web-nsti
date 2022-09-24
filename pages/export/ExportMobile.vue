@@ -1,6 +1,6 @@
 <template>
   <v-row class="ma-0 pa-0">
-    <h1 id="export-heritage" class="defaultGolden--text export-heading mt-15">
+    <h1 id="export-heritage" class="defaultGolden--text export-heading">
       {{ $t('export.title') }}
     </h1>
     <div class="image-container ma-0 pa-0">
