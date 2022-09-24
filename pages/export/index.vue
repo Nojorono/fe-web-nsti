@@ -1,5 +1,10 @@
 <template>
-  <v-row justify="center" align="center" class="ma-0 pa-0" v-if="!isMobileCheck()">
+  <v-row
+    v-if="!isMobileCheck()"
+    justify="center"
+    align="center"
+    class="ma-0 pa-0"
+  >
     <h1 id="export-heritage" class="defaultGolden--text export-heading mt-10">
       {{ $t('export.title') }}
     </h1>
@@ -77,7 +82,7 @@
       </div>
     </v-col>
   </v-row>
-  <ExportMobile  v-else/>
+  <ExportMobile v-else />
 </template>
 
 <script>

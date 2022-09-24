@@ -8,8 +8,8 @@
       <CareerAt id="career" />
       <ContactUs id="contact-us" />
     </template>
-    <template v-else-if="isMobileCheck()">
-      <top-carousel-mobile/>
+    <template v-else>
+      <top-carousel-mobile />
     </template>
   </v-row>
 </template>

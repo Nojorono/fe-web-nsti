@@ -15,7 +15,7 @@
         max-width="10px"
         class="v-img"
       />
-      <p>&copy; Future. All rights reserved</p>
+      <p>&copy; 2022 PT Nikki Super. All rights reserved.</p>
     </div>
   </v-col>
 </template>

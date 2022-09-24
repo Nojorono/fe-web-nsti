@@ -18,7 +18,7 @@
   <v-app v-else-if="isMobileCheck()" dark>
     <nav-bar-mobile></nav-bar-mobile>
     <v-main>
-      <v-container fluid app>
+      <v-container fluid class="ma-0 pa-0">
         <Nuxt />
       </v-container>
     </v-main>

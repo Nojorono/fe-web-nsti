@@ -146,6 +146,10 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100vw;
   .menu {
     background-color: $color-primary-root;
     background-image: url('assets/images/grain.png');
@@ -160,12 +164,12 @@ export default {
 
       li {
         list-style: none;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
         a {
           color: $color-secondary-root;
           font-family: 'Barlow', sans-serif;
           font-weight: 800;
-          font-size: 2em;
+          font-size: 1.5em;
           line-height: 29px;
           letter-spacing: 0.1em;
           text-decoration: none;

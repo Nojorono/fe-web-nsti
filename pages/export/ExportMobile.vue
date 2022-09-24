@@ -1,83 +1,57 @@
 <template>
-  <v-row justify="center" align="center" class="ma-0 pa-0" v-if="!isMobileCheck()">
-    <h1 id="export-heritage" class="defaultGolden--text export-heading mt-10">
+  <v-row class="ma-0 pa-0">
+    <h1 id="export-heritage" class="defaultGolden--text export-heading mt-15">
       {{ $t('export.title') }}
     </h1>
-    <v-col cols="12" class="export-container ma-0 pa-0">
-      <div class="card-content">
-        <h1 class="defaultGray--text">{{ $t('export.heritage') }}</h1>
-        <p class="defaultGray--text">
-          {{ $t('export.subHeritage') }}
-        </p>
+    <div class="image-container ma-0 pa-0">
+      <img
+        :src="require('assets/images/export-tobacco.png')"
+        height="242"
+        width="100%"
+      />
+    </div>
+    <div class='text-container-one'>
+      <h1 class="defaultGray--text">{{ $t('export.heritage') }}</h1>
+      <p class="defaultGray--text">
+        {{ $t('export.subHeritage') }}
+      </p>
+    </div>
+    <div class="image-container ma-0 pa-0">
+      <img
+        :src="require('assets/images/forklift.png')"
+        height="242"
+        width="100%"
+      />
+    </div>
+    <div class='text-container-two'>
+      <h1 class="white--text">{{ $t('export.global') }}</h1>
+      <p class="white--text">
+        {{ $t('export.subGlobal') }}
+      </p>
+    </div>
+    <div class='contact-us-export defaultGolden--text'>
+      <div class="contact-us-title">
+        <h1 class="">{{ $t('export.contact.title') }}</h1>
+        <p>{{ $t('export.contact.sub') }}</p>
       </div>
-      <div class="triangle">
-        <img
-          :src="require('assets/images/left-trapesium.svg')"
-          width="100%"
-          height="100%"
-        />
-      </div>
-      <div class="image-container ma-0 pa-0">
-        <v-img
-          :src="require('assets/images/export-tobacco.png')"
-          max-height="100%"
-          max-width="100%"
-        />
-      </div>
-    </v-col>
-    <v-col
-      id="export-quality-tobacco"
-      cols="12"
-      class="export-container-2 ma-0 pa-0"
-    >
-      <div class="image-container-2 ma-0 pa-0">
-        <v-img
-          :src="require('assets/images/forklift.png')"
-          max-height="100%"
-          max-width="100%"
-        />
-      </div>
-      <div class="triangle-2">
-        <img
-          :src="require('assets/images/right-trapesium.svg')"
-          width="100%"
-          height="100%"
-          alt="divider"
-        />
-      </div>
-      <div class="card-content-2">
-        <h1 class="white--text">{{ $t('export.global') }}</h1>
-        <p class="white--text">
-          {{ $t('export.subGlobal') }}
-        </p>
-      </div>
-    </v-col>
-    <v-col cols="12" class="mt-15 ma-0 pa-0">
-      <div id="export-contact" class="contact-us-export defaultGolden--text">
-        <div class="contact-us-title">
-          <h1 class="">{{ $t('export.contact.title') }}</h1>
-          <p>{{ $t('export.contact.sub') }}</p>
+      <div class="contact-details">
+        <div class="detail-child-phone">
+          <h2>{{ $t('export.contact.phone') }}</h2>
+          <p>
+            <a href="tel:+62291445035">{{ $t('export.contact.number') }}</a>
+          </p>
         </div>
-        <div class="contact-details">
-          <div class="detail-child-phone">
-            <h2>{{ $t('export.contact.phone') }}</h2>
-            <p>
-              <a href="tel:+62291445035">{{ $t('export.contact.number') }}</a>
-            </p>
-          </div>
-          <div class="detail-child-email">
-            <h2>{{ $t('export.contact.email') }}</h2>
-            <p>
-              <a href="mailto: info@nikkisuper.co.id">{{
-                  $t('export.contact.emailLink')
-                }}</a>
-            </p>
-          </div>
+        <div class="detail-child-email">
+          <h2>{{ $t('export.contact.email') }}</h2>
+          <p>
+            <a href="mailto: info@nikkisuper.co.id">{{
+                $t('export.contact.emailLink')
+              }}</a>
+          </p>
         </div>
       </div>
-    </v-col>
+    </div>
   </v-row>
-
 </template>
 
 <script>
@@ -94,124 +68,46 @@ export default {
 <style lang="scss" scoped>
 .export-heading {
   font-weight: 800;
-  font-size: 5.5em;
-  line-height: 119px;
+  font-size: 2em;
   letter-spacing: 0.1em;
   background-color: $color-primary-root;
-  width: 100%;
-  height: 100%;
-  padding: 3rem 5rem;
+  width: 100vw;
+  padding: 1rem 2rem;
   font-family: 'Barlow', sans-serif;
 }
-.export-container {
+.image-container {
+  img{
+    object-fit: cover;
+  }
+}
+[class*='text-container'] {
   font-family: 'Barlow', sans-serif;
-  position: relative;
-  display: flex;
-  width: 100%;
-  height: 826px;
-  .card-content {
-    position: absolute;
-    left: 0;
-    z-index: 3;
-    width: 45%;
-    height: 100%;
-    padding: 9rem 5rem;
-    h1 {
-      font-weight: 800;
-      font-size: 3.2em;
-      line-height: 78px;
-      letter-spacing: 0.05em;
-    }
-    p {
-      font-weight: 500;
-      font-size: 1.5em;
-      line-height: 150%;
-    }
+  padding: 1rem 2rem;
+  margin-top: -2%;
+
+  h1 {
+    font-weight: 800;
+    letter-spacing: 0.05em;
   }
-  .triangle {
-    position: absolute;
-    left: -5rem;
-    z-index: 2;
+  p{
+    font-weight: 500;
   }
-  .image-container {
-    position: absolute;
-    right: 0;
-    z-index: 1;
-  }
+}
+.text-container-one{
+    background:#AE983D ;
+}
+.text-container-two{
+  background: #29306E;
 }
 
-.export-container-2 {
-  font-family: 'Barlow', sans-serif;
-  position: relative;
-  display: flex;
-  width: 100%;
-  height: 760px;
-  .card-content-2 {
-    position: absolute;
-    right: 0;
-    z-index: 3;
-    width: 40%;
-    height: 100%;
-    padding: 10rem 8rem;
-    h1 {
-      font-weight: 800;
-      font-size: 3.5em;
-      line-height: 78px;
-      letter-spacing: 0.05em;
-    }
-    p {
-      font-weight: 500;
-      font-size: 1.3em;
-      line-height: 150%;
-      letter-spacing: 0.05em;
-    }
-  }
-  .triangle-2 {
-    position: absolute;
-    right: -5rem;
-    z-index: 2;
-  }
-  .image-container-2 {
-    position: absolute;
-    left: 0rem;
-    z-index: 1;
-  }
-}
+.contact-us-export{
 
-.contact-us-export {
-  width: 100%;
-  background-color: $color-primary-root;
-  padding: 6rem 13rem;
-  display: flex;
-  justify-content: space-between;
-  font-family: 'Barlow', sans-serif;
-  .contact-us-title {
-    h1 {
-      font-weight: 800;
-      font-size: 4em;
-      line-height: 96px;
-      letter-spacing: 0.05em;
-    }
-    p {
-      font-weight: 500;
-      font-size: 1.5em;
-      line-height: 39px;
-    }
-  }
-  .contact-details {
-    padding-right: 5rem;
-    h2 {
-      font-weight: 700;
-      font-size: 1.8em;
-      line-height: 39px;
-    }
-    a {
-      font-weight: 500;
-      font-size: 1.3em;
-      line-height: 29px;
-      text-decoration: none;
-      color: $color-secondary-dark-root;
-    }
+  background: $color-primary-root;
+  width: 100vw;
+  padding: 1rem 2rem;
+  a{
+    text-decoration: none;
+    color: $color-secondary-dark-root;
   }
 }
 </style>

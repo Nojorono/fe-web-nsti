@@ -1,7 +1,7 @@
 <template>
   <v-col class="footer-bottom ma-0 pa-0 defaultGolden--text">
     <div class="footer-bottom-top">
-      <p>Terms & Conditions</p>
+        <p>Terms & Conditions</p>
       <v-img
         :src="require('assets/images/Ellipse.svg')"
         max-height="3px"
@@ -11,7 +11,7 @@
       <p>Privacy Policy</p>
     </div>
     <div class="footer-bottom-bottom">
-      <p>&copy; Future. All rights reserved</p>
+      <p>&copy; 2022 PT Nikki Super. All rights reserved.</p>
     </div>
   </v-col>
 </template>
@@ -27,24 +27,28 @@ export default {
   background: $color-primary-root;
   border-top: 5px solid $color-secondary-dark-root;
   font-family: 'Barlow', sans-serif;
-  font-size: 9px;
+  font-size: 12px;
   .v-img {
     margin: 0 0.5rem;
   }
   &-top {
+    margin-top: 0.5rem;
     display: flex;
     align-content: center;
     align-items: center;
     text-align: center;
     justify-content: center;
     font-size: inherit;
+    p{
+      //margin-top: 1rem;
+      margin-bottom: 0;
+    }
   }
-  &-bottom{
+  &-bottom {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: inherit;
-
   }
 }
 </style>
