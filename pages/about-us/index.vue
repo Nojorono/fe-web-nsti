@@ -1,5 +1,10 @@
 <template>
-  <v-row  v-if="!isMobileCheck()" justify="center" align="center" class="about-us-container">
+  <v-row
+    v-if="!isMobileCheck()"
+    justify="center"
+    align="center"
+    class="about-us-container"
+  >
     <v-col cols="12" class="ma-0 pa-0">
       <v-carousel
         cycle
@@ -120,7 +125,7 @@
       </vueper-slides>
     </div>
   </v-row>
-  <about-us-mobile  v-else />
+  <about-us-mobile v-else />
 </template>
 
 <script>
@@ -174,6 +179,7 @@ export default {
   },
   mounted() {
     // console.log(this.$store.state.mobile.device)
+    // console.createTask()
   },
 }
 </script>

@@ -10,7 +10,7 @@
         width="100%"
       />
     </div>
-    <div class='text-container-one'>
+    <div class="text-container-one">
       <h1 class="defaultGray--text">{{ $t('export.heritage') }}</h1>
       <p class="defaultGray--text">
         {{ $t('export.subHeritage') }}
@@ -23,13 +23,13 @@
         width="100%"
       />
     </div>
-    <div class='text-container-two'>
+    <div class="text-container-two">
       <h1 class="white--text">{{ $t('export.global') }}</h1>
       <p class="white--text">
         {{ $t('export.subGlobal') }}
       </p>
     </div>
-    <div class='contact-us-export defaultGolden--text'>
+    <div class="contact-us-export defaultGolden--text">
       <div class="contact-us-title">
         <h1 class="">{{ $t('export.contact.title') }}</h1>
         <p>{{ $t('export.contact.sub') }}</p>
@@ -45,8 +45,8 @@
           <h2>{{ $t('export.contact.email') }}</h2>
           <p>
             <a href="mailto: info@nikkisuper.co.id">{{
-                $t('export.contact.emailLink')
-              }}</a>
+              $t('export.contact.emailLink')
+            }}</a>
           </p>
         </div>
       </div>
@@ -76,7 +76,7 @@ export default {
   font-family: 'Barlow', sans-serif;
 }
 .image-container {
-  img{
+  img {
     object-fit: cover;
   }
 }
@@ -89,23 +89,22 @@ export default {
     font-weight: 800;
     letter-spacing: 0.05em;
   }
-  p{
+  p {
     font-weight: 500;
   }
 }
-.text-container-one{
-    background:#AE983D ;
+.text-container-one {
+  background: #ae983d;
 }
-.text-container-two{
-  background: #29306E;
+.text-container-two {
+  background: #29306e;
 }
 
-.contact-us-export{
-
+.contact-us-export {
   background: $color-primary-root;
   width: 100vw;
   padding: 1rem 2rem;
-  a{
+  a {
     text-decoration: none;
     color: $color-secondary-dark-root;
   }

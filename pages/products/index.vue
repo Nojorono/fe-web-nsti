@@ -1,5 +1,5 @@
 <template>
-  <div class="products-container" v-if="!isMobileCheck()">
+  <div v-if="!isMobileCheck()" class="products-container">
     <div class="title-container">
       <h1 class="defaultGolden--text">{{ $t('media.title') }}</h1>
     </div>

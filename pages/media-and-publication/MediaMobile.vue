@@ -1,31 +1,28 @@
 <template>
-  <div v-if="!isMobileCheck()" class="media-and-publication">
-    <div class="mt-15"></div>
+  <div class="media-and-publication-mobile">
     <card />
-    <div class="pagination">
-      <img
-        src="~/assets/images/paginate-left.svg"
-        alt="button previous pagination"
-      />
-      <div v-for="i in pages" :key="i" class="number cursor-pointer">
-        {{ i }}
-      </div>
-      <img
-        src="~/assets/images/paginate-right.svg"
-        alt="button next pagination"
-      />
-    </div>
+    <!--    <div class="pagination">-->
+    <!--      <img-->
+    <!--        src="~/assets/images/paginate-left.svg"-->
+    <!--        alt="button previous pagination"-->
+    <!--      />-->
+    <!--      <div v-for="i in pages" :key="i" class="number cursor-pointer">-->
+    <!--        {{ i }}-->
+    <!--      </div>-->
+    <!--      <img-->
+    <!--        src="~/assets/images/paginate-right.svg"-->
+    <!--        alt="button next pagination"-->
+    <!--      />-->
+    <!--    </div>-->
   </div>
-  <media-and-publication-mobile v-else />
 </template>
 
 <script>
-import card from '@/components/home/MediaAndPublication.vue'
-import MediaAndPublicationMobile from '@/pages/media-and-publication/MediaMobile'
+import card from '@/components/home/mobile/MediaAndPublicationMobile.vue'
 
 export default {
-  name: 'MediaAndPublication',
-  components: { MediaAndPublicationMobile, card },
+  name: 'MediaAndPublicationMobile',
+  components: { card },
   data() {
     return {
       pages: 1,
@@ -41,7 +38,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.media-and-publication {
+.media-and-publication-mobile {
   font-family: 'Barlow', sans-serif;
   .pagination {
     display: flex;

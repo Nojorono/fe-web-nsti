@@ -1,13 +1,12 @@
 <template>
-  <div class="products-container-mobile ">
+  <div class="products-container-mobile">
     <div class="title-container">
       <h1 class="defaultGolden--text">{{ $t('media.title') }}</h1>
     </div>
     <div class="carousel-container">
-      <products-carousel-mobile :slides="productList"/>
+      <products-carousel-mobile :slides="productList" />
     </div>
   </div>
-
 </template>
 <script>
 import ProductsCarouselMobile from '@/components/ProductsCarouselMobile.vue'
@@ -53,17 +52,15 @@ export default {
 .products-container-mobile {
   background: $color-primary-root;
   width: 100%;
-  .carousel-container{
+  .carousel-container {
     height: 76vh;
     display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: column;
-
-
   }
   .title-container {
-  padding: 1rem 3rem;
+    padding: 1rem 3rem;
     h1 {
       font-family: 'Barlow', sans-serif;
       font-style: normal;

@@ -1,7 +1,7 @@
 <template>
   <v-col class="footer-bottom ma-0 pa-0 defaultGolden--text">
     <div class="footer-bottom-top">
-        <p>Terms & Conditions</p>
+      <p>Terms & Conditions</p>
       <v-img
         :src="require('assets/images/Ellipse.svg')"
         max-height="3px"
@@ -39,7 +39,7 @@ export default {
     text-align: center;
     justify-content: center;
     font-size: inherit;
-    p{
+    p {
       //margin-top: 1rem;
       margin-bottom: 0;
     }

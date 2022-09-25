@@ -63,6 +63,13 @@
     "_name": "_bae50fdc"
   },
   {
+    "name": "contact-us-ConnectMobile___en",
+    "path": "/contact-us/ConnectMobile",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\contact-us\\\\ConnectMobile.vue",
+    "chunkName": "pages/contact-us/ConnectMobile",
+    "_name": "_4487ae78"
+  },
+  {
     "name": "content-management-about-us___en",
     "path": "/content-management/about-us",
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\about-us\\\\index.vue",
@@ -161,6 +168,13 @@
     "_name": "_b7f0509e"
   },
   {
+    "name": "media-and-publication-MediaMobile___en",
+    "path": "/media-and-publication/MediaMobile",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\media-and-publication\\\\MediaMobile.vue",
+    "chunkName": "pages/media-and-publication/MediaMobile",
+    "_name": "_9f268134"
+  },
+  {
     "name": "products-ProductsMobile___en",
     "path": "/products/ProductsMobile",
     "component": "F:\\\\nikkiClient\\\\pages\\\\products\\\\ProductsMobile.vue",
@@ -201,6 +215,13 @@
     "component": "F:\\\\nikkiClient\\\\pages\\\\about-us\\\\AboutUsMobile.vue",
     "chunkName": "pages/about-us/AboutUsMobile",
     "_name": "_bae50fdc"
+  },
+  {
+    "name": "contact-us-ConnectMobile___id",
+    "path": "/id/contact-us/ConnectMobile",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\contact-us\\\\ConnectMobile.vue",
+    "chunkName": "pages/contact-us/ConnectMobile",
+    "_name": "_4487ae78"
   },
   {
     "name": "content-management-about-us___id",
@@ -252,11 +273,25 @@
     "_name": "_045d2cd2"
   },
   {
+    "name": "media-and-publication-MediaMobile___id",
+    "path": "/id/media-and-publication/MediaMobile",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\media-and-publication\\\\MediaMobile.vue",
+    "chunkName": "pages/media-and-publication/MediaMobile",
+    "_name": "_9f268134"
+  },
+  {
     "name": "products-ProductsMobile___id",
     "path": "/id/products/ProductsMobile",
     "component": "F:\\\\nikkiClient\\\\pages\\\\products\\\\ProductsMobile.vue",
     "chunkName": "pages/products/ProductsMobile",
     "_name": "_0a296977"
+  },
+  {
+    "name": "media-and-publication-detail-Mobile___en",
+    "path": "/media-and-publication/detail/Mobile",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\media-and-publication\\\\detail\\\\Mobile.vue",
+    "chunkName": "pages/media-and-publication/detail/Mobile",
+    "_name": "_7fdba563"
   },
   {
     "name": "content-management-about-us-add-new___id",
@@ -285,6 +320,13 @@
     "component": "F:\\\\nikkiClient\\\\pages\\\\content-management\\\\products\\\\add-new\\\\index.vue",
     "chunkName": "pages/content-management/products/add-new/index",
     "_name": "_7162d966"
+  },
+  {
+    "name": "media-and-publication-detail-Mobile___id",
+    "path": "/id/media-and-publication/detail/Mobile",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\media-and-publication\\\\detail\\\\Mobile.vue",
+    "chunkName": "pages/media-and-publication/detail/Mobile",
+    "_name": "_7fdba563"
   },
   {
     "name": "content-management-about-us-edit-id___id",

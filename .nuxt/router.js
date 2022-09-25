@@ -13,6 +13,7 @@ const _532694d5 = () => interopDefault(import('..\\pages\\index.vue' /* webpackC
 const _153d9eb2 = () => interopDefault(import('..\\pages\\media-and-publication\\index.vue' /* webpackChunkName: "pages/media-and-publication/index" */))
 const _b7f0509e = () => interopDefault(import('..\\pages\\products\\index.vue' /* webpackChunkName: "pages/products/index" */))
 const _bae50fdc = () => interopDefault(import('..\\pages\\about-us\\AboutUsMobile.vue' /* webpackChunkName: "pages/about-us/AboutUsMobile" */))
+const _4487ae78 = () => interopDefault(import('..\\pages\\contact-us\\ConnectMobile.vue' /* webpackChunkName: "pages/contact-us/ConnectMobile" */))
 const _bb769180 = () => interopDefault(import('..\\pages\\content-management\\about-us\\index.vue' /* webpackChunkName: "pages/content-management/about-us/index" */))
 const _842df4c0 = () => interopDefault(import('..\\pages\\content-management\\career\\index.vue' /* webpackChunkName: "pages/content-management/career/index" */))
 const _072a1209 = () => interopDefault(import('..\\pages\\content-management\\media-and-publication\\index.vue' /* webpackChunkName: "pages/content-management/media-and-publication/index" */))
@@ -20,11 +21,13 @@ const _0dcfc2fa = () => interopDefault(import('..\\pages\\content-management\\pr
 const _74cfde21 = () => interopDefault(import('..\\pages\\content-management\\sign-in\\index.vue' /* webpackChunkName: "pages/content-management/sign-in/index" */))
 const _9b51122a = () => interopDefault(import('..\\pages\\content-management\\sign-up\\index.vue' /* webpackChunkName: "pages/content-management/sign-up/index" */))
 const _045d2cd2 = () => interopDefault(import('..\\pages\\export\\ExportMobile.vue' /* webpackChunkName: "pages/export/ExportMobile" */))
+const _9f268134 = () => interopDefault(import('..\\pages\\media-and-publication\\MediaMobile.vue' /* webpackChunkName: "pages/media-and-publication/MediaMobile" */))
 const _0a296977 = () => interopDefault(import('..\\pages\\products\\ProductsMobile.vue' /* webpackChunkName: "pages/products/ProductsMobile" */))
 const _6b5553e0 = () => interopDefault(import('..\\pages\\content-management\\about-us\\add-new\\index.vue' /* webpackChunkName: "pages/content-management/about-us/add-new/index" */))
 const _24333180 = () => interopDefault(import('..\\pages\\content-management\\career\\add-new\\index.vue' /* webpackChunkName: "pages/content-management/career/add-new/index" */))
 const _577f0b37 = () => interopDefault(import('..\\pages\\content-management\\media-and-publication\\add-new\\index.vue' /* webpackChunkName: "pages/content-management/media-and-publication/add-new/index" */))
 const _7162d966 = () => interopDefault(import('..\\pages\\content-management\\products\\add-new\\index.vue' /* webpackChunkName: "pages/content-management/products/add-new/index" */))
+const _7fdba563 = () => interopDefault(import('..\\pages\\media-and-publication\\detail\\Mobile.vue' /* webpackChunkName: "pages/media-and-publication/detail/Mobile" */))
 const _738e9a44 = () => interopDefault(import('..\\pages\\content-management\\about-us\\edit\\_id.vue' /* webpackChunkName: "pages/content-management/about-us/edit/_id" */))
 const _7f625d84 = () => interopDefault(import('..\\pages\\content-management\\career\\edit\\_id.vue' /* webpackChunkName: "pages/content-management/career/edit/_id" */))
 const _2ff18127 = () => interopDefault(import('..\\pages\\content-management\\media-and-publication\\edit\\_id.vue' /* webpackChunkName: "pages/content-management/media-and-publication/edit/_id" */))
@@ -78,6 +81,10 @@ export const routerOptions = {
     path: "/about-us/AboutUsMobile",
     component: _bae50fdc,
     name: "about-us-AboutUsMobile___en"
+  }, {
+    path: "/contact-us/ConnectMobile",
+    component: _4487ae78,
+    name: "contact-us-ConnectMobile___en"
   }, {
     path: "/content-management/about-us",
     component: _bb769180,
@@ -135,6 +142,10 @@ export const routerOptions = {
     component: _b7f0509e,
     name: "products___id"
   }, {
+    path: "/media-and-publication/MediaMobile",
+    component: _9f268134,
+    name: "media-and-publication-MediaMobile___en"
+  }, {
     path: "/products/ProductsMobile",
     component: _0a296977,
     name: "products-ProductsMobile___en"
@@ -158,6 +169,10 @@ export const routerOptions = {
     path: "/id/about-us/AboutUsMobile",
     component: _bae50fdc,
     name: "about-us-AboutUsMobile___id"
+  }, {
+    path: "/id/contact-us/ConnectMobile",
+    component: _4487ae78,
+    name: "contact-us-ConnectMobile___id"
   }, {
     path: "/id/content-management/about-us",
     component: _bb769180,
@@ -187,9 +202,17 @@ export const routerOptions = {
     component: _045d2cd2,
     name: "export-ExportMobile___id"
   }, {
+    path: "/id/media-and-publication/MediaMobile",
+    component: _9f268134,
+    name: "media-and-publication-MediaMobile___id"
+  }, {
     path: "/id/products/ProductsMobile",
     component: _0a296977,
     name: "products-ProductsMobile___id"
+  }, {
+    path: "/media-and-publication/detail/Mobile",
+    component: _7fdba563,
+    name: "media-and-publication-detail-Mobile___en"
   }, {
     path: "/id/content-management/about-us/add-new",
     component: _6b5553e0,
@@ -206,6 +229,10 @@ export const routerOptions = {
     path: "/id/content-management/products/add-new",
     component: _7162d966,
     name: "content-management-products-add-new___id"
+  }, {
+    path: "/id/media-and-publication/detail/Mobile",
+    component: _7fdba563,
+    name: "media-and-publication-detail-Mobile___id"
   }, {
     path: "/id/content-management/about-us/edit/:id?",
     component: _738e9a44,

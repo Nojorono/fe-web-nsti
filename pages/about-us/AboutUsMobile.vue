@@ -1,5 +1,9 @@
 <template>
-  <v-row  justify="center" align="center" class="about-us-container-mobile ma-0 pa-0" >
+  <v-row
+    justify="center"
+    align="center"
+    class="about-us-container-mobile ma-0 pa-0"
+  >
     <v-col cols="12" class="ma-0 pa-0">
       <v-carousel
         cycle
@@ -26,12 +30,12 @@
     <v-col
       id="about-us-overview"
       cols="12"
-      class="d-flex justify-start flex-column ma-0  overview-container"
+      class="d-flex justify-start flex-column ma-0 overview-container"
     >
       <h1 class="defaultGolden--text overview-title text-center">
         {{ $t('aboutUs.title') }}
       </h1>
-      <div class="d-flex justify-center ">
+      <div class="d-flex justify-center">
         <div class="overview-text">
           <p>
             {{ $t('aboutUs.subText1') }}
@@ -44,16 +48,37 @@
       </div>
     </v-col>
     <v-row
+      id="about-us-milestone"
+      justify="center"
+      align="center"
+      class="ma-0 pa-0"
+    >
+      <!--      <template v-if="$i18n.locale === 'en'">-->
+      <img
+        :src="require('assets/images/milestoneMobile.jpg')"
+        height="100%"
+        width="100%"
+      />
+      <!--      </template>-->
+      <!--      <template v-if="$i18n.locale === 'id'">-->
+      <!--        <img-->
+      <!--          :src="require('assets/images/liniwaktu.png')"-->
+      <!--          height="100%"-->
+      <!--          width="100%"-->
+      <!--        />-->
+      <!--      </template>-->
+    </v-row>
+    <v-row
       id="about-us-visi-misi"
       class="ma-16 pa-0 defaultGolden--text text-center visi-misi"
     >
-      <v-col cols="12" class=" ma-0 pa-0 visi">
+      <v-col cols="12" class="ma-0 pa-0 visi">
         <h1>{{ $t('aboutUs.vissionTitle') }}</h1>
         <h3 class="fontLight--text">
           {{ $t('aboutUs.vissionSub') }}
         </h3>
       </v-col>
-      <v-col cols="12" class=" ma-0 pa-0 misi">
+      <v-col cols="12" class="ma-0 pa-0 misi">
         <h1>{{ $t('aboutUs.missionTitle') }}</h1>
         <h3 class="fontLight--text">
           {{ $t('aboutUs.missionSub') }}
@@ -61,12 +86,11 @@
       </v-col>
     </v-row>
     <div id="about-us-values" class="about-us-our-values">
-      <div class="defaultGolden--text core-values ">
+      <div class="defaultGolden--text core-values">
         <h1>{{ $t('aboutUs.coreValues') }}</h1>
       </div>
       <vueper-slides
         infinite
-        pause-on-hover
         autoplay
         class="no-shadow"
         :bullets="false"
@@ -80,14 +104,14 @@
         </vueper-slide>
       </vueper-slides>
     </div>
-  </v-row >
+  </v-row>
 </template>
 
 <script>
-// import { VueperSlides, VueperSlide } from 'vueperslides'
+import { VueperSlides, VueperSlide } from 'vueperslides'
 export default {
   name: 'AboutUsMobile',
-  // components: { VueperSlides, VueperSlide },
+  components: { VueperSlides, VueperSlide },
   data() {
     return {
       content: [],
@@ -138,7 +162,6 @@ export default {
 .about-us-container-mobile {
   font-family: 'Barlow', sans-serif;
 
-
   .overview-container {
     .overview-title {
       font-weight: 700;
@@ -171,6 +194,7 @@ export default {
 
   .about-us-our-values {
     //min-height: 759px;
+    padding: 0 2rem;
     height: 300px;
     width: 100%;
     .core-values {
@@ -198,5 +222,4 @@ export default {
     }
   }
 }
-
 </style>

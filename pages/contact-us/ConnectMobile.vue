@@ -1,32 +1,25 @@
 <template>
   <v-row
-    v-if="!isMobileCheck()"
     justify="space-around"
     align="center"
-    class="defaultGray--text"
+    class="defaultGray--text ma-0 pa-0"
   >
-    <div class="container-contact">
+    <div class="container-contact-mobile">
+      <div class="title d-flex defaultGolden--text py-5 justify-center">
+        <h2>{{ $t('contact.title1') }} &nbsp;</h2>
+
+        <h2>{{ $t('contact.title2') }}</h2>
+      </div>
+
       <div class="img-content">
         <v-img
           :src="require('assets/images/nikki-factory.png')"
-          max-width="100%"
-          height="1000px"
+          width="100vw"
           alt="nikki super office"
         />
-        <div class="right-content">
-          <v-img
-            :src="require('assets/images/right-triagle.svg')"
-            max-width="100%"
-            height="1000px"
-          />
-        </div>
         <div class="text-content">
-          <div class="connect-title">
-            <h1>{{ $t('contact.title1') }}</h1>
-            <h1>{{ $t('contact.title2') }}</h1>
-          </div>
           <div
-            class="sub-wrapper d-flex flex-column justify-space-between pa-0"
+            class="sub-wrapper d-flex flex-column"
           >
             <div class="connect-sub-office">
               <h3>{{ $t('contact.address') }}</h3>
@@ -49,14 +42,12 @@
       </div>
     </div>
   </v-row>
-  <connect-with-us-mobile v-else />
 </template>
 
 <script>
-import ConnectWithUsMobile from '@/pages/contact-us/ConnectMobile'
 export default {
-  name: 'ConnectWithUs',
-  components: { ConnectWithUsMobile },
+  name: 'ConnectWithUsMobile',
+  components: {},
   head() {
     return {
       title: 'Contact Us',
@@ -67,46 +58,42 @@ export default {
 </script>
 
 <style lang="scss">
-.container-contact {
-  .img-content {
-    position: relative;
-    top: 0;
+.container-contact-mobile {
+  .title {
+    background: $color-primary-root;
     width: 100%;
-  }
-  .right-content {
-    position: absolute;
-    top: 0;
-    right: -45rem;
-    width: 100%;
+    height: 100%;
+    h1 {
+      font-weight: 800;
+      font-size: 30px;
+    }
   }
 
   .text-content {
-    position: absolute;
-    top: 12rem;
-    right: 0;
+    background: $color-primary-root;
+    height: 130%;
+    width: 100%;
+    padding: 2rem 0;
     .sub-wrapper {
-      height: 100%;
-      width: 50%;
-    }
-    .connect-title {
-      letter-spacing: 0.1em;
-      font-weight: 800;
-      font-family: 'Barlow', sans-serif;
-      font-size: 2.5em;
+      background: #ae983d;
+
+      //height: 100%;
+      //width: 100%;
+      padding: 2rem;
     }
   }
   [class*='connect-sub'] {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     h3 {
-      margin-bottom: 1rem;
-      font-weight: 600;
-      font-size: 1.7em;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      font-size: 23.3839px;
     }
     h4,
     a {
       font-weight: 500;
-      font-size: 1.3em;
+      font-size: 17.1892px;
       text-decoration: none;
       color: $color-primary-root !important;
     }

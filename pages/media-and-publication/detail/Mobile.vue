@@ -1,14 +1,11 @@
 <template>
-  <div
-    v-if="!isMobileCheck()"
-    class="detail-media-parent-wrapper px-lg-15 px-sm-10"
-  >
+  <div class="detail-media-parent-wrapper-mobile">
     <div class="defaultGolden--text">
-      <div class="news-date mb-10 pt-10">
+      <div class="news-date mt-3">
         <h2>{{ newsData[$route.params.id - 1].date }}</h2>
       </div>
 
-      <div class="news-title my-10">
+      <div class="news-title my-5">
         <h1>{{ newsData[$route.params.id - 1].title }}</h1>
       </div>
     </div>
@@ -28,16 +25,14 @@
       ></div>
     </div>
   </div>
-  <detail-media-mobile v-else />
 </template>
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
-import DetailMediaMobile from '@/pages/media-and-publication/detail/Mobile'
 
 export default {
-  name: 'DetailMedia',
-  components: { DetailMediaMobile },
+  name: 'DetailMediaMobile',
+  components: {},
   data() {
     return {
       newsData: [
@@ -140,28 +135,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.detail-media-parent-wrapper {
+.detail-media-parent-wrapper-mobile {
+  padding: 1rem 1.5rem 0 1.5rem;
   font-family: 'Barlow', sans-serif;
   letter-spacing: 0.05em;
   .news-date {
     font-family: Barlow, sans-serif;
+    font-size: 10px;
   }
   .news-title {
     font-family: Barlow, sans-serif;
     font-weight: 700;
-    font-size: 2.2em;
+    font-size: 14px;
   }
   .news-content {
     border-radius: 50px 50px 0 0;
     background-color: #f8f5ec;
 
     .text-content {
-      padding: 3.5rem 7rem;
-    }
-    @include mobile {
-      .text-content {
-        padding: 1rem 2rem;
-      }
+      padding: 1rem 2rem;
     }
   }
 }

@@ -25,7 +25,7 @@
             ? mediaCardList.slice(0, 3)
             : mediaCardList.slice(0, 3)"
           :key="i"
-          class="media-card ma-10"
+          class="media-card ma-5"
           :to="
             $i18n.locale === 'id'
               ? '/id/media-and-publication/detail/' + card.id
@@ -40,8 +40,8 @@
               content-class="media-card-linear-gradient"
             />
             <div class="media-text-wrapper">
-              <h2 class="mb-3">{{ card.title }}</h2>
-              <h3 class="">Read More ></h3>
+              <h5 class="mb-3">{{ card.title }}</h5>
+              <h6 class="">Read More ></h6>
             </div>
           </div>
         </nuxt-link>
@@ -127,14 +127,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.media-wrapper {
-  width: 100rem;
-  height: 540px;
-  max-width: 100rem;
+.media-wrapper-mobile {
+  width: 100%;
   .media-header {
     h1 {
       font-family: 'Barlow', sans-serif;
-      font-size: 4.5em;
+      font-size: 30px;
+      padding: 1rem 4rem 2rem 2rem;
     }
   }
 }
@@ -143,31 +142,31 @@ export default {
   font-family: 'Barlow', sans-serif;
   font-weight: 500;
   aspect-ratio: 1 / 1;
-  width: 24rem;
-  height: 24rem;
+  width: 250px;
+  //height: 210px;
   position: relative;
   .zoom-transition {
-    transition: width 300ms, height 300ms;
-    width: 23.75rem;
-    height: 23.75rem;
+    //transition: width 300ms, height 300ms;
+    width: 250px;
+    //height: 210px;
     .media-text-wrapper {
-      transition: ease-out 300ms;
+      //transition: ease-out 300ms;
       font-size: 100%;
       position: absolute;
-      top: 13rem;
+      top: 6rem;
       right: 0;
       padding: 1rem;
     }
   }
 }
 
-.media-card:hover .zoom-transition {
-  width: 25.5rem;
-  height: 25.5rem;
-  .media-text-wrapper {
-    background-repeat: repeat;
-    top: 14.5rem;
-    font-size: 111%;
-  }
-}
+//.media-card:hover .zoom-transition {
+//  width: 25.5rem;
+//  height: 25.5rem;
+//  .media-text-wrapper {
+//    background-repeat: repeat;
+//    top: 14.5rem;
+//    font-size: 111%;
+//  }
+//}
 </style>
