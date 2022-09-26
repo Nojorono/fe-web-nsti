@@ -37,7 +37,7 @@
         <div
           v-for="(job, i) in jobList"
           :key="i"
-          class="joblist-card my-5 mx-3 px-10 py-5"
+          class="joblist-card my-5  px-10 py-5"
         >
           <div class="joblist-text">
             <h2>
@@ -338,7 +338,7 @@ export default {
 }
 .text-overlay {
   position: absolute;
-  padding: 1rem 10rem;
+  padding: 0 7rem;
   font-family: 'Barlow', sans-serif;
   letter-spacing: 0.1em;
   z-index: 1;
@@ -348,14 +348,13 @@ export default {
   .overlay-title {
     h1 {
       font-weight: 800;
-      font-size: 4.5em;
+      font-size: 3.3em;
     }
   }
   .overlay-subtext {
     font-weight: 500;
-    line-height: 39px;
     padding-right: 30rem;
-    font-size: 2em;
+    font-size: 1.2em;
   }
 }
 
@@ -363,11 +362,13 @@ export default {
   font-family: 'Barlow', sans-serif;
   .job-opportunities-title {
     font-weight: 800;
-    font-size: 2.5em;
+    font-size: 2em;
   }
   .joblist {
+    gap: 3%;
+
     .joblist-card {
-      width: 437px;
+      width: 396px;
       background: rgba(41, 48, 110, 0.5);
       border-radius: 10px;
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -410,7 +411,7 @@ export default {
   background: rgba(41, 48, 110, 0.5);
   .learn-title {
     h1 {
-      font-size: 4em;
+      font-size: 3em;
       font-family: 'Barlow', sans-serif;
       font-weight: 800;
     }
@@ -424,18 +425,18 @@ export default {
       height: 100%;
       .review-text {
         font-weight: 500;
-        font-size: 1.4em;
+        font-size: 1em;
         overflow-y: auto;
       }
       .review-bottom-container {
-        padding-top: 1rem;
+        padding-bottom: 1rem;
         .review-name {
           font-weight: 700;
-          font-size: 24px;
+          font-size: 20px;
         }
         .review-position {
           font-weight: 400;
-          font-size: 20px;
+          font-size: 14px;
         }
       }
       img {

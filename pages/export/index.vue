@@ -19,13 +19,13 @@
         <img
           :src="require('assets/images/left-trapesium.svg')"
           width="100%"
-          height="100%"
+          height="550"
         />
       </div>
       <div class="image-container ma-0 pa-0">
         <v-img
           :src="require('assets/images/export-tobacco.png')"
-          max-height="100%"
+          max-height="550"
           max-width="100%"
         />
       </div>
@@ -38,7 +38,7 @@
       <div class="image-container-2 ma-0 pa-0">
         <v-img
           :src="require('assets/images/forklift.png')"
-          max-height="100%"
+          max-height="550"
           max-width="100%"
         />
       </div>
@@ -46,7 +46,7 @@
         <img
           :src="require('assets/images/right-trapesium.svg')"
           width="100%"
-          height="100%"
+          height="550"
           alt="divider"
         />
       </div>
@@ -57,7 +57,7 @@
         </p>
       </div>
     </v-col>
-    <v-col cols="12" class="mt-15 ma-0 pa-0">
+    <v-col cols="12" class="ma-0 pa-0">
       <div id="export-contact" class="contact-us-export defaultGolden--text">
         <div class="contact-us-title">
           <h1 class="">{{ $t('export.contact.title') }}</h1>
@@ -101,13 +101,13 @@ export default {
 <style lang="scss" scoped>
 .export-heading {
   font-weight: 800;
-  font-size: 5.5em;
+  font-size: 4em;
   line-height: 119px;
   letter-spacing: 0.1em;
   background-color: $color-primary-root;
   width: 100%;
   height: 100%;
-  padding: 3rem 5rem;
+  padding: 2rem 5rem;
   font-family: 'Barlow', sans-serif;
 }
 .export-container {
@@ -115,29 +115,29 @@ export default {
   position: relative;
   display: flex;
   width: 100%;
-  height: 826px;
+  height: 550px;
   .card-content {
     position: absolute;
     left: 0;
     z-index: 3;
-    width: 45%;
+    width: 40%;
     height: 100%;
-    padding: 9rem 5rem;
+    padding: 4rem 5rem;
     h1 {
       font-weight: 800;
-      font-size: 3.2em;
-      line-height: 78px;
+      font-size: 2.5em;
+      //line-height: 78px;
       letter-spacing: 0.05em;
     }
     p {
       font-weight: 500;
-      font-size: 1.5em;
+      font-size: 1.2em;
       line-height: 150%;
     }
   }
   .triangle {
     position: absolute;
-    left: -5rem;
+    //left: -5rem;
     z-index: 2;
   }
   .image-container {
@@ -152,18 +152,17 @@ export default {
   position: relative;
   display: flex;
   width: 100%;
-  height: 760px;
+  height: 550px;
   .card-content-2 {
     position: absolute;
     right: 0;
     z-index: 3;
     width: 40%;
     height: 100%;
-    padding: 10rem 8rem;
+    padding: 6rem 6rem;
     h1 {
       font-weight: 800;
-      font-size: 3.5em;
-      line-height: 78px;
+      font-size: 2.5em;
       letter-spacing: 0.05em;
     }
     p {
@@ -175,7 +174,7 @@ export default {
   }
   .triangle-2 {
     position: absolute;
-    right: -5rem;
+    right: 0;
     z-index: 2;
   }
   .image-container-2 {
@@ -188,7 +187,7 @@ export default {
 .contact-us-export {
   width: 100%;
   background-color: $color-primary-root;
-  padding: 6rem 13rem;
+  padding: 6rem 10rem;
   display: flex;
   justify-content: space-between;
   font-family: 'Barlow', sans-serif;
@@ -201,7 +200,7 @@ export default {
     }
     p {
       font-weight: 500;
-      font-size: 1.5em;
+      font-size: 1.3em;
       line-height: 39px;
     }
   }

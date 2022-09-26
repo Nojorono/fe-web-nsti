@@ -1,5 +1,5 @@
 <template>
-  <v-row justify="center" align="center">
+  <v-row justify="center" align="center" class="ma-0 pa-0">
     <template v-if="!isMobileCheck()">
       <TopCarousel id="home" />
       <OurStory id="about-us" />
@@ -40,7 +40,6 @@ export default {
     }
   },
   mounted() {
-    // console.log(this.isMobileCheck())
   },
 }
 </script>

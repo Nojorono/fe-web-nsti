@@ -56,7 +56,7 @@ export default {
   .connect-with-us {
     h1 {
       font-weight: 800;
-      font-size: 3.5em;
+      font-size: 2.7em;
       letter-spacing: 0.05em;
     }
 

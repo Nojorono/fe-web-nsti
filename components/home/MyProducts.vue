@@ -84,7 +84,7 @@ export default {
 
   h1 {
     color: $color-secondary-root;
-    font-size: 3.5em;
+    font-size: 2.7em;
     font-family: 'Barlow', sans-serif;
     margin-left: 4rem;
   }

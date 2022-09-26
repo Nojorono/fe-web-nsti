@@ -1,15 +1,15 @@
 <template>
   <div>
     <carousel-3d
-      :width="507"
-      :height="550"
+      :width="350"
+      :height="400"
       :perspective="0"
       :controls-visible="true"
       :controls-prev-html="''"
       :controls-next-html="''"
-      :controls-width="40"
-      :controls-height="60"
-      :space="350"
+      :controls-width="30"
+      :controls-height="50"
+      :space="300"
       :display="5"
       :inverse-scaling="350"
     >
@@ -35,7 +35,7 @@
       <div class="dialog-product">
         <div class="defaultGolden--text dialog-container d-flex align-start">
           <div class="dialog-img-container">
-            <img :src="linkPopup" height="616.57px" />
+            <img :src="linkPopup" height="550px" />
           </div>
           <div class="close-btn cursor-pointer d-flex justify-start">
             <img
@@ -88,11 +88,11 @@ export default {
   .carousel-3d-controls {
     .prev {
       background: url('assets/images/arrow-left-gold.svg') no-repeat;
-      background-size: 90%;
+      background-size: 80%;
     }
     .next {
       background: url('assets/images/arrow-right-gold.svg') no-repeat;
-      background-size: 90%;
+      background-size: 80%;
     }
   }
 }

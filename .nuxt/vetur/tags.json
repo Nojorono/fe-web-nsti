@@ -29,18 +29,6 @@
   "CmsSideBar": {
     "description": "Auto imported from components/cms/SideBar.vue"
   },
-  "LayoutFooterBottom": {
-    "description": "Auto imported from components/layout/FooterBottom.vue"
-  },
-  "LayoutFooterMobile": {
-    "description": "Auto imported from components/layout/FooterMobile.vue"
-  },
-  "LayoutNavBarMobile": {
-    "description": "Auto imported from components/layout/NavBarMobile.vue"
-  },
-  "LayoutNavbarTop": {
-    "description": "Auto imported from components/layout/NavbarTop.vue"
-  },
   "HomeCareerAt": {
     "description": "Auto imported from components/home/CareerAt.vue"
   },
@@ -58,6 +46,18 @@
   },
   "HomeTopCarousel": {
     "description": "Auto imported from components/home/TopCarousel.vue"
+  },
+  "LayoutFooterBottom": {
+    "description": "Auto imported from components/layout/FooterBottom.vue"
+  },
+  "LayoutFooterMobile": {
+    "description": "Auto imported from components/layout/FooterMobile.vue"
+  },
+  "LayoutNavBarMobile": {
+    "description": "Auto imported from components/layout/NavBarMobile.vue"
+  },
+  "LayoutNavbarTop": {
+    "description": "Auto imported from components/layout/NavbarTop.vue"
   },
   "HomeMobileMediaAndPublicationMobile": {
     "description": "Auto imported from components/home/mobile/MediaAndPublicationMobile.vue"

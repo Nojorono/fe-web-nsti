@@ -1,8 +1,8 @@
 <template>
   <v-col col="11" class="my-15 d-flex justify-center">
-    <div class="media-wrapper-mobile">
+    <div class="media-wrapper">
       <div class="media-header d-flex justify-space-between align-center">
-        <h1 class="defaultGolden--text">{{ $t('home.media.title') }}</h1>
+        <h1 class="defaultGolden--text ml-8">{{ $t('home.media.title') }}</h1>
         <template v-if="$route.fullPath === '/' || $route.fullPath === '/id'">
           <v-btn
             rounded
@@ -18,7 +18,6 @@
           </v-btn>
         </template>
       </div>
-
       <div class="card-container d-flex flex-wrap justify-center align-center">
         <nuxt-link
           v-for="(card, i) in $route.fullPath === '/'
@@ -129,13 +128,16 @@ export default {
 <style lang="scss" scoped>
 .media-wrapper {
   width: 100rem;
-  height: 540px;
+  min-height: 540px;
   max-width: 100rem;
   .media-header {
     h1 {
       font-family: 'Barlow', sans-serif;
-      font-size: 4.5em;
+      font-size: 2.7em;
     }
+  }
+  .card-container{
+    height: 100%;
   }
 }
 .media-card {
@@ -143,16 +145,16 @@ export default {
   font-family: 'Barlow', sans-serif;
   font-weight: 500;
   aspect-ratio: 1 / 1;
-  width: 24rem;
-  height: 24rem;
+  width: 22rem;
+  height: 22rem;
   position: relative;
   .zoom-transition {
     transition: width 300ms, height 300ms;
-    width: 23.75rem;
-    height: 23.75rem;
+    width: 23.25rem;
+    height: 23.25rem;
     .media-text-wrapper {
       transition: ease-out 300ms;
-      font-size: 100%;
+      font-size: 90%;
       position: absolute;
       top: 13rem;
       right: 0;
@@ -162,12 +164,12 @@ export default {
 }
 
 .media-card:hover .zoom-transition {
-  width: 25.5rem;
-  height: 25.5rem;
+  width: 24rem;
+  height: 24rem;
   .media-text-wrapper {
     background-repeat: repeat;
-    top: 14.5rem;
-    font-size: 111%;
+    top: 13.5rem;
+    font-size: 95%;
   }
 }
 </style>

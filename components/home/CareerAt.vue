@@ -1,12 +1,12 @@
 <template>
-  <v-col col="12" class="my-15 mx-0 pa-0">
+  <v-col col="12" class=" ma-0 pa-0">
     <div class="background-fill">
       <div class="our-company-container">
         <div class="life-at-img">
           <img
             :src="require('assets/images/History-nikki.png')"
-            width="100%"
-            height="100%"
+            width="1920"
+            height="550"
             alt="nikki history"
             class=""
           />
@@ -36,12 +36,12 @@ export default {
 <style lang="scss" scoped>
 .background-fill {
   position: relative;
-  height: 804px;
+  //height: 804px;
   width: 1916px;
   .our-company-container {
     width: 100vw;
     .life-at-img {
-      height: 800px;
+      //height: 800px;
       width: 100%;
       img {
         object-fit: cover;
@@ -51,27 +51,27 @@ export default {
       position: absolute;
       top: 0;
       width: 100%;
-      height: 100%;
+      height: 550px;
       background: url('assets/images/our-story-transparent.svg') no-repeat
         no-repeat right top;
       //padding-bottom: 5rem;
 
       .text-container {
         position: absolute;
-        left: 53%;
-        top: 10rem;
+        left: 50%;
+        top: 7rem;
         font-family: 'Barlow', sans-serif;
-        width: 23.5rem;
+        width: 24rem;
 
         h1 {
           font-weight: 800;
-          font-size: 3.8em;
+          font-size: 3em;
           letter-spacing: 0.05em;
           color: $color-secondary-root;
         }
         h3 {
           font-weight: 500;
-          font-size: 1.7em;
+          font-size: 1.2em;
           color: $color-font-light-root;
         }
       }

@@ -33,7 +33,7 @@
       cols="12"
       class="d-flex justify-center flex-column ma-0 py-10 px-16 overview-container"
     >
-      <h1 class="defaultGolden--text overview-title">
+      <h1 class="defaultGolden--text overview-title text-center">
         {{ $t('aboutUs.title') }}
       </h1>
       <div class="d-flex justify-center mt-10">
@@ -205,11 +205,11 @@ export default {
     letter-spacing: 0.05em;
   }
   .overview-text {
-    width: 70rem;
+    width: 60rem;
     text-align: center;
     P {
       font-weight: 500;
-      font-size: 1.7em;
+      font-size: 1.3em;
     }
   }
 }
@@ -220,12 +220,12 @@ export default {
   }
   h1 {
     font-weight: 800;
-    font-size: 3em;
+    font-size: 2.7em;
     margin-bottom: 2rem;
   }
   h3 {
     font-weight: 500;
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
   .visi {
     border-right: 1.5px solid $color-secondary-root;
@@ -239,10 +239,9 @@ export default {
 .head-of-nikki {
   width: 92%;
   margin: 4rem 2.5rem;
-  //height: 600px;
   h1 {
     font-weight: 700;
-    font-size: 5em;
+    font-size: 3.5em;
     line-height: 96px;
     letter-spacing: 0.05em;
     margin-left: 3rem;

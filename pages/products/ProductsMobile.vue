@@ -43,6 +43,11 @@ export default {
           img: require('assets/images/produk5.png'),
           popUp: require('assets/images/produk5-pop.png'),
         },
+        {
+          id: 6,
+          img: require('assets/images/produk6.png'),
+          popUp: require('assets/images/produk6-pop.png'),
+        },
       ],
     }
   },

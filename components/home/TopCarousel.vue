@@ -5,7 +5,7 @@
     :show-arrows="false"
     hide-delimiters
     interval="5000"
-    height="766"
+    height="750"
     class="carousel-parent ma-0 pa-0"
   >
     <v-carousel-item v-for="(img, i) in image" :key="i">
@@ -94,7 +94,7 @@ export default {
 
       h1 {
         font-weight: 800;
-        font-size: 3.5em;
+        font-size: 3em;
         letter-spacing: 0.05em;
         @include mobile {
           font-size: 1em;
@@ -102,7 +102,7 @@ export default {
       }
       h2 {
         font-weight: 500;
-        font-size: 1.7em;
+        font-size: 1.5em;
         @include mobile {
           font-size: 0.5em;
         }
@@ -127,7 +127,7 @@ export default {
       text-align: left;
       width: 30rem;
       h1 {
-        font-size: 8em;
+        font-size: 7em;
         letter-spacing: -0.05em;
         font-family: 'Barlow', sans-serif;
         font-weight: 700;

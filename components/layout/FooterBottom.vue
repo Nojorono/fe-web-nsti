@@ -33,7 +33,7 @@ export default {
   border-top: 5px solid $color-secondary-dark-root;
   font-family: 'Barlow', sans-serif;
   .footer-inner {
-    padding: 2rem;
+    padding: 0.5rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -41,7 +41,7 @@ export default {
     P {
       padding-top: 0.7rem;
       font-weight: 400;
-      font-size: 1.3em;
+      font-size: 1.2em;
       letter-spacing: 0.05em;
     }
     .v-img {

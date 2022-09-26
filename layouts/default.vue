@@ -66,6 +66,6 @@ export default {
   background-repeat: repeat, repeat;
 }
 .non-cms-nuxt {
-  margin-top: 6rem;
+  margin-top: 5rem;
 }
 </style>

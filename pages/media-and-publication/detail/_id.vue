@@ -149,7 +149,7 @@ export default {
   .news-title {
     font-family: Barlow, sans-serif;
     font-weight: 700;
-    font-size: 2.2em;
+    font-size: 1.5em;
   }
   .news-content {
     border-radius: 50px 50px 0 0;
@@ -157,6 +157,7 @@ export default {
 
     .text-content {
       padding: 3.5rem 7rem;
+      font-size: 1.4em;
     }
     @include mobile {
       .text-content {

@@ -7,7 +7,6 @@
     <div class="container-contact-mobile">
       <div class="title d-flex defaultGolden--text py-5 justify-center">
         <h2>{{ $t('contact.title1') }} &nbsp;</h2>
-
         <h2>{{ $t('contact.title2') }}</h2>
       </div>
 
@@ -18,9 +17,7 @@
           alt="nikki super office"
         />
         <div class="text-content">
-          <div
-            class="sub-wrapper d-flex flex-column"
-          >
+          <div class="sub-wrapper d-flex flex-column">
             <div class="connect-sub-office">
               <h3>{{ $t('contact.address') }}</h3>
               <h4>

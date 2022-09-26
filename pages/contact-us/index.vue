@@ -10,14 +10,14 @@
         <v-img
           :src="require('assets/images/nikki-factory.png')"
           max-width="100%"
-          height="1000px"
+          height="600"
           alt="nikki super office"
         />
         <div class="right-content">
           <v-img
             :src="require('assets/images/right-triagle.svg')"
             max-width="100%"
-            height="1000px"
+            height="600"
           />
         </div>
         <div class="text-content">
@@ -76,14 +76,14 @@ export default {
   .right-content {
     position: absolute;
     top: 0;
-    right: -45rem;
+    right: -35rem;
     width: 100%;
   }
 
   .text-content {
     position: absolute;
-    top: 12rem;
-    right: 0;
+    top: 3.5rem;
+    right: 15rem;
     .sub-wrapper {
       height: 100%;
       width: 50%;
@@ -92,21 +92,21 @@ export default {
       letter-spacing: 0.1em;
       font-weight: 800;
       font-family: 'Barlow', sans-serif;
-      font-size: 2.5em;
+      font-size: 2em;
     }
   }
   [class*='connect-sub'] {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
     h3 {
-      margin-bottom: 1rem;
+      //margin-bottom: 1rem;
       font-weight: 600;
-      font-size: 1.7em;
+      font-size: 1.3em;
     }
     h4,
     a {
       font-weight: 500;
-      font-size: 1.3em;
+      font-size: 1.1em;
       text-decoration: none;
       color: $color-primary-root !important;
     }

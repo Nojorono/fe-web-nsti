@@ -6,8 +6,7 @@
           :src="require('assets/images/logo-light.svg')"
           alt="logo niki super"
           class="cursor-pointer"
-          height="50"
-          width="310"
+          width="250"
           @click="$router.push('/id')"
         />
       </div>
@@ -128,8 +127,7 @@
           :src="require('assets/images/logo-light.svg')"
           alt="logo niki super"
           class="cursor-pointer"
-          height="50"
-          width="310"
+          width="250"
           @click="$router.push('/')"
         />
       </div>
@@ -287,7 +285,7 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: $color-primary-root;
-  height: 100px;
+  height: 85px;
   .search-bar {
     width: 15%;
     display: flex;
@@ -322,7 +320,7 @@ export default {
     justify-content: space-evenly;
 
     .nav-child {
-      text-transform: uppercase;
+      text-transform: capitalize;
       @include mobile {
         font-size: 0.5rem;
         display: none;

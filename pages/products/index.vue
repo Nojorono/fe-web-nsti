@@ -1,6 +1,6 @@
 <template>
   <div v-if="!isMobileCheck()" class="products-container">
-    <div class="title-container">
+    <div class="title-container ml-5">
       <h1 class="defaultGolden--text">{{ $t('media.title') }}</h1>
     </div>
     <ProductsCarousel :slides="productList"></ProductsCarousel>
@@ -44,6 +44,11 @@ export default {
           img: require('assets/images/produk5.png'),
           popUp: require('assets/images/produk5-pop.png'),
         },
+        {
+          id: 6,
+          img: require('assets/images/produk6.png'),
+          popUp: require('assets/images/produk6-pop.png'),
+        },
       ],
     }
   },
@@ -56,7 +61,7 @@ export default {
       font-family: 'Barlow', sans-serif;
       font-style: normal;
       font-weight: 800;
-      font-size: 90px;
+      font-size: 3.5em;
       letter-spacing: 0.1em;
     }
   }

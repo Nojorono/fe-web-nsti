@@ -5,8 +5,8 @@
         <img
           lazy
           :src="require('assets/images/smelling-coffee.png')"
-          width="120%"
-          height="100%"
+          width="110%"
+          height="550"
           alt="coffee beans smelling"
           class=""
         />
@@ -40,7 +40,7 @@ export default {
   height: 100%;
 
   .smelling-coffee {
-    height: 900px;
+    //height: 900px;
     width: 100%;
     img {
       object-fit: cover;
@@ -50,27 +50,29 @@ export default {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 550px;
     background: url('assets/images/our-story-transparent.svg') no-repeat
       no-repeat right top;
     padding-bottom: 5rem;
+    right: -15rem;
+    //left: 10%;
 
     .text-container {
       position: absolute;
-      right: 21rem;
-      top: 18rem;
+      right: 25rem;
+      top: 7rem;
       font-family: 'Barlow', sans-serif;
-      width: 30rem;
+      width: 25rem;
 
       h1 {
         font-weight: 800;
-        font-size: 3.8em;
+        font-size: 2.5em;
         letter-spacing: 0.05em;
         color: $color-secondary-root;
       }
       h3 {
         font-weight: 500;
-        font-size: 1.7em;
+        font-size: 1.3em;
         color: $color-font-light-root;
       }
     }
