@@ -1,12 +1,12 @@
 <template>
-  <v-row v-if="!isMobileCheck()" justify="center" align="center" class="career-container">
+  <v-row justify="center" align="center" class="career-container-mobile ma-0 pa-0" >
     <v-col id="career-life-at" cols="12" class="ma-0 pa-0 carousel-container">
       <v-carousel
         cycle
         :show-arrows="false"
         hide-delimiters
         interval="5000"
-        height="760px"
+        height="200px"
         class="carousel-responsive"
       >
         <v-carousel-item v-for="(img, i) in image" :key="i">
@@ -40,11 +40,11 @@
           class="joblist-card my-5  px-10 py-5"
         >
           <div class="joblist-text">
-            <h2>
+            <h3>
               {{ job.title }}
-            </h2>
+            </h3>
             <div class="joblist-sub my-3">
-              <h3>{{ $t('career.location') }} : {{ job.location }}</h3>
+              <h4>{{ $t('career.location') }} : {{ job.location }}</h4>
             </div>
           </div>
           <v-btn
@@ -74,19 +74,18 @@
         />
       </div>
     </v-col>
-    <v-col id="career-learn-grow" cols="12" class="pa-10 review-container">
+    <v-col id="career-learn-grow" cols="12" class="pa-3 review-container">
       <div class="learn-title defaultGolden--text d-flex justify-center mb-10">
         <h1>{{ $t('career.learnNgrow') }}</h1>
       </div>
       <vueper-slides
         class="no-shadow"
-        :visible-slides="3"
+        :visible-slides="2"
         :gap="3"
         :bullets="false"
         :arrows="false"
-        :slide-ratio="1 / 3"
+        :slide-ratio="1 / 0.9 "
         :dragging-distance="70"
-        :breakpoints="{ 800: { visibleSlides: 2, slideMultiple: 2 } }"
       >
         <vueper-slide v-for="(review, i) in reviewsList" :key="i">
           <template #content>
@@ -99,7 +98,7 @@
                   <img
                     :src="review.profileImg"
                     alt="review profile picture"
-                    width="140px"
+                    width="35px"
                     height="auto"
                   />
                   <p class="review-name">{{ review.name }}</p>
@@ -115,7 +114,7 @@
     <!--    dialog-->
     <v-row justify="center">
       <v-dialog v-model="dialog" width="800px ">
-        <div class="modal-card">
+        <div class="modal-card-mobile">
           <div class="d-flex justify-end">
             <v-icon dark @click="dialog = false"> mdi-window-close </v-icon>
           </div>
@@ -134,17 +133,15 @@
       </v-dialog>
     </v-row>
   </v-row>
-  <career-with-us-mobile v-else />
 </template>
 
 <script>
 import { VueperSlide, VueperSlides } from 'vueperslides'
 import { mapActions, mapGetters } from 'vuex'
-import CareerWithUsMobile from '@/pages/career/CareerMobile'
 
 export default {
-  name: 'CareerWithUs',
-  components: { CareerWithUsMobile, VueperSlides, VueperSlide },
+  name: 'CareerWithUsMobile',
+  components: { VueperSlides, VueperSlide },
   data() {
     return {
       content: '',
@@ -315,14 +312,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.career-container {
+.career-container-mobile {
   font-family: 'Barlow', sans-serif;
   .carousel-container {
     position: relative;
   }
   .text-overlay {
     position: absolute;
-    padding: 0 7rem;
+    padding: 0 5rem 0 2.5rem;
     font-family: 'Barlow', sans-serif;
     letter-spacing: 0.1em;
     z-index: 1;
@@ -332,20 +329,19 @@ export default {
     .overlay-title {
       h1 {
         font-weight: 800;
-        font-size: 3.3em;
+        font-size: 16px;
       }
     }
     .overlay-subtext {
       font-weight: 500;
-      padding-right: 30rem;
-      font-size: 1.2em;
+      font-size: 5px;
     }
   }
   .job-opportunities {
     font-family: 'Barlow', sans-serif;
     .job-opportunities-title {
       font-weight: 800;
-      font-size: 2em;
+      font-size: 16px;
     }
     .joblist {
       gap: 3%;
@@ -356,11 +352,11 @@ export default {
         border-radius: 10px;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         .joblist-text {
-          h2 {
+          h3 {
             font-weight: 500;
           }
           .joblist-sub {
-            h3 {
+            h4 {
               font-weight: 400;
             }
           }
@@ -371,7 +367,7 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
 
       .number {
         display: flex;
@@ -394,7 +390,7 @@ export default {
     background: rgba(41, 48, 110, 0.5);
     .learn-title {
       h1 {
-        font-size: 3em;
+        font-size: 24px;
         font-family: 'Barlow', sans-serif;
         font-weight: 800;
       }
@@ -403,23 +399,23 @@ export default {
       background: rgba(41, 48, 110, 0.5);
       border-radius: 10px;
       font-family: 'Barlow', sans-serif;
-      height: 31rem;
+      height: 100%;
       .review-card-innner {
         height: 100%;
         .review-text {
           font-weight: 500;
-          font-size: 1em;
+          font-size: 11px;
           overflow-y: auto;
         }
         .review-bottom-container {
           padding-bottom: 1rem;
           .review-name {
             font-weight: 700;
-            font-size: 20px;
+            font-size: 11px;
           }
           .review-position {
             font-weight: 400;
-            font-size: 14px;
+            font-size: 8px;
           }
         }
         img {
@@ -431,7 +427,7 @@ export default {
 
 
 }
-.modal-card {
+.modal-card-mobile {
   padding: 1rem;
   min-height: 90vh;
   background: $color-news-gray-root;
@@ -444,9 +440,4 @@ export default {
     padding: 3rem;
   }
 }
-
-
-
-
-
 </style>

@@ -63,6 +63,13 @@
     "_name": "_bae50fdc"
   },
   {
+    "name": "career-CareerMobile___en",
+    "path": "/career/CareerMobile",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\career\\\\CareerMobile.vue",
+    "chunkName": "pages/career/CareerMobile",
+    "_name": "_ca5a03aa"
+  },
+  {
     "name": "contact-us-ConnectMobile___en",
     "path": "/contact-us/ConnectMobile",
     "component": "F:\\\\nikkiClient\\\\pages\\\\contact-us\\\\ConnectMobile.vue",
@@ -215,6 +222,13 @@
     "component": "F:\\\\nikkiClient\\\\pages\\\\about-us\\\\AboutUsMobile.vue",
     "chunkName": "pages/about-us/AboutUsMobile",
     "_name": "_bae50fdc"
+  },
+  {
+    "name": "career-CareerMobile___id",
+    "path": "/id/career/CareerMobile",
+    "component": "F:\\\\nikkiClient\\\\pages\\\\career\\\\CareerMobile.vue",
+    "chunkName": "pages/career/CareerMobile",
+    "_name": "_ca5a03aa"
   },
   {
     "name": "contact-us-ConnectMobile___id",

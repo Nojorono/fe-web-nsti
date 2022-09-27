@@ -13,6 +13,7 @@ const _532694d5 = () => interopDefault(import('..\\pages\\index.vue' /* webpackC
 const _153d9eb2 = () => interopDefault(import('..\\pages\\media-and-publication\\index.vue' /* webpackChunkName: "pages/media-and-publication/index" */))
 const _b7f0509e = () => interopDefault(import('..\\pages\\products\\index.vue' /* webpackChunkName: "pages/products/index" */))
 const _bae50fdc = () => interopDefault(import('..\\pages\\about-us\\AboutUsMobile.vue' /* webpackChunkName: "pages/about-us/AboutUsMobile" */))
+const _ca5a03aa = () => interopDefault(import('..\\pages\\career\\CareerMobile.vue' /* webpackChunkName: "pages/career/CareerMobile" */))
 const _4487ae78 = () => interopDefault(import('..\\pages\\contact-us\\ConnectMobile.vue' /* webpackChunkName: "pages/contact-us/ConnectMobile" */))
 const _bb769180 = () => interopDefault(import('..\\pages\\content-management\\about-us\\index.vue' /* webpackChunkName: "pages/content-management/about-us/index" */))
 const _842df4c0 = () => interopDefault(import('..\\pages\\content-management\\career\\index.vue' /* webpackChunkName: "pages/content-management/career/index" */))
@@ -81,6 +82,10 @@ export const routerOptions = {
     path: "/about-us/AboutUsMobile",
     component: _bae50fdc,
     name: "about-us-AboutUsMobile___en"
+  }, {
+    path: "/career/CareerMobile",
+    component: _ca5a03aa,
+    name: "career-CareerMobile___en"
   }, {
     path: "/contact-us/ConnectMobile",
     component: _4487ae78,
@@ -169,6 +174,10 @@ export const routerOptions = {
     path: "/id/about-us/AboutUsMobile",
     component: _bae50fdc,
     name: "about-us-AboutUsMobile___id"
+  }, {
+    path: "/id/career/CareerMobile",
+    component: _ca5a03aa,
+    name: "career-CareerMobile___id"
   }, {
     path: "/id/contact-us/ConnectMobile",
     component: _4487ae78,
