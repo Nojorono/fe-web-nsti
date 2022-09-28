@@ -1,5 +1,5 @@
 <template>
-  <div class="products-container-mobile">
+  <div :class="$route.fullPath === '/' ? 'products-container-mobile ' : 'products-container-mobile background-blue'">
     <div class="title-container">
       <h1 class="defaultGolden--text">{{ $t('media.title') }}</h1>
     </div>
@@ -54,8 +54,10 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.products-container-mobile {
+.background-blue{
   background: $color-primary-root;
+}
+.products-container-mobile {
   width: 100%;
   .carousel-container {
     height: 76vh;

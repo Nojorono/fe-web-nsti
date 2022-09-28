@@ -399,7 +399,7 @@ export default {
       background: rgba(41, 48, 110, 0.5);
       border-radius: 10px;
       font-family: 'Barlow', sans-serif;
-      height: 100%;
+      height: 110%;
       .review-card-innner {
         height: 100%;
         .review-text {

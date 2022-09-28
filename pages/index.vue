@@ -10,6 +10,9 @@
     </template>
     <template v-else>
       <top-carousel-mobile />
+      <our-story-mobile />
+      <products-mobile />
+      <media-and-publication-mobile />
     </template>
   </v-row>
 </template>
@@ -22,10 +25,16 @@ import MediaAndPublication from '@/components/home/MediaAndPublication.vue'
 import CareerAt from '@/components/home/CareerAt.vue'
 import ContactUs from '@/components/home/ContactUs.vue'
 import TopCarouselMobile from '@/components/home/mobile/TopCarouselMobile'
+import OurStoryMobile from '@/components/home/mobile/OurStoryMobile'
+import ProductsMobile from '@/pages/products/ProductsMobile'
+import MediaAndPublicationMobile from '@/pages/media-and-publication/MediaMobile'
 
 export default {
   name: 'Home',
   components: {
+    MediaAndPublicationMobile,
+    ProductsMobile,
+    OurStoryMobile,
     TopCarouselMobile,
     TopCarousel,
     OurStory,

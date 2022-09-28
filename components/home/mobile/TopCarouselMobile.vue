@@ -5,8 +5,8 @@
     :show-arrows="false"
     hide-delimiters
     interval="5000"
-    height="766"
-    class="carousel-parent ma-0 pa-0"
+    height="200"
+    class="carousel-parent-mobile ma-0 pa-0"
   >
     <v-carousel-item v-for="(img, i) in image" :key="i">
       <v-sheet color="defaultGray" height="100%" tile>
@@ -74,7 +74,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.carousel-parent {
+.carousel-parent-mobile {
   position: relative;
   .text-overlay {
     position: absolute;

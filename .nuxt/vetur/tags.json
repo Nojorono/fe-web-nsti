@@ -62,6 +62,9 @@
   "HomeMobileMediaAndPublicationMobile": {
     "description": "Auto imported from components/home/mobile/MediaAndPublicationMobile.vue"
   },
+  "HomeMobileOurStoryMobile": {
+    "description": "Auto imported from components/home/mobile/OurStoryMobile.vue"
+  },
   "HomeMobileTopCarouselMobile": {
     "description": "Auto imported from components/home/mobile/TopCarouselMobile.vue"
   }

@@ -19,6 +19,7 @@ export { default as LayoutFooterMobile } from '../..\\components\\layout\\Footer
 export { default as LayoutNavBarMobile } from '../..\\components\\layout\\NavBarMobile.vue'
 export { default as LayoutNavbarTop } from '../..\\components\\layout\\NavbarTop.vue'
 export { default as HomeMobileMediaAndPublicationMobile } from '../..\\components\\home\\mobile\\MediaAndPublicationMobile.vue'
+export { default as HomeMobileOurStoryMobile } from '../..\\components\\home\\mobile\\OurStoryMobile.vue'
 export { default as HomeMobileTopCarouselMobile } from '../..\\components\\home\\mobile\\TopCarouselMobile.vue'
 
 // nuxt/nuxt.js#8607
