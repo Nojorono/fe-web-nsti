@@ -96,8 +96,8 @@ export default {
     }
   }
   [class*='connect-sub'] {
-    margin-top: .5rem;
-    margin-bottom: .5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     h3 {
       //margin-bottom: 1rem;
       font-weight: 600;

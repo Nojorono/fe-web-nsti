@@ -37,7 +37,7 @@ export default {
   height: 100%;
 
   .smelling-coffee {
-    width: 100%;
+    width: 100vw;
     img {
       object-fit: cover;
     }

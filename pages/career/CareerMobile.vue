@@ -1,5 +1,9 @@
 <template>
-  <v-row justify="center" align="center" class="career-container-mobile ma-0 pa-0" >
+  <v-row
+    justify="center"
+    align="center"
+    class="career-container-mobile ma-0 pa-0"
+  >
     <v-col id="career-life-at" cols="12" class="ma-0 pa-0 carousel-container">
       <v-carousel
         cycle
@@ -37,7 +41,7 @@
         <div
           v-for="(job, i) in jobList"
           :key="i"
-          class="joblist-card my-5  px-10 py-5"
+          class="joblist-card my-5 px-10 py-5"
         >
           <div class="joblist-text">
             <h3>
@@ -84,12 +88,12 @@
         :gap="3"
         :bullets="false"
         :arrows="false"
-        :slide-ratio="1 / 0.9 "
+        :slide-ratio="1 / 1.3"
         :dragging-distance="70"
       >
         <vueper-slide v-for="(review, i) in reviewsList" :key="i">
           <template #content>
-            <div class="review-card px-10 py-10 text-center">
+            <div class="review-card pa-4 text-center">
               <div
                 class="review-card-innner d-flex flex-column align-center justify-space-between"
               >
@@ -399,7 +403,7 @@ export default {
       background: rgba(41, 48, 110, 0.5);
       border-radius: 10px;
       font-family: 'Barlow', sans-serif;
-      height: 110%;
+      height: 105%;
       .review-card-innner {
         height: 100%;
         .review-text {
@@ -424,8 +428,6 @@ export default {
       }
     }
   }
-
-
 }
 .modal-card-mobile {
   padding: 1rem;

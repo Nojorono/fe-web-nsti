@@ -3,20 +3,20 @@
     <div class="media-wrapper-mobile">
       <div class="media-header d-flex justify-space-between align-center">
         <h1 class="defaultGolden--text">{{ $t('home.media.title') }}</h1>
-<!--        <template v-if="$route.fullPath === '/' || $route.fullPath === '/id'">-->
-<!--          <v-btn-->
-<!--            rounded-->
-<!--            x-large-->
-<!--            class="defaultGolden fontDark&#45;&#45;text font-weight-bold d-flex mr-15"-->
-<!--            :to="-->
-<!--              $i18n.locale === 'id'-->
-<!--                ? '/id/media-and-publication'-->
-<!--                : '/media-and-publication'-->
-<!--            "-->
-<!--          >-->
-<!--            {{ $t('home.media.btn') }}-->
-<!--          </v-btn>-->
-<!--        </template>-->
+        <!--        <template v-if="$route.fullPath === '/' || $route.fullPath === '/id'">-->
+        <!--          <v-btn-->
+        <!--            rounded-->
+        <!--            x-large-->
+        <!--            class="defaultGolden fontDark&#45;&#45;text font-weight-bold d-flex mr-15"-->
+        <!--            :to="-->
+        <!--              $i18n.locale === 'id'-->
+        <!--                ? '/id/media-and-publication'-->
+        <!--                : '/media-and-publication'-->
+        <!--            "-->
+        <!--          >-->
+        <!--            {{ $t('home.media.btn') }}-->
+        <!--          </v-btn>-->
+        <!--        </template>-->
       </div>
 
       <div class="card-container d-flex flex-wrap justify-center align-center">

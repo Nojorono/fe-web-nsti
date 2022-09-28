@@ -136,7 +136,7 @@ export default {
       font-size: 2.7em;
     }
   }
-  .card-container{
+  .card-container {
     height: 100%;
   }
 }

@@ -59,6 +59,12 @@
   "LayoutNavbarTop": {
     "description": "Auto imported from components/layout/NavbarTop.vue"
   },
+  "HomeMobileCareerAtMobile": {
+    "description": "Auto imported from components/home/mobile/CareerAtMobile.vue"
+  },
+  "HomeMobileContactUsMobile": {
+    "description": "Auto imported from components/home/mobile/ContactUsMobile.vue"
+  },
   "HomeMobileMediaAndPublicationMobile": {
     "description": "Auto imported from components/home/mobile/MediaAndPublicationMobile.vue"
   },

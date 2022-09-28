@@ -26,6 +26,8 @@ You can directly use them in pages and other components without the need to impo
 - `<LayoutFooterMobile>` | `<layout-footer-mobile>` (components/layout/FooterMobile.vue)
 - `<LayoutNavBarMobile>` | `<layout-nav-bar-mobile>` (components/layout/NavBarMobile.vue)
 - `<LayoutNavbarTop>` | `<layout-navbar-top>` (components/layout/NavbarTop.vue)
+- `<HomeMobileCareerAtMobile>` | `<home-mobile-career-at-mobile>` (components/home/mobile/CareerAtMobile.vue)
+- `<HomeMobileContactUsMobile>` | `<home-mobile-contact-us-mobile>` (components/home/mobile/ContactUsMobile.vue)
 - `<HomeMobileMediaAndPublicationMobile>` | `<home-mobile-media-and-publication-mobile>` (components/home/mobile/MediaAndPublicationMobile.vue)
 - `<HomeMobileOurStoryMobile>` | `<home-mobile-our-story-mobile>` (components/home/mobile/OurStoryMobile.vue)
 - `<HomeMobileTopCarouselMobile>` | `<home-mobile-top-carousel-mobile>` (components/home/mobile/TopCarouselMobile.vue)

@@ -18,6 +18,8 @@ export { default as LayoutFooterBottom } from '../..\\components\\layout\\Footer
 export { default as LayoutFooterMobile } from '../..\\components\\layout\\FooterMobile.vue'
 export { default as LayoutNavBarMobile } from '../..\\components\\layout\\NavBarMobile.vue'
 export { default as LayoutNavbarTop } from '../..\\components\\layout\\NavbarTop.vue'
+export { default as HomeMobileCareerAtMobile } from '../..\\components\\home\\mobile\\CareerAtMobile.vue'
+export { default as HomeMobileContactUsMobile } from '../..\\components\\home\\mobile\\ContactUsMobile.vue'
 export { default as HomeMobileMediaAndPublicationMobile } from '../..\\components\\home\\mobile\\MediaAndPublicationMobile.vue'
 export { default as HomeMobileOurStoryMobile } from '../..\\components\\home\\mobile\\OurStoryMobile.vue'
 export { default as HomeMobileTopCarouselMobile } from '../..\\components\\home\\mobile\\TopCarouselMobile.vue'

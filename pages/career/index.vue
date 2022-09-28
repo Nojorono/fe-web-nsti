@@ -1,5 +1,10 @@
 <template>
-  <v-row v-if="!isMobileCheck()" justify="center" align="center" class="career-container">
+  <v-row
+    v-if="!isMobileCheck()"
+    justify="center"
+    align="center"
+    class="career-container"
+  >
     <v-col id="career-life-at" cols="12" class="ma-0 pa-0 carousel-container">
       <v-carousel
         cycle
@@ -37,7 +42,7 @@
         <div
           v-for="(job, i) in jobList"
           :key="i"
-          class="joblist-card my-5  px-10 py-5"
+          class="joblist-card my-5 px-10 py-5"
         >
           <div class="joblist-text">
             <h2>
@@ -428,8 +433,6 @@ export default {
       }
     }
   }
-
-
 }
 .modal-card {
   padding: 1rem;
@@ -444,9 +447,4 @@ export default {
     padding: 3rem;
   }
 }
-
-
-
-
-
 </style>

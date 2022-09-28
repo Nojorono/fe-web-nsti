@@ -13,6 +13,8 @@
       <our-story-mobile />
       <products-mobile />
       <media-and-publication-mobile />
+      <CareerAtMobile />
+      <contact-us-mobile />
     </template>
   </v-row>
 </template>
@@ -28,10 +30,14 @@ import TopCarouselMobile from '@/components/home/mobile/TopCarouselMobile'
 import OurStoryMobile from '@/components/home/mobile/OurStoryMobile'
 import ProductsMobile from '@/pages/products/ProductsMobile'
 import MediaAndPublicationMobile from '@/pages/media-and-publication/MediaMobile'
+import CareerAtMobile from '@/components/home/mobile/CareerAtMobile'
+import ContactUsMobile from '@/components/home/mobile/ContactUsMobile'
 
 export default {
   name: 'Home',
   components: {
+    ContactUsMobile,
+    CareerAtMobile,
     MediaAndPublicationMobile,
     ProductsMobile,
     OurStoryMobile,
@@ -48,8 +54,7 @@ export default {
       title: 'Home',
     }
   },
-  mounted() {
-  },
+  mounted() {},
 }
 </script>
 
