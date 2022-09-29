@@ -120,9 +120,9 @@ export default {
     position: absolute;
     left: 0;
     z-index: 3;
-    width: 40%;
+    width: 38%;
     height: 100%;
-    padding: 4rem 5rem;
+    padding: 3rem 5rem;
     h1 {
       font-weight: 800;
       font-size: 2.5em;
@@ -157,9 +157,9 @@ export default {
     position: absolute;
     right: 0;
     z-index: 3;
-    width: 40%;
+    width: 39%;
     height: 100%;
-    padding: 6rem 6rem;
+    padding: 6rem ;
     h1 {
       font-weight: 800;
       font-size: 2.5em;
