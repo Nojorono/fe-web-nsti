@@ -94,7 +94,7 @@
         class="no-shadow"
         :bullets="false"
         :arrows="false"
-        fixed-height="750px"
+        fixed-height="600px"
 
       >
         <vueper-slide
@@ -235,10 +235,10 @@ export default {
 .about-us-our-values {
   //min-height: 759px;
   width: 100%;
-  .vueperslide {
-    object-fit: contain;
-    object-position: 5% 100%;
-  }
+  //.vueperslide {
+  //  object-fit: contain;
+  //  //object-position: 5% 100%;
+  //}
 }
 .head-of-nikki {
   width: 92%;
