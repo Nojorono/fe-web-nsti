@@ -178,8 +178,6 @@ export default {
     }
   },
   mounted() {
-    // console.log(this.$store.state.mobile.device)
-    // console.createTask()
   },
 }
 </script>

@@ -24,6 +24,11 @@ export default {
   components: {
     ProductsCarouselMobile,
   },
+  head() {
+    return {
+      title: 'Products',
+    }
+  },
   data() {
     return {
       productList: [

@@ -14,7 +14,7 @@
       :inverse-scaling="350"
     >
       <slide v-for="(slide, i) in slides" :key="slide.id" :index="i">
-        <v-img
+        <img
           :src="slide.img"
           alt="nikki super product"
           class="cursor-pointer"

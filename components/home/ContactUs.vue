@@ -52,7 +52,7 @@ export default {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 5rem 10rem;
+  padding: 5% 10%;
   .connect-with-us {
     h1 {
       font-weight: 800;
@@ -64,10 +64,10 @@ export default {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      width: 55rem;
+      gap: 3%;
     }
     [class*='detail-child'] {
-      width: 15rem;
+      width: 30%;
       P {
         font-weight: 400;
         font-size: 1.2em;

@@ -2,13 +2,12 @@
   <v-col class="product-parent-wrapper ma-0 pa-0 mt-15 mb-15" cols="12">
     <h1>{{ $t('home.products.title') }}</h1>
     <div class="carousel-container">
-      <ProductsCarousel :slides="productList" />
+      <ProductsCarousel :slides="$store.state.home.allProducts" />
     </div>
   </v-col>
 </template>
 
 <script>
-// import { VueperSlides, VueperSlide } from 'vueperslides'
 import 'vueperslides/dist/vueperslides.css'
 import { mapActions, mapGetters } from 'vuex'
 import ProductsCarousel from '@/components/ProductsCarousel.vue'

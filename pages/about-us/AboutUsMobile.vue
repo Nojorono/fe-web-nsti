@@ -104,6 +104,11 @@
         </vueper-slide>
       </vueper-slides>
     </div>
+    <div class="profile-pendiri d-flex overflow-x-auto">
+      <div v-for="(img, i) in profilePendiri" :key="i">
+        <img :src="img.img" alt="profile pendiri" width="310" >
+      </div>
+    </div>
   </v-row>
 </template>
 
@@ -116,9 +121,9 @@ export default {
     return {
       content: [],
       profilePendiri: [
-        { img: require('assets/images/pendiri-SOFFAN HARYANTO.png') },
-        { img: require('assets/images/pendiri-JOHANES ANDRIAN.png') },
-        { img: require('assets/images/pendiri-EKO NOVIANTO.png') },
+        { img: require('assets/images/soffan-mobile.png') },
+        { img: require('assets/images/johanes-mobile.png') },
+        { img: require('assets/images/eko-mobile.png') },
       ],
       profilePendiriID: [
         { img: require('assets/images/soffan-id.png') },
@@ -220,6 +225,10 @@ export default {
       touch-action: pan-x;
       cursor: grab;
     }
+  }
+  .profile-pendiri{
+    padding: 0 8%;
+    gap: 4%
   }
 }
 </style>

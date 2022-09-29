@@ -4,7 +4,7 @@
       <div class="connect-with-us">
         <h1 class="mb-5">{{ $t('home.contact.title') }}</h1>
         <div class="d-flex justify-space-around">
-          <div class=" detail-container">
+          <div class="detail-container">
             <div class="detail-child-adress">
               <h2>{{ $t('home.contact.alamat') }}</h2>
               <p>

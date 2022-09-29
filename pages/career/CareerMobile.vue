@@ -21,15 +21,16 @@
           </v-sheet>
         </v-carousel-item>
       </v-carousel>
-      <div class="text-overlay defaultGolden--text">
-        <div class="overlay-title">
-          <h1>{{ $t('career.title') }}</h1>
-        </div>
-        <p class="overlay-subtext">
-          {{ $t('career.subTitle') }}
-        </p>
-      </div>
+
     </v-col>
+    <div class="text-overlay defaultGolden--text ">
+      <div class="overlay-title text-center">
+        <h1>{{ $t('career.title') }}</h1>
+      </div>
+      <p class="overlay-subtext text-center">
+        {{ $t('career.subTitle') }}
+      </p>
+    </div>
 
     <v-col id="career-opportunities" cols="12" class="job-opportunities px-10">
       <div
@@ -117,7 +118,7 @@
     </v-col>
     <!--    dialog-->
     <v-row justify="center">
-      <v-dialog v-model="dialog" width="800px ">
+      <v-dialog v-model="dialog ">
         <div class="modal-card-mobile">
           <div class="d-flex justify-end">
             <v-icon dark @click="dialog = false"> mdi-window-close </v-icon>
@@ -318,12 +319,8 @@ export default {
 <style lang="scss" scoped>
 .career-container-mobile {
   font-family: 'Barlow', sans-serif;
-  .carousel-container {
-    position: relative;
-  }
   .text-overlay {
-    position: absolute;
-    padding: 0 5rem 0 2.5rem;
+    padding: 1% 12%;
     font-family: 'Barlow', sans-serif;
     letter-spacing: 0.1em;
     z-index: 1;
@@ -333,12 +330,12 @@ export default {
     .overlay-title {
       h1 {
         font-weight: 800;
-        font-size: 16px;
+        font-size: 26px;
       }
     }
     .overlay-subtext {
       font-weight: 500;
-      font-size: 5px;
+      font-size: 13px;
     }
   }
   .job-opportunities {
@@ -430,7 +427,7 @@ export default {
   }
 }
 .modal-card-mobile {
-  padding: 1rem;
+  padding: 6%;
   min-height: 90vh;
   background: $color-news-gray-root;
   display: flex;
@@ -438,8 +435,7 @@ export default {
   justify-content: space-between;
   .content {
     color: $color-primary-root;
-    min-width: 90%;
-    padding: 3rem;
+    padding: 4% 0;
   }
 }
 </style>
