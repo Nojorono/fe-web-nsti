@@ -1,12 +1,12 @@
 <template>
-  <v-col cols="12" class="pa-0 ma-0">
+  <v-col @click="$router.push(`/${$i18n.locale === 'id' ? 'id/' : ''}about-us`)" cols="12" class="pa-0 ma-0 cursor-pointer">
     <div class="our-story-container">
       <div class="smelling-coffee">
         <img
           lazy
           :src="require('assets/images/smelling-coffee.png')"
           width="110%"
-          height="550"
+          height="500"
           alt="coffee beans smelling"
           class=""
         />
@@ -50,7 +50,7 @@ export default {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 550px;
+    height: 500px;
     background: url('assets/images/our-story-transparent.svg') no-repeat
       no-repeat right top;
     padding-bottom: 5rem;
@@ -59,20 +59,20 @@ export default {
 
     .text-container {
       position: absolute;
-      right: 25rem;
-      top: 7rem;
+      right: 26rem;
+      top: 6rem;
       font-family: 'Barlow', sans-serif;
       width: 25rem;
 
       h1 {
         font-weight: 800;
-        font-size: 2.5em;
+        font-size: 2.2em;
         letter-spacing: 0.05em;
         color: $color-secondary-root;
       }
       h3 {
         font-weight: 500;
-        font-size: 1.3em;
+        font-size: 1.1em;
         color: $color-font-light-root;
       }
     }

@@ -4,15 +4,15 @@
       <p>Terms & Conditions</p>
       <v-img
         :src="require('assets/images/Ellipse.svg')"
-        max-height="10px"
-        max-width="10px"
+        max-height="7px"
+        max-width="7px"
         class="v-img"
       />
       <p>Privacy Policy</p>
       <v-img
         :src="require('assets/images/Ellipse.svg')"
-        max-height="10px"
-        max-width="10px"
+        max-height="7px"
+        max-width="7px"
         class="v-img"
       />
       <p>&copy; 2022 PT Nikki Super. All rights reserved.</p>
@@ -41,7 +41,7 @@ export default {
     P {
       padding-top: 0.7rem;
       font-weight: 400;
-      font-size: 1.2em;
+      font-size: 1em;
       letter-spacing: 0.05em;
     }
     .v-img {

@@ -54,13 +54,14 @@ export default {
       align-items: center;
       border: 2.04082px solid $color-secondary-root;
       border-radius: 6px;
-      width: 65.31px;
-      height: 65.31px;
+      width: 55px;
+      height: 55px;
       margin: 0 0.5rem;
       color: $color-secondary-root;
     }
     img {
       margin: 0 0.5rem;
+      width: 55px;
     }
   }
 }

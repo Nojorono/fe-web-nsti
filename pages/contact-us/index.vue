@@ -25,6 +25,7 @@
             <h1>{{ $t('contact.title1') }}</h1>
             <h1>{{ $t('contact.title2') }}</h1>
           </div>
+          <br>
           <div
             class="sub-wrapper d-flex flex-column justify-space-between pa-0"
           >
@@ -68,6 +69,7 @@ export default {
 
 <style lang="scss">
 .container-contact {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
   .img-content {
     position: relative;
     top: 0;
@@ -92,7 +94,10 @@ export default {
       letter-spacing: 0.1em;
       font-weight: 800;
       font-family: 'Barlow', sans-serif;
-      font-size: 2em;
+      font-size: 1.7em;
+      h1{
+        margin-bottom: -5%;
+      }
     }
   }
   [class*='connect-sub'] {
@@ -101,12 +106,12 @@ export default {
     h3 {
       //margin-bottom: 1rem;
       font-weight: 600;
-      font-size: 1.3em;
+      font-size: 1.2em;
     }
     h4,
     a {
       font-weight: 500;
-      font-size: 1.1em;
+      font-size: 1em;
       text-decoration: none;
       color: $color-primary-root !important;
     }

@@ -94,6 +94,8 @@
         class="no-shadow"
         :bullets="false"
         :arrows="false"
+        fixed-height="750px"
+
       >
         <vueper-slide
           v-for="(slide, i) in $i18n.locale === 'en' ? values : nilaiNilai"
@@ -190,7 +192,7 @@ export default {
   margin-left: 10rem;
   margin-bottom: 3rem;
   font-weight: 700;
-  font-size: 2em;
+  font-size: 1.5em;
   line-height: 96px;
   letter-spacing: 0.05em;
 }
@@ -198,7 +200,7 @@ export default {
 .overview-container {
   .overview-title {
     font-weight: 700;
-    font-size: 4em;
+    font-size: 3em;
     line-height: 96px;
     letter-spacing: 0.05em;
   }
@@ -207,7 +209,7 @@ export default {
     text-align: center;
     P {
       font-weight: 500;
-      font-size: 1.3em;
+      font-size: 1.1em;
     }
   }
 }
@@ -218,12 +220,12 @@ export default {
   }
   h1 {
     font-weight: 800;
-    font-size: 2.7em;
+    font-size: 2.5em;
     margin-bottom: 2rem;
   }
   h3 {
     font-weight: 500;
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
   .visi {
     border-right: 1.5px solid $color-secondary-root;
@@ -231,24 +233,22 @@ export default {
 }
 
 .about-us-our-values {
-  min-height: 759px;
+  //min-height: 759px;
   width: 100%;
+  .vueperslide {
+    object-fit: contain;
+    object-position: 5% 100%;
+  }
 }
 .head-of-nikki {
   width: 92%;
   margin: 4rem 2.5rem;
   h1 {
     font-weight: 700;
-    font-size: 3.5em;
+    font-size: 2.5em;
     line-height: 96px;
     letter-spacing: 0.05em;
     margin-left: 3rem;
-  }
-  .profile-card-container {
-    display: flex;
-    overflow-x: auto;
-    touch-action: pan-x;
-    cursor: grab;
   }
 }
 </style>

@@ -11,7 +11,7 @@
         :show-arrows="false"
         hide-delimiters
         interval="5000"
-        height="760px"
+        height="650px"
         class="carousel-responsive"
       >
         <v-carousel-item v-for="(img, i) in image" :key="i">
@@ -128,7 +128,6 @@
           <div>
             <v-btn
               rounded
-              x-large
               class="defaultGray defaultGolden--text font-weight-bold d-flex"
               href="mailto: karir@nikkisuper.co.id"
             >
@@ -307,7 +306,6 @@ export default {
   },
   mounted() {
     this.fetchAllCareer()
-    console.log(this.isMobileCheck())
   },
   methods: {
     ...mapActions(['fetchAllCareer']),
@@ -333,24 +331,25 @@ export default {
     z-index: 1;
     bottom: 10%;
     left: 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
 
     .overlay-title {
       h1 {
         font-weight: 800;
-        font-size: 3.3em;
+        font-size: 2.5em;
       }
     }
     .overlay-subtext {
       font-weight: 500;
       padding-right: 30rem;
-      font-size: 1.2em;
+      font-size: 1.1em;
     }
   }
   .job-opportunities {
     font-family: 'Barlow', sans-serif;
     .job-opportunities-title {
       font-weight: 800;
-      font-size: 2em;
+      font-size: 1.4em;
     }
     .joblist {
       gap: 3%;
@@ -384,14 +383,15 @@ export default {
         align-items: center;
         border: 2.04082px solid $color-secondary-root;
         border-radius: 6px;
-        width: 65.31px;
-        height: 65.31px;
+        width: 55px;
+        height: 55px;
         margin: 0 0.5rem;
         color: $color-secondary-root;
       }
 
       img {
         margin: 0 0.5rem;
+        width: 55px;
       }
     }
   }
@@ -399,7 +399,7 @@ export default {
     background: rgba(41, 48, 110, 0.5);
     .learn-title {
       h1 {
-        font-size: 3em;
+        font-size:2.5em;
         font-family: 'Barlow', sans-serif;
         font-weight: 800;
       }
@@ -428,7 +428,7 @@ export default {
           }
         }
         img {
-          border-radius: 50%;
+          border-radius: 100%;
         }
       }
     }

@@ -89,20 +89,13 @@ export default {
 
   //left text
   .about-us {
+
     .about-us-container {
       font-family: 'Barlow', sans-serif;
-
-      h1 {
-        font-weight: 800;
-        font-size: 3em;
-        letter-spacing: 0.05em;
-        @include mobile {
-          font-size: 1em;
-        }
-      }
       h2 {
+        text-shadow: 1.5px 1.5px 2px rgba(0,0,0,0.6);
         font-weight: 500;
-        font-size: 1.5em;
+        font-size: 1.3em;
         @include mobile {
           font-size: 0.5em;
         }
@@ -127,7 +120,7 @@ export default {
       text-align: left;
       width: 30rem;
       h1 {
-        font-size: 7em;
+        font-size: 6.5em;
         letter-spacing: -0.05em;
         font-family: 'Barlow', sans-serif;
         font-weight: 700;

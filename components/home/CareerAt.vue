@@ -1,12 +1,12 @@
 <template>
-  <v-col col="12" class="ma-0 pa-0">
+  <v-col  @click="$router.push(`/${$i18n.locale === 'id' ? 'id/' : ''}career`)" col="12" class="ma-0 pa-0 cursor-pointer">
     <div class="background-fill">
       <div class="our-company-container">
         <div class="life-at-img">
           <img
             :src="require('assets/images/History-nikki.png')"
             width="1920"
-            height="550"
+            height="500"
             alt="nikki history"
             class=""
           />
@@ -49,7 +49,7 @@ export default {
       position: absolute;
       top: 0;
       width: 100%;
-      height: 550px;
+      height: 500px;
       background: url('assets/images/our-story-transparent.svg') no-repeat
         no-repeat right top;
       .text-container {
@@ -57,17 +57,17 @@ export default {
         left: 50%;
         top: 7rem;
         font-family: 'Barlow', sans-serif;
-        width: 24rem;
+        width: 20%;
 
         h1 {
           font-weight: 800;
-          font-size: 3em;
+          font-size: 2.5em;
           letter-spacing: 0.05em;
           color: $color-secondary-root;
         }
         h3 {
           font-weight: 500;
-          font-size: 1.2em;
+          font-size: 1.1em;
           color: $color-font-light-root;
         }
       }

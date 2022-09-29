@@ -67,23 +67,13 @@ export default {
   font-family: 'Barlow', sans-serif;
   padding: 8.5% 20%;
   height: 100%;
-  .dialog-text {
-    h1 {
-      font-size: 3.5em;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-    }
-    .description-text {
-      font-size: 1.2em;
-    }
-  }
 }
 .product-parent-wrapper {
   width: 100vw;
 
   h1 {
     color: $color-secondary-root;
-    font-size: 2.7em;
+    font-size: 2.5em;
     font-family: 'Barlow', sans-serif;
     margin-left: 4rem;
   }

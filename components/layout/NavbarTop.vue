@@ -277,7 +277,7 @@ export default {
     display: none;
   }
   font-family: Barlow, sans-serif;
-  font-size: 1.1em;
+  font-size: 0.95em;
   font-weight: 600;
   line-height: 29px;
   letter-spacing: 0.05em;
@@ -285,7 +285,7 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: $color-primary-root;
-  height: 85px;
+  height: 75px;
   .search-bar {
     width: 15%;
     display: flex;
@@ -328,11 +328,6 @@ export default {
     }
   }
   .nav-img-container {
-    responsive {
-      width: 100%;
-      max-width: 318px;
-      height: auto;
-    }
   }
   .nav-list a {
     color: $color-secondary-root;

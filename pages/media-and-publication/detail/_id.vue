@@ -5,7 +5,7 @@
   >
     <div class="defaultGolden--text">
       <div class="news-date mb-10 pt-10">
-        <h2>{{ newsData[$route.params.id - 1].date }}</h2>
+        <h3>{{ newsData[$route.params.id - 1].date }}</h3>
       </div>
 
       <div class="news-title my-10">
@@ -149,7 +149,7 @@ export default {
   .news-title {
     font-family: Barlow, sans-serif;
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
   .news-content {
     border-radius: 50px 50px 0 0;
@@ -157,7 +157,7 @@ export default {
 
     .text-content {
       padding: 3.5rem 7rem;
-      font-size: 1.4em;
+      font-size: 1.1em;
     }
     @include mobile {
       .text-content {

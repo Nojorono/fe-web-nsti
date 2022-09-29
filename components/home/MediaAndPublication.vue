@@ -1,12 +1,12 @@
 <template>
-  <v-col col="11" class="my-15 d-flex justify-center">
+  <v-col col="11" class="my-6 d-flex justify-center">
     <div class="media-wrapper">
       <div class="media-header d-flex justify-space-between align-center">
         <h1 class="defaultGolden--text ml-8">{{ $t('home.media.title') }}</h1>
         <template v-if="$route.fullPath === '/' || $route.fullPath === '/id'">
           <v-btn
             rounded
-            x-large
+            large
             class="defaultGolden fontDark--text font-weight-bold d-flex mr-15"
             :to="
               $i18n.locale === 'id'
@@ -24,7 +24,7 @@
             ? mediaCardList.slice(0, 3)
             : mediaCardList.slice(0, 3)"
           :key="i"
-          class="media-card ma-10"
+          class="media-card mx-10"
           :to="
             $i18n.locale === 'id'
               ? '/id/media-and-publication/detail/' + card.id
@@ -127,17 +127,17 @@ export default {
 
 <style lang="scss" scoped>
 .media-wrapper {
-  width: 100rem;
+  width: 100%;
   min-height: 540px;
   max-width: 100rem;
   .media-header {
     h1 {
       font-family: 'Barlow', sans-serif;
-      font-size: 2.7em;
+      font-size: 2.5em;
     }
   }
   .card-container {
-    height: 100%;
+    height: 90%;
   }
 }
 .media-card {
@@ -154,7 +154,7 @@ export default {
     height: 23.25rem;
     .media-text-wrapper {
       transition: ease-out 300ms;
-      font-size: 90%;
+      font-size: 85%;
       position: absolute;
       top: 13rem;
       right: 0;
@@ -169,7 +169,7 @@ export default {
   .media-text-wrapper {
     background-repeat: repeat;
     top: 13.5rem;
-    font-size: 95%;
+    font-size: 90%;
   }
 }
 </style>

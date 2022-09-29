@@ -101,7 +101,7 @@ export default {
 <style lang="scss" scoped>
 .export-heading {
   font-weight: 800;
-  font-size: 4em;
+  font-size: 3em;
   line-height: 119px;
   letter-spacing: 0.1em;
   background-color: $color-primary-root;
@@ -125,13 +125,13 @@ export default {
     padding: 3rem 5rem;
     h1 {
       font-weight: 800;
-      font-size: 2.5em;
+      font-size: 2em;
       //line-height: 78px;
       letter-spacing: 0.05em;
     }
     p {
       font-weight: 500;
-      font-size: 1.2em;
+      font-size: 1.1em;
       line-height: 150%;
     }
   }
@@ -162,12 +162,12 @@ export default {
     padding: 6rem ;
     h1 {
       font-weight: 800;
-      font-size: 2.5em;
+      font-size: 2em;
       letter-spacing: 0.05em;
     }
     p {
       font-weight: 500;
-      font-size: 1.3em;
+      font-size: 1.1em;
       line-height: 150%;
       letter-spacing: 0.05em;
     }
@@ -194,13 +194,13 @@ export default {
   .contact-us-title {
     h1 {
       font-weight: 800;
-      font-size: 4em;
+      font-size: 3.5em;
       line-height: 96px;
       letter-spacing: 0.05em;
     }
     p {
       font-weight: 500;
-      font-size: 1.3em;
+      font-size: 1.2em;
       line-height: 39px;
     }
   }
@@ -208,12 +208,12 @@ export default {
     padding-right: 5rem;
     h2 {
       font-weight: 700;
-      font-size: 1.8em;
+      font-size: 1.5em;
       line-height: 39px;
     }
     a {
       font-weight: 500;
-      font-size: 1.3em;
+      font-size: 1.2em;
       line-height: 29px;
       text-decoration: none;
       color: $color-secondary-dark-root;

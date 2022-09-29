@@ -1,14 +1,14 @@
 <template>
   <div>
     <carousel-3d
-      :width="350"
-      :height="400"
+      :width="325"
+      :height="375"
       :perspective="0"
       :controls-visible="true"
       :controls-prev-html="''"
       :controls-next-html="''"
-      :controls-width="30"
-      :controls-height="50"
+      :controls-width="25"
+      :controls-height="45"
       :space="300"
       :display="5"
       :inverse-scaling="350"
