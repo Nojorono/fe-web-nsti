@@ -73,23 +73,23 @@ export default {
   methods: {
     ...mapActions(['login']),
     clickLogin() {
-      this.$router.push({
-        path: '/content-management/products',
-      })
-      // const payload = {
-      //   email: this.email,
-      //   password: this.password,
-      // }
-      // this.login(payload)
-      //   .then((_) => {
-      //     console.log('masuk then')
-      //     this.$router.push({
-      //       path: '/content-management/products',
-      //     })
-      //   })
-      //   .catch((e) => {
-      //     alert('gagal')
-      //   })
+      // this.$router.push({
+      //   path: '/content-management/products',
+      // })
+      const payload = {
+        email: this.email,
+        password: this.password,
+      }
+      this.login(payload)
+        .then((_) => {
+          console.log('masuk then')
+          this.$router.push({
+            path: '/content-management/products',
+          })
+        })
+        .catch((e) => {
+          alert('email/password wrong')
+        })
     },
   },
   head() {

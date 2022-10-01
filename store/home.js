@@ -75,9 +75,9 @@ export default {
     },
   },
   actions: {
-    async getAllMedia({ commit }) {
+    async getAllMedia({ commit },payload) {
       try {
-        const { data } = await axios.get(`media/readAll`)
+        const { data } = await axios.get(`media/readAll?page=${payload.page}&size=${payload.size}`)
         commit('setMediaList', data)
       } catch (e) {
         console.log(e)

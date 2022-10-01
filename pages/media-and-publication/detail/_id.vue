@@ -5,26 +5,31 @@
   >
     <div class="defaultGolden--text">
       <div class="news-date mb-10 pt-10">
-        <h3>{{ newsData[$route.params.id - 1].date }}</h3>
+<!--        <h3>{{ newsData[$route.params.id - 1].date }}</h3>-->
+        <h3>{{getDetailMedia.location}} {{ findDate(getDetailMedia.createdAt) }}</h3>
       </div>
 
       <div class="news-title my-10">
-        <h1>{{ newsData[$route.params.id - 1].title }}</h1>
+<!--        <h1>{{ newsData[$route.params.id - 1].title }}</h1>-->
+        <h1>{{ getDetailMedia.title }}</h1>
       </div>
     </div>
 
     <div class="news-content">
       <div class="image-content">
-        <v-img
-          :src="newsData[$route.params.id - 1].img"
-          max-height="auto"
-          max-width="auto"
+<!--                  :src="newsData[$route.params.id - 1].img"
+-->
+        <img
+          :src="'https://back-api.nikkisuper.my.id/' + getDetailMedia.imageName"
+          width="100%"
+          height="450"
         />
       </div>
-
+<!--         v-html="newsData[$route.params.id - 1].data"
+-->
       <div
         class="text-content defaultGray--text"
-        v-html="newsData[$route.params.id - 1].data"
+        v-html="getDetailMedia.description"
       ></div>
     </div>
   </div>
@@ -135,6 +140,36 @@ export default {
   },
   methods: {
     ...mapActions(['fetchMediaDetail']),
+    // findDate(created){
+    //   if (created) {
+    //     const newDate = [];
+    //     const date = new Date(created).toISOString().split('T')[0];
+    //     const split = date.split('-');
+    //     newDate.push(split[2]);
+    //     const month = [
+    //       'Januari',
+    //       'Februari',
+    //       'Maret',
+    //       'April',
+    //       'Mei',
+    //       'Juni',
+    //       'Juli',
+    //       'Agustus',
+    //       'September',
+    //       'Oktober',
+    //       'November',
+    //       'Desember',
+    //     ];
+    //     const monthInt = parseInt(split[1].split(0)[1]);
+    //     const monthInt2 = parseInt(split[1]);
+    //     const fixMonth = month[monthInt ? monthInt - 1 : monthInt2 -1];
+    //     newDate.push(fixMonth);
+    //     newDate.push(split[0]);
+    //     const dateFix2 = newDate.join(' ');
+    //     return dateFix2;
+    //   }
+    //
+    // }
   },
 }
 </script>
@@ -154,7 +189,12 @@ export default {
   .news-content {
     border-radius: 50px 50px 0 0;
     background-color: #f8f5ec;
-
+    .image-content {
+      img{
+        border-radius: 50px 50px 0 0;
+        object-fit: cover;
+      }
+    }
     .text-content {
       padding: 3.5rem 7rem;
       font-size: 1.1em;

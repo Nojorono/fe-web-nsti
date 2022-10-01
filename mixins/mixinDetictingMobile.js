@@ -16,6 +16,35 @@ const mixinDetictingMobile = {
       })(navigator.userAgent || navigator.vendor || window.opera)
       return check
     },
+    findDate(created) {
+      if (created){
+        const newDate = [];
+        const date = new Date(created).toISOString().split('T')[0];
+        const split = date.split('-');
+        newDate.push(split[2]);
+        const month = [
+          'Januari',
+          'Februari',
+          'Maret',
+          'April',
+          'Mei',
+          'Juni',
+          'Juli',
+          'Agustus',
+          'September',
+          'Oktober',
+          'November',
+          'Desember',
+        ];
+        const monthInt = parseInt(split[1].split(0)[1]);
+        const monthInt2 = parseInt(split[1]);
+        const fixMonth = month[monthInt ? monthInt - 1 : monthInt2 -1];
+        newDate.push(fixMonth);
+        newDate.push(split[0]);
+        const dateFix2 = newDate.join(' ');
+        return dateFix2;
+      }
+    }
   },
 }
 export default mixinDetictingMobile

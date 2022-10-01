@@ -26,6 +26,7 @@ export default {
           {
             headers: {
               access_token: token,
+              "Content-Type": "multipart/form-data",
             },
           }
         )
@@ -80,6 +81,7 @@ export default {
       console.log(data)
     },
     async deleteProducts({ commit }, id) {
+      // console.log(token, '========')
       const { data } = await axios({
         url: `product/delete`,
         method: 'DElETE',

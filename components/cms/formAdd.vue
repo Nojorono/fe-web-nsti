@@ -30,8 +30,11 @@
       </div>
     </div>
     <div class="mb-3 add-new-container">
-      <div class="input-title">
+      <div class="input-title mb-3">
         <input v-model="title" type="text" placeholder="Add Title" required />
+      </div>
+      <div class="input-title">
+        <input v-model="location" type="text" placeholder="Add Location" required />
       </div>
     </div>
     <div class="mb-3 input-text-area">
@@ -59,9 +62,10 @@ export default {
     return {
       img: null,
       title: null,
-      bodyText: null,
+      // bodyText: null,
       imgPreview: null,
-      content: '<h3>Add Body Text</h3>',
+      location: '',
+      content: '<p>Add Body Text</p>',
     }
   },
   head() {
@@ -69,12 +73,31 @@ export default {
   },
   methods: {
     postBtn() {
-      this.$emit('postBtn')
+      this.$emit('postBtn', {
+        location: this.location,
+        description: this.content,
+        title: this.title,
+        sampleFile: this.imgPreview
+
+      })
     },
     upload(event) {
       if (event.target.files.length) {
-        this.imgPreview = URL.createObjectURL(event.target.files[0])
+        // this.imgPreview = URL.createObjectURL(event.target.files[0])
+        this.imgPreview = event.target.files[0]
+        // this.$emit('imgPreview', this.imgPreview)
+
+        const formData = new FormData();
+        formData.append('file', this.imgPreview)
         this.$emit('imgPreview', this.imgPreview)
+
+        // const image = event.target.files[0];
+        // const reader = new FileReader();
+        // reader.readAsDataURL(image);
+        // reader.onload = event =>{
+        //   this.imgPreview = event.target.result;
+        //   console.log(this.imgPreview);
+        // };
       }
     },
   },

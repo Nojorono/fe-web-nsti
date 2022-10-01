@@ -1,12 +1,12 @@
 <template>
   <div class="card">
     <div class="img-container">
-      <v-img :src="card.img" max-width="206" max-height="137" class="img" />
+      <v-img :src="'https://back-api.nikkisuper.my.id/' + card.imageName" max-width="206" max-height="137" class="img" />
     </div>
     <div class="card-title my-2">
       <h3>
 <!--        {{ titleParser(card.title) }}-->
-        {{ card.title }} adasdasdasdsadasdsadsadasdasdsadasdasd
+        {{ card.title }}
       </h3>
     </div>
     <div class="card-text">
@@ -17,7 +17,7 @@
     </div>
     <div class="card-time-stamp">
       <b>
-        {{ card.updatedAt }}
+        {{ findDate(card.updatedAt) }}
       </b>
     </div>
     <div

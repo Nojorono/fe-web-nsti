@@ -49,12 +49,8 @@ export default {
     emitBody(body) {
       this.bodyText = body
     },
-    postBtn() {
-      this.postCreateMedia({
-        sampleFile: this.img,
-        title: this.title,
-        description: this.bodyText,
-      })
+    postBtn(payload) {
+      this.postCreateMedia(payload)
     },
   },
 }

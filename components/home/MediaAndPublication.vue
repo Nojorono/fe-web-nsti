@@ -33,7 +33,7 @@
         >
           <div class="zoom-transition defaultGolden--text cursor-pointer">
             <v-img
-              :src="card.img"
+              :src="'https://back-api.nikkisuper.my.id/' + card.imageName"
               width="100%"
               height="100%"
               content-class="media-card-linear-gradient"
@@ -111,13 +111,18 @@ export default {
           id: 6,
         },
       ],
+      page: 0,
+      size: 6
     }
   },
   computed: {
     ...mapGetters(['getMediaList']),
   },
   mounted() {
-    this.getAllMedia().then((_) => {})
+    this.getAllMedia({
+      page: this.page,
+      size: this.size,
+    }).then((_) => {})
   },
   methods: {
     ...mapActions(['getAllMedia']),
@@ -152,6 +157,7 @@ export default {
     transition: width 300ms, height 300ms;
     width: 23.25rem;
     height: 23.25rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
     .media-text-wrapper {
       transition: ease-out 300ms;
       font-size: 85%;
