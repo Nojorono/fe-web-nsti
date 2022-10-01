@@ -2,18 +2,22 @@
   <div class="card">
     <div class="card-title">
       <h3>
-        {{ titleParser(card.title) }}
+<!--        {{ titleParser(card.title) }}-->
+        {{ card.title }}
       </h3>
     </div>
-    <div class="card-level">
-      <p>Level: {{ textParser(card.level) }}</p>
+<!--    <div class="card-level">-->
+<!--&lt;!&ndash;      <p>Level: {{ textParser(card.level) }}</p>&ndash;&gt;-->
+<!--      <p>Level: {{ card.level }}</p>-->
+<!--    </div>-->
+    <div class="card-text">
+<!--      <p>Location: {{ textParser(card.location) }}</p>-->
+      <p>Location: {{ card.location }}</p>
     </div>
-    <div class="card-level">
-      <p>Location: {{ textParser(card.location) }}</p>
-    </div>
-    <div class="card-level">
-      <p>Link: {{ textParser(card.link) }}</p>
-    </div>
+<!--    <div class="card-level">-->
+<!--&lt;!&ndash;      <p>Link: {{ textParser(card.link) }}</p>&ndash;&gt;-->
+<!--      <p>Link: {{ card.link }}</p>-->
+<!--    </div>-->
     <div class="card-time-stamp">
       <b>
         {{ card.updatedAt.split('T')[0] }}
@@ -107,8 +111,7 @@ export default {
     },
     titleParser(title) {
       let result = ''
-
-      if (title) {
+      if (title.length) {
         for (let i = 0; i < title.length; i++) {
           if (i === 30) {
             result += '...'
@@ -163,6 +166,20 @@ export default {
 .card-title {
   height: 2.5rem;
   line-height: 1;
+  h3{
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+  }
+}
+
+.card-text {
+  height: 110px;
+  p{
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+  }
 }
 
 .card-overlay-action {

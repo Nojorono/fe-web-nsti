@@ -139,7 +139,7 @@ export default {
   width: 100%;
   h1 {
     font-weight: 700;
-    font-size: 3em;
+    font-size: 2.5em;
   }
 }
 </style>

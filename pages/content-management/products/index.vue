@@ -1,6 +1,6 @@
 <template>
   <div class="cms-about-us-container">
-    <template v-if="!getAllProducts.length">
+    <template v-if="!getAllProducts?.length">
       <empty-card />
     </template>
     <div

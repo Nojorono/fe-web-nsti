@@ -96,7 +96,7 @@ export default {
       // console.log('masuk')
       try {
         const { data } = await axios.get(`product/readAll`)
-        // commit('setAllProducts', data)
+        commit('setAllProducts', data)
         console.log(data)
       } catch (e) {
         console.log(e)

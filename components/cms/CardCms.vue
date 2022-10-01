@@ -5,12 +5,14 @@
     </div>
     <div class="card-title my-2">
       <h3>
-        {{ titleParser(card.title) }}
+<!--        {{ titleParser(card.title) }}-->
+        {{ card.title }} adasdasdasdsadasdsadsadasdasdsadasdasd
       </h3>
     </div>
     <div class="card-text">
       <p>
-        {{ textParser(card.description) }}
+<!--        {{ textParser(card.description) }}-->
+        {{ card.description }}
       </p>
     </div>
     <div class="card-time-stamp">
@@ -156,10 +158,20 @@ export default {
 }
 .card-text {
   height: 110px;
+  p{
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+  }
 }
 .card-title {
   height: 2.5rem;
   line-height: 1;
+  h3{
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+  }
 }
 
 .card-overlay-action {
