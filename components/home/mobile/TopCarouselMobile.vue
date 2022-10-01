@@ -1,5 +1,5 @@
 <template>
-  <v-col cols="12"  class="ma-0 pa-0 carousel-parent-mobile">
+  <v-col cols="12" class="ma-0 pa-0 carousel-parent-mobile">
     <v-carousel
       v-model="currentIndex"
       cycle
@@ -17,18 +17,18 @@
         </v-sheet>
       </v-carousel-item>
     </v-carousel>
-      <v-col cols="12" class="about-us defaultGolden--text">
-          <div class="about-us-container text-center px-3 py-2">
-            <h3>{{ image[currentIndex].text }}</h3>
-            <br />
-            <v-btn
-              class="defaultGolden fontDark--text font-weight-bold"
-              :to="image[currentIndex].to"
-            >
-              {{ image[currentIndex].btnText }}
-            </v-btn>
-          </div>
-      </v-col>
+    <v-col cols="12" class="about-us defaultGolden--text">
+      <div class="about-us-container text-center px-3 py-2">
+        <h3>{{ image[currentIndex].text }}</h3>
+        <br />
+        <v-btn
+          class="defaultGolden fontDark--text font-weight-bold"
+          :to="image[currentIndex].to"
+        >
+          {{ image[currentIndex].btnText }}
+        </v-btn>
+      </div>
+    </v-col>
   </v-col>
 </template>
 
@@ -73,7 +73,7 @@ export default {
     .about-us {
       .about-us-container {
         //padding: 20%;
-        h3{
+        h3 {
           font-family: 'Barlow', sans-serif;
           font-weight: 500;
         }

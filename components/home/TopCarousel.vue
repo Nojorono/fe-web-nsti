@@ -89,11 +89,10 @@ export default {
 
   //left text
   .about-us {
-
     .about-us-container {
       font-family: 'Barlow', sans-serif;
       h2 {
-        text-shadow: 1.5px 1.5px 2px rgba(0,0,0,0.6);
+        text-shadow: 1.5px 1.5px 2px rgba(0, 0, 0, 0.6);
         font-weight: 500;
         font-size: 1.3em;
         @include mobile {

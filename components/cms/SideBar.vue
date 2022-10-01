@@ -3,46 +3,46 @@
     <v-menu>
       <template #activator="{ on, attrs }">
         <div
-          class="left-btn add-new cursor-pointer mt-15 mb-4 ml-4"
+          class="left-btn add-new cursor-pointer mt-13 mb-4 ml-4"
           v-bind="attrs"
           v-on="on"
         ></div>
       </template>
       <div class="">
+<!--        <div-->
+<!--          class="left-btn full-width about-us my-4 cursor-pointer"-->
+<!--          @click="$router.push('/content-management/about-us/add-new')"-->
+<!--        ></div>-->
         <div
-          class="left-btn full-width about-us my-4 cursor-pointer"
-          @click="$router.push('/content-management/about-us/add-new')"
-        ></div>
-        <div
-          class="left-btn full-width products mb-4 cursor-pointer"
+          class="left-btn full-width products cursor-pointer"
           @click="$router.push('/content-management/products/add-new')"
         ></div>
         <div
-          class="left-btn full-width media-and-publication mb-4 cursor-pointer"
+          class="left-btn full-width media-and-publication cursor-pointer"
           @click="
             $router.push('/content-management/media-and-publication/add-new')
           "
         ></div>
         <div
-          class="left-btn full-width career mb-4 cursor-pointer"
+          class="left-btn full-width career cursor-pointer"
           @click="$router.push('/content-management/career/add-new')"
         ></div>
       </div>
     </v-menu>
+<!--    <nuxt-link-->
+<!--      class="left-btn full-width about-us mb-4"-->
+<!--      to="/content-management/about-us"-->
+<!--    ></nuxt-link>-->
     <nuxt-link
-      class="left-btn full-width about-us mb-4"
-      to="/content-management/about-us"
-    ></nuxt-link>
-    <nuxt-link
-      class="left-btn full-width products mb-4"
+      class="left-btn full-width products "
       to="/content-management/products"
     ></nuxt-link>
     <nuxt-link
-      class="left-btn full-width media-and-publication mb-4"
+      class="left-btn full-width media-and-publication "
       to="/content-management/media-and-publication"
     ></nuxt-link>
     <nuxt-link
-      class="left-btn full-width career mb-4"
+      class="left-btn full-width career"
       to="/content-management/career"
     ></nuxt-link>
   </div>
@@ -64,7 +64,7 @@ export default {
 }
 
 .left-nav-container {
-  width: 302px;
+  width: 250px;
   min-height: calc(100vh - 80px);
   background-color: $btn-cms-gray;
 }
@@ -73,13 +73,13 @@ export default {
   background-size: contain;
   transition: all ease-in-out 0.3s;
   &.full-width {
-    width: 300px;
+    width: 250px;
     height: 40px;
   }
   &.add-new {
     background-image: url('assets/images/cms/add-new.svg');
-    width: 150px;
-    height: 58px;
+    width: 130px;
+    height: 50px;
     &:hover {
       background-image: url('assets/images/cms/add-new-hover.svg');
     }

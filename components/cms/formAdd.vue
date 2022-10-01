@@ -35,7 +35,10 @@
       </div>
     </div>
     <div class="mb-3 input-text-area">
-      <textarea v-model="bodyText" placeholder="Add Body Text" />
+<!--      <textarea v-model="bodyText" placeholder="Add Body Text" />-->
+      <client-only>
+        <vue-editor v-model="content"></vue-editor>
+      </client-only>
     </div>
     <div class="action-btn d-flex justify-end">
       <v-btn class="ma-2" outlined color="fontDark"> Delete </v-btn>
@@ -47,9 +50,10 @@
 </template>
 
 <script>
+import { VueEditor } from 'vue2-editor'
 export default {
   name: 'FormAdd',
-  components: {},
+  components: {VueEditor},
   props: {},
   data() {
     return {
@@ -57,6 +61,7 @@ export default {
       title: null,
       bodyText: null,
       imgPreview: null,
+      content: '<h3>Add Body Text</h3>',
     }
   },
   head() {
@@ -100,40 +105,19 @@ export default {
 .add-new-btn > input {
   display: none;
 }
-.input-title {
-  width: 939px;
-  height: 77px;
-  border: 3px solid $color-font-dark-root;
-  border-radius: 20px;
-  padding: 0 1%;
-  input {
-    width: 100%;
-    font-size: 3em;
-    color: $color-font-dark-root;
-    &:focus {
-      outline: none;
-    }
-    &::placeholder {
-      font-weight: 500;
-      color: $color-font-dark-root;
-      font-size: 0.7em;
-      text-align: center;
-    }
-  }
-}
 .text-field {
   color: #90c143 !important; /* this will override the existing property applied */
   /* add whatever properties you want */
 }
 .input-title {
-  width: 939px;
-  height: 77px;
-  border: 3px solid $color-font-dark-root;
+  width: 100%;
+  height: 55px;
+  border: 2.5px solid $color-font-dark-root;
   border-radius: 20px;
   padding: 0 1%;
   input {
     width: 100%;
-    font-size: 3em;
+    font-size: 2em;
     color: $color-font-dark-root;
     &:focus {
       outline: none;
@@ -141,7 +125,7 @@ export default {
     &::placeholder {
       font-weight: 500;
       color: $color-font-dark-root;
-      font-size: 0.7em;
+      font-size: 0.6em;
       text-align: center;
     }
   }

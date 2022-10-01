@@ -25,7 +25,7 @@
             <h1>{{ $t('contact.title1') }}</h1>
             <h1>{{ $t('contact.title2') }}</h1>
           </div>
-          <br>
+          <br />
           <div
             class="sub-wrapper d-flex flex-column justify-space-between pa-0"
           >
@@ -69,7 +69,7 @@ export default {
 
 <style lang="scss">
 .container-contact {
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
   .img-content {
     position: relative;
     top: 0;
@@ -95,7 +95,7 @@ export default {
       font-weight: 800;
       font-family: 'Barlow', sans-serif;
       font-size: 1.7em;
-      h1{
+      h1 {
         margin-bottom: -5%;
       }
     }

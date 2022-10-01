@@ -37,6 +37,10 @@ export default {
       isSingInUp: false,
     }
   },
+  mounted() {
+    // eslint-disable-next-line no-unused-expressions
+    this.$vuetify.theme.dark = false
+  }
 }
 </script>
 

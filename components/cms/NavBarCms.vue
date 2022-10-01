@@ -2,10 +2,9 @@
   <div class="nav-cms d-flex justify-space-between align-center">
     <v-img
       :src="require('assets/images/logo-light.svg')"
-      max-height="63px"
-      max-width="390px"
+      max-width="320px"
       alt="nikki super logo light"
-      class="ml-5 cursor-pointer"
+      class="ml-5"
       @click="goToHome"
     />
     <div class="pp-container mr-15">
@@ -39,7 +38,7 @@ export default {
   },
   methods: {
     goToHome() {
-      window.location.href = '/'
+      // window.location.href = '/'
     },
   },
 }
@@ -48,7 +47,7 @@ export default {
 <style lang="scss" scoped>
 .nav-cms {
   width: 100vw;
-  height: 80px;
+  height: 68px;
   left: 0;
   top: 0;
 

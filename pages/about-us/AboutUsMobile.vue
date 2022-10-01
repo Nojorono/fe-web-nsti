@@ -104,18 +104,19 @@
         </vueper-slide>
       </vueper-slides>
     </div>
-<!--    <div class="management-container">-->
+    <!--    <div class="management-container">-->
     <div>
-      <h1 class="defaultGolden--text management-title">{{ $t('aboutUs.management') }}</h1>
+      <h1 class="defaultGolden--text management-title">
+        {{ $t('aboutUs.management') }}
+      </h1>
     </div>
-    <br>
-      <div class="profile-pendiri d-flex overflow-x-auto">
-        <div v-for="(img, i) in profilePendiri" :key="i">
-          <img :src="img.img" alt="profile pendiri" width="310" >
-        </div>
-<!--      </div>-->
+    <br />
+    <div class="profile-pendiri d-flex overflow-x-auto">
+      <div v-for="(img, i) in profilePendiri" :key="i">
+        <img :src="img.img" alt="profile pendiri" width="310" />
+      </div>
+      <!--      </div>-->
     </div>
-
   </v-row>
 </template>
 
@@ -217,18 +218,17 @@ export default {
     }
   }
   //.management-container {
-  .management-title{
-      font-weight: 700;
-      //font-size: 30px;
-      line-height: 96px;
-      letter-spacing: 0.05em;
+  .management-title {
+    font-weight: 700;
+    //font-size: 30px;
+    line-height: 96px;
+    letter-spacing: 0.05em;
     margin-left: -4%;
-    }
-    .profile-pendiri{
-      padding: 0 8%;
-      gap: 4%
-    }
+  }
+  .profile-pendiri {
+    padding: 0 8%;
+    gap: 4%;
+  }
   //}
-
 }
 </style>

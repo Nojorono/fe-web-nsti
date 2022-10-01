@@ -95,7 +95,6 @@
         :bullets="false"
         :arrows="false"
         fixed-height="600px"
-
       >
         <vueper-slide
           v-for="(slide, i) in $i18n.locale === 'en' ? values : nilaiNilai"
@@ -179,8 +178,7 @@ export default {
       title: 'About Us',
     }
   },
-  mounted() {
-  },
+  mounted() {},
 }
 </script>
 

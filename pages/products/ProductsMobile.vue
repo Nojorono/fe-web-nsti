@@ -24,11 +24,6 @@ export default {
   components: {
     ProductsCarouselMobile,
   },
-  head() {
-    return {
-      title: 'Products',
-    }
-  },
   data() {
     return {
       productList: [
@@ -63,6 +58,11 @@ export default {
           popUp: require('assets/images/produk6-pop.png'),
         },
       ],
+    }
+  },
+  head() {
+    return {
+      title: 'Products',
     }
   },
 }

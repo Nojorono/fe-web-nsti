@@ -10,15 +10,16 @@
         <div class="input-box">
           <input v-model="title" type="text" placeholder="Add Posistion" />
         </div>
-        <div class="input-box">
-          <input v-model="level" type="text" placeholder="Add level" />
-        </div>
+        <!--        <div class="input-box">-->
+        <!--          <input v-model="level" type="text" placeholder="Add level" />-->
+        <!--        </div>-->
         <div class="input-box">
           <input v-model="location" type="text" placeholder="Add location" />
         </div>
-        <div class="input-box">
-          <input v-model="link" type="text" placeholder="Add Link" />
-        </div>
+        <client-only>
+          <vue-editor v-model="content"></vue-editor>
+        </client-only>
+
       </div>
       <div class="action-btn d-flex justify-end">
         <v-btn class="ma-2" outlined color="fontDark"> Delete </v-btn>
@@ -32,12 +33,14 @@
 
 <script>
 import { mapActions } from 'vuex'
+import { VueEditor } from 'vue2-editor'
+
 import CmsHeading from '@/components/cms/Heading'
 export default {
   name: 'AddNewCareer',
-
   components: {
     CmsHeading,
+    VueEditor,
   },
   layout: 'cmsLayout',
   props: {},
@@ -49,6 +52,7 @@ export default {
       bodyText: null,
       location: null,
       link: null,
+      content: '<h3>Description about the job...</h3>',
     }
   },
   head() {
@@ -80,11 +84,11 @@ export default {
 
 .input-box {
   margin: 1rem 0;
-  width: 939px;
-  height: 77px;
-  border: 3px solid $color-font-dark-root;
+  width: 100%;
+  height: 55px;
+  border: 2.5px solid $color-font-dark-root;
   border-radius: 20px;
-  padding: 0 1%;
+  padding: 1%;
   display: flex;
   justify-content: center;
   align-items: center;

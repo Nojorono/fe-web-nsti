@@ -1,0 +1,116 @@
+<template>
+  <div>
+    <div class="mb-3 d-flex justify-center flex-column align-center">
+      <div class="add-new">
+        <div>
+          <h3>Thumbnail Image</h3>
+        </div>
+        <label for="file-input">
+          <v-img
+            v-if="!imgPreview"
+            :src="require('assets/images/cms/add-media-btn.svg')"
+            alt="add new content"
+            max-width="256.77"
+            max-height="130.55"
+            class="cursor-pointer"
+          />
+        </label>
+        <img
+          v-if="imgPreview"
+          :src="imgPreview"
+          alt="image preview"
+          width="256.77"
+          height="130.55"
+          style="object-fit: cover"
+        />
+        <input
+          id="file-input"
+          type="file"
+          accept="image/*"
+          required
+          @change="upload"
+        />
+      </div>
+      <div class="add-new">
+        <div>
+          <h3>Detail Image</h3>
+        </div>
+        <label for="file-input2">
+          <v-img
+            v-if="!imgPreview2"
+            :src="require('assets/images/cms/add-media-btn.svg')"
+            alt="add new content"
+            max-width="256.77"
+            max-height="130.55"
+            class="cursor-pointer"
+          />
+        </label>
+        <img
+          v-if="imgPreview2"
+          :src="imgPreview2"
+          alt="image preview"
+          width="256.77"
+          height="130.55"
+          style="object-fit: cover"
+        />
+        <input
+          id="file-input2"
+          type="file"
+          accept="image/*"
+          required
+          @change="uploadDetail"
+        />
+      </div>
+    </div>
+    <div class="action-btn d-flex justify-end">
+      <v-btn class="ma-2" outlined color="fontDark" @click="deleleteImg"> Delete </v-btn>
+      <v-btn class="ma-2" color="fontDark fontLight--text" @click="postBtn">
+        Post
+      </v-btn>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'FormAddProduts',
+  components: {},
+  props: {},
+  data() {
+    return {
+      imgPreview: null,
+      imgPreview2: null,
+    }
+  },
+  head() {
+    return {}
+  },
+  methods: {
+    postBtn() {
+      this.$emit('postBtn')
+    },
+    deleleteImg() {
+      this.imgPreview = null
+      this.imgPreview2 = null
+    },
+    upload(event) {
+      console.log('masuk 1')
+      if (event.target.files.length) {
+        this.imgPreview = URL.createObjectURL(event.target.files[0])
+      }
+    },
+    uploadDetail(event) {
+      console.log('masuk')
+      if (event.target.files.length) {
+        this.imgPreview2 = URL.createObjectURL(event.target.files[0])
+      }
+    },
+  },
+}
+</script>
+
+<style lang="scss" scoped>
+.add-new > input {
+  display: none;
+}
+</style>

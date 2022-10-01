@@ -6,21 +6,20 @@
         :heading="heading"
         class="mb-3"
       />
-      <form-add @postBtn="postBtn" />
+      <form-add-produts @postBtn='postBtn' />
     </div>
   </div>
 </template>
 
 <script>
 import { mapActions } from 'vuex'
-
 import CmsHeading from '@/components/cms/Heading'
-import FormAdd from '@/components/cms/formAdd'
+import FormAddProduts from '@/components/cms/formAddProducts'
 export default {
   name: 'AddNewProducts',
 
   components: {
-    FormAdd,
+    FormAddProduts,
     CmsHeading,
   },
   layout: 'cmsLayout',

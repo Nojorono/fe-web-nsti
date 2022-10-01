@@ -1,5 +1,9 @@
 <template>
-  <v-col  @click="$router.push(`/${$i18n.locale === 'id' ? 'id/' : ''}career`)" col="12" class="ma-0 pa-0 cursor-pointer">
+  <v-col
+    col="12"
+    class="ma-0 pa-0 cursor-pointer"
+    @click="$router.push(`/${$i18n.locale === 'id' ? 'id/' : ''}career`)"
+  >
     <div class="background-fill">
       <div class="our-company-container">
         <div class="life-at-img">

@@ -21,9 +21,8 @@
           </v-sheet>
         </v-carousel-item>
       </v-carousel>
-
     </v-col>
-    <div class="text-overlay defaultGolden--text ">
+    <div class="text-overlay defaultGolden--text">
       <div class="overlay-title text-center">
         <h1>{{ $t('career.title') }}</h1>
       </div>
@@ -118,7 +117,7 @@
     </v-col>
     <!--    dialog-->
     <v-row justify="center">
-      <v-dialog v-model="dialog ">
+      <v-dialog v-model="dialog">
         <div class="modal-card-mobile">
           <div class="d-flex justify-end">
             <v-icon dark @click="dialog = false"> mdi-window-close </v-icon>

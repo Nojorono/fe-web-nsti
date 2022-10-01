@@ -331,7 +331,7 @@ export default {
     z-index: 1;
     bottom: 10%;
     left: 0;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 
     .overlay-title {
       h1 {
@@ -399,7 +399,7 @@ export default {
     background: rgba(41, 48, 110, 0.5);
     .learn-title {
       h1 {
-        font-size:2.5em;
+        font-size: 2.5em;
         font-family: 'Barlow', sans-serif;
         font-weight: 800;
       }
@@ -442,7 +442,7 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   .content {
-    color: $color-primary-root;
+    //color: $color-primary-root;
     min-width: 90%;
     padding: 3rem;
   }

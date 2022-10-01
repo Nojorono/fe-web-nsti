@@ -19,13 +19,12 @@ export default {
     ProductsMobile,
     ProductsCarousel,
   },
+  data() {
+    return {}
+  },
   head() {
     return {
       title: 'Products',
-    }
-  },
-  data() {
-    return {
     }
   },
   computed: {
@@ -37,7 +36,6 @@ export default {
   methods: {
     ...mapActions(['fetchAllProducts', 'fetchDetailProducts']),
   },
-
 }
 </script>
 <style lang="scss" scoped>
