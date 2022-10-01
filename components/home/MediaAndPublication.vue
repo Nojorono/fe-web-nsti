@@ -21,8 +21,8 @@
       <div class="card-container d-flex flex-wrap justify-center align-center">
         <nuxt-link
           v-for="(card, i) in $route.fullPath === '/'
-            ? mediaCardList.slice(0, 3)
-            : mediaCardList.slice(0, 3)"
+            ? getMediaList.slice(0, 3)
+            : getMediaList.slice(0, 3)"
           :key="i"
           class="media-card mx-10"
           :to="

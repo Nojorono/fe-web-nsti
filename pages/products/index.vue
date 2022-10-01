@@ -10,6 +10,7 @@
   <products-mobile v-else />
 </template>
 <script>
+import { mapActions, mapGetters } from 'vuex'
 import ProductsCarousel from '@/components/ProductsCarousel.vue'
 import ProductsMobile from '@/pages/products/ProductsMobile'
 export default {
@@ -27,6 +28,16 @@ export default {
     return {
     }
   },
+  computed: {
+    ...mapGetters(['getAllProducts', 'getDetailProducts']),
+  },
+  mounted() {
+    this.fetchAllProducts()
+  },
+  methods: {
+    ...mapActions(['fetchAllProducts', 'fetchDetailProducts']),
+  },
+
 }
 </script>
 <style lang="scss" scoped>

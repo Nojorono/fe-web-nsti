@@ -93,6 +93,7 @@ export default {
       }
     },
     async fetchAllProducts({ commit }, payload) {
+      console.log('masuk')
       try {
         const { data } = await axios.get(`product/readAll`)
         commit('setAllProducts', data)

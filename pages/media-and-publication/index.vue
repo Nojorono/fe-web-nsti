@@ -20,6 +20,7 @@
 </template>
 
 <script>
+// import { mapActions, mapGetters } from 'vuex'
 import card from '@/components/home/MediaAndPublication.vue'
 import MediaAndPublicationMobile from '@/pages/media-and-publication/MediaMobile'
 
@@ -36,7 +37,15 @@ export default {
       title: 'Media And Publication',
     }
   },
-  mounted() {},
+  // computed: {
+  //   ...mapGetters(['getMediaList']),
+  // },
+  // mounted() {
+  //   this.getAllMedia().then((_) => {})
+  // },
+  // methods: {
+  //   ...mapActions(['getAllMedia']),
+  // },
 }
 </script>
 

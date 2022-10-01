@@ -13,7 +13,7 @@
       class="carousel-container"
       :style="$route.fullPath !== '/' ? 'height: 76vh' : ''"
     >
-      <products-carousel-mobile :slides="productList" />
+      <products-carousel-mobile :slides="$store.state.home.allProducts" />
     </div>
   </div>
 </template>
