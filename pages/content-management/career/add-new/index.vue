@@ -19,7 +19,6 @@
         <client-only>
           <vue-editor v-model="content"></vue-editor>
         </client-only>
-
       </div>
       <div class="action-btn d-flex justify-end">
         <v-btn class="ma-2" outlined color="fontDark"> Delete </v-btn>

@@ -10,15 +10,15 @@
         <div class="input-box">
           <input v-model="title" type="text" placeholder="Add Posistion" />
         </div>
-        <div class="input-box">
-          <input v-model="level" type="text" placeholder="Add level" />
-        </div>
+        <!--        <div class="input-box">-->
+        <!--          <input v-model="level" type="text" placeholder="Add level" />-->
+        <!--        </div>-->
         <div class="input-box">
           <input v-model="location" type="text" placeholder="Add location" />
         </div>
-        <div class="input-box">
-          <input v-model="link" type="text" placeholder="Add Link" />
-        </div>
+        <client-only>
+          <vue-editor v-model="content"></vue-editor>
+        </client-only>
       </div>
       <div class="action-btn d-flex justify-end">
         <v-btn class="ma-2" outlined color="fontDark"> Delete </v-btn>
@@ -31,6 +31,7 @@
 </template>
 
 <script>
+import { VueEditor } from 'vue2-editor'
 import { mapActions, mapGetters } from 'vuex'
 import CmsHeading from '@/components/cms/Heading'
 export default {
@@ -38,6 +39,7 @@ export default {
 
   components: {
     CmsHeading,
+    VueEditor
   },
   layout: 'cmsLayout',
   props: {},
@@ -48,6 +50,7 @@ export default {
       level: null,
       location: null,
       link: null,
+      content: '<h3>Description about the job...</h3>',
     }
   },
   head() {

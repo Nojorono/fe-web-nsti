@@ -6,7 +6,7 @@
         :heading="heading"
         class="mb-3"
       />
-      <form-add @postBtn="postBtn" />
+      <form-add-produts @postBtn='postBtn' />
     </div>
   </div>
 </template>
@@ -14,12 +14,10 @@
 <script>
 import { mapActions, mapGetters } from 'vuex'
 import CmsHeading from '@/components/cms/Heading'
-import FormAdd from '@/components/cms/formAdd'
 export default {
   name: 'EditProducts',
 
   components: {
-    FormAdd,
     CmsHeading,
   },
   layout: 'cmsLayout',
