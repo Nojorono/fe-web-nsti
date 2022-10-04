@@ -75,6 +75,8 @@ export default {
           time: '4 hours ago',
         },
       ],
+      page: 0,
+      size: 6
     }
   },
   head() {
@@ -92,7 +94,11 @@ export default {
     },
   },
   mounted() {
-    this.getAllMedia()
+    console.log(this.$route.name)
+    this.getAllMedia({
+      page: this.page,
+      size: this.size,
+    })
   },
 }
 </script>

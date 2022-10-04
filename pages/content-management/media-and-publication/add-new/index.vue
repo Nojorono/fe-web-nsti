@@ -50,7 +50,9 @@ export default {
       this.bodyText = body
     },
     postBtn(payload) {
-      this.postCreateMedia(payload)
+      this.postCreateMedia(payload).then((_) => {
+        this.$router.push('/content-management/media-and-publication')
+      })
     },
   },
 }

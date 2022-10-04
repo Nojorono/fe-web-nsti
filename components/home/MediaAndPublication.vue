@@ -162,8 +162,8 @@ export default {
       transition: ease-out 300ms;
       font-size: 85%;
       position: absolute;
-      top: 13rem;
-      right: 0;
+      top: 68%;
+      left: 7%;
       padding: 1rem;
     }
   }
@@ -174,7 +174,7 @@ export default {
   height: 24rem;
   .media-text-wrapper {
     background-repeat: repeat;
-    top: 13.5rem;
+    top: 72%;
     font-size: 90%;
   }
 }

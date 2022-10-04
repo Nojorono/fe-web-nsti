@@ -17,7 +17,6 @@ export default {
   actions: {
     async postCreateMedia({ commit }, payload) {
       try {
-        console.log(payload)
         const { data } = await axios.post(
           `media/create`,
           {
@@ -25,6 +24,7 @@ export default {
           },
           {
             headers: {
+              Authorization: 'Bearer' + token,
               access_token: token,
               "Content-Type": "multipart/form-data",
             },

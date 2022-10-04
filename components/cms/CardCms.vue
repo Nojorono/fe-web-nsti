@@ -10,8 +10,10 @@
       </h3>
     </div>
     <div class="card-text">
-      <p>
-<!--        {{ textParser(card.description) }}-->
+
+      <p v-if="$route.name == 'content-management-media-and-publication___en'" v-html="card.description"></p>
+      <p v-else>
+        <!--        {{ textParser(card.description) }}-->
         {{ card.description }}
       </p>
     </div>

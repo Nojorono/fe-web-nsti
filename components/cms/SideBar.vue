@@ -9,10 +9,6 @@
         ></div>
       </template>
       <div class="">
-<!--        <div-->
-<!--          class="left-btn full-width about-us my-4 cursor-pointer"-->
-<!--          @click="$router.push('/content-management/about-us/add-new')"-->
-<!--        ></div>-->
         <div
           class="left-btn full-width products cursor-pointer"
           @click="$router.push('/content-management/products/add-new')"
@@ -27,12 +23,12 @@
           class="left-btn full-width career cursor-pointer"
           @click="$router.push('/content-management/career/add-new')"
         ></div>
+        <div
+          class="left-btn full-width review cursor-pointer"
+          @click="$router.push('/content-management/review/add-new')"
+        ></div>
       </div>
     </v-menu>
-<!--    <nuxt-link-->
-<!--      class="left-btn full-width about-us mb-4"-->
-<!--      to="/content-management/about-us"-->
-<!--    ></nuxt-link>-->
     <nuxt-link
       class="left-btn full-width products "
       to="/content-management/products"
@@ -44,6 +40,10 @@
     <nuxt-link
       class="left-btn full-width career"
       to="/content-management/career"
+    ></nuxt-link>
+    <nuxt-link
+      class="left-btn full-width review "
+      to="/content-management/review"
     ></nuxt-link>
   </div>
 </template>
@@ -84,7 +84,7 @@ export default {
       background-image: url('assets/images/cms/add-new-hover.svg');
     }
   }
-  &.about-us {
+  &.review {
     background-image: url('assets/images/cms/about-us.svg');
     &:hover {
       background-image: url('assets/images/cms/about-us-hover.svg');

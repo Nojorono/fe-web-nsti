@@ -74,6 +74,8 @@ export default {
           time: '4 hours ago',
         },
       ],
+      page: 0,
+      size: 6
     }
   },
   head() {
@@ -85,7 +87,10 @@ export default {
     ...mapGetters(['getAllCareer']),
   },
   mounted() {
-    this.fetchAllCareer()
+    this.fetchAllCareer({
+      page: this.page,
+      size: this.size,
+    })
   },
   methods: {
     ...mapActions(['fetchAllCareer']),

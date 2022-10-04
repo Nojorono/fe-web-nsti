@@ -64,9 +64,9 @@ export default {
     postBtn() {
       const payload = {
         title: this.title,
-        level: this.level,
         location: this.location,
-        link: this.link,
+        description: this.content,
+
       }
       this.postCreateCareer(payload).then((_) => {
         this.$router.push({ path: '/content-management/career/' })

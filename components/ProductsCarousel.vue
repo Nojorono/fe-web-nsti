@@ -15,12 +15,12 @@
     >
       <slide v-for="(slide, i) in slides" :key="slide.id" :index="i">
         <img
-          :src="slide.img"
+          :src="'https://back-api.nikkisuper.my.id/' + slide.imageName"
           alt="nikki super product"
           class="cursor-pointer"
           height="auto"
           width="auto"
-          @click="clickProduct(slide.popUp)"
+          @click="clickProduct(slide)"
         />
       </slide>
     </carousel-3d>
@@ -35,7 +35,7 @@
       <div class="dialog-product">
         <div class="defaultGolden--text dialog-container d-flex align-start">
           <div class="dialog-img-container">
-            <img :src="linkPopup" height="550px" />
+            <img :src="'https://back-api.nikkisuper.my.id/' + linkPopup?.imageName" height="550px" />
           </div>
           <div class="close-btn cursor-pointer d-flex justify-start">
             <img
@@ -44,11 +44,16 @@
             />
           </div>
         </div>
+        <div class='desc-container'>
+          <p>{{linkPopup?.description}}</p>
+        </div>
       </div>
     </v-dialog>
   </div>
 </template>
 <script>
+import { mapActions, mapGetters } from 'vuex'
+
 export default {
   name: 'ProductsCarousel',
   props: {
@@ -70,10 +75,17 @@ export default {
       ],
     }
   },
+  computed: {
+    ...mapGetters(['getDetailProducts'])
+  },
   methods: {
+    ...mapActions(['fetchDetailProducts']),
     clickProduct(popUp) {
       this.dialogProduct = true
-      this.linkPopup = popUp
+      this.fetchDetailProducts(popUp.id).then((_) => {
+        this.linkPopup = this.getDetailProducts[1]
+        console.log(this.getDetailProducts)
+      })
     },
   },
 }
@@ -104,8 +116,10 @@ export default {
     .dialog-img-container {
       margin: auto;
     }
-    .close-btn {
-      //margin-left: 13%;
+    .desc-container{
+      background: lightgray;
+      width: 100%;
+      padding: 5px 16px;
     }
   }
 }

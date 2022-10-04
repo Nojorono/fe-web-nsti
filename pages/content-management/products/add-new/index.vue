@@ -34,13 +34,14 @@ export default {
       title: 'Add New Products',
     }
   },
+
   methods: {
     ...mapActions(['postCreateMedia']),
-    postBtn() {
+    postBtn(payload) {
       this.postCreateMedia({
-        sampleFile: this.img,
-        title: this.title,
-        description: this.bodyText,
+        sampleFile: payload.imgPreview,
+        sampleFile2: payload.imgPreview2,
+        description: payload.description,
       })
     },
   },

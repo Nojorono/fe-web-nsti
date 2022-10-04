@@ -40,7 +40,7 @@
       </div>
       <div class="joblist d-flex flex-wrap justify-center">
         <div
-          v-for="(job, i) in jobList"
+          v-for="(job, i) in getAllCareer"
           :key="i"
           class="joblist-card my-5 px-10 py-5"
         >
@@ -57,7 +57,7 @@
             x-large
             class="defaultGolden fontDark--text font-weight-bold d-flex"
             block
-            @click="onClickApply(job.htmlContent)"
+            @click="onClickApply(job.description)"
           >
             {{ $t('career.apply') }}
           </v-btn>
@@ -154,6 +154,8 @@ export default {
       content: '',
       dialog: false,
       pages: 1,
+      page: 0,
+      size: 6,
       reviewsList: [
         {
           review: this.$t('career.reviewer1.comment'),
@@ -293,6 +295,7 @@ export default {
             </ul>`,
         },
       ],
+
     }
   },
   head() {
@@ -305,7 +308,10 @@ export default {
     ...mapGetters(['getAllCareer']),
   },
   mounted() {
-    this.fetchAllCareer()
+    this.fetchAllCareer({
+      page: this.page,
+      size: this.size
+    })
   },
   methods: {
     ...mapActions(['fetchAllCareer']),
@@ -442,7 +448,6 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   .content {
-    //color: $color-primary-root;
     min-width: 90%;
     padding: 3rem;
   }
