@@ -15,35 +15,23 @@ export default {
     },
   },
   actions: {
-    async postCreateMedia({ commit }, payload) {
-      try {
-        const { data } = await axios.post(
-          `media/create`,
-          {
-            ...payload,
-          },
-          {
-            headers: {
-              Authorization: 'Bearer' + token,
-              access_token: token,
-              "Content-Type": "multipart/form-data",
-            },
-          }
-        )
-        console.log(data)
-      } catch (e) {
-        console.log(e)
-      }
-    },
     async postCreateProduct({ commit }, payload) {
       try {
         const { data } = await axios.post(
           `product/create`,
           {
+            /*
+
+sampleFile1 : File type (imageProduk)
+title: Strings
+description: strings
+sampleFile2 : File Type (imageIklan)
+             */
             ...payload,
           },
           {
             headers: {
+              'Content-Type': 'multipart/form-data',
               access_token: token,
             },
           }
@@ -116,16 +104,35 @@ export default {
       })
       console.log(data)
     },
+    async postCreateMedia({ commit }, payload) {
+      try {
+        const { data } = await axios.post(
+          `media/create`,
+          {
+            ...payload,
+          },
+          {
+            headers: {
+              Authorization: 'Bearer' + token,
+              access_token: token,
+              'Content-Type': 'multipart/form-data',
+            },
+          }
+        )
+        console.log(data)
+      } catch (e) {
+        console.log(e)
+      }
+    },
     async patchDetailMedia({ commit }, payload) {
       const { data } = await axios({
+        method: 'PATCH',
         url: `media/edit`,
         data: {
-          id: payload.id,
-          sampleFile: payload.sampleFile,
-          title: payload.title,
-          description: payload.description,
+          ...payload,
         },
         headers: {
+          'Content-Type': 'multipart/form-data',
           access_token: token,
         },
       })

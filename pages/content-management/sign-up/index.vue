@@ -57,44 +57,44 @@
           <input id="confirm-password" type="password" class="input-text" />
         </div>
       </div>
-<!--      <div class="password-validation fontLightBlue&#45;&#45;text my-3">-->
-<!--        <div class="">-->
-<!--          <img-->
-<!--            :src="require('assets/images/cms/blue-Ellipse.png')"-->
-<!--            width="12"-->
-<!--            height="13"-->
-<!--          />-->
-<!--          <span class="fontLightBlue&#45;&#45;text">-->
-<!--            Contains at least one uppercase letter-->
-<!--          </span>-->
-<!--        </div>-->
-<!--        <div class="">-->
-<!--          <img-->
-<!--            :src="require('assets/images/cms/dark-blue-ellipse.png')"-->
-<!--            width="12"-->
-<!--            height="13"-->
-<!--          />-->
-<!--          <span class="fontDark&#45;&#45;text"-->
-<!--            >Contains at least one special character-->
-<!--          </span>-->
-<!--        </div>-->
-<!--        <div class="">-->
-<!--          <img-->
-<!--            :src="require('assets/images/cms/dark-blue-ellipse.png')"-->
-<!--            width="12"-->
-<!--            height="13"-->
-<!--          />-->
-<!--          <span class="fontDark&#45;&#45;text"> Contains at least one number </span>-->
-<!--        </div>-->
-<!--        <div class="">-->
-<!--          <img-->
-<!--            :src="require('assets/images/cms/dark-blue-ellipse.png')"-->
-<!--            width="12"-->
-<!--            height="13"-->
-<!--          />-->
-<!--          <span class="fontDark&#45;&#45;text"> Passwords are matching </span>-->
-<!--        </div>-->
-<!--      </div>-->
+      <!--      <div class="password-validation fontLightBlue&#45;&#45;text my-3">-->
+      <!--        <div class="">-->
+      <!--          <img-->
+      <!--            :src="require('assets/images/cms/blue-Ellipse.png')"-->
+      <!--            width="12"-->
+      <!--            height="13"-->
+      <!--          />-->
+      <!--          <span class="fontLightBlue&#45;&#45;text">-->
+      <!--            Contains at least one uppercase letter-->
+      <!--          </span>-->
+      <!--        </div>-->
+      <!--        <div class="">-->
+      <!--          <img-->
+      <!--            :src="require('assets/images/cms/dark-blue-ellipse.png')"-->
+      <!--            width="12"-->
+      <!--            height="13"-->
+      <!--          />-->
+      <!--          <span class="fontDark&#45;&#45;text"-->
+      <!--            >Contains at least one special character-->
+      <!--          </span>-->
+      <!--        </div>-->
+      <!--        <div class="">-->
+      <!--          <img-->
+      <!--            :src="require('assets/images/cms/dark-blue-ellipse.png')"-->
+      <!--            width="12"-->
+      <!--            height="13"-->
+      <!--          />-->
+      <!--          <span class="fontDark&#45;&#45;text"> Contains at least one number </span>-->
+      <!--        </div>-->
+      <!--        <div class="">-->
+      <!--          <img-->
+      <!--            :src="require('assets/images/cms/dark-blue-ellipse.png')"-->
+      <!--            width="12"-->
+      <!--            height="13"-->
+      <!--          />-->
+      <!--          <span class="fontDark&#45;&#45;text"> Passwords are matching </span>-->
+      <!--        </div>-->
+      <!--      </div>-->
       <v-btn class="btn-sign-up my-2" color="defaultGolden" @click="register">
         Sign Up
       </v-btn>

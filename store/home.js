@@ -75,16 +75,18 @@ export default {
     },
   },
   actions: {
-    async getAllMedia({ commit },payload) {
-      console.log('masuk')
+    async getAllMedia({ commit }, payload) {
       try {
-        const { data } = await axios.get(`media/readAll?page=${payload.page}&size=${payload.size}`)
+        const { data } = await axios.get(
+          `media/readAll?page=${payload.page}&size=${payload.size}`
+        )
         commit('setMediaList', data)
       } catch (e) {
         console.log(e)
       }
     },
     async fetchMediaDetail({ commit }, id) {
+      commit('setDetailMedia', {})
       try {
         const { data } = await axios.get(`media/detail/${id}`)
         commit('setDetailMedia', data[0])
@@ -108,7 +110,9 @@ export default {
       commit('setDetailProdcuts', data)
     },
     async fetchAllCareer({ commit }, payload) {
-      const { data } = await axios.get(`career/readAll?page=${payload.page}&size=${payload.size}`)
+      const { data } = await axios.get(
+        `career/readAll?page=${payload.page}&size=${payload.size}`
+      )
       commit('setAllCareer', data)
     },
   },

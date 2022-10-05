@@ -6,7 +6,7 @@
         :heading="heading"
         class="mb-3"
       />
-      <form-add @postBtn="postBtn" />
+      <form-add :loading-btn="loadingBtn" @postBtn="postBtn" />
     </div>
   </div>
 </template>
@@ -31,6 +31,7 @@ export default {
       img: null,
       title: null,
       bodyText: null,
+      loadingBtn: false,
     }
   },
   head() {
@@ -51,6 +52,7 @@ export default {
     },
     postBtn(payload) {
       this.postCreateMedia(payload).then((_) => {
+        this.loadingBtn = true
         this.$router.push('/content-management/media-and-publication')
       })
     },

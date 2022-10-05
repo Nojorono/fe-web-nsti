@@ -159,7 +159,7 @@ export default {
     z-index: 3;
     width: 39%;
     height: 100%;
-    padding: 6rem ;
+    padding: 6rem;
     h1 {
       font-weight: 800;
       font-size: 2em;

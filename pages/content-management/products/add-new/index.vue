@@ -6,7 +6,7 @@
         :heading="heading"
         class="mb-3"
       />
-      <form-add-produts @postBtn='postBtn' />
+      <form-add-produts @postBtn="postBtn" />
     </div>
   </div>
 </template>
@@ -36,12 +36,13 @@ export default {
   },
 
   methods: {
-    ...mapActions(['postCreateMedia']),
+    ...mapActions(['postCreateProduct']),
     postBtn(payload) {
-      this.postCreateMedia({
-        sampleFile: payload.imgPreview,
+      this.postCreateProduct({
+        sampleFile1: payload.imgPreview,
         sampleFile2: payload.imgPreview2,
         description: payload.description,
+        title: '',
       })
     },
   },

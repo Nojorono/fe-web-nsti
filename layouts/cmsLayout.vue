@@ -22,13 +22,12 @@
 </template>
 
 <script>
-import vue from "vue";
+import vue from 'vue'
 import NavBarCms from '@/components/cms/NavBarCms.vue'
 import SideBar from '@/components/cms/SideBar.vue'
 import mixinDetictingMobile from '@/mixins/mixinDetictingMobile'
 
 vue.mixin(mixinDetictingMobile)
-
 
 export default {
   name: 'CmsLayout',
@@ -45,7 +44,7 @@ export default {
   mounted() {
     // eslint-disable-next-line no-unused-expressions
     this.$vuetify.theme.dark = false
-  }
+  },
 }
 </script>
 

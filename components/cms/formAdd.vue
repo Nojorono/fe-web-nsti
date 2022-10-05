@@ -2,24 +2,17 @@
   <div>
     <div class="mb-3 d-flex justify-center align-center">
       <div class="add-new-btn">
+        <!--        kalo ga ada foto-->
         <label for="file-input">
           <v-img
             v-if="!imgPreview"
             :src="require('assets/images/cms/add-media-btn.svg')"
             alt="add new content"
-            max-width="256.77"
-            max-height="130.55"
+            width="355"
+            height="180"
             class="cursor-pointer"
           />
         </label>
-        <img
-          v-if="imgPreview"
-          :src="imgPreview"
-          alt="image preview"
-          width="256.77"
-          height="130.55"
-          style="object-fit: cover"
-        />
         <input
           id="file-input"
           type="file"
@@ -27,6 +20,20 @@
           required
           @change="upload"
         />
+        <!--        kalo ada foto -->
+
+        <label for="file-input">
+          <img
+            v-if="imgPreview"
+            id="file-input"
+            :src="tempImage || imgPreview"
+            alt="image preview"
+            width="355"
+            height="180"
+            style="object-fit: cover"
+            class="cursor-pointer"
+          />
+        </label>
       </div>
     </div>
     <div class="mb-3 add-new-container">
@@ -34,18 +41,28 @@
         <input v-model="title" type="text" placeholder="Add Title" required />
       </div>
       <div class="input-title">
-        <input v-model="location" type="text" placeholder="Add Location" required />
+        <input
+          v-model="location"
+          type="text"
+          placeholder="Add Location"
+          required
+        />
       </div>
     </div>
     <div class="mb-3 input-text-area">
-<!--      <textarea v-model="bodyText" placeholder="Add Body Text" />-->
+      <!--      <textarea v-model="bodyText" placeholder="Add Body Text" />-->
       <client-only>
         <vue-editor v-model="content"></vue-editor>
       </client-only>
     </div>
     <div class="action-btn d-flex justify-end">
       <v-btn class="ma-2" outlined color="fontDark"> Delete </v-btn>
-      <v-btn class="ma-2" color="fontDark fontLight--text" @click="postBtn">
+      <v-btn
+        class="ma-2"
+        color="fontDark fontLight--text"
+        :loading="loadingBtn"
+        @click="postBtn"
+      >
         Post
       </v-btn>
     </div>
@@ -54,15 +71,20 @@
 
 <script>
 import { VueEditor } from 'vue2-editor'
+import { mapGetters } from 'vuex'
 export default {
   name: 'FormAdd',
-  components: {VueEditor},
-  props: {},
+  components: { VueEditor },
+  props: {
+    loadingBtn: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data() {
     return {
-      img: null,
+      tempImage: null,
       title: null,
-      // bodyText: null,
       imgPreview: null,
       location: '',
       content: '<p>Add Body Text</p>',
@@ -71,23 +93,60 @@ export default {
   head() {
     return {}
   },
+  computed: {
+    ...mapGetters(['getDetailMedia']),
+  },
+  watch: {
+    $route: {
+      deep: true,
+      handler() {
+        this.resetForm()
+      }
+    },
+    getDetailMedia: {
+      deep: true,
+      immediate: true,
+      handler() {
+        if (Object.keys(this.getDetailMedia).length) {
+          const data = this.getDetailMedia
+          this.content = data.description
+          this.imgPreview =
+            'https://back-api.nikkisuper.my.id/' + data.imageName
+          this.title = data.title
+          this.location = data.location
+        }
+      },
+    },
+  },
+  mounted() {
+    this.tempImage= null
+      this.title= null
+      this.imgPreview = null
+      this.location= ''
+      this.content= '<p>Add Body Text</p>'
+  },
   methods: {
+    resetForm() {
+      this.tempImage= null
+      this.title= null
+      this.imgPreview = null
+      this.location= ''
+      this.content= '<p>Add Body Text</p>'
+    },
     postBtn() {
       this.$emit('postBtn', {
         location: this.location,
         description: this.content,
         title: this.title,
-        sampleFile: this.imgPreview
-
+        sampleFile: this.imgPreview,
       })
     },
     upload(event) {
       if (event.target.files.length) {
-        // this.imgPreview = URL.createObjectURL(event.target.files[0])
+        this.tempImage = URL.createObjectURL(event.target.files[0])
         this.imgPreview = event.target.files[0]
         // this.$emit('imgPreview', this.imgPreview)
-
-        const formData = new FormData();
+        const formData = new FormData()
         formData.append('file', this.imgPreview)
         this.$emit('imgPreview', this.imgPreview)
 
@@ -105,26 +164,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.input-text-area {
-  textarea {
-    padding: 2%;
-    width: 939px;
-    height: 375px;
-
-    border: 3px solid $color-font-dark-root;
-    border-radius: 20px;
-    &:focus {
-      outline: none;
-    }
-    &::placeholder {
-      color: $color-font-dark-root;
-      font-weight: bold;
-      text-align: center;
-      font-size: 1em;
-      padding: 15% 0;
-    }
-  }
-}
+//.input-text-area {
+//  textarea {
+//    padding: 2%;
+//    width: 939px;
+//    height: 375px;
+//
+//    border: 3px solid $color-font-dark-root;
+//    border-radius: 20px;
+//    &:focus {
+//      outline: none;
+//    }
+//    &::placeholder {
+//      color: $color-font-dark-root;
+//      font-weight: bold;
+//      text-align: center;
+//      font-size: 1em;
+//      padding: 15% 0;
+//    }
+//  }
+//}
 .add-new-btn > input {
   display: none;
 }

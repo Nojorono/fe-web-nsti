@@ -75,7 +75,7 @@ export default {
         },
       ],
       page: 0,
-      size: 6
+      size: 6,
     }
   },
   head() {

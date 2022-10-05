@@ -63,10 +63,15 @@
       </div>
     </div>
     <div class="input-title mb-3">
-      <textarea v-model="description" type="text" placeholder="Add Description" required />
+      <textarea
+        v-model="description"
+        type="text"
+        placeholder="Add Description"
+        required
+      />
     </div>
     <div class="action-btn d-flex justify-end">
-<!--      <v-btn class="ma-2" outlined color="fontDark" @click="deleleteImg"> Delete </v-btn>-->
+      <!--      <v-btn class="ma-2" outlined color="fontDark" @click="deleleteImg"> Delete </v-btn>-->
       <v-btn class="ma-2" color="fontDark fontLight--text" @click="postBtn">
         Post
       </v-btn>
@@ -83,7 +88,7 @@ export default {
     return {
       imgPreview: null,
       imgPreview2: null,
-      description: ''
+      description: '',
     }
   },
   head() {

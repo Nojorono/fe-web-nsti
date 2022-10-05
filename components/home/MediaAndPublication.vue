@@ -21,8 +21,8 @@
       <div class="card-container d-flex flex-wrap justify-center align-center">
         <nuxt-link
           v-for="(card, i) in $route.fullPath === '/'
-            ? getMediaList.slice(0, 3)
-            : getMediaList.slice(0, 3)"
+            ? getMediaList?.data?.slice(0, 3)
+            : getMediaList?.data?.slice(0, 6)"
           :key="i"
           class="media-card mx-10"
           :to="
@@ -111,18 +111,18 @@ export default {
           id: 6,
         },
       ],
-      page: 0,
-      size: 6
+      // page: 0,
+      // size: 6,
     }
   },
   computed: {
     ...mapGetters(['getMediaList']),
   },
   mounted() {
-    this.getAllMedia({
-      page: this.page,
-      size: this.size,
-    }).then((_) => {})
+    // this.getAllMedia({
+    //   page: this.page,
+    //   size: this.size,
+    // })
   },
   methods: {
     ...mapActions(['getAllMedia']),
@@ -142,7 +142,7 @@ export default {
     }
   }
   .card-container {
-    height: 90%;
+    height: 110%;
   }
 }
 .media-card {

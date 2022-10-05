@@ -35,7 +35,10 @@
       <div class="dialog-product">
         <div class="defaultGolden--text dialog-container d-flex align-start">
           <div class="dialog-img-container">
-            <img :src="'https://back-api.nikkisuper.my.id/' + linkPopup?.imageName" height="550px" />
+            <img
+              :src="'https://back-api.nikkisuper.my.id/' + linkPopup?.imageName"
+              height="550px"
+            />
           </div>
           <div class="close-btn cursor-pointer d-flex justify-start">
             <img
@@ -44,8 +47,8 @@
             />
           </div>
         </div>
-        <div class='desc-container'>
-          <p>{{linkPopup?.description}}</p>
+        <div class="desc-container">
+          <p>{{ linkPopup?.description }}</p>
         </div>
       </div>
     </v-dialog>
@@ -76,7 +79,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getDetailProducts'])
+    ...mapGetters(['getDetailProducts']),
   },
   methods: {
     ...mapActions(['fetchDetailProducts']),
@@ -116,7 +119,7 @@ export default {
     .dialog-img-container {
       margin: auto;
     }
-    .desc-container{
+    .desc-container {
       background: lightgray;
       width: 100%;
       padding: 5px 16px;

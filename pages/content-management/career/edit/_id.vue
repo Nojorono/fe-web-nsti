@@ -39,7 +39,7 @@ export default {
 
   components: {
     CmsHeading,
-    VueEditor
+    VueEditor,
   },
   layout: 'cmsLayout',
   props: {},

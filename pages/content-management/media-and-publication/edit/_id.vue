@@ -28,9 +28,6 @@ export default {
   data() {
     return {
       heading: 'Media and Publication',
-      img: null,
-      title: null,
-      bodyText: null,
     }
   },
   head() {
@@ -42,12 +39,7 @@ export default {
     ...mapGetters(['getDetailMedia']),
   },
   mounted() {
-    this.fetchMediaDetail(this.$route.params.id).then((_) => {
-      console.log(this.getDetailMedia)
-      this.img = null
-      this.title = null
-      this.bodyText = null
-    })
+    this.fetchMediaDetail(this.$route.params.id)
   },
   methods: {
     ...mapActions(['fetchMediaDetail', 'patchDetailMedia']),
@@ -60,14 +52,13 @@ export default {
     emitBody(body) {
       this.bodyText = body
     },
-    postBtn() {
-      const payload = {
+    postBtn(payload) {
+      this.patchDetailMedia({
+        ...payload,
         id: this.$route.params.id,
-        sampleFile: this.img,
-        title: this.title,
-        description: this.bodyText,
-      }
-      this.patchDetailMedia(payload)
+      }).then(() => {
+        this.$router.push('/content-management/media-and-publication')
+      })
     },
   },
 }

@@ -30,11 +30,11 @@
       </div>
     </v-menu>
     <nuxt-link
-      class="left-btn full-width products "
+      class="left-btn full-width products"
       to="/content-management/products"
     ></nuxt-link>
     <nuxt-link
-      class="left-btn full-width media-and-publication "
+      class="left-btn full-width media-and-publication"
       to="/content-management/media-and-publication"
     ></nuxt-link>
     <nuxt-link
@@ -42,7 +42,7 @@
       to="/content-management/career"
     ></nuxt-link>
     <nuxt-link
-      class="left-btn full-width review "
+      class="left-btn full-width review"
       to="/content-management/review"
     ></nuxt-link>
   </div>

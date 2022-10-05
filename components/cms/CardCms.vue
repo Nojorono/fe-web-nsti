@@ -1,17 +1,24 @@
 <template>
   <div class="card">
     <div class="img-container">
-      <v-img :src="'https://back-api.nikkisuper.my.id/' + card.imageName" max-width="206" max-height="137" class="img" />
+      <v-img
+        :src="'https://back-api.nikkisuper.my.id/' + card.imageName"
+        max-width="206"
+        max-height="137"
+        class="img"
+      />
     </div>
-    <div class="card-title my-2">
+    <div class="card-title mt-3">
       <h3>
-<!--        {{ titleParser(card.title) }}-->
+        <!--        {{ titleParser(card.title) }}-->
         {{ card.title }}
       </h3>
     </div>
     <div class="card-text">
-
-      <p v-if="$route.name == 'content-management-media-and-publication___en'" v-html="card.description"></p>
+      <p
+        v-if="$route.name == 'content-management-media-and-publication___en'"
+        v-html="card.description"
+      ></p>
       <p v-else>
         <!--        {{ textParser(card.description) }}-->
         {{ card.description }}
@@ -100,6 +107,7 @@ export default {
   methods: {
     deletePost(id) {
       this.$emit('deletePost', id)
+      this.dialogDelete = false
     },
     titleParser(title) {
       let result = ''
@@ -160,19 +168,20 @@ export default {
 }
 .card-text {
   height: 110px;
-  p{
-    text-overflow:ellipsis;
-    overflow:hidden;
-    white-space:nowrap;
+  overflow: hidden;
+  p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 }
 .card-title {
   height: 2.5rem;
   line-height: 1;
-  h3{
-    text-overflow:ellipsis;
-    overflow:hidden;
-    white-space:nowrap;
+  h3 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 }
 

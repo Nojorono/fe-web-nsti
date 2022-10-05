@@ -66,7 +66,6 @@ export default {
         title: this.title,
         location: this.location,
         description: this.content,
-
       }
       this.postCreateCareer(payload).then((_) => {
         this.$router.push({ path: '/content-management/career/' })

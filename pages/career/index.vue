@@ -295,7 +295,6 @@ export default {
             </ul>`,
         },
       ],
-
     }
   },
   head() {
@@ -310,7 +309,7 @@ export default {
   mounted() {
     this.fetchAllCareer({
       page: this.page,
-      size: this.size
+      size: this.size,
     })
   },
   methods: {

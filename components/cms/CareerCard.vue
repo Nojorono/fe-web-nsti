@@ -2,22 +2,22 @@
   <div class="card">
     <div class="card-title">
       <h3>
-<!--        {{ titleParser(card.title) }}-->
+        <!--        {{ titleParser(card.title) }}-->
         {{ card.title }}
       </h3>
     </div>
-<!--    <div class="card-level">-->
-<!--&lt;!&ndash;      <p>Level: {{ textParser(card.level) }}</p>&ndash;&gt;-->
-<!--      <p>Level: {{ card.level }}</p>-->
-<!--    </div>-->
+    <!--    <div class="card-level">-->
+    <!--&lt;!&ndash;      <p>Level: {{ textParser(card.level) }}</p>&ndash;&gt;-->
+    <!--      <p>Level: {{ card.level }}</p>-->
+    <!--    </div>-->
     <div class="card-text">
-<!--      <p>Location: {{ textParser(card.location) }}</p>-->
+      <!--      <p>Location: {{ textParser(card.location) }}</p>-->
       <p>Location: {{ card.location }}</p>
     </div>
-<!--    <div class="card-level">-->
-<!--&lt;!&ndash;      <p>Link: {{ textParser(card.link) }}</p>&ndash;&gt;-->
-<!--      <p>Link: {{ card.link }}</p>-->
-<!--    </div>-->
+    <!--    <div class="card-level">-->
+    <!--&lt;!&ndash;      <p>Link: {{ textParser(card.link) }}</p>&ndash;&gt;-->
+    <!--      <p>Link: {{ card.link }}</p>-->
+    <!--    </div>-->
     <div class="card-time-stamp">
       <b>
         {{ card.updatedAt.split('T')[0] }}
@@ -166,19 +166,19 @@ export default {
 .card-title {
   height: 2.5rem;
   line-height: 1;
-  h3{
-    text-overflow:ellipsis;
-    overflow:hidden;
-    white-space:nowrap;
+  h3 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 }
 
 .card-text {
   height: 110px;
-  p{
-    text-overflow:ellipsis;
-    overflow:hidden;
-    white-space:nowrap;
+  p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 }
 

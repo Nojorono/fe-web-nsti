@@ -6,7 +6,7 @@
         :heading="heading"
         class="mb-3"
       />
-      <form-add-produts @postBtn='postBtn' />
+      <form-add-produts @postBtn="postBtn" />
     </div>
   </div>
 </template>

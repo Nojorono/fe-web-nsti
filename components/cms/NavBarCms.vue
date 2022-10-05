@@ -8,27 +8,24 @@
       @click="goToHome"
     />
     <div class="pp-container mr-15">
-<!--      <v-img-->
-<!--        :src="require('assets/images/cms/dummy-pp.png')"-->
-<!--        :lazy-src="require('assets/images/cms/dummy-pp.png')"-->
-<!--        alt="admin profile picture"-->
-<!--        height="50px"-->
-<!--        width="50px"-->
-<!--        class="rounded-circle"-->
-<!--      >-->
-<!--        <template #placeholder>-->
-<!--          <v-row class="fill-height ma-0" align="center" justify="center">-->
-<!--            <v-progress-circular-->
-<!--              indeterminate-->
-<!--              color="grey lighten-5"-->
-<!--            ></v-progress-circular>-->
-<!--          </v-row>-->
-<!--        </template>-->
-<!--      </v-img>-->
-      <v-btn @click="signOut">
-        Sign Out
-
-      </v-btn>
+      <!--      <v-img-->
+      <!--        :src="require('assets/images/cms/dummy-pp.png')"-->
+      <!--        :lazy-src="require('assets/images/cms/dummy-pp.png')"-->
+      <!--        alt="admin profile picture"-->
+      <!--        height="50px"-->
+      <!--        width="50px"-->
+      <!--        class="rounded-circle"-->
+      <!--      >-->
+      <!--        <template #placeholder>-->
+      <!--          <v-row class="fill-height ma-0" align="center" justify="center">-->
+      <!--            <v-progress-circular-->
+      <!--              indeterminate-->
+      <!--              color="grey lighten-5"-->
+      <!--            ></v-progress-circular>-->
+      <!--          </v-row>-->
+      <!--        </template>-->
+      <!--      </v-img>-->
+      <v-btn @click="signOut"> Sign Out </v-btn>
     </div>
   </div>
 </template>
@@ -47,7 +44,7 @@ export default {
     signOut() {
       localStorage.clear()
       this.$router.push('/content-management/sign-in')
-    }
+    },
   },
 }
 </script>

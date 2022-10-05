@@ -10,8 +10,7 @@
 <script>
 export default {
   name: 'EmptyCard',
-  props: {
-  },
+  props: {},
   data() {
     return {}
   },

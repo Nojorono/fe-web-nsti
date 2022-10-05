@@ -1,18 +1,18 @@
 <template>
   <div class="cms-about-us-container">
-    <template v-if="!getMediaList.length">
+    <template v-if="!getMediaList?.data?.length">
       <empty-card />
     </template>
     <div
-      v-else-if="getMediaList.length"
+      v-else-if="getMediaList?.data?.length"
       class="d-flex flex-wrap card-container justify-start align-center"
     >
       <card-list-cms
-        v-for="(card, i) in getMediaList"
+        v-for="(card, i) in getMediaList.data"
         :key="i"
         :card="card"
         class=""
-        edit-page="content-management-media-and-publication-edit-id"
+        edit-page="content-management-media-and-publication-edit-id___en"
         @deletePost="deletePost"
       />
     </div>
@@ -76,7 +76,7 @@ export default {
         },
       ],
       page: 0,
-      size: 6
+      size: 6,
     }
   },
   head() {
@@ -90,11 +90,15 @@ export default {
   methods: {
     ...mapActions(['getAllMedia', 'destroyMedia']),
     deletePost(id) {
-      this.destroyMedia(id)
+      this.destroyMedia(id).then(() => {
+        this.getAllMedia({
+          page: this.page,
+          size: this.size,
+        })
+      })
     },
   },
   mounted() {
-    console.log(this.$route.name)
     this.getAllMedia({
       page: this.page,
       size: this.size,
