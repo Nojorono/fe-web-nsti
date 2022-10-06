@@ -145,10 +145,8 @@ export default {
       if (event.target.files.length) {
         this.tempImage = URL.createObjectURL(event.target.files[0])
         this.imgPreview = event.target.files[0]
-        // this.$emit('imgPreview', this.imgPreview)
         const formData = new FormData()
         formData.append('file', this.imgPreview)
-        this.$emit('imgPreview', this.imgPreview)
 
         // const image = event.target.files[0];
         // const reader = new FileReader();

@@ -6,7 +6,7 @@
         :heading="heading"
         class="mb-3"
       />
-      <form-add-produts @postBtn="postBtn" />
+      <form-add-produts @postBtn="postBtn"/>
     </div>
   </div>
 </template>
@@ -14,10 +14,12 @@
 <script>
 import { mapActions, mapGetters } from 'vuex'
 import CmsHeading from '@/components/cms/Heading'
+import FormAddProduts from '@/components/cms/formAddProducts'
 export default {
   name: 'EditProducts',
 
   components: {
+    FormAddProduts,
     CmsHeading,
   },
   layout: 'cmsLayout',
@@ -25,9 +27,6 @@ export default {
   data() {
     return {
       heading: 'Products',
-      img: null,
-      title: null,
-      bodyText: null,
     }
   },
   head() {
@@ -41,9 +40,6 @@ export default {
   mounted() {
     this.fetchDetailProducts(this.$route.params.id).then((_) => {
       console.log(this.getDetailProducts)
-      this.img = this.getDetailProducts.imagePath
-      this.title = this.getDetailProducts.title
-      this.bodyText = this.getDetailProducts.description
     })
   },
   methods: {
@@ -57,14 +53,14 @@ export default {
     emitBody(body) {
       this.bodyText = body
     },
-    postBtn() {
-      const payload = {
-        id: this.$route.params.id,
-        sampleFile: this.img,
-        title: this.title,
-        description: this.bodyText,
-      }
-      this.patchDetailProducts(payload).then((_) => {
+    postBtn(payload) {
+      this.patchDetailProducts({
+          sampleFile1: payload.imgPreview,
+          sampleFile2: payload.imgPreview2,
+          description: payload.description,
+          title: '',
+          id: this.$route.params.id})
+        .then((_) => {
         this.$router.push('/content-management/products')
       })
     },

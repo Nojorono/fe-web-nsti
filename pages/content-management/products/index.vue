@@ -12,7 +12,7 @@
         :key="i"
         :card="card"
         class=""
-        edit-page="content-management-products-edit-id"
+        edit-page="content-management-products-edit-id___en"
         @deletePost="deletePost"
       />
     </div>

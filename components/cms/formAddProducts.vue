@@ -15,14 +15,6 @@
             class="cursor-pointer"
           />
         </label>
-        <img
-          v-if="imgPreview"
-          :src="imgPreview"
-          alt="image preview"
-          width="256.77"
-          height="130.55"
-          style="object-fit: cover"
-        />
         <input
           id="file-input"
           type="file"
@@ -30,6 +22,21 @@
           required
           @change="upload"
         />
+
+<!--        kalo ada foto -->
+        <label for="file-input">
+          <img
+            v-if="imgPreview"
+            :src="tempImage || imgPreview"
+            id="file-input"
+            alt="image preview"
+            width="256.77"
+            height="130.55"
+            style="object-fit: cover"
+            class="cursor-pointer"
+          />
+        </label>
+
       </div>
       <div class="add-new">
         <div>
@@ -45,14 +52,6 @@
             class="cursor-pointer"
           />
         </label>
-        <img
-          v-if="imgPreview2"
-          :src="imgPreview2"
-          alt="image preview"
-          width="256.77"
-          height="130.55"
-          style="object-fit: cover"
-        />
         <input
           id="file-input2"
           type="file"
@@ -60,6 +59,19 @@
           required
           @change="uploadDetail"
         />
+        <!--        kalo ada foto -->
+        <label for="file-input2">
+          <img
+            v-if="imgPreview2"
+            :src="tempImage2 ||imgPreview2"
+            id="file-input2"
+            alt="image preview"
+            width="256.77"
+            height="130.55"
+            style="object-fit: cover"
+            class="cursor-pointer"
+          />
+        </label>
       </div>
     </div>
     <div class="input-title mb-3">
@@ -80,6 +92,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'FormAddProduts',
   components: {},
@@ -87,14 +101,50 @@ export default {
   data() {
     return {
       imgPreview: null,
+      tempImage: null,
       imgPreview2: null,
+      tempImage2: null,
       description: '',
     }
   },
   head() {
     return {}
   },
+
+  watch: {
+    $route: {
+      deep: true,
+      handler() {
+        this.resetForm()
+      }
+    },
+    getDetailProducts: {
+      deep: true,
+      immediate: true,
+      handler() {
+        if (Object.keys(this.getDetailProducts).length) {
+          const data = this.getDetailProducts[0]
+          this.description = data.description
+          this.imgPreview =
+            'https://back-api.nikkisuper.my.id/' + data.images[0].imageName
+          this.imgPreview2 =
+            'https://back-api.nikkisuper.my.id/' + data.images[1].imageName
+          this.title = data.title
+        }
+      },
+    },
+  },
+  computed: {
+    ...mapGetters(['getDetailProducts']),
+  },
   methods: {
+    resetForm() {
+     this.imgPreview = null
+       this.tempImage = null
+       this.imgPreview2 = null
+        this.tempImage2 = null
+        this.description = ''
+    },
     postBtn() {
       this.$emit('postBtn', {
         imgPreview: this.imgPreview,
@@ -107,15 +157,21 @@ export default {
       this.imgPreview2 = null
     },
     upload(event) {
-      console.log('masuk 1')
       if (event.target.files.length) {
-        this.imgPreview = URL.createObjectURL(event.target.files[0])
+        // this.imgPreview = URL.createObjectURL(event.target.files[0])
+        this.tempImage = URL.createObjectURL(event.target.files[0])
+        this.imgPreview = event.target.files[0]
+        const formData = new FormData()
+        formData.append('file', this.imgPreview)
       }
     },
     uploadDetail(event) {
-      console.log('masuk')
       if (event.target.files.length) {
-        this.imgPreview2 = URL.createObjectURL(event.target.files[0])
+        // this.imgPreview2 = URL.createObjectURL(event.target.files[0])
+        this.tempImage2 = URL.createObjectURL(event.target.files[0])
+        this.imgPreview2 = event.target.files[0]
+        const formData = new FormData()
+        formData.append('file', this.imgPreview2)
       }
     },
   },

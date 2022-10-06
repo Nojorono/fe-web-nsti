@@ -36,8 +36,8 @@
         <div class="defaultGolden--text dialog-container d-flex align-start">
           <div class="dialog-img-container">
             <img
-              :src="'https://back-api.nikkisuper.my.id/' + linkPopup?.imageName"
-              height="550px"
+              :src="'https://back-api.nikkisuper.my.id/' + linkPopup?.images[1].imageName"
+              height="500px"
             />
           </div>
           <div class="close-btn cursor-pointer d-flex justify-start">
@@ -86,8 +86,8 @@ export default {
     clickProduct(popUp) {
       this.dialogProduct = true
       this.fetchDetailProducts(popUp.id).then((_) => {
-        this.linkPopup = this.getDetailProducts[1]
-        console.log(this.getDetailProducts)
+        this.linkPopup = this.getDetailProducts[0]
+        console.log(this.linkPopup)
       })
     },
   },
@@ -119,11 +119,18 @@ export default {
     .dialog-img-container {
       margin: auto;
     }
-    .desc-container {
-      background: lightgray;
-      width: 100%;
-      padding: 5px 16px;
-    }
   }
+  .desc-container {
+    background: #F8F5EC;
+    p{
+      color: #000;
+
+    }
+    width: 100%;
+    padding: 5px 16px;
+    text-align: center;
+    overflow-y: auto;
+  }
+
 }
 </style>

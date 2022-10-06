@@ -5,36 +5,36 @@ export default {
     mediaList: [],
     detailMedia: {},
     allProducts: [
-      {
-        id: 1,
-        img: require('assets/images/product-dummy.png'),
-        popUp: require('assets/images/dummy-detail-products.png'),
-      },
-      {
-        id: 2,
-        img: require('assets/images/produk2.png'),
-        popUp: require('assets/images/produk2-pop.png'),
-      },
-      {
-        id: 3,
-        img: require('assets/images/produk3.png'),
-        popUp: require('assets/images/produk3-pop.png'),
-      },
-      {
-        id: 4,
-        img: require('assets/images/produk4.png'),
-        popUp: require('assets/images/produk4-pop.png'),
-      },
-      {
-        id: 5,
-        img: require('assets/images/produk5.png'),
-        popUp: require('assets/images/produk5-pop.png'),
-      },
-      {
-        id: 6,
-        img: require('assets/images/produk6.png'),
-        popUp: require('assets/images/produk6-pop.png'),
-      },
+      // {
+      //   id: 1,
+      //   img: require('assets/images/product-dummy.png'),
+      //   popUp: require('assets/images/dummy-detail-products.png'),
+      // },
+      // {
+      //   id: 2,
+      //   img: require('assets/images/produk2.png'),
+      //   popUp: require('assets/images/produk2-pop.png'),
+      // },
+      // {
+      //   id: 3,
+      //   img: require('assets/images/produk3.png'),
+      //   popUp: require('assets/images/produk3-pop.png'),
+      // },
+      // {
+      //   id: 4,
+      //   img: require('assets/images/produk4.png'),
+      //   popUp: require('assets/images/produk4-pop.png'),
+      // },
+      // {
+      //   id: 5,
+      //   img: require('assets/images/produk5.png'),
+      //   popUp: require('assets/images/produk5-pop.png'),
+      // },
+      // {
+      //   id: 6,
+      //   img: require('assets/images/produk6.png'),
+      //   popUp: require('assets/images/produk6-pop.png'),
+      // },
     ],
     allCareer: [],
     detailProducts: [],

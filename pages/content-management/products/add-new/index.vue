@@ -43,6 +43,8 @@ export default {
         sampleFile2: payload.imgPreview2,
         description: payload.description,
         title: '',
+      }).then((_) => {
+        this.$router.push('/content-management/products')
       })
     },
   },

@@ -152,14 +152,13 @@ sampleFile2 : File Type (imageIklan)
     },
     async patchDetailProducts({ commit }, payload) {
       await axios({
-        ur: `product/edit`,
+        url: `product/edit`,
+        method: 'PATCH',
         data: {
-          id: payload.id,
-          sampleFile: payload.sampleFile,
-          title: payload.title,
-          description: payload.description,
+          ...payload
         },
         headers: {
+          'Content-Type': 'multipart/form-data',
           access_token: token,
         },
       })
