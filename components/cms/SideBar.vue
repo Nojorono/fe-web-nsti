@@ -85,9 +85,9 @@ export default {
     }
   }
   &.review {
-    background-image: url('assets/images/cms/about-us.svg');
+    background-image: url('assets/images/cms/review.svg');
     &:hover {
-      background-image: url('assets/images/cms/about-us-hover.svg');
+      background-image: url('assets/images/cms/review-hover.svg');
     }
   }
   &.products {

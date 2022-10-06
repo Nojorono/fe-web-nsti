@@ -3,17 +3,23 @@
     <div class="mt-15"></div>
     <card />
     <div class="pagination">
-      <img
-        src="~/assets/images/paginate-left.svg"
-        alt="button previous pagination"
-      />
-      <div @click="changePage(i)" v-for="i in getMediaList.pagesleft" :key="i" :class="$route.query.page + 1 === i ?'number cursor-pointer num-active':'number cursor-pointer'">
+<!--      <img-->
+<!--        src="~/assets/images/paginate-left.svg"-->
+<!--        alt="button previous pagination"-->
+<!--        class="cursor-pointer"-->
+<!--        @click="prev"-->
+<!--      />-->
+<!--              @click="changePage($route.query.page -= +$route.query.page -1 )"
+-->
+      <div @click="changePage(i)" v-for="i in getMediaList.pagesleft" :key="i" :class="+$route.query.page + 1 === i ?'number cursor-pointer num-active':'number cursor-pointer'">
         {{ i }}
       </div>
-      <img
-        src="~/assets/images/paginate-right.svg"
-        alt="button next pagination"
-      />
+<!--      <img-->
+<!--        src="~/assets/images/paginate-right.svg"-->
+<!--        alt="button next pagination"-->
+<!--        class="cursor-pointer"-->
+<!--        @click="next"-->
+<!--      />-->
     </div>
   </div>
   <media-and-publication-mobile v-else />
@@ -55,14 +61,20 @@ export default {
     //   page: this.$route.query.page -1,
     //   size: this.size,
     // })
-    this.$router.replace({path: this.$route.path, query: {page: 0}})
+    this.$router.replace({path: this.$route.path, query: {page: +this.$route.query.page ||  0 }})
   },
   methods: {
     ...mapActions(['getAllMedia']),
-
+    // prev() {
+    //   const page = +this.$route.query.page - 1
+    //   console.log(page)
+    //   this.changePage(page)
+    // },
+    // next() {
+    //
+    // },
     changePage(page) {
       this.$router.replace({path: this.$route.path, query: {page: page -1}})
-
     }
   },
 }
@@ -93,11 +105,12 @@ export default {
       justify-content: center;
       align-items: center;
       border: 2.04082px solid $color-secondary-root;
+      background: $color-secondary-dark-root;
       border-radius: 6px;
       width: 55px;
       height: 55px;
       margin: 0 0.5rem;
-      color: $color-secondary-root;
+      color: $color-primary-root;
     }
     img {
       margin: 0 0.5rem;
