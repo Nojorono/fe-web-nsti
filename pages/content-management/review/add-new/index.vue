@@ -15,7 +15,9 @@
 import CmsHeading from '@/components/cms/Heading'
 import FormAdd from '@/components/cms/formAdd'
 export default {
-  name: 'AddNewAboutUs',
+  name: 'AddNewReview',
+  middleware: 'authentication',
+
   components: {
     FormAdd,
     CmsHeading,

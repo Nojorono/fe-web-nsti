@@ -37,6 +37,8 @@ import { VueEditor } from 'vue2-editor'
 import CmsHeading from '@/components/cms/Heading'
 export default {
   name: 'AddNewCareer',
+  middleware: 'authentication',
+
   components: {
     CmsHeading,
     VueEditor,

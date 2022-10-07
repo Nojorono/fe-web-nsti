@@ -25,6 +25,7 @@ import EmptyCard from '@/components/cms/EmptyCard'
 import CardListCms from '@/components/cms/CardCms'
 export default {
   name: 'CmsAboutUs',
+  middleware: 'authentication',
 
   components: { CardListCms, EmptyCard },
   layout: 'cmsLayout',
@@ -90,7 +91,9 @@ export default {
   methods: {
     ...mapActions(['fetchAllProducts', 'deleteProducts']),
     deletePost(id) {
-      this.deleteProducts(id)
+      this.deleteProducts(id).then((_) => {
+        this.fetchAllProducts()
+      })
     },
   },
 }

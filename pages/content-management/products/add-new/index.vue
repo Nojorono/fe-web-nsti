@@ -17,6 +17,7 @@ import CmsHeading from '@/components/cms/Heading'
 import FormAddProduts from '@/components/cms/formAddProducts'
 export default {
   name: 'AddNewProducts',
+  middleware: 'authentication',
 
   components: {
     FormAddProduts,
@@ -39,8 +40,8 @@ export default {
     ...mapActions(['postCreateProduct']),
     postBtn(payload) {
       this.postCreateProduct({
-        sampleFile1: payload.imgPreview,
-        sampleFile2: payload.imgPreview2,
+        sampleFile1: payload.imgPreview2,
+        sampleFile2: payload.imgPreview,
         description: payload.description,
         title: '',
       }).then((_) => {

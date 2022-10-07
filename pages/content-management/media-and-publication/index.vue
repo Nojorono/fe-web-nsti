@@ -43,7 +43,7 @@ import { mapActions, mapGetters } from 'vuex'
 import EmptyCard from '@/components/cms/EmptyCard'
 import CardListCms from '@/components/cms/CardCms'
 export default {
-  // middleware: 'authentication',
+  middleware: 'authentication',
   name: 'CmsMediaAndPublication',
 
   components: { CardListCms, EmptyCard },

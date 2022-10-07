@@ -110,7 +110,9 @@ export default {
   head() {
     return {}
   },
-
+  mounted() {
+    this.resetForm()
+  },
   watch: {
     $route: {
       deep: true,

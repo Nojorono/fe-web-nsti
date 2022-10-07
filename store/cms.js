@@ -91,12 +91,7 @@ sampleFile2 : File Type (imageIklan)
         url: `career/edit`,
         method: 'PATCH',
         data: {
-          id: payload.id,
-          title: payload.title,
-          description: null,
-          level: payload.level,
-          location: payload.location,
-          link: payload.link,
+          ...payload
         },
         headers: {
           access_token: token,

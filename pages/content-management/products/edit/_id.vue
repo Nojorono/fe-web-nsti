@@ -17,6 +17,7 @@ import CmsHeading from '@/components/cms/Heading'
 import FormAddProduts from '@/components/cms/formAddProducts'
 export default {
   name: 'EditProducts',
+  middleware: 'authentication',
 
   components: {
     FormAddProduts,
@@ -55,12 +56,12 @@ export default {
     },
     postBtn(payload) {
       this.patchDetailProducts({
-          sampleFile1: payload.imgPreview,
-          sampleFile2: payload.imgPreview2,
+          sampleFile1: payload.imgPreview2,
+          sampleFile2: payload.imgPreview,
           description: payload.description,
           title: '',
-          id: this.$route.params.id})
-        .then((_) => {
+          id: this.$route.params.id
+      }).then((_) => {
         this.$router.push('/content-management/products')
       })
     },

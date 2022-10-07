@@ -36,6 +36,7 @@ import { mapActions, mapGetters } from 'vuex'
 import CmsHeading from '@/components/cms/Heading'
 export default {
   name: 'EditCareer',
+  middleware: 'authentication',
 
   components: {
     CmsHeading,
@@ -62,6 +63,7 @@ export default {
     this.fetchDetailCareer(this.$route.params.id).then((_) => {
       console.log(this.getDetailCareer)
       const data = this.getDetailCareer
+      this.content = data.description
       this.title = data.title
       this.level = data.level
       this.location = data.location
@@ -77,9 +79,8 @@ export default {
     postBtn() {
       const payload = {
         title: this.title,
-        level: this.level,
         location: this.location,
-        link: this.link,
+        description: this.content,
         id: this.$route.params.id,
       }
       this.patchDetailCareer(payload).then((_) => {

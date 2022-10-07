@@ -18,6 +18,7 @@ import CmsHeading from '@/components/cms/Heading'
 import FormAdd from '@/components/cms/formAdd'
 export default {
   name: 'AddNewMediaAndPublication',
+  middleware: 'authentication',
 
   components: {
     FormAdd,
