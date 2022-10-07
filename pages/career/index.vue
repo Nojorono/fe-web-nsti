@@ -84,6 +84,7 @@
         <h1>{{ $t('career.learnNgrow') }}</h1>
       </div>
       <vueper-slides
+        v-if="getAllTestimoni.length"
         class="no-shadow"
         :visible-slides="3"
         :gap="3"
@@ -93,22 +94,24 @@
         :dragging-distance="70"
         :breakpoints="{ 800: { visibleSlides: 2, slideMultiple: 2 } }"
       >
-        <vueper-slide v-for="(review, i) in reviewsList" :key="i">
+        <vueper-slide v-for="(review, i) in getAllTestimoni" :key="i">
           <template #content>
             <div class="review-card px-10 py-10 text-center">
               <div
                 class="review-card-innner d-flex flex-column align-center justify-space-between"
               >
-                <p class="mb-5 review-text">{{ review.review }}</p>
+                <p class="mb-5 review-text" v-html="review.description"></p>
                 <div class="review-bottom-container">
                   <img
-                    :src="review.profileImg"
+                    :src="
+                      'https://back-api.nikkisuper.my.id/' + review.imageName
+                    "
                     alt="review profile picture"
                     width="140px"
-                    height="auto"
+                    height="140px"
                   />
                   <p class="review-name">{{ review.name }}</p>
-                  <p class="review-position">{{ review.position }}</p>
+                  <p class="review-position">{{ review.title }}</p>
                 </div>
               </div>
             </div>
@@ -119,7 +122,7 @@
     </v-col>
     <!--    dialog-->
     <v-row justify="center">
-      <v-dialog v-model="dialog" width="800px ">
+      <v-dialog v-model="dialog" width="800px" light>
         <div class="modal-card">
           <div class="d-flex justify-end">
             <v-icon dark @click="dialog = false"> mdi-window-close </v-icon>
@@ -304,16 +307,17 @@ export default {
   },
 
   computed: {
-    ...mapGetters(['getAllCareer']),
+    ...mapGetters(['getAllCareer', 'getAllTestimoni']),
   },
   mounted() {
     this.fetchAllCareer({
       page: this.page,
       size: this.size,
     })
+    this.fetchAllTestimoni()
   },
   methods: {
-    ...mapActions(['fetchAllCareer']),
+    ...mapActions(['fetchAllCareer', 'fetchAllTestimoni']),
     onClickApply(html) {
       this.dialog = true
       this.content = html
@@ -434,6 +438,7 @@ export default {
         }
         img {
           border-radius: 100%;
+          object-fit: cover;
         }
       }
     }
@@ -449,6 +454,7 @@ export default {
   .content {
     min-width: 90%;
     padding: 3rem;
+    color: black;
   }
 }
 </style>

@@ -38,15 +38,10 @@
     </div>
     <div class="mb-3 add-new-container">
       <div class="input-title mb-3">
-        <input v-model="title" type="text" placeholder="Add Title" required />
+        <input v-model="name" type="text" placeholder="Add Name" required />
       </div>
       <div class="input-title">
-        <input
-          v-model="location"
-          type="text"
-          placeholder="Add Location"
-          required
-        />
+        <input v-model="title" type="text" placeholder="Add Title" required />
       </div>
     </div>
     <div class="mb-3 input-text-area">
@@ -73,7 +68,7 @@
 import { VueEditor } from 'vue2-editor'
 import { mapGetters } from 'vuex'
 export default {
-  name: 'FormAdd',
+  name: 'FormAddTestimoni',
   components: { VueEditor },
   props: {
     loadingBtn: {
@@ -83,10 +78,14 @@ export default {
   },
   data() {
     return {
+      // sampleFile : filetype
+      // name: string
+      // title:string
+      // description: string
       tempImage: null,
-      title: null,
       imgPreview: null,
-      location: '',
+      name: '',
+      title: null,
       content: '<p>Add Body Text</p>',
     }
   },
@@ -113,7 +112,7 @@ export default {
           this.imgPreview =
             'https://back-api.nikkisuper.my.id/' + data.imageName
           this.title = data.title
-          this.location = data.location
+          this.name = data.name
         }
       },
     },
@@ -122,7 +121,7 @@ export default {
     this.tempImage = null
     this.title = null
     this.imgPreview = null
-    this.location = ''
+    this.name = ''
     this.content = '<p>Add Body Text</p>'
   },
   methods: {
@@ -130,12 +129,12 @@ export default {
       this.tempImage = null
       this.title = null
       this.imgPreview = null
-      this.location = ''
+      this.name = ''
       this.content = '<p>Add Body Text</p>'
     },
     postBtn() {
       this.$emit('postBtn', {
-        location: this.location,
+        name: this.name,
         description: this.content,
         title: this.title,
         sampleFile: this.imgPreview,
@@ -147,14 +146,6 @@ export default {
         this.imgPreview = event.target.files[0]
         const formData = new FormData()
         formData.append('file', this.imgPreview)
-
-        // const image = event.target.files[0];
-        // const reader = new FileReader();
-        // reader.readAsDataURL(image);
-        // reader.onload = event =>{
-        //   this.imgPreview = event.target.result;
-        //   console.log(this.imgPreview);
-        // };
       }
     },
   },
@@ -162,26 +153,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-//.input-text-area {
-//  textarea {
-//    padding: 2%;
-//    width: 939px;
-//    height: 375px;
-//
-//    border: 3px solid $color-font-dark-root;
-//    border-radius: 20px;
-//    &:focus {
-//      outline: none;
-//    }
-//    &::placeholder {
-//      color: $color-font-dark-root;
-//      font-weight: bold;
-//      text-align: center;
-//      font-size: 1em;
-//      padding: 15% 0;
-//    }
-//  }
-//}
 .add-new-btn > input {
   display: none;
 }

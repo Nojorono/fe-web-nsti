@@ -6,23 +6,25 @@
         :heading="heading"
         class="mb-3"
       />
-      <form-add @postBtn="postBtn" />
+      <form-add-testimoni @postBtn="postBtn" />
     </div>
   </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 import CmsHeading from '@/components/cms/Heading'
-import FormAdd from '@/components/cms/formAdd'
+import FormAddTestimoni from '@/components/cms/formAddTestimoni'
 export default {
   name: 'AddNewReview',
-  middleware: 'authentication',
 
   components: {
-    FormAdd,
+    FormAddTestimoni,
     CmsHeading,
   },
   layout: 'cmsLayout',
+  middleware: 'authentication',
   props: {},
   data() {
     return {
@@ -35,7 +37,12 @@ export default {
     }
   },
   methods: {
-    postBtn() {},
+    ...mapActions(['postTestimoni']),
+    postBtn(payload) {
+      this.postTestimoni(payload).then((_) => {
+        this.$router.push('/content-management/review')
+      })
+    },
   },
 }
 </script>

@@ -23,12 +23,12 @@
           @change="upload"
         />
 
-<!--        kalo ada foto -->
+        <!--        kalo ada foto -->
         <label for="file-input">
           <img
             v-if="imgPreview"
-            :src="tempImage || imgPreview"
             id="file-input"
+            :src="tempImage || imgPreview"
             alt="image preview"
             width="256.77"
             height="130.55"
@@ -36,7 +36,6 @@
             class="cursor-pointer"
           />
         </label>
-
       </div>
       <div class="add-new">
         <div>
@@ -63,8 +62,8 @@
         <label for="file-input2">
           <img
             v-if="imgPreview2"
-            :src="tempImage2 ||imgPreview2"
             id="file-input2"
+            :src="tempImage2 || imgPreview2"
             alt="image preview"
             width="256.77"
             height="130.55"
@@ -110,15 +109,12 @@ export default {
   head() {
     return {}
   },
-  mounted() {
-    this.resetForm()
-  },
   watch: {
     $route: {
       deep: true,
       handler() {
         this.resetForm()
-      }
+      },
     },
     getDetailProducts: {
       deep: true,
@@ -136,16 +132,19 @@ export default {
       },
     },
   },
+  mounted() {
+    this.resetForm()
+  },
   computed: {
     ...mapGetters(['getDetailProducts']),
   },
   methods: {
     resetForm() {
-     this.imgPreview = null
-       this.tempImage = null
-       this.imgPreview2 = null
-        this.tempImage2 = null
-        this.description = ''
+      this.imgPreview = null
+      this.tempImage = null
+      this.imgPreview2 = null
+      this.tempImage2 = null
+      this.description = ''
     },
     postBtn() {
       this.$emit('postBtn', {

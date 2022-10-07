@@ -1,33 +1,34 @@
 <template>
   <div class="cms-about-us-container">
-    <template v-if="!aboutUsList.length">
+    <template v-if="!getAllTestimoni.length">
       <empty-card />
     </template>
     <div
-      v-else-if="aboutUsList.length"
+      v-else-if="getAllTestimoni.length"
       class="d-flex flex-wrap card-container justify-start align-center"
     >
       <card-list-cms
-        v-for="(card, i) in aboutUsList"
+        v-for="(card, i) in getAllTestimoni"
         :key="i"
         :card="card"
         class=""
-        edit-page="/content-management/about-us/edit"
+        edit-page="content-management-review-edit-id___en"
+        @deletePost="deletePost"
       />
     </div>
   </div>
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
+
 import EmptyCard from '@/components/cms/EmptyCard'
 import CardListCms from '@/components/cms/CardCms'
 export default {
   name: 'CmsReview',
   components: { CardListCms, EmptyCard },
-  // middleware: 'authentication',
-  middleware: 'authentication',
-
   layout: 'cmsLayout',
+  middleware: 'authentication',
   data() {
     return {
       aboutUsList: [],
@@ -37,6 +38,20 @@ export default {
     return {
       title: 'Manage About Us',
     }
+  },
+  computed: {
+    ...mapGetters(['getAllTestimoni']),
+  },
+  mounted() {
+    this.fetchAllTestimoni()
+  },
+  methods: {
+    ...mapActions(['fetchAllTestimoni', 'destroyTestimoni']),
+    deletePost(id) {
+      this.destroyTestimoni(id).then((_) => {
+        this.fetchAllTestimoni()
+      })
+    },
   },
 }
 </script>

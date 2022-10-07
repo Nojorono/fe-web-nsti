@@ -21,7 +21,6 @@
       </div>
     </div>
     -->
-
   </div>
 </template>
 
@@ -31,9 +30,9 @@ import EmptyCard from '@/components/cms/EmptyCard'
 import CareerCard from '@/components/cms/CareerCard.vue'
 export default {
   name: 'CmsCareer',
-  middleware: 'authentication',
   components: { CareerCard, EmptyCard },
   layout: 'cmsLayout',
+  middleware: 'authentication',
   data() {
     return {
       careerList: [
@@ -127,7 +126,7 @@ export default {
     margin: 0 0.5rem;
     color: $color-primary-root;
   }
-  .num-active{
+  .num-active {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -144,5 +143,4 @@ export default {
     width: 55px;
   }
 }
-
 </style>

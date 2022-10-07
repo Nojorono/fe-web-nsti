@@ -3,15 +3,22 @@ const token = localStorage.getItem('token')
 export default {
   state: {
     detailCareer: {},
+    allTestimoni: [],
   },
   getters: {
     getDetailCareer(state) {
       return state.detailCareer
     },
+    getAllTestimoni(state) {
+      return state.allTestimoni
+    },
   },
   mutations: {
     setDetailCarerr(state, payload) {
       state.detailCareer = payload
+    },
+    setAllTestimoni(state, payload) {
+      state.allTestimoni = payload
     },
   },
   actions: {
@@ -91,7 +98,7 @@ sampleFile2 : File Type (imageIklan)
         url: `career/edit`,
         method: 'PATCH',
         data: {
-          ...payload
+          ...payload,
         },
         headers: {
           access_token: token,
@@ -150,10 +157,54 @@ sampleFile2 : File Type (imageIklan)
         url: `product/edit`,
         method: 'PATCH',
         data: {
-          ...payload
+          ...payload,
         },
         headers: {
           'Content-Type': 'multipart/form-data',
+          access_token: token,
+        },
+      })
+    },
+    // testimoni
+    async fetchAllTestimoni({ commit }, payload) {
+      try {
+        const { data } = await axios.get(`testimoni/readAll?size=15&page=0`)
+        commit('setAllTestimoni', data)
+        console.log(data)
+      } catch (e) {
+        console.log(e)
+      }
+    },
+    async postTestimoni({ commit }, payload) {
+      try {
+        const { data } = await axios.post(
+          `testimoni/create`,
+          {
+            ...payload,
+          },
+          {
+            headers: {
+              access_token: token,
+              'Content-Type': 'multipart/form-data',
+            },
+          }
+        )
+        console.log(data)
+      } catch (e) {
+        console.log(e)
+      }
+    },
+    async fetchDetailTestimoni({ commit }, payload) {
+      // http://back-api.nikkisuper.my.id/testimoni/detail/b081d2d6-28a4-4b44-bfd0-ba3c8709a2e3
+    },
+    async destroyTestimoni({ commit }, id) {
+      await axios({
+        url: `testimoni/delete`,
+        method: 'DElETE',
+        data: {
+          id,
+        },
+        headers: {
           access_token: token,
         },
       })

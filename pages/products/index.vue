@@ -3,7 +3,8 @@
     <div class="title-container ml-5">
       <h1 class="defaultGolden--text">{{ $t('media.title') }}</h1>
     </div>
-    <ProductsCarousel v-if="$store.state.home.allProducts.length"
+    <ProductsCarousel
+      v-if="$store.state.home.allProducts.length"
       :slides="$store.state.home.allProducts"
     ></ProductsCarousel>
   </div>

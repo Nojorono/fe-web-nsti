@@ -25,7 +25,16 @@
       <!--      />-->
       <!--              @click="changePage($route.query.page -= +$route.query.page -1 )"
       -->
-      <div @click="changePage(i)" v-for="i in getMediaList.pagesleft" :key="i" :class="+$route.query.page + 1 === i ?'number cursor-pointer num-active':'number cursor-pointer'">
+      <div
+        v-for="i in getMediaList.pagesleft"
+        :key="i"
+        :class="
+          +$route.query.page + 1 === i
+            ? 'number cursor-pointer num-active'
+            : 'number cursor-pointer'
+        "
+        @click="changePage(i)"
+      >
         {{ i }}
       </div>
       <!--      <img-->
@@ -43,11 +52,11 @@ import { mapActions, mapGetters } from 'vuex'
 import EmptyCard from '@/components/cms/EmptyCard'
 import CardListCms from '@/components/cms/CardCms'
 export default {
-  middleware: 'authentication',
   name: 'CmsMediaAndPublication',
 
   components: { CardListCms, EmptyCard },
   layout: 'cmsLayout',
+  middleware: 'authentication',
   data() {
     return {
       mediaPub: [
@@ -112,7 +121,7 @@ export default {
         page: this.$route.query.page,
         size: this.size,
       })
-    }
+    },
   },
   methods: {
     ...mapActions(['getAllMedia', 'destroyMedia']),
@@ -125,15 +134,21 @@ export default {
       })
     },
     changePage(page) {
-      this.$router.replace({path: this.$route.path, query: {page: page -1}})
-    }
+      this.$router.replace({
+        path: this.$route.path,
+        query: { page: page - 1 },
+      })
+    },
   },
   mounted() {
     this.getAllMedia({
       page: this.$route.query.page,
       size: this.size,
     })
-    this.$router.replace({path: this.$route.path, query: {page: +this.$route.query.page ||  0 }})
+    this.$router.replace({
+      path: this.$route.path,
+      query: { page: +this.$route.query.page || 0 },
+    })
   },
 }
 </script>
@@ -159,7 +174,7 @@ export default {
     margin: 0 0.5rem;
     color: $color-primary-root;
   }
-  .num-active{
+  .num-active {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,5 +191,4 @@ export default {
     width: 55px;
   }
 }
-
 </style>

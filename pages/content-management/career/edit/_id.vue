@@ -36,13 +36,13 @@ import { mapActions, mapGetters } from 'vuex'
 import CmsHeading from '@/components/cms/Heading'
 export default {
   name: 'EditCareer',
-  middleware: 'authentication',
 
   components: {
     CmsHeading,
     VueEditor,
   },
   layout: 'cmsLayout',
+  middleware: 'authentication',
   props: {},
   data() {
     return {

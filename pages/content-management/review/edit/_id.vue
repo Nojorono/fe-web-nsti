@@ -16,13 +16,13 @@ import CmsHeading from '@/components/cms/Heading'
 import FormAdd from '@/components/cms/formAdd'
 export default {
   name: 'EditReview',
-  middleware: 'authentication',
 
   components: {
     FormAdd,
     CmsHeading,
   },
   layout: 'cmsLayout',
+  middleware: 'authentication',
   props: {},
   data() {
     return {

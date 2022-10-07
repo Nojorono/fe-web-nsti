@@ -3,23 +3,32 @@
     <div class="mt-15"></div>
     <card />
     <div class="pagination">
-<!--      <img-->
-<!--        src="~/assets/images/paginate-left.svg"-->
-<!--        alt="button previous pagination"-->
-<!--        class="cursor-pointer"-->
-<!--        @click="prev"-->
-<!--      />-->
-<!--              @click="changePage($route.query.page -= +$route.query.page -1 )"
+      <!--      <img-->
+      <!--        src="~/assets/images/paginate-left.svg"-->
+      <!--        alt="button previous pagination"-->
+      <!--        class="cursor-pointer"-->
+      <!--        @click="prev"-->
+      <!--      />-->
+      <!--              @click="changePage($route.query.page -= +$route.query.page -1 )"
 -->
-      <div @click="changePage(i)" v-for="i in getMediaList.pagesleft" :key="i" :class="+$route.query.page + 1 === i ?'number cursor-pointer num-active':'number cursor-pointer'">
+      <div
+        v-for="i in getMediaList.pagesleft"
+        :key="i"
+        :class="
+          +$route.query.page + 1 === i
+            ? 'number cursor-pointer num-active'
+            : 'number cursor-pointer'
+        "
+        @click="changePage(i)"
+      >
         {{ i }}
       </div>
-<!--      <img-->
-<!--        src="~/assets/images/paginate-right.svg"-->
-<!--        alt="button next pagination"-->
-<!--        class="cursor-pointer"-->
-<!--        @click="next"-->
-<!--      />-->
+      <!--      <img-->
+      <!--        src="~/assets/images/paginate-right.svg"-->
+      <!--        alt="button next pagination"-->
+      <!--        class="cursor-pointer"-->
+      <!--        @click="next"-->
+      <!--      />-->
     </div>
   </div>
   <media-and-publication-mobile v-else />
@@ -50,7 +59,7 @@ export default {
         page: this.$route.query.page,
         size: this.size,
       })
-    }
+    },
   },
   computed: {
     ...mapGetters(['getMediaList']),
@@ -61,7 +70,10 @@ export default {
     //   page: this.$route.query.page -1,
     //   size: this.size,
     // })
-    this.$router.replace({path: this.$route.path, query: {page: +this.$route.query.page ||  0 }})
+    this.$router.replace({
+      path: this.$route.path,
+      query: { page: +this.$route.query.page || 0 },
+    })
   },
   methods: {
     ...mapActions(['getAllMedia']),
@@ -74,8 +86,11 @@ export default {
     //
     // },
     changePage(page) {
-      this.$router.replace({path: this.$route.path, query: {page: page -1}})
-    }
+      this.$router.replace({
+        path: this.$route.path,
+        query: { page: page - 1 },
+      })
+    },
   },
 }
 </script>
@@ -100,7 +115,7 @@ export default {
       margin: 0 0.5rem;
       color: $color-secondary-root;
     }
-    .num-active{
+    .num-active {
       display: flex;
       justify-content: center;
       align-items: center;

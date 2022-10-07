@@ -17,13 +17,13 @@ import CmsHeading from '@/components/cms/Heading'
 import FormAddProduts from '@/components/cms/formAddProducts'
 export default {
   name: 'AddNewProducts',
-  middleware: 'authentication',
 
   components: {
     FormAddProduts,
     CmsHeading,
   },
   layout: 'cmsLayout',
+  middleware: 'authentication',
   props: {},
   data() {
     return {

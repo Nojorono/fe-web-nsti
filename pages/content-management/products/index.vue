@@ -25,10 +25,10 @@ import EmptyCard from '@/components/cms/EmptyCard'
 import CardListCms from '@/components/cms/CardCms'
 export default {
   name: 'CmsAboutUs',
-  middleware: 'authentication',
 
   components: { CardListCms, EmptyCard },
   layout: 'cmsLayout',
+  middleware: 'authentication',
   data() {
     return {
       ProductsList: [

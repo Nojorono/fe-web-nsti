@@ -6,7 +6,7 @@
         :heading="heading"
         class="mb-3"
       />
-      <form-add-produts @postBtn="postBtn"/>
+      <form-add-produts @postBtn="postBtn" />
     </div>
   </div>
 </template>
@@ -17,13 +17,13 @@ import CmsHeading from '@/components/cms/Heading'
 import FormAddProduts from '@/components/cms/formAddProducts'
 export default {
   name: 'EditProducts',
-  middleware: 'authentication',
 
   components: {
     FormAddProduts,
     CmsHeading,
   },
   layout: 'cmsLayout',
+  middleware: 'authentication',
   props: {},
   data() {
     return {
@@ -56,11 +56,11 @@ export default {
     },
     postBtn(payload) {
       this.patchDetailProducts({
-          sampleFile1: payload.imgPreview2,
-          sampleFile2: payload.imgPreview,
-          description: payload.description,
-          title: '',
-          id: this.$route.params.id
+        sampleFile1: payload.imgPreview2,
+        sampleFile2: payload.imgPreview,
+        description: payload.description,
+        title: '',
+        id: this.$route.params.id,
       }).then((_) => {
         this.$router.push('/content-management/products')
       })
