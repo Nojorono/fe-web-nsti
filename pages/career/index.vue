@@ -100,7 +100,7 @@
               <div
                 class="review-card-innner d-flex flex-column align-center justify-space-between"
               >
-                <p class="mb-5 review-text" v-html="review.description"></p>
+                <p class="mb-5 review-text" >{{review.description}}</p>
                 <div class="review-bottom-container">
                   <img
                     :src="
@@ -454,7 +454,7 @@ export default {
   .content {
     min-width: 90%;
     padding: 3rem;
-    color: black;
+    color: $color-primary-root;
   }
 }
 </style>

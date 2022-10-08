@@ -39,9 +39,7 @@ export default {
     ...mapGetters(['getDetailProducts']),
   },
   mounted() {
-    this.fetchDetailProducts(this.$route.params.id).then((_) => {
-      console.log(this.getDetailProducts)
-    })
+    this.fetchDetailProducts(this.$route.params.id)
   },
   methods: {
     ...mapActions(['fetchDetailProducts', 'patchDetailProducts']),

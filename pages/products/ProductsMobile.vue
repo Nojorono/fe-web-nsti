@@ -13,11 +13,12 @@
       class="carousel-container"
       :style="$route.fullPath !== '/' ? 'height: 76vh' : ''"
     >
-      <products-carousel-mobile :slides="$store.state.home.allProducts" />
+      <products-carousel-mobile v-if="getAllProducts.length" :slides="getAllProducts" />
     </div>
   </div>
 </template>
 <script>
+import { mapActions, mapGetters } from 'vuex'
 import ProductsCarouselMobile from '@/components/ProductsCarouselMobile.vue'
 export default {
   name: 'ProductsMobile',
@@ -64,6 +65,15 @@ export default {
     return {
       title: 'Products',
     }
+  },
+  computed: {
+    ...mapGetters(['getAllProducts', 'getDetailProducts']),
+  },
+  mounted() {
+    this.fetchAllProducts()
+  },
+  methods: {
+    ...mapActions(['fetchAllProducts', 'fetchDetailProducts']),
   },
 }
 </script>

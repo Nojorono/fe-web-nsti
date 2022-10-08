@@ -46,9 +46,12 @@
     </div>
     <div class="mb-3 input-text-area">
       <!--      <textarea v-model="bodyText" placeholder="Add Body Text" />-->
-      <client-only>
-        <vue-editor v-model="content"></vue-editor>
-      </client-only>
+      <textarea
+        v-model="content"
+        type="text"
+        placeholder="Add Text"
+        required
+      />
     </div>
     <div class="action-btn d-flex justify-end">
       <!--      <v-btn class="ma-2" outlined color="fontDark"> Delete </v-btn>-->
@@ -65,11 +68,10 @@
 </template>
 
 <script>
-import { VueEditor } from 'vue2-editor'
 import { mapGetters } from 'vuex'
 export default {
   name: 'FormAddTestimoni',
-  components: { VueEditor },
+  components: {  },
   props: {
     loadingBtn: {
       type: Boolean,
@@ -78,22 +80,18 @@ export default {
   },
   data() {
     return {
-      // sampleFile : filetype
-      // name: string
-      // title:string
-      // description: string
       tempImage: null,
       imgPreview: null,
       name: '',
       title: null,
-      content: '<p>Add Body Text</p>',
+      content: '',
     }
   },
   head() {
     return {}
   },
   computed: {
-    ...mapGetters(['getDetailMedia']),
+    ...mapGetters(['getDetailTetimoni']),
   },
   watch: {
     $route: {
@@ -102,12 +100,12 @@ export default {
         this.resetForm()
       },
     },
-    getDetailMedia: {
+    getDetailTetimoni: {
       deep: true,
       immediate: true,
       handler() {
-        if (Object.keys(this.getDetailMedia).length) {
-          const data = this.getDetailMedia
+        if (Object.keys(this.getDetailTetimoni).length) {
+          const data = this.getDetailTetimoni
           this.content = data.description
           this.imgPreview =
             'https://back-api.nikkisuper.my.id/' + data.imageName
@@ -118,11 +116,7 @@ export default {
     },
   },
   mounted() {
-    this.tempImage = null
-    this.title = null
-    this.imgPreview = null
-    this.name = ''
-    this.content = '<p>Add Body Text</p>'
+    this.resetForm()
   },
   methods: {
     resetForm() {
@@ -130,7 +124,7 @@ export default {
       this.title = null
       this.imgPreview = null
       this.name = ''
-      this.content = '<p>Add Body Text</p>'
+      this.content = ''
     },
     postBtn() {
       this.$emit('postBtn', {
@@ -153,6 +147,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.input-text-area {
+  textarea {
+    padding: 2%;
+    width: 100%;
+    height: 250px;
+
+    border: 3px solid $color-font-dark-root;
+    border-radius: 20px;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: $color-font-dark-root;
+      font-weight: bold;
+      text-align: center;
+      font-size: 1em;
+      padding: 5% 0;
+    }
+  }
+}
 .add-new-btn > input {
   display: none;
 }

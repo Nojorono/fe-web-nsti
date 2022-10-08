@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import TopCarousel from '@/components/home/TopCarousel.vue'
 import OurStory from '@/components/home/OurStory.vue'
 import MyProducts from '@/components/home/MyProducts.vue'
@@ -54,7 +55,16 @@ export default {
       title: 'Home',
     }
   },
-  mounted() {},
+  mounted() {
+      this.getAllMedia({
+      page: 0,
+      size: 3,
+    })
+  },
+  methods: {
+    ...mapActions(['getAllMedia']),
+
+  }
 }
 </script>
 

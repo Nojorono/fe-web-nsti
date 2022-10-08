@@ -8,7 +8,6 @@ export default {
   mutations: {
     setAuthenticated(state, payload) {
       state.authenticated = payload
-      console.log(state.authenticated, 'isAuth')
     },
   },
   actions: {
@@ -26,7 +25,6 @@ export default {
         })
         .catch((e) => {
           commit('setAuthenticated', false)
-          console.log(e)
           throw e
         })
     },

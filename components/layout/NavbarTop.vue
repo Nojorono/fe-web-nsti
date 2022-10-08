@@ -66,7 +66,7 @@
         </nuxt-link>
         <nuxt-link
           class="nav-child text-decoration-none"
-          :to="'/id/media-and-publication'"
+          :to="'/id/media-and-publication?page=0'"
         >
           {{ $t('navbar.media') }}
         </nuxt-link>
@@ -181,7 +181,7 @@
         </nuxt-link>
         <nuxt-link
           class="nav-child text-decoration-none"
-          :to="'/media-and-publication'"
+          :to="'/media-and-publication?page=0'"
         >
           {{ $t('navbar.media') }}
         </nuxt-link>

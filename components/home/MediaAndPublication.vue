@@ -57,62 +57,6 @@ export default {
   components: {},
   data() {
     return {
-      mediaCardList: [
-        {
-          img: `${require(`assets/images/media-dummy-1.png`)}`,
-          title:
-            'J-Live Hadirkan Podcast Live Perdana, Gandeng GJLS Entertainment.',
-          id: 1,
-        },
-        {
-          img: `${require(`assets/images/media-dummy-2.png`)}`,
-          title:
-            'Satu Rasa, Satu Tujuan dalam Menyambut Festival Pacu Jalur 2022.',
-          id: 2,
-        },
-        {
-          img: `${require(`assets/images/media-dummy-3.png`)}`,
-          title: 'J-LIVE Sukses Meriahkan D13 Hard Festival 2022 di Bandung.',
-          id: 3,
-        },
-        {
-          img: `${require(`assets/images/media.png`)}`,
-          title: 'Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit.',
-          id: 4,
-        },
-        {
-          img: `${require(`assets/images/media.png`)}`,
-          title: 'Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit.',
-          id: 5,
-        },
-        {
-          img: `${require(`assets/images/media.png`)}`,
-          title: 'Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit.',
-          id: 6,
-        },
-        {
-          img: `${require(`assets/images/media.png`)}`,
-          title: 'Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit.',
-          id: 6,
-        },
-        {
-          img: `${require(`assets/images/media.png`)}`,
-          title: 'Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit.',
-          id: 6,
-        },
-        {
-          img: `${require(`assets/images/media.png`)}`,
-          title: 'Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit.',
-          id: 6,
-        },
-        {
-          img: `${require(`assets/images/media.png`)}`,
-          title: 'Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit.',
-          id: 6,
-        },
-      ],
-      // page: 0,
-      // size: 6,
     }
   },
   computed: {
@@ -120,8 +64,8 @@ export default {
   },
   mounted() {
     // this.getAllMedia({
-    //   page: this.page,
-    //   size: this.size,
+    //   page: 0,
+    //   size: 3,
     // })
   },
   methods: {

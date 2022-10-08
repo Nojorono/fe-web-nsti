@@ -1,5 +1,5 @@
 <template>
-  <v-col col="11" class="my-15 d-flex justify-center">
+  <v-col col="11" class="my-10 d-flex justify-center">
     <div class="media-wrapper-mobile">
       <div class="media-header d-flex justify-space-between align-center">
         <h1 class="defaultGolden--text">{{ $t('home.media.title') }}</h1>
@@ -22,8 +22,8 @@
       <div class="card-container d-flex flex-wrap justify-center align-center">
         <nuxt-link
           v-for="(card, i) in $route.fullPath === '/'
-            ? mediaCardList.slice(0, 3)
-            : mediaCardList.slice(0, 3)"
+             ? getMediaList?.data?.slice(0, 3)
+            : getMediaList?.data?.slice(0, 6)"
           :key="i"
           class="media-card ma-5"
           :to="
@@ -34,7 +34,7 @@
         >
           <div class="zoom-transition defaultGolden--text cursor-pointer">
             <v-img
-              :src="card.img"
+              :src="'https://back-api.nikkisuper.my.id/' + card.imageName"
               width="100%"
               height="100%"
               content-class="media-card-linear-gradient"
@@ -160,13 +160,4 @@ export default {
   }
 }
 
-//.media-card:hover .zoom-transition {
-//  width: 25.5rem;
-//  height: 25.5rem;
-//  .media-text-wrapper {
-//    background-repeat: repeat;
-//    top: 14.5rem;
-//    font-size: 111%;
-//  }
-//}
 </style>

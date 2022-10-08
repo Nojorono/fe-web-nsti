@@ -15,12 +15,12 @@
     >
       <slide v-for="(slide, i) in slides" :key="slide.id" :index="i">
         <v-img
-          :src="slide.img"
+          :src="'https://back-api.nikkisuper.my.id/' + slide.imageName"
           alt="nikki super product"
           class="cursor-pointer"
           height="auto"
           width="auto"
-          @click="clickProduct(slide.popUp)"
+          @click="clickProduct(slide)"
         />
       </slide>
     </carousel-3d>
@@ -35,14 +35,22 @@
       <div class="dialog-product">
         <div class="defaultGolden--text dialog-container d-flex align-center">
           <div class="dialog-img-container">
-            <img :src="linkPopup" height="auto" width="100%" />
+            <img :src="
+                'https://back-api.nikkisuper.my.id/' +
+                linkPopup?.images[1].imageName
+              " height="auto" width="100%" />
           </div>
+        </div>
+        <div class="desc-container">
+          <p>{{ linkPopup?.description }}</p>
         </div>
       </div>
     </v-dialog>
   </div>
 </template>
 <script>
+import { mapActions, mapGetters } from 'vuex'
+
 export default {
   name: 'ProductsCarouselMobile',
   props: {
@@ -55,19 +63,20 @@ export default {
     return {
       dialogProduct: false,
       linkPopup: null,
-      slides1: [
-        {
-          id: 1,
-          img: require('assets/images/product-dummy.png'),
-          popUp: require('assets/images/dummy-detail-products.png'),
-        },
-      ],
+
     }
   },
+  computed: {
+    ...mapGetters(['getDetailProducts']),
+  },
   methods: {
+    ...mapActions(['fetchDetailProducts']),
     clickProduct(popUp) {
       this.dialogProduct = true
-      this.linkPopup = popUp
+      this.fetchDetailProducts(popUp.id).then((_) => {
+        this.linkPopup = this.getDetailProducts[0]
+        console.log(this.linkPopup)
+      })
     },
   },
 }
@@ -98,9 +107,17 @@ export default {
     .dialog-img-container {
       margin: auto;
     }
-    .close-btn {
-      //margin-left: 13%;
+
+  }
+  .desc-container {
+    background: #f8f5ec;
+    p {
+      color: #000;
     }
+    width: 100%;
+    padding: 5px 16px;
+    text-align: center;
+    overflow-y: auto;
   }
 }
 </style>

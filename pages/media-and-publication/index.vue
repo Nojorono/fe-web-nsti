@@ -3,14 +3,12 @@
     <div class="mt-15"></div>
     <card />
     <div class="pagination">
-      <!--      <img-->
-      <!--        src="~/assets/images/paginate-left.svg"-->
-      <!--        alt="button previous pagination"-->
-      <!--        class="cursor-pointer"-->
-      <!--        @click="prev"-->
-      <!--      />-->
-      <!--              @click="changePage($route.query.page -= +$route.query.page -1 )"
--->
+            <img
+              src="~/assets/images/paginate-left.svg"
+              alt="button previous pagination"
+              class="cursor-pointer"
+              @click="prev"
+            />
       <div
         v-for="i in getMediaList.pagesleft"
         :key="i"
@@ -23,12 +21,12 @@
       >
         {{ i }}
       </div>
-      <!--      <img-->
-      <!--        src="~/assets/images/paginate-right.svg"-->
-      <!--        alt="button next pagination"-->
-      <!--        class="cursor-pointer"-->
-      <!--        @click="next"-->
-      <!--      />-->
+            <img
+              src="~/assets/images/paginate-right.svg"
+              alt="button next pagination"
+              class="cursor-pointer"
+              @click="next"
+            />
     </div>
   </div>
   <media-and-publication-mobile v-else />
@@ -70,21 +68,40 @@ export default {
     //   page: this.$route.query.page -1,
     //   size: this.size,
     // })
-    this.$router.replace({
-      path: this.$route.path,
-      query: { page: +this.$route.query.page || 0 },
-    })
+    if (!this.$route.query.page){
+      this.$router.replace({
+        path: this.$route.path,
+        query: { page: +this.$route.query.page || 0 },
+      })
+    } else {
+      this.getAllMedia(
+        {
+          page: this.$route.query.page,
+          size: this.size,
+        }
+      )
+    }
   },
   methods: {
     ...mapActions(['getAllMedia']),
-    // prev() {
-    //   const page = +this.$route.query.page - 1
-    //   console.log(page)
-    //   this.changePage(page)
-    // },
-    // next() {
-    //
-    // },
+    prev() {
+      const page = +this.$route.query.page -1
+      if(page >= 0) {
+        this.$router.replace({
+          path: this.$route.path,
+          query: { page },
+        })
+      }
+    },
+    next() {
+      const page = +this.$route.query.page +1
+      if(page < this.getMediaList.pagesleft) {
+        this.$router.replace({
+          path: this.$route.path,
+          query: { page },
+        })
+      }
+    },
     changePage(page) {
       this.$router.replace({
         path: this.$route.path,

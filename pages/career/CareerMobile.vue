@@ -39,7 +39,7 @@
       </div>
       <div class="joblist d-flex flex-wrap justify-center">
         <div
-          v-for="(job, i) in jobList"
+          v-for="(job, i) in getAllCareer"
           :key="i"
           class="joblist-card my-5 px-10 py-5"
         >
@@ -56,7 +56,7 @@
             x-large
             class="defaultGolden fontDark--text font-weight-bold d-flex"
             block
-            @click="onClickApply(job.htmlContent)"
+            @click="onClickApply(job.description)"
           >
             {{ $t('career.apply') }}
           </v-btn>
@@ -91,19 +91,21 @@
         :slide-ratio="1 / 1.3"
         :dragging-distance="70"
       >
-        <vueper-slide v-for="(review, i) in reviewsList" :key="i">
+        <vueper-slide v-for="(review, i) in getAllTestimoni" :key="i">
           <template #content>
             <div class="review-card pa-4 text-center">
               <div
                 class="review-card-innner d-flex flex-column align-center justify-space-between"
               >
-                <p class="mb-5 review-text">{{ review.review }}</p>
+                <p class="mb-5 review-text">{{review.description}}</p>
                 <div class="review-bottom-container">
                   <img
-                    :src="review.profileImg"
+                    :src="
+                      'https://back-api.nikkisuper.my.id/' + review.imageName
+                    "
                     alt="review profile picture"
                     width="35px"
-                    height="auto"
+                    height="35px"
                   />
                   <p class="review-name">{{ review.name }}</p>
                   <p class="review-position">{{ review.position }}</p>
@@ -299,11 +301,10 @@ export default {
   },
 
   computed: {
-    ...mapGetters(['getAllCareer']),
+    ...mapGetters(['getAllCareer','getAllTestimoni']),
   },
   mounted() {
     this.fetchAllCareer()
-    console.log(this.isMobileCheck())
   },
   methods: {
     ...mapActions(['fetchAllCareer']),
@@ -399,7 +400,7 @@ export default {
       background: rgba(41, 48, 110, 0.5);
       border-radius: 10px;
       font-family: 'Barlow', sans-serif;
-      height: 105%;
+      height: 18rem;
       .review-card-innner {
         height: 100%;
         .review-text {
@@ -419,7 +420,8 @@ export default {
           }
         }
         img {
-          border-radius: 50%;
+          border-radius: 100%;
+          object-fit: cover;
         }
       }
     }

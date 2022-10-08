@@ -28,12 +28,12 @@ export default {
   props: {},
   data() {
     return {
-      heading: 'About Us',
+      heading: 'Testimoni',
     }
   },
   head() {
     return {
-      title: 'Add New About Us',
+      title: 'Add New Testimoni',
     }
   },
   methods: {

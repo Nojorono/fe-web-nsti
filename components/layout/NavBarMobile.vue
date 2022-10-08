@@ -83,7 +83,7 @@ export default {
         },
         {
           title: 'MEDIA & PUBLICATION',
-          to: '/id/media-and-publication',
+          to: '/id/media-and-publication?page=0',
         },
         {
           title: 'CAREER',
@@ -113,7 +113,7 @@ export default {
         },
         {
           title: 'MEDIA & PUBLICATION',
-          to: '/media-and-publication',
+          to: '/media-and-publication?page=0',
         },
         {
           title: 'CAREER',

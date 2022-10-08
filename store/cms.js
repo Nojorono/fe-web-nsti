@@ -4,6 +4,7 @@ export default {
   state: {
     detailCareer: {},
     allTestimoni: [],
+    detailTestimoni: {}
   },
   getters: {
     getDetailCareer(state) {
@@ -12,6 +13,9 @@ export default {
     getAllTestimoni(state) {
       return state.allTestimoni
     },
+    getDetailTetimoni(state) {
+    return state.detailTestimoni
+    }
   },
   mutations: {
     setDetailCarerr(state, payload) {
@@ -20,6 +24,9 @@ export default {
     setAllTestimoni(state, payload) {
       state.allTestimoni = payload
     },
+    setDetailTestimoni(state, payload) {
+      state.detailTestimoni = payload
+    }
   },
   actions: {
     async postCreateProduct({ commit }, payload) {
@@ -194,8 +201,24 @@ sampleFile2 : File Type (imageIklan)
         console.log(e)
       }
     },
-    async fetchDetailTestimoni({ commit }, payload) {
+    async fetchDetailTestimoni({ commit }, id) {
       // http://back-api.nikkisuper.my.id/testimoni/detail/b081d2d6-28a4-4b44-bfd0-ba3c8709a2e3
+      const { data } = await axios.get(`testimoni/detail/${id}`)
+      console.log(data, '======')
+      commit('setDetailTestimoni', data[0])
+    },
+    async patchDetailTestimoni({ commit }, payload) {
+      await axios({
+        url: `testimoni/edit`,
+        method: 'PATCH',
+        data: {
+          ...payload,
+        },
+        headers: {
+          'Content-Type': 'multipart/form-data',
+          access_token: token,
+        },
+      })
     },
     async destroyTestimoni({ commit }, id) {
       await axios({
