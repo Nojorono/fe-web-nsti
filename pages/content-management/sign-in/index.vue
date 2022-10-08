@@ -53,6 +53,20 @@
           Sign Up</span
         >
       </div>
+      <v-dialog v-model="validateDialog" width="500">
+        <v-card class="text-center">
+          <v-card-title class="text-h5 grey black--text lighten-2 py-5">
+            Some of the Fields are empty!
+          </v-card-title>
+        </v-card>
+      </v-dialog>
+      <v-dialog v-model="validateDialogPass" width="500">
+        <v-card class="text-center">
+          <v-card-title class="text-h5 grey lighten-2 black--text py-5">
+            Email/Password wrong!
+          </v-card-title>
+        </v-card>
+      </v-dialog>
     </div>
   </div>
 </template>
@@ -68,6 +82,8 @@ export default {
     return {
       email: '',
       password: '',
+      validateDialog: false,
+      validateDialogPass: false
     }
   },
   methods: {
@@ -80,16 +96,20 @@ export default {
         email: this.email,
         password: this.password,
       }
-      this.login(payload)
-        .then((_) => {
-          console.log('masuk then')
-          this.$router.push({
-            path: '/content-management/products',
+      if (!this.email || !this.password) {
+        this.validateDialog = true
+      } else {
+        this.login(payload)
+          .then((_) => {
+            this.$router.push({
+              path: '/content-management/products',
+            })
           })
-        })
-        .catch((e) => {
-          alert('email/password wrong')
-        })
+          .catch((e) => {
+            this.validateDialogPass = true
+          })
+      }
+
     },
   },
   head() {

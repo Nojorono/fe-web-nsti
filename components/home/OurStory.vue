@@ -15,7 +15,6 @@
           class=""
         />
       </div>
-
       <div class="wrapper">
         <div class="text-container">
           <h1>{{ $t('home.ourStory.title') }}</h1>
@@ -44,7 +43,6 @@ export default {
   height: 100%;
 
   .smelling-coffee {
-    //height: 900px;
     width: 100%;
     img {
       object-fit: cover;
@@ -58,12 +56,10 @@ export default {
     background: url('assets/images/our-story-transparent.svg') no-repeat
       no-repeat right top;
     padding-bottom: 5rem;
-    right: -15rem;
-    //left: 10%;
-
+    right: -30%;
     .text-container {
       position: absolute;
-      right: 26rem;
+      right: 40%;
       top: 6rem;
       font-family: 'Barlow', sans-serif;
       width: 25rem;

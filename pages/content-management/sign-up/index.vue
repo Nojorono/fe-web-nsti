@@ -53,7 +53,12 @@
           >
             Confirm Password
           </label>
-          <input id="confirm-password" type="password" class="input-text" />
+          <input
+            id="confirm-password"
+            v-model="confirmPassword"
+            type="password"
+            class="input-text"
+          />
         </div>
       </div>
       <!--      <div class="password-validation fontLightBlue&#45;&#45;text my-3">-->
@@ -107,6 +112,20 @@
           Sign In</span
         >
       </div>
+      <v-dialog v-model="validateDialog" width="500" >
+        <v-card class="text-center">
+          <v-card-title class="text-h5 grey black--text lighten-2 py-5">
+            Some of the Fields are empty!
+          </v-card-title>
+        </v-card>
+      </v-dialog>
+      <v-dialog v-model="validateDialogPass" width="500" >
+        <v-card class="text-center">
+          <v-card-title class="text-h5 grey black--text lighten-2 py-5">
+            Password did not match!
+          </v-card-title>
+        </v-card>
+      </v-dialog>
     </div>
   </div>
 </template>
@@ -122,6 +141,9 @@ export default {
       lName: null,
       email: null,
       password: null,
+      confirmPassword: null,
+      validateDialog: false,
+      validateDialogPass: false,
       // regex
       uppercase: false,
       specialChar: false,
@@ -136,13 +158,27 @@ export default {
   },
   methods: {
     register() {
-      this.$store.dispatch('register', {
-        email: this.email,
-        password: this.password,
-        username: this.fName + this.lName,
-      }).then((_) => {
-        this.$router.push('/content-management/sign-in')
-      })
+      if (
+        !this.fName ||
+        !this.lName ||
+        !this.email ||
+        !this.password ||
+        !this.confirmPassword
+      ) {
+        this.validateDialog = true
+      } else if (this.password !== this.confirmPassword) {
+        this.validateDialogPass = true
+      } else {
+        this.$store
+          .dispatch('register', {
+            email: this.email,
+            password: this.password,
+            username: this.fName + this.lName,
+          })
+          .then((_) => {
+            this.$router.push('/content-management/sign-in')
+          })
+      }
     },
   },
 }

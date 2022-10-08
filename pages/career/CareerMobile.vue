@@ -39,7 +39,7 @@
       </div>
       <div class="joblist d-flex flex-wrap justify-center">
         <div
-          v-for="(job, i) in getAllCareer"
+          v-for="(job, i) in getAllCareer.data"
           :key="i"
           class="joblist-card my-5 px-10 py-5"
         >
@@ -67,14 +67,25 @@
           src="~/assets/images/paginate-left.svg"
           alt="button previous pagination"
           class="cursor-pointer"
+          @click="prev"
         />
-        <div v-for="i in pages" :key="i" class="number cursor-pointer">
+        <div
+          v-for="i in getAllCareer?.pagesLeft"
+          :key="i"
+          :class="
+            +$route.query.page + 1 === i
+              ? 'number cursor-pointer num-active'
+              : 'number cursor-pointer'
+          "
+          @click="changePage(i)"
+        >
           {{ i }}
         </div>
         <img
           class="cursor-pointer"
           src="~/assets/images/paginate-right.svg"
           alt="button next pagination"
+          @click="next"
         />
       </div>
     </v-col>
@@ -299,7 +310,14 @@ export default {
       title: 'Career With Us',
     }
   },
-
+  watch: {
+    '$route.query'() {
+      this.fetchAllCareer({
+        page: this.$route.query.page,
+        size: this.size,
+      })
+    },
+  },
   computed: {
     ...mapGetters(['getAllCareer', 'getAllTestimoni']),
   },
@@ -308,9 +326,33 @@ export default {
   },
   methods: {
     ...mapActions(['fetchAllCareer']),
+    prev() {
+      const page = +this.$route.query.page - 1
+      if (page >= 0) {
+        this.$router.replace({
+          path: this.$route.path,
+          query: { page },
+        })
+      }
+    },
+    next() {
+      const page = +this.$route.query.page + 1
+      if (page < this.fetchAllCareer.pagesleft) {
+        this.$router.replace({
+          path: this.$route.path,
+          query: { page },
+        })
+      }
+    },
     onClickApply(html) {
       this.dialog = true
       this.content = html
+    },
+    changePage(page) {
+      this.$router.replace({
+        path: this.$route.path,
+        query: { page: page - 1 },
+      })
     },
   },
 }
@@ -376,14 +418,26 @@ export default {
         align-items: center;
         border: 2.04082px solid $color-secondary-root;
         border-radius: 6px;
-        width: 65.31px;
-        height: 65.31px;
+        width: 55px;
+        height: 55px;
         margin: 0 0.5rem;
         color: $color-secondary-root;
       }
-
+      .num-active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2.04082px solid $color-secondary-root;
+        background: $color-secondary-dark-root;
+        border-radius: 6px;
+        width: 55px;
+        height: 55px;
+        margin: 0 0.5rem;
+        color: $color-primary-root;
+      }
       img {
         margin: 0 0.5rem;
+        width: 55px;
       }
     }
   }

@@ -12,7 +12,7 @@
       <top-carousel-mobile />
       <our-story-mobile />
       <products-mobile />
-      <media-and-publication-mobile />
+      <media-and-publication-mobile-comp />
       <CareerAtMobile />
       <contact-us-mobile />
     </template>
@@ -30,16 +30,16 @@ import ContactUs from '@/components/home/ContactUs.vue'
 import TopCarouselMobile from '@/components/home/mobile/TopCarouselMobile'
 import OurStoryMobile from '@/components/home/mobile/OurStoryMobile'
 import ProductsMobile from '@/pages/products/ProductsMobile'
-import MediaAndPublicationMobile from '@/pages/media-and-publication/MediaMobile'
 import CareerAtMobile from '@/components/home/mobile/CareerAtMobile'
 import ContactUsMobile from '@/components/home/mobile/ContactUsMobile'
+import MediaAndPublicationMobileComp from '@/components/home/mobile/MediaAndPublicationMobile'
 
 export default {
   name: 'Home',
   components: {
+    MediaAndPublicationMobileComp,
     ContactUsMobile,
     CareerAtMobile,
-    MediaAndPublicationMobile,
     ProductsMobile,
     OurStoryMobile,
     TopCarouselMobile,

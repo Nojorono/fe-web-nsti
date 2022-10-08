@@ -1,11 +1,45 @@
 import axios from '~/plugins/axios'
 
 export default {
+  /*
+  http://back-api.nikkisuper.my.id/searchbar/search
+METHOD POST
+PAYLOAD
+text: string
+limit: string
+RESPONSE
+[
+    {
+        "id": "1023d4bf-ddda-4108-bfb1-7b0fccfd98ee",
+        "title": "TEST MEDIA 2",
+        "category": "media"
+    },
+    {
+        "id": "4639bc9d-e777-4bff-9e1a-ae896f4aab64",
+        "title": "TEST MEDIA 6",
+        "category": "media"
+    },
+    {
+        "id": "529a3781-f026-4818-ad0e-7345ed5dcafc",
+        "title": "TEST MEDIA 3",
+        "category": "media"
+    },
+    {
+        "id": "6c7d40e5-9a04-43b2-8422-c1e30a16852b",
+        "title": "TEST MEDIA 1",
+        "category": "media"
+    },
+    {
+        "id": "856e15a4-b32f-41b7-a613-0fef5e3216c9",
+        "title": "TEST MEDIA 4",
+        "category": "media"
+    }
+]
+   */
   state: {
     mediaList: [],
     detailMedia: {},
-    allProducts: [
-    ],
+    allProducts: [],
     allCareer: [],
     detailProducts: [],
   },
@@ -48,7 +82,7 @@ export default {
     async getAllMedia({ commit }, payload) {
       try {
         const { data } = await axios.get(
-          `media/readAll?page=${payload.page}&size=${payload.size}`
+          `media/readAll?page=${payload.page * 6}&size=${payload.size}`
         )
         commit('setMediaList', data)
       } catch (e) {
@@ -81,7 +115,7 @@ export default {
     },
     async fetchAllCareer({ commit }, payload) {
       const { data } = await axios.get(
-        `career/readAll?page=${payload.page}&size=${payload.size}`
+        `career/readAll?page=${payload.page * 6}&size=${payload.size}`
       )
       commit('setAllCareer', data)
     },

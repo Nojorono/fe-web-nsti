@@ -2,7 +2,7 @@
   <v-col class="product-parent-wrapper ma-0 pa-0 mt-15 mb-15" cols="12">
     <h1>{{ $t('home.products.title') }}</h1>
     <div class="carousel-container">
-      <ProductsCarousel :slides="getAllProducts" />
+      <ProductsCarousel v-if="getAllProducts.length" :slides="getAllProducts" />
     </div>
   </v-col>
 </template>

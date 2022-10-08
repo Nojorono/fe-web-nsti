@@ -79,53 +79,51 @@ export default {
   .text-overlay {
     position: absolute;
     top: 0;
-  }
-}
+    height: 100%;
+    width: 100%;
+    z-index: 2;
 
-.text-overlay {
-  height: 100%;
-  width: 100%;
-  z-index: 2;
-
-  //left text
-  .about-us {
-    .about-us-container {
-      font-family: 'Barlow', sans-serif;
-      h2 {
-        text-shadow: 1.5px 1.5px 2px rgba(0, 0, 0, 0.6);
-        font-weight: 500;
-        font-size: 1.3em;
-        @include mobile {
-          font-size: 0.5em;
-        }
-      }
-      width: 37rem;
-    }
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  //right text
-  .our-motto {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    align-items: center;
-    padding-bottom: 1rem;
-    padding-left: 10%;
-    .motto-container {
-      text-align: left;
-      width: 30rem;
-      h1 {
-        font-size: 6.5em;
-        letter-spacing: -0.05em;
+    //left text
+    .about-us {
+      .about-us-container {
         font-family: 'Barlow', sans-serif;
-        font-weight: 700;
-        line-height: 0.9;
-        @include mobile {
-          font-size: 3em;
+        h2 {
+          text-shadow: 1.5px 1.5px 2px rgba(0, 0, 0, 0.6);
+          font-weight: 500;
+          font-size: 1.3em;
+          @include mobile {
+            font-size: 0.5em;
+          }
+        }
+        width: 37rem;
+      }
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      padding-left: 8%;
+    }
+
+    //right text
+    .our-motto {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      align-items: center;
+      padding-bottom: 1rem;
+      padding-left: 10%;
+      .motto-container {
+        text-align: left;
+        width: 30rem;
+        h1 {
+          font-size: 6.5em;
+          letter-spacing: -0.05em;
+          font-family: 'Barlow', sans-serif;
+          font-weight: 700;
+          line-height: 0.9;
+          @include mobile {
+            font-size: 3em;
+          }
         }
       }
     }

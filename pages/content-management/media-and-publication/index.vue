@@ -116,7 +116,6 @@ export default {
   },
   watch: {
     '$route.query'() {
-      // this.page = this.$route.query.page -1
       this.getAllMedia({
         page: this.$route.query.page,
         size: this.size,
@@ -141,14 +140,25 @@ export default {
     },
   },
   mounted() {
-    this.getAllMedia({
-      page: this.$route.query.page,
-      size: this.size,
-    })
-    this.$router.replace({
-      path: this.$route.path,
-      query: { page: +this.$route.query.page || 0 },
-    })
+    // this.getAllMedia({
+    //   page: this.$route.query.page,
+    //   size: this.size,
+    // })
+    // this.$router.replace({
+    //   path: this.$route.path,
+    //   query: { page: +this.$route.query.page || 0 },
+    // })
+    if (!this.$route.query.page) {
+      this.$router.replace({
+        path: this.$route.path,
+        query: { page: +this.$route.query.page || 0 },
+      })
+    } else {
+      this.getAllMedia({
+        page: this.$route.query.page,
+        size: this.size,
+      })
+    }
   },
 }
 </script>

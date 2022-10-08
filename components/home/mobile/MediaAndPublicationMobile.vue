@@ -54,7 +54,7 @@
 import { mapActions, mapGetters } from 'vuex'
 
 export default {
-  name: 'MediaAndPublication',
+  name: 'MediaAndPublicationMobileComp',
   components: {},
   data() {
     return {
@@ -118,7 +118,7 @@ export default {
     ...mapGetters(['getMediaList']),
   },
   mounted() {
-    this.getAllMedia().then((_) => {})
+    // this.getAllMedia().then((_) => {})
   },
   methods: {
     ...mapActions(['getAllMedia']),

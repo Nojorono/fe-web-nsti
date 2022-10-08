@@ -1,9 +1,10 @@
 <template>
   <div class="media-and-publication-mobile">
     <card />
+    <template></template>
     <div
       :class="
-        getMediaList.pagesleft >= 3
+        getMediaList.pagesleft <= 3
           ? 'pagination justify-center'
           : 'pagination justify-start'
       "
@@ -46,7 +47,7 @@ export default {
   components: { card },
   data() {
     return {
-      pages: 1,
+      size: 6,
     }
   },
   head() {
@@ -56,7 +57,6 @@ export default {
   },
   watch: {
     '$route.query'() {
-      // this.page = this.$route.query.page -1
       this.getAllMedia({
         page: this.$route.query.page,
         size: this.size,

@@ -40,8 +40,8 @@ export default {
     ...mapActions(['postCreateProduct']),
     postBtn(payload) {
       this.postCreateProduct({
-        sampleFile1: payload.imgPreview2,
-        sampleFile2: payload.imgPreview,
+        sampleFile1: payload.imgPreview,
+        sampleFile2: payload.imgPreview2,
         description: payload.description,
         title: '',
       }).then((_) => {

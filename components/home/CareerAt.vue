@@ -9,7 +9,7 @@
         <div class="life-at-img">
           <img
             :src="require('assets/images/History-nikki.png')"
-            width="1920"
+            width="110%"
             height="500"
             alt="nikki history"
             class=""
@@ -56,12 +56,13 @@ export default {
       height: 500px;
       background: url('assets/images/our-story-transparent.svg') no-repeat
         no-repeat right top;
+      right: 10%;
       .text-container {
         position: absolute;
-        left: 50%;
+        right: 30%;
         top: 7rem;
         font-family: 'Barlow', sans-serif;
-        width: 20%;
+        width: 25rem;
 
         h1 {
           font-weight: 800;

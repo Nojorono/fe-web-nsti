@@ -19,7 +19,7 @@ export default {
     },
     getGlobalNotify(state) {
       return state.globalNotify
-    }
+    },
   },
   mutations: {
     setDetailCarerr(state, payload) {
@@ -33,7 +33,7 @@ export default {
     },
     setGlobalNotify(state, payload) {
       state.globalNotify = payload
-    }
+    },
   },
   actions: {
     async postCreateProduct({ commit }, payload) {
@@ -57,24 +57,25 @@ export default {
         console.log(e)
       } finally {
         commit('setGlobalNotify', false)
-
       }
     },
     async postCreateCareer({ commit }, payload) {
       commit('setGlobalNotify', true)
-      const { data } = await axios.post(
-        `career/create`,
-        {
-          ...payload,
-        },
-        {
-          headers: {
-            access_token: token,
+      const { data } = await axios
+        .post(
+          `career/create`,
+          {
+            ...payload,
           },
-        }
-      ).finally((_) => {
-        commit('setGlobalNotify', false)
-      })
+          {
+            headers: {
+              access_token: token,
+            },
+          }
+        )
+        .finally((_) => {
+          commit('setGlobalNotify', false)
+        })
       console.log(data)
     },
     async deleteCareer({ commit }, payload) {
@@ -155,7 +156,6 @@ export default {
         console.log(e)
       } finally {
         commit('setGlobalNotify', false)
-
       }
     },
     async patchDetailMedia({ commit }, payload) {
@@ -173,7 +173,6 @@ export default {
       })
       console.log(data)
       commit('setGlobalNotify', false)
-
     },
     async destroyMedia({ commit }, id) {
       commit('setGlobalNotify', true)
@@ -189,7 +188,6 @@ export default {
       }).finally((_) => {
         commit('setGlobalNotify', false)
       })
-
     },
     async patchDetailProducts({ commit }, payload) {
       commit('setGlobalNotify', true)
@@ -210,7 +208,7 @@ export default {
     // testimoni
     async fetchAllTestimoni({ commit }, payload) {
       try {
-        const { data } = await axios.get(`testimoni/readAll?size=15&page=0`)
+        const { data } = await axios.get(`testimoni/readAll?size=100&page=0`)
         commit('setAllTestimoni', data)
         console.log(data)
       } catch (e) {
@@ -238,7 +236,6 @@ export default {
         console.log(e)
       } finally {
         commit('setGlobalNotify', false)
-
       }
     },
     async fetchDetailTestimoni({ commit }, id) {

@@ -1,26 +1,34 @@
 <template>
-  <div class="cms-about-us-container">
-    <template v-if="!getAllCareer.length">
+  <div class="cms-career-container">
+    <template v-if="!getAllCareer?.data?.length">
       <empty-card />
     </template>
     <div
-      v-else-if="getAllCareer.length"
+      v-else-if="getAllCareer?.data?.length"
       class="d-flex flex-wrap card-container justify-start align-center"
     >
       <career-card
-        v-for="(card, i) in getAllCareer"
+        v-for="(card, i) in getAllCareer.data"
         :key="i"
         :card="card"
         class=""
         edit-page="content-management-career-edit-id___en"
       />
     </div>
-    <!-- <div class="pagination">
-      <div @click="changePage(i)" v-for="i in getAllCareer.pagesleft" :key="i" :class="+$route.query.page + 1 === i ?'number cursor-pointer num-active':'number cursor-pointer'">
+    <div class="pagination">
+      <div
+        v-for="i in getAllCareer.pagesLeft"
+        :key="i"
+        :class="
+          +$route.query.page + 1 === i
+            ? 'number cursor-pointer num-active'
+            : 'number cursor-pointer'
+        "
+        @click="changePage(i)"
+      >
         {{ i }}
       </div>
     </div>
-    -->
   </div>
 </template>
 
@@ -93,14 +101,39 @@ export default {
   computed: {
     ...mapGetters(['getAllCareer']),
   },
+  watch: {
+    '$route.query'() {
+      this.fetchAllCareer({
+        page: this.$route.query.page,
+        size: this.size,
+      })
+    },
+  },
   mounted() {
-    this.fetchAllCareer({
-      page: this.page,
-      size: this.size,
-    })
+    // this.fetchAllCareer({
+    //   page: this.page,
+    //   size: this.size,
+    // })
+    if (!this.$route.query.page) {
+      this.$router.replace({
+        path: this.$route.path,
+        query: { page: +this.$route.query.page || 0 },
+      })
+    } else {
+      this.fetchAllCareer({
+        page: this.$route.query.page,
+        size: this.size,
+      })
+    }
   },
   methods: {
     ...mapActions(['fetchAllCareer']),
+    changePage(page) {
+      this.$router.replace({
+        path: this.$route.path,
+        query: { page: page - 1 },
+      })
+    },
   },
 }
 </script>

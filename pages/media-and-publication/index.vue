@@ -52,7 +52,6 @@ export default {
   },
   watch: {
     '$route.query'() {
-      // this.page = this.$route.query.page -1
       this.getAllMedia({
         page: this.$route.query.page,
         size: this.size,
@@ -63,11 +62,6 @@ export default {
     ...mapGetters(['getMediaList']),
   },
   mounted() {
-    // this.getAllMedia().then((_) => {})
-    // this.getAllMedia({
-    //   page: this.$route.query.page -1,
-    //   size: this.size,
-    // })
     if (!this.$route.query.page) {
       this.$router.replace({
         path: this.$route.path,

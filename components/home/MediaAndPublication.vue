@@ -1,8 +1,10 @@
 <template>
-  <v-col col="11" class="my-6 d-flex justify-center">
+  <v-col col="11" class="mb-16 d-flex justify-center">
     <div class="media-wrapper">
       <div class="media-header d-flex justify-space-between align-center">
-        <h1 class="defaultGolden--text ml-8">{{ $t('home.media.title') }}</h1>
+        <h1 class="defaultGolden--text ml-8">
+          {{ $t('home.media.title') }}
+        </h1>
         <template v-if="$route.fullPath === '/' || $route.fullPath === '/id'">
           <v-btn
             rounded
@@ -24,7 +26,7 @@
             ? getMediaList?.data?.slice(0, 3)
             : getMediaList?.data?.slice(0, 6)"
           :key="i"
-          class="media-card mx-10"
+          class="media-card mx-7"
           :to="
             $i18n.locale === 'id'
               ? '/id/media-and-publication/detail/' + card.id

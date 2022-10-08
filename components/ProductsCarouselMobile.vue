@@ -38,7 +38,7 @@
             <img
               :src="
                 'https://back-api.nikkisuper.my.id/' +
-                linkPopup?.images[1].imageName
+                linkPopup?.images[0].imageName
               "
               height="auto"
               width="100%"

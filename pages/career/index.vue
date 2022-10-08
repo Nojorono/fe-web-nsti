@@ -40,7 +40,7 @@
       </div>
       <div class="joblist d-flex flex-wrap justify-center">
         <div
-          v-for="(job, i) in getAllCareer"
+          v-for="(job, i) in getAllCareer?.data"
           :key="i"
           class="joblist-card my-5 px-10 py-5"
         >
@@ -69,7 +69,16 @@
           alt="button previous pagination"
           class="cursor-pointer"
         />
-        <div v-for="i in pages" :key="i" class="number cursor-pointer">
+        <div
+          v-for="i in getAllCareer?.pagesLeft"
+          :key="i"
+          :class="
+            +$route.query.page + 1 === i
+              ? 'number cursor-pointer num-active'
+              : 'number cursor-pointer'
+          "
+          @click="changePage(i)"
+        >
           {{ i }}
         </div>
         <img
@@ -190,114 +199,6 @@ export default {
           img: require('assets/images/career-2.png'),
         },
       ],
-      jobList: [
-        {
-          title: 'Production Staff',
-          location: 'Kudus, Indonesia',
-          htmlContent: `<h1>Job Description:</h1>
-            <p> Supervisor & person in charge of SKM/SKT and BLENDING production units</p>
-            <ul>
-              <li>Manage the production work system of SKM/SKT and BLENDING units.</li>
-              <li>Ensure production activities are carried out according to SOPs and run smoothly.</li>
-              <li>Ensure the quality of production according to the standards that have been set.</li>
-              <li>Perform routine control and evaluation of the results of production work.</li>
-              <li>Ensure that there are no work accidents in all work areas of factories, warehouses, and offices, and ensure that work processes are carried out properly to prevent work accidents.</li>
-              <li>Fostering employees and developing the quality of human resources.</li>
-              <li>Execute the 5R or 5S program according to the agreed rules.</li>
-              <li>Ensure good communication with the production team, QC, Engineering, and PPIC.</li>
-              <li>Make production performance reports.</li>
-            </ul>
-            <br>
-            <h3>Requirements:</h3>
-            <ul>
-              <li>\tIndonesian Citizen (WNI)</li>
-              <li>\tMale / Female physically and mentally healthy, maximum age 30 years old</li>
-              <li>\tMinimum education Strata 1 ( S1 )</li>
-              <li>Preference will be given to those with work experience</li>
-              <li>\tCan work in a team and individually</li>
-              <li>Profile photo 4x6 ( 2 sheets )</li>
-              <li>\tPhotcopy of ID Card and Family Card</li>
-              <li>Photocopy of the latest Diploma Certificate</li>
-              <li>Curriculum Vitae </li>
-              <li> Certificate of Good Behavior (SKCK) from the local Police</li>
-            </ul>
-            <br>
-            <h3>Notes:</h3>
-            <ul>
-              <li>\tDeadline for application is December 20, 2022.</li>
-              <li>Please include a telephone number that can be contacted.</li>
-            </ul>`,
-        },
-        {
-          title: 'Machine Technician',
-          location: 'Jakarta, Indonesia',
-          htmlContent: `<h1>Job Description:</h1>
-            <ul>
-              <li>Responsible for the SKM Making/Packing machine at PT Nikki Super Tobacco Indonesia.</li>
-              <li>Carry out repairs, maintenance, development, and innovations to maintain good packing machine performance.</li>
-              <li> Ensure that the safety features of machines and equipment work properly and make improvements when necessary.</li>
-              <li> Ensuring that there are no work accidents in all work areas of factories, warehouses, and offices, as well as ensuring that work processes are carried out properly to prevent work accidents.</li>
-              <li> Monitoring the performance of the SKM Making/Packing machine and its supporting equipment, as well as evaluating and taking corrective actions.</li>
-              <li> Execute the 5R or 5S program according to the agreed rules.</li>
-              <li>Ensure good communication with the production team, QC, Engineering, and PPIC</li>
-              <li>Make reports on the performance of machines and supporting equipment</li>
-            </ul>
-            <br>
-            <h3>Requirements:</h3>
-            <ul>
-              <li>\tIndonesian Citizen (WNI)</li>
-              <li>\tMale / Female physically and mentally healthy, maximum age 30 years old</li>
-              <li>Education Vocational High School/DIII Mechanical Engineering Major</li>
-              <li>Preference will be given to those with work experience</li>
-              <li>\tCan work in a team and individually</li>
-              <li>Profile photo 4x6 ( 2 sheets )</li>
-              <li>\tPhotcopy of ID Card and Family Card</li>
-              <li>Photocopy of the latest Diploma Certificate</li>
-              <li>Curriculum Vitae </li>
-              <li> Certificate of Good Behavior (SKCK) from the local Police</li>
-            </ul>
-            <br>
-            <h3>Notes:</h3>
-            <ul>
-              <li>\tDeadline for application is December 20, 2022.</li>
-              <li>Please include a telephone number that can be contacted.</li>
-            </ul>`,
-        },
-        {
-          title: 'Electric Technician',
-          location: 'Jakarta, Indonesia',
-          htmlContent: `<h1>Job Description:</h1>
-            <ul>
-              <li> Responsible for the Genset/Compressor/Vacuum Pump utility facilities at PT Nikki Super Tobacco Indonesia.</li>
-              <li>Carry out repairs, maintenance, development, and innovations to maintain good engine performance in the utility section.</li>
-              <li> Ensuring the safety features of machines and equipment work properly and making improvements when necessary.</li>
-              <li> Ensuring that there are no work accidents in all work areas of factories, warehouses, and offices, as well as ensuring that work processes are carried out properly to prevent work accidents.</li>
-              <li> Execute the 5R or 5S program according to the agreed rules.</li>
-              <li>Ensure good communication with the production team, QC, Engineering, and PPIC.</li>
-              <li>Make reports on the performance of utility machines in the scope of work.</li>
-            </ul>
-            <br>
-            <h3>Requirements:</h3>
-            <ul>
-              <li>\tIndonesian Citizen (WNI)</li>
-              <li>\tMale / Female physically and mentally healthy, maximum age 30 years old</li>
-              <li> Education Vocational High School/DIII Electrical Engineering Major</li>
-              <li>Preference will be given to those with work experience</li>
-              <li>\tCan work in a team and individually</li>
-              <li>Profile photo 4x6 ( 2 sheets )</li>
-              <li>\tPhotcopy of ID Card and Family Card</li>
-              <li>Photocopy of the latest Diploma Certificate</li>
-              <li>Curriculum Vitae </li>
-              <li> Certificate of Good Behavior (SKCK) from the local Police</li>
-            </ul>
-            <br>
-            <h3>Notes:</h3>
-            <ul>
-              <li>\tDeadline for application is December 20, 2022.</li>
-              <li>Please include a telephone number that can be contacted.</li>
-            </ul>`,
-        },
-      ],
     }
   },
   head() {
@@ -305,15 +206,33 @@ export default {
       title: 'Career With Us',
     }
   },
-
+  watch: {
+    '$route.query'() {
+      this.fetchAllCareer({
+        page: this.$route.query.page,
+        size: this.size,
+      })
+    },
+  },
   computed: {
     ...mapGetters(['getAllCareer', 'getAllTestimoni']),
   },
   mounted() {
-    this.fetchAllCareer({
-      page: this.page,
-      size: this.size,
-    })
+    // this.fetchAllCareer({
+    //   page: this.page,
+    //   size: this.size,
+    // })
+    if (!this.$route.query.page) {
+      this.$router.replace({
+        path: this.$route.path,
+        query: { page: +this.$route.query.page || 0 },
+      })
+    } else {
+      this.fetchAllCareer({
+        page: this.$route.query.page,
+        size: this.size,
+      })
+    }
     this.fetchAllTestimoni()
   },
   methods: {
@@ -321,6 +240,30 @@ export default {
     onClickApply(html) {
       this.dialog = true
       this.content = html
+    },
+    prev() {
+      const page = +this.$route.query.page - 1
+      if (page >= 0) {
+        this.$router.replace({
+          path: this.$route.path,
+          query: { page },
+        })
+      }
+    },
+    next() {
+      const page = +this.$route.query.page + 1
+      if (page < this.fetchAllCareer.pagesleft) {
+        this.$router.replace({
+          path: this.$route.path,
+          query: { page },
+        })
+      }
+    },
+    changePage(page) {
+      this.$router.replace({
+        path: this.$route.path,
+        query: { page: page - 1 },
+      })
     },
   },
 }
@@ -364,7 +307,7 @@ export default {
       gap: 3%;
 
       .joblist-card {
-        width: 396px;
+        width: 390px;
         background: rgba(41, 48, 110, 0.5);
         border-radius: 10px;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -396,6 +339,18 @@ export default {
         height: 55px;
         margin: 0 0.5rem;
         color: $color-secondary-root;
+      }
+      .num-active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2.04082px solid $color-secondary-root;
+        background: $color-secondary-dark-root;
+        border-radius: 6px;
+        width: 55px;
+        height: 55px;
+        margin: 0 0.5rem;
+        color: $color-primary-root;
       }
 
       img {
