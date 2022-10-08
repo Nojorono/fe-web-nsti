@@ -163,7 +163,7 @@ export default {
     return {
       content: '',
       dialog: false,
-      pages: 1,
+      size: 6,
       reviewsList: [
         {
           review: this.$t('career.reviewer1.comment'),
@@ -322,7 +322,10 @@ export default {
     ...mapGetters(['getAllCareer', 'getAllTestimoni']),
   },
   mounted() {
-    this.fetchAllCareer()
+    this.fetchAllCareer({
+      page: this.$route.query.page,
+      size: this.size,
+    })
   },
   methods: {
     ...mapActions(['fetchAllCareer']),
