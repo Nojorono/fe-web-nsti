@@ -4,7 +4,7 @@ export default {
   state: {
     detailCareer: {},
     allTestimoni: [],
-    detailTestimoni: {}
+    detailTestimoni: {},
   },
   getters: {
     getDetailCareer(state) {
@@ -14,8 +14,8 @@ export default {
       return state.allTestimoni
     },
     getDetailTetimoni(state) {
-    return state.detailTestimoni
-    }
+      return state.detailTestimoni
+    },
   },
   mutations: {
     setDetailCarerr(state, payload) {
@@ -26,7 +26,7 @@ export default {
     },
     setDetailTestimoni(state, payload) {
       state.detailTestimoni = payload
-    }
+    },
   },
   actions: {
     async postCreateProduct({ commit }, payload) {

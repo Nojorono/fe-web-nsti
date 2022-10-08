@@ -127,7 +127,6 @@ export default {
     background: #f8f5ec;
     p {
       color: #000;
-
     }
     width: 100%;
     padding: 5px 16px;

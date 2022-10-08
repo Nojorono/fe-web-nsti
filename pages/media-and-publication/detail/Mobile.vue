@@ -36,8 +36,7 @@ export default {
   name: 'DetailMediaMobile',
   components: {},
   data() {
-    return {
-    }
+    return {}
   },
   head() {
     return {

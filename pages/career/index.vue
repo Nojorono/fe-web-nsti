@@ -100,7 +100,7 @@
               <div
                 class="review-card-innner d-flex flex-column align-center justify-space-between"
               >
-                <p class="mb-5 review-text" >{{review.description}}</p>
+                <p class="mb-5 review-text">{{ review.description }}</p>
                 <div class="review-bottom-container">
                   <img
                     :src="

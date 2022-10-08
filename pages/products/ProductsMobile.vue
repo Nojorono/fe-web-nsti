@@ -13,7 +13,10 @@
       class="carousel-container"
       :style="$route.fullPath !== '/' ? 'height: 76vh' : ''"
     >
-      <products-carousel-mobile v-if="getAllProducts.length" :slides="getAllProducts" />
+      <products-carousel-mobile
+        v-if="getAllProducts.length"
+        :slides="getAllProducts"
+      />
     </div>
   </div>
 </template>

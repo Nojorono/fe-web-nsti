@@ -1,7 +1,13 @@
 <template>
   <div class="media-and-publication-mobile">
     <card />
-    <div :class="getMediaList.pagesleft >=3 ? 'pagination justify-center' : 'pagination justify-start'">
+    <div
+      :class="
+        getMediaList.pagesleft >= 3
+          ? 'pagination justify-center'
+          : 'pagination justify-start'
+      "
+    >
       <img
         src="~/assets/images/paginate-left.svg"
         alt="button previous pagination"
@@ -61,25 +67,23 @@ export default {
     ...mapGetters(['getMediaList']),
   },
   mounted() {
-    if (!this.$route.query.page){
+    if (!this.$route.query.page) {
       this.$router.replace({
         path: this.$route.path,
         query: { page: +this.$route.query.page || 0 },
       })
     } else {
-      this.getAllMedia(
-        {
-          page: this.$route.query.page,
-          size: this.size,
-        }
-      )
+      this.getAllMedia({
+        page: this.$route.query.page,
+        size: this.size,
+      })
     }
   },
   methods: {
     ...mapActions(['getAllMedia']),
     prev() {
-      const page = +this.$route.query.page -1
-      if(page >= 0) {
+      const page = +this.$route.query.page - 1
+      if (page >= 0) {
         this.$router.replace({
           path: this.$route.path,
           query: { page },
@@ -87,8 +91,8 @@ export default {
       }
     },
     next() {
-      const page = +this.$route.query.page +1
-      if(page < this.getMediaList.pagesleft) {
+      const page = +this.$route.query.page + 1
+      if (page < this.getMediaList.pagesleft) {
         this.$router.replace({
           path: this.$route.path,
           query: { page },
@@ -101,7 +105,7 @@ export default {
         query: { page: page - 1 },
       })
     },
-  }
+  },
 }
 </script>
 
@@ -109,7 +113,7 @@ export default {
 .media-and-publication-mobile {
   font-family: 'Barlow', sans-serif;
   .pagination {
-    overflow:  auto;
+    overflow: auto;
     display: flex;
     align-items: center;
     flex: 1;
@@ -144,6 +148,5 @@ export default {
       width: 55px;
     }
   }
-
 }
 </style>

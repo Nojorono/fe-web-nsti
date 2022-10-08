@@ -22,7 +22,7 @@
       <div class="card-container d-flex flex-wrap justify-center align-center">
         <nuxt-link
           v-for="(card, i) in $route.fullPath === '/'
-             ? getMediaList?.data?.slice(0, 3)
+            ? getMediaList?.data?.slice(0, 3)
             : getMediaList?.data?.slice(0, 6)"
           :key="i"
           class="media-card ma-5"
@@ -159,5 +159,4 @@ export default {
     }
   }
 }
-
 </style>

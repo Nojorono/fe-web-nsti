@@ -6,7 +6,7 @@
         :heading="heading"
         class="mb-3"
       />
-      <form-add-testimoni  @postBtn="postBtn"/>
+      <form-add-testimoni @postBtn="postBtn" />
     </div>
   </div>
 </template>
@@ -44,7 +44,7 @@ export default {
     postBtn(payload) {
       this.patchDetailTestimoni({
         ...payload,
-        id: this.$route.params.id
+        id: this.$route.params.id,
       }).then((_) => {
         this.$router.push('/content-management/review')
       })

@@ -56,8 +56,7 @@ export default {
   name: 'MediaAndPublication',
   components: {},
   data() {
-    return {
-    }
+    return {}
   },
   computed: {
     ...mapGetters(['getMediaList']),

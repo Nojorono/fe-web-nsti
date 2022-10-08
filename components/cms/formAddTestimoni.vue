@@ -46,12 +46,7 @@
     </div>
     <div class="mb-3 input-text-area">
       <!--      <textarea v-model="bodyText" placeholder="Add Body Text" />-->
-      <textarea
-        v-model="content"
-        type="text"
-        placeholder="Add Text"
-        required
-      />
+      <textarea v-model="content" type="text" placeholder="Add Text" required />
     </div>
     <div class="action-btn d-flex justify-end">
       <!--      <v-btn class="ma-2" outlined color="fontDark"> Delete </v-btn>-->
@@ -71,7 +66,7 @@
 import { mapGetters } from 'vuex'
 export default {
   name: 'FormAddTestimoni',
-  components: {  },
+  components: {},
   props: {
     loadingBtn: {
       type: Boolean,

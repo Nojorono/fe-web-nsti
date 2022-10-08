@@ -56,15 +56,14 @@ export default {
     }
   },
   mounted() {
-      this.getAllMedia({
+    this.getAllMedia({
       page: 0,
       size: 3,
     })
   },
   methods: {
     ...mapActions(['getAllMedia']),
-
-  }
+  },
 }
 </script>
 

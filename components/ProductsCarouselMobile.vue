@@ -35,10 +35,14 @@
       <div class="dialog-product">
         <div class="defaultGolden--text dialog-container d-flex align-center">
           <div class="dialog-img-container">
-            <img :src="
+            <img
+              :src="
                 'https://back-api.nikkisuper.my.id/' +
                 linkPopup?.images[1].imageName
-              " height="auto" width="100%" />
+              "
+              height="auto"
+              width="100%"
+            />
           </div>
         </div>
         <div class="desc-container">
@@ -63,7 +67,6 @@ export default {
     return {
       dialogProduct: false,
       linkPopup: null,
-
     }
   },
   computed: {
@@ -107,7 +110,6 @@ export default {
     .dialog-img-container {
       margin: auto;
     }
-
   }
   .desc-container {
     background: #f8f5ec;
