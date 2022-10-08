@@ -128,7 +128,7 @@ export default {
     deletePost(id) {
       this.destroyMedia(id).then(() => {
         this.getAllMedia({
-          page: this.page,
+          page: this.$route.query.page,
           size: this.size,
         })
       })

@@ -1,14 +1,6 @@
 <template>
-  <!--  v-if="isCms && isSingInUp" -->
-  <!--  <v-app >-->
-  <!--    <v-main>-->
-  <!--      <v-container fluid class="max-width ma-0 pa-0">-->
-  <!--        <Nuxt />-->
-  <!--      </v-container>-->
-  <!--    </v-main>-->
-  <!--  </v-app>-->
-  <!--  v-else -->
   <v-app light>
+    <global-notify />
     <NavBarCms />
     <div class="d-flex">
       <SideBar />
@@ -26,12 +18,14 @@ import vue from 'vue'
 import NavBarCms from '@/components/cms/NavBarCms.vue'
 import SideBar from '@/components/cms/SideBar.vue'
 import mixinDetictingMobile from '@/mixins/mixinDetictingMobile'
+import GlobalNotify from '@/components/GlobatNotify'
 
 vue.mixin(mixinDetictingMobile)
 
 export default {
   name: 'CmsLayout',
   components: {
+    GlobalNotify,
     NavBarCms,
     SideBar,
   },

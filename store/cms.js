@@ -5,6 +5,7 @@ export default {
     detailCareer: {},
     allTestimoni: [],
     detailTestimoni: {},
+    globalNotify: false,
   },
   getters: {
     getDetailCareer(state) {
@@ -16,6 +17,9 @@ export default {
     getDetailTetimoni(state) {
       return state.detailTestimoni
     },
+    getGlobalNotify(state) {
+      return state.globalNotify
+    }
   },
   mutations: {
     setDetailCarerr(state, payload) {
@@ -27,20 +31,18 @@ export default {
     setDetailTestimoni(state, payload) {
       state.detailTestimoni = payload
     },
+    setGlobalNotify(state, payload) {
+      state.globalNotify = payload
+    }
   },
   actions: {
     async postCreateProduct({ commit }, payload) {
+      commit('setGlobalNotify', true)
+
       try {
         const { data } = await axios.post(
           `product/create`,
           {
-            /*
-
-sampleFile1 : File type (imageProduk)
-title: Strings
-description: strings
-sampleFile2 : File Type (imageIklan)
-             */
             ...payload,
           },
           {
@@ -53,9 +55,13 @@ sampleFile2 : File Type (imageIklan)
         console.log(data)
       } catch (e) {
         console.log(e)
+      } finally {
+        commit('setGlobalNotify', false)
+
       }
     },
     async postCreateCareer({ commit }, payload) {
+      commit('setGlobalNotify', true)
       const { data } = await axios.post(
         `career/create`,
         {
@@ -66,10 +72,14 @@ sampleFile2 : File Type (imageIklan)
             access_token: token,
           },
         }
-      )
+      ).finally((_) => {
+        commit('setGlobalNotify', false)
+      })
       console.log(data)
     },
     async deleteCareer({ commit }, payload) {
+      commit('setGlobalNotify', true)
+
       const { data } = await axios({
         method: 'DELETE',
         url: `career/delete`,
@@ -79,11 +89,15 @@ sampleFile2 : File Type (imageIklan)
         headers: {
           access_token: token,
         },
+      }).finally((_) => {
+        commit('setGlobalNotify', false)
       })
       console.log(data)
     },
     async deleteProducts({ commit }, id) {
       // console.log(token, '========')
+      commit('setGlobalNotify', true)
+
       const { data } = await axios({
         url: `product/delete`,
         method: 'DElETE',
@@ -93,6 +107,8 @@ sampleFile2 : File Type (imageIklan)
         headers: {
           access_token: token,
         },
+      }).finally((_) => {
+        commit('setGlobalNotify', false)
       })
       console.log(data)
     },
@@ -101,6 +117,8 @@ sampleFile2 : File Type (imageIklan)
       commit('setDetailCarerr', data[0])
     },
     async patchDetailCareer({ commit }, payload) {
+      commit('setGlobalNotify', true)
+
       const { data } = await axios({
         url: `career/edit`,
         method: 'PATCH',
@@ -110,10 +128,14 @@ sampleFile2 : File Type (imageIklan)
         headers: {
           access_token: token,
         },
+      }).finally((_) => {
+        commit('setGlobalNotify', false)
       })
       console.log(data)
     },
     async postCreateMedia({ commit }, payload) {
+      commit('setGlobalNotify', true)
+
       try {
         const { data } = await axios.post(
           `media/create`,
@@ -131,9 +153,13 @@ sampleFile2 : File Type (imageIklan)
         console.log(data)
       } catch (e) {
         console.log(e)
+      } finally {
+        commit('setGlobalNotify', false)
+
       }
     },
     async patchDetailMedia({ commit }, payload) {
+      commit('setGlobalNotify', true)
       const { data } = await axios({
         method: 'PATCH',
         url: `media/edit`,
@@ -146,8 +172,11 @@ sampleFile2 : File Type (imageIklan)
         },
       })
       console.log(data)
+      commit('setGlobalNotify', false)
+
     },
     async destroyMedia({ commit }, id) {
+      commit('setGlobalNotify', true)
       await axios({
         url: `media/delete`,
         method: 'DElETE',
@@ -157,9 +186,13 @@ sampleFile2 : File Type (imageIklan)
         headers: {
           access_token: token,
         },
+      }).finally((_) => {
+        commit('setGlobalNotify', false)
       })
+
     },
     async patchDetailProducts({ commit }, payload) {
+      commit('setGlobalNotify', true)
       await axios({
         url: `product/edit`,
         method: 'PATCH',
@@ -170,6 +203,8 @@ sampleFile2 : File Type (imageIklan)
           'Content-Type': 'multipart/form-data',
           access_token: token,
         },
+      }).finally((_) => {
+        commit('setGlobalNotify', false)
       })
     },
     // testimoni
@@ -183,6 +218,8 @@ sampleFile2 : File Type (imageIklan)
       }
     },
     async postTestimoni({ commit }, payload) {
+      commit('setGlobalNotify', true)
+
       try {
         const { data } = await axios.post(
           `testimoni/create`,
@@ -199,15 +236,17 @@ sampleFile2 : File Type (imageIklan)
         console.log(data)
       } catch (e) {
         console.log(e)
+      } finally {
+        commit('setGlobalNotify', false)
+
       }
     },
     async fetchDetailTestimoni({ commit }, id) {
-      // http://back-api.nikkisuper.my.id/testimoni/detail/b081d2d6-28a4-4b44-bfd0-ba3c8709a2e3
       const { data } = await axios.get(`testimoni/detail/${id}`)
-      console.log(data, '======')
       commit('setDetailTestimoni', data[0])
     },
     async patchDetailTestimoni({ commit }, payload) {
+      commit('setGlobalNotify', true)
       await axios({
         url: `testimoni/edit`,
         method: 'PATCH',
@@ -218,9 +257,13 @@ sampleFile2 : File Type (imageIklan)
           'Content-Type': 'multipart/form-data',
           access_token: token,
         },
+      }).finally((_) => {
+        commit('setGlobalNotify', false)
       })
     },
     async destroyTestimoni({ commit }, id) {
+      commit('setGlobalNotify', true)
+
       await axios({
         url: `testimoni/delete`,
         method: 'DElETE',
@@ -230,6 +273,8 @@ sampleFile2 : File Type (imageIklan)
         headers: {
           access_token: token,
         },
+      }).finally((_) => {
+        commit('setGlobalNotify', false)
       })
     },
   },

@@ -44,7 +44,6 @@
             v-model="password"
             type="password"
             class="input-text"
-            @input="runRegex"
           />
         </div>
         <div class="confirm-password ml-2 half-input-width">
@@ -141,6 +140,8 @@ export default {
         email: this.email,
         password: this.password,
         username: this.fName + this.lName,
+      }).then((_) => {
+        this.$router.push('/content-management/sign-in')
       })
     },
   },
