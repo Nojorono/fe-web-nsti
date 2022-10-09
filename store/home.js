@@ -79,6 +79,25 @@ RESPONSE
     },
   },
   actions: {
+     async fetchSearch({ commit }, payload) {
+      /*
+
+
+      http://back-api.nikkisuper.my.id/searchbar/search
+        METHOD POST
+      PAYLOAD
+      text: string
+      limit: string
+      RESPONSE
+      */
+       // eslint-disable-next-line no-useless-catch
+      try {
+        const { data } = await axios.post('searchbar/search', {...payload})
+        console.log(data)
+      } catch (e) {
+        throw e
+      }
+    },
     async getAllMedia({ commit }, payload) {
       try {
         const { data } = await axios.get(

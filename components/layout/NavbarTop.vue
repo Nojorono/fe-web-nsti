@@ -105,6 +105,7 @@
           type="text"
           :placeholder="$t('navbar.search')"
           class="input-search"
+          @input="inputSearch"
         />
       </div>
       <div class="lang-swichter defaultGolden--text">
@@ -215,6 +216,7 @@
           type="text"
           :placeholder="$t('navbar.search')"
           class="input-search"
+          @input="inputSearch"
         />
       </div>
       <div class="lang-swichter defaultGolden--text">
@@ -244,6 +246,13 @@ export default {
     }
   },
   methods: {
+
+    inputSearch() {
+      this.$store.dispatch('fetchSearch', {
+        text: this.searchInput,
+        limit: 5
+      })
+    },
     onChangeLang(event) {
       this.$router.replace(this.switchLocalePath(event))
     },
