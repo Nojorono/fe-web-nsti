@@ -111,6 +111,9 @@
           class="input-search"
           color="defaultGolden"
           no-data-text="Tidak ada data"
+          append-icon=""
+          hide-details
+
           @change="goToDetailMedia"
         ></v-autocomplete>
       </div>
@@ -227,6 +230,8 @@
           item-value="id"
           class="input-search"
           color="defaultGolden"
+          append-icon=""
+          hide-details
           @change="goToDetailMedia"
         ></v-autocomplete>
       </div>
@@ -343,11 +348,9 @@ export default {
       padding-left: 1rem;
     }
     .input-search {
-      //color: $color-secondary-root;
-      //padding: 6px 14px 7px 4px;
       padding-right: 4%;
+      padding-bottom: 2%;
       padding-left: 4%;
-      //width: 100%;
     }
     .input-search:focus {
       outline: none;
@@ -417,5 +420,13 @@ export default {
 }
 .nobull {
   list-style-type: none;
+}
+</style>
+<style lang="scss">
+.v-text-field > .v-input__control > .v-input__slot:before {
+  border-style: none;
+}
+.v-text-field > .v-input__control > .v-input__slot:after {
+  border-style: none;
 }
 </style>
