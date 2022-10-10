@@ -74,12 +74,15 @@
       </div>
     </div>
     <div class="input-title mb-3">
-      <textarea
-        v-model="description"
-        type="text"
-        placeholder="Add Description"
-        required
-      />
+      <!--      <textarea-->
+      <!--        v-model="description"-->
+      <!--        type="text"-->
+      <!--        placeholder="Add Description"-->
+      <!--        required-->
+      <!--      />-->
+      <client-only>
+        <vue-editor v-model="description"></vue-editor>
+      </client-only>
     </div>
     <div class="action-btn d-flex justify-end">
       <!--      <v-btn class="ma-2" outlined color="fontDark" @click="deleleteImg"> Delete </v-btn>-->
@@ -92,10 +95,11 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import { VueEditor } from 'vue2-editor'
 
 export default {
   name: 'FormAddProduts',
-  components: {},
+  components: { VueEditor },
   props: {},
   data() {
     return {
@@ -103,7 +107,7 @@ export default {
       tempImage: null,
       imgPreview2: null,
       tempImage2: null,
-      description: '',
+      description: '<p>Add Content </p>',
     }
   },
   head() {
@@ -183,25 +187,25 @@ export default {
 .add-new > input {
   display: none;
 }
-.input-title {
-  width: 100%;
-  height: 100%;
-  border: 2.5px solid $color-font-dark-root;
-  border-radius: 20px;
-  padding: 0 1%;
-  textarea {
-    width: 100%;
-    font-size: 16px;
-    color: $color-font-dark-root;
-    &:focus {
-      outline: none;
-    }
-    &::placeholder {
-      font-weight: 500;
-      color: $color-font-dark-root;
-      font-size: 1.2em;
-      text-align: center;
-    }
-  }
-}
+//.input-title {
+//  width: 100%;
+//  height: 100%;
+//  border: 2.5px solid $color-font-dark-root;
+//  border-radius: 20px;
+//  padding: 0 1%;
+//  textarea {
+//    width: 100%;
+//    font-size: 16px;
+//    color: $color-font-dark-root;
+//    &:focus {
+//      outline: none;
+//    }
+//    &::placeholder {
+//      font-weight: 500;
+//      color: $color-font-dark-root;
+//      font-size: 1.2em;
+//      text-align: center;
+//    }
+//  }
+//}
 </style>

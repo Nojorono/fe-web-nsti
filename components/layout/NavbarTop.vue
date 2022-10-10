@@ -100,13 +100,19 @@
       </div>
       <div class="search-bar">
         <img src="~/assets/images/search-icon.svg" />
-        <input
-          v-model="searchInput"
-          type="text"
-          :placeholder="$t('navbar.search')"
+        <v-autocomplete
+          v-model="search"
+          :search-input.sync="searchInput"
+          clearable
+          dense
+          item-text="title"
+          :items="items"
+          item-value="id"
           class="input-search"
-          @input="inputSearch"
-        />
+          color="defaultGolden"
+          no-data-text="Tidak ada data"
+          @change="goToDetailMedia"
+        ></v-autocomplete>
       </div>
       <div class="lang-swichter defaultGolden--text">
         <template v-if="$i18n.locale === 'id'">
@@ -211,13 +217,18 @@
       </div>
       <div class="search-bar">
         <img src="~/assets/images/search-icon.svg" />
-        <input
-          v-model="searchInput"
-          type="text"
-          :placeholder="$t('navbar.search')"
+        <v-autocomplete
+          v-model="search"
+          :search-input.sync="searchInput"
+          clearable
+          dense
+          item-text="title"
+          :items="items"
+          item-value="id"
           class="input-search"
-          @input="inputSearch"
-        />
+          color="defaultGolden"
+          @change="goToDetailMedia"
+        ></v-autocomplete>
       </div>
       <div class="lang-swichter defaultGolden--text">
         <template v-if="$i18n.locale === 'id'">
@@ -237,21 +248,42 @@
 </template>
 
 <script>
+// import TypeAhead from 'vue2-typeahead'
 export default {
   name: 'NavBarTop',
   components: {},
   data() {
     return {
       searchInput: '',
+      items: [],
+      search: {},
     }
   },
+  watch: {
+    searchInput() {
+      this.$store
+        .dispatch('fetchSearch', {
+          text: this.searchInput,
+          limit: 5,
+        })
+        .then((data) => {
+          this.items = data
+        })
+    },
+  },
   methods: {
-
-    inputSearch() {
-      this.$store.dispatch('fetchSearch', {
-        text: this.searchInput,
-        limit: 5
-      })
+    goToDetailMedia() {
+      if (this.$i18n.locale === 'id') {
+        if (!this.search) {
+          this.$router.push('/id/media-and-publication')
+        } else {
+          this.$router.push(`/id/media-and-publication/detail/${this.search}`)
+        }
+      } else if (!this.search) {
+        this.$router.push('/media-and-publication')
+      } else {
+        this.$router.push(`/media-and-publication/detail/${this.search}`)
+      }
     },
     onChangeLang(event) {
       this.$router.replace(this.switchLocalePath(event))
@@ -311,9 +343,11 @@ export default {
       padding-left: 1rem;
     }
     .input-search {
-      color: $color-secondary-root;
-      padding: 6px 14px 7px 4px;
-      width: 100%;
+      //color: $color-secondary-root;
+      //padding: 6px 14px 7px 4px;
+      padding-right: 4%;
+      padding-left: 4%;
+      //width: 100%;
     }
     .input-search:focus {
       outline: none;

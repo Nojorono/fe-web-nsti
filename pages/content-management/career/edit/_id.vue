@@ -61,7 +61,6 @@ export default {
   },
   mounted() {
     this.fetchDetailCareer(this.$route.params.id).then((_) => {
-      console.log(this.getDetailCareer)
       const data = this.getDetailCareer
       this.content = data.description
       this.title = data.title

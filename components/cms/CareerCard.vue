@@ -107,7 +107,6 @@ export default {
         this.fetchAllCareer()
         this.dialogDelete = false
       })
-      console.log(id)
     },
     titleParser(title) {
       let result = ''

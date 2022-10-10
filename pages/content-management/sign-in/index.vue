@@ -83,7 +83,7 @@ export default {
       email: '',
       password: '',
       validateDialog: false,
-      validateDialogPass: false
+      validateDialogPass: false,
     }
   },
   methods: {
@@ -109,7 +109,6 @@ export default {
             this.validateDialogPass = true
           })
       }
-
     },
   },
   head() {

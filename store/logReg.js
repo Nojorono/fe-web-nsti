@@ -19,7 +19,6 @@ export default {
         })
         .then((data) => {
           commit('setAuthenticated', true)
-          console.log(data.data)
           localStorage.setItem('token', data.data.access_token)
           // throw
         })
@@ -30,7 +29,6 @@ export default {
     },
     checkToken({ commit }, payload) {
       const token = localStorage.getItem('token')
-      // console.log(this.state.authenticated, 'state')
       if (!token) {
         commit('setAuthenticated', false)
       } else if (token) {
@@ -38,13 +36,13 @@ export default {
       }
     },
     async register({ commit }, payload) {
+      // eslint-disable-next-line no-useless-catch
       try {
-        const { data } = await axios.post(`user/register`, {
+        await axios.post(`user/register`, {
           ...payload,
         })
-        console.log(data)
       } catch (e) {
-        console.log(e)
+        throw e
       }
     },
   },

@@ -79,7 +79,7 @@ RESPONSE
     },
   },
   actions: {
-     async fetchSearch({ commit }, payload) {
+    async fetchSearch({ commit }, payload) {
       /*
 
 
@@ -90,22 +90,23 @@ RESPONSE
       limit: string
       RESPONSE
       */
-       // eslint-disable-next-line no-useless-catch
+      // eslint-disable-next-line no-useless-catch
       try {
-        const { data } = await axios.post('searchbar/search', {...payload})
-        console.log(data)
+        const { data } = await axios.post('searchbar/search', { ...payload })
+        return data
       } catch (e) {
         throw e
       }
     },
     async getAllMedia({ commit }, payload) {
+      // eslint-disable-next-line no-useless-catch
       try {
         const { data } = await axios.get(
           `media/readAll?page=${payload.page * 6}&size=${payload.size}`
         )
         commit('setMediaList', data)
       } catch (e) {
-        console.log(e)
+        throw e
       }
     },
     async fetchMediaDetail({ commit }, id) {
@@ -113,17 +114,14 @@ RESPONSE
       try {
         const { data } = await axios.get(`media/detail/${id}`)
         commit('setDetailMedia', data[0])
-        console.log(data)
       } catch (e) {
         console.log(e)
       }
     },
     async fetchAllProducts({ commit }, payload) {
-      // console.log('masuk')
       try {
         const { data } = await axios.get(`product/readAll`)
         commit('setAllProducts', data)
-        console.log(data)
       } catch (e) {
         console.log(e)
       }

@@ -43,10 +43,8 @@
               height="auto"
               width="100%"
             />
+            <div class="desc-container" v-html="linkPopup?.description"></div>
           </div>
-        </div>
-        <div class="desc-container">
-          <p>{{ linkPopup?.description }}</p>
         </div>
       </div>
     </v-dialog>
@@ -78,7 +76,6 @@ export default {
       this.dialogProduct = true
       this.fetchDetailProducts(popUp.id).then((_) => {
         this.linkPopup = this.getDetailProducts[0]
-        console.log(this.linkPopup)
       })
     },
   },
@@ -109,17 +106,16 @@ export default {
   .dialog-container {
     .dialog-img-container {
       margin: auto;
+      .desc-container {
+        margin-top: -2%;
+        background: #f8f5ec;
+        color: #000;
+        width: 100%;
+        padding: 5px 16px;
+        text-align: center;
+        overflow-y: auto;
+      }
     }
-  }
-  .desc-container {
-    background: #f8f5ec;
-    p {
-      color: #000;
-    }
-    width: 100%;
-    padding: 5px 16px;
-    text-align: center;
-    overflow-y: auto;
   }
 }
 </style>

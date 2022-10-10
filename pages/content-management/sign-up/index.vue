@@ -112,14 +112,14 @@
           Sign In</span
         >
       </div>
-      <v-dialog v-model="validateDialog" width="500" >
+      <v-dialog v-model="validateDialog" width="500">
         <v-card class="text-center">
           <v-card-title class="text-h5 grey black--text lighten-2 py-5">
             Some of the Fields are empty!
           </v-card-title>
         </v-card>
       </v-dialog>
-      <v-dialog v-model="validateDialogPass" width="500" >
+      <v-dialog v-model="validateDialogPass" width="500">
         <v-card class="text-center">
           <v-card-title class="text-h5 grey black--text lighten-2 py-5">
             Password did not match!
