@@ -222,6 +222,7 @@
         <img src="~/assets/images/search-icon.svg" />
         <v-autocomplete
           v-model="search"
+
           :search-input.sync="searchInput"
           clearable
           dense
@@ -424,9 +425,9 @@ export default {
 </style>
 <style lang="scss">
 .v-text-field > .v-input__control > .v-input__slot:before {
-  border-style: none;
+  border-style: none !important;
 }
 .v-text-field > .v-input__control > .v-input__slot:after {
-  border-style: none;
+  border-style: none !important;
 }
 </style>
