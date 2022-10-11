@@ -42,7 +42,7 @@ export default {
     },
     ourStory: {
       title: 'OUR STORY',
-      text: 'PT Nikki Super Tobacco Indonesia was established on Desember 11, 1990 and is a cigarette manufacturer from Kudus, known as the city of kretek. PT Nikki Super Tobacco Indonesia is one of the leading cigarette manufacturers in Central Java with a national market reach.',
+      text: 'PT Nikki Super Tobacco Indonesia was established on December 11, 1990 and is a cigarette manufacturer from Kudus, known as the city of kretek. PT Nikki Super Tobacco Indonesia is one of the leading cigarette manufacturers in Central Java with a national market reach.',
     },
     products: {
       title: 'PRODUCTS',
