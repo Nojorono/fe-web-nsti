@@ -95,7 +95,7 @@ export default {
   },
   head() {
     return {
-      title: 'Manage About Us',
+      title: 'Manage ',
     }
   },
   computed: {

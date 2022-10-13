@@ -16,7 +16,7 @@
     </div>
     <div class="card-text">
       <p
-        v-if="$route.name == 'content-management-media-and-publication___en'"
+        v-if="$route.name == 'content-management-media-and-publication___en' || $route.name == 'content-management-products___en'"
         v-html="card.description"
       ></p>
       <p v-else>
