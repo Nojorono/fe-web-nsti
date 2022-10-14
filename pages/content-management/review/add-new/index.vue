@@ -2,7 +2,7 @@
   <div class="d-flex justify-center align-center">
     <div class="max-cms-width my-10">
       <CmsHeading
-        :close-page="'/content-management/about-us'"
+        :close-page="'/content-management/review'"
         :heading="heading"
         class="mb-3"
       />
