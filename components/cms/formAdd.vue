@@ -23,6 +23,7 @@
         <!--        kalo ada foto -->
 
         <label for="file-input">
+<!--          `data:image/png;base64,${img.encodedImage}`-->
           <img
             v-if="imgPreview"
             id="file-input"
@@ -143,18 +144,18 @@ export default {
     },
     upload(event) {
       if (event.target.files.length) {
-        this.tempImage = URL.createObjectURL(event.target.files[0])
         this.imgPreview = event.target.files[0]
         const formData = new FormData()
         formData.append('file', this.imgPreview)
 
-        // const image = event.target.files[0];
-        // const reader = new FileReader();
-        // reader.readAsDataURL(image);
-        // reader.onload = event =>{
-        //   this.imgPreview = event.target.result;
-        //   console.log(this.imgPreview);
-        // };
+        const file = event.target.files[0]
+        const reader = new FileReader()
+        let rawImg;
+        reader.onloadend = () => {
+          rawImg = reader.result;
+          this.tempImage = rawImg
+        }
+        reader.readAsDataURL(file);
       }
     },
   },

@@ -163,20 +163,37 @@ export default {
     },
     upload(event) {
       if (event.target.files.length) {
-        // this.imgPreview = URL.createObjectURL(event.target.files[0])
         this.tempImage = URL.createObjectURL(event.target.files[0])
         this.imgPreview = event.target.files[0]
         const formData = new FormData()
         formData.append('file', this.imgPreview)
+
+        // preview
+        const file = event.target.files[0]
+        const reader = new FileReader()
+        let rawImg;
+        reader.onloadend = () => {
+          rawImg = reader.result;
+          this.tempImage= rawImg
+        }
+        reader.readAsDataURL(file);
       }
     },
     uploadDetail(event) {
       if (event.target.files.length) {
-        // this.imgPreview2 = URL.createObjectURL(event.target.files[0])
-        this.tempImage2 = URL.createObjectURL(event.target.files[0])
         this.imgPreview2 = event.target.files[0]
         const formData = new FormData()
         formData.append('file', this.imgPreview2)
+
+        // preview
+        const file = event.target.files[0]
+        const reader = new FileReader()
+        let rawImg;
+        reader.onloadend = () => {
+          rawImg = reader.result;
+          this.tempImage2 = rawImg
+        }
+        reader.readAsDataURL(file);
       }
     },
   },
