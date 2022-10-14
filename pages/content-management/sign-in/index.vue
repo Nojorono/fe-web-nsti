@@ -3,8 +3,9 @@
     <div class="image-container pa-0 ma-0 d-flex">
       <div class="img-sub d-flex justify-center align-center">
         <v-img
-          :src="require('assets/images/cms/sign-up-img.png')"
-          max-height="100vh"
+          :src="require('assets/images/cms/sign-in.png')"
+          height="100vh"
+          width="60vw"
         />
         <div class="text-overlay fontLight--text text-center">
           <h1>Welcome Abroad</h1>
@@ -13,7 +14,7 @@
       </div>
     </div>
     <div class="sign-in d-flex flex-column sign-in-width">
-      <h1 class="fontDark--text">Sign In</h1>
+      <h1 class="fontDark--text ">Sign In</h1>
       <div class="email my-2">
         <label class="ml-1 font-weight-medium fontDark--text" for="lname"
           >Email</label
@@ -46,11 +47,11 @@
       <div class="my-3 d-flex justify-center align-center">
         <span class="fontDark--text">Don't have an account?</span>
         &nbsp;
-        <span
-          class="fontLightBlue--text"
-          @click="$router.push('/content-management/sign-up')"
+        <nuxt-link
+          class="fontLightBlue--text cursor-pointer"
+          to="/content-management/sign-up"
         >
-          Sign Up</span
+          Sign Up</nuxt-link
         >
       </div>
       <v-dialog v-model="validateDialog" width="500">
