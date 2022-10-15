@@ -16,7 +16,10 @@
     </div>
     <div class="card-text">
       <p
-        v-if="$route.name == 'content-management-media-and-publication___en' || $route.name == 'content-management-products___en'"
+        v-if="
+          $route.name == 'content-management-media-and-publication___en' ||
+          $route.name == 'content-management-products___en'
+        "
         v-html="card.description"
       ></p>
       <p v-else>
@@ -32,19 +35,22 @@
     <div
       class="card-overlay-action d-flex justify-center align-center flex-column"
     >
-      <img
-        :src="require('assets/images/cms/card-edit.svg')"
-        alt="card edit button"
-        width="auto"
-        height="auto"
-        class="cursor-pointer mb-2"
-        @click="
-          $router.push({
-            name: editPage,
-            params: { id: card.id },
-          })
-        "
-      />
+      <template v-if="$route.name !== 'content-management-products___en'">
+        <img
+          :src="require('assets/images/cms/card-edit.svg')"
+          alt="card edit button"
+          width="auto"
+          height="auto"
+          class="cursor-pointer mb-2"
+          @click="
+            $router.push({
+              name: editPage,
+              params: { id: card.id },
+            })
+          "
+        />
+      </template>
+
       <img
         :src="require('assets/images/cms/card-delete.svg')"
         alt="card edit button"
