@@ -155,11 +155,9 @@ export default {
         imgPreview: this.imgPreview,
         imgPreview2: this.imgPreview2,
         description: this.description,
+        tempImage: this.tempImage,
+        tempImage2: this.tempImage2
       })
-    },
-    deleleteImg() {
-      this.imgPreview = null
-      this.imgPreview2 = null
     },
     upload(event) {
       if (event.target.files.length) {
