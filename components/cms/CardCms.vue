@@ -35,7 +35,7 @@
     <div
       class="card-overlay-action d-flex justify-center align-center flex-column"
     >
-      <template v-if="$route.name !== 'content-management-products___en'">
+<!--      <template v-if="$route.name !== 'content-management-products___en'">-->
         <img
           :src="require('assets/images/cms/card-edit.svg')"
           alt="card edit button"
@@ -49,7 +49,7 @@
             })
           "
         />
-      </template>
+<!--      </template>-->
 
       <img
         :src="require('assets/images/cms/card-delete.svg')"
