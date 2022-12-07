@@ -16,7 +16,7 @@
       </v-sheet>
     </v-carousel-item>
     <v-row class="text-overlay mt-10">
-      <v-col cols="6" sm="1" md="1" lg="6" class="about-us defaultGolden--text">
+      <v-col cols="6" sm="6" md="6" lg="6" class="about-us defaultGolden--text">
         <div class="about-us-container">
           <div class="about-us-container">
             <h2>{{ image[currentIndex].text }}</h2>
@@ -32,7 +32,7 @@
           </div>
         </div>
       </v-col>
-      <v-col cols="6" sm="1" md="1" lg="6" class="our-motto">
+      <v-col cols="6" sm="6" md="6" lg="6" class="our-motto">
         <div class="motto-container">
           <h1>BERANI BUKA JALAN</h1>
         </div>
