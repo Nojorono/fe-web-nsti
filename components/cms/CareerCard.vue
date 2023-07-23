@@ -98,13 +98,17 @@ export default {
   data() {
     return {
       dialogDelete: false,
+      size: 6,
     }
   },
   methods: {
     ...mapActions(['deleteCareer', 'fetchAllCareer']),
     deletePost(id) {
       this.deleteCareer(id).then((_) => {
-        this.fetchAllCareer()
+        this.fetchAllCareer({
+          page: this.$route.query.page,
+          size: this.size,
+        })
         this.dialogDelete = false
       })
     },
