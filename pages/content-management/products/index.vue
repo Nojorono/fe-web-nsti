@@ -82,16 +82,16 @@ export default {
       title: 'Manage',
     }
   },
-  mounted() {
-    this.fetchAllProducts()
-  },
   computed: {
     ...mapGetters(['getAllProducts']),
+  },
+  mounted() {
+    this.fetchAllProducts()
   },
   methods: {
     ...mapActions(['fetchAllProducts', 'deleteProducts']),
     deletePost(id) {
-      this.deleteProducts(id).then((_) => {
+      this.deleteProducts(id).finally((_) => {
         this.fetchAllProducts()
       })
     },
