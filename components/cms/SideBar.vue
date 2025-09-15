@@ -45,6 +45,12 @@
       class="left-btn full-width review"
       to="/content-management/review"
     ></nuxt-link>
+    <nuxt-link
+      class="left-btn full-width privacy-policy"
+      to="/content-management/privacy-policy"
+    >
+      <span class="privacy-policy-text">Privacy Policy</span>
+    </nuxt-link>
   </div>
 </template>
 
@@ -106,6 +112,24 @@ export default {
     background-image: url('assets/images/cms/career.svg');
     &:hover {
       background-image: url('assets/images/cms/career-hover.svg');
+    }
+  }
+  &.privacy-policy {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    
+    &:hover {
+      background-color: #e9ecef;
+    }
+    
+    .privacy-policy-text {
+      color: #495057;
+      font-weight: 500;
+      font-size: 14px;
     }
   }
 }

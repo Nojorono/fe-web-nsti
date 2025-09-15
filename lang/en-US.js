@@ -152,4 +152,12 @@ export default {
     email: 'EMAIL',
     emailFull: 'info@nikkisuper.co.id',
   },
+  privacyPolicy: 'Privacy Policy',
+  privacyPolicyDescription: 'PT Nikki Super Tobacco Indonesia privacy policy regarding the collection, use, and protection of your personal data.',
+  privacyPolicyKeywords: 'privacy policy, data protection, personal data, PT Nikki Super Tobacco Indonesia',
+  loading: 'Loading...',
+  tryAgain: 'Try Again',
+  lastUpdated: 'Last updated',
+  noContentAvailable: 'No content available',
+  errorLoadingContent: 'An error occurred while loading content',
 }

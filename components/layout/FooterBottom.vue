@@ -8,7 +8,13 @@
         max-width="7px"
         class="v-img"
       />
-      <p>Privacy Policy</p>
+      <nuxt-link 
+        to="/privacy-policy" 
+        class="footer-link"
+        @click.native="$nuxt.$loading.start()"
+      >
+        <p>Privacy Policy</p>
+      </nuxt-link>
       <v-img
         :src="require('assets/images/Ellipse.svg')"
         max-height="7px"
@@ -46,6 +52,22 @@ export default {
     }
     .v-img {
       margin: 0 2rem;
+    }
+    .footer-link {
+      text-decoration: none;
+      color: inherit;
+      transition: opacity 0.3s ease;
+      
+      &:hover {
+        opacity: 0.8;
+      }
+      
+      p {
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }

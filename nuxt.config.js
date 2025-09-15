@@ -2,10 +2,10 @@ import colors from 'vuetify/es5/util/colors'
 require('dotenv').config()
 
 export default {
-  mode: 'spa',
+  // mode: 'spa', // This is deprecated, removed
   server: {
-    port: 8001,
-    host: process.env.NUXT_ENV_HOST || 'localhost',
+    port: 8002,
+    host: 'localhost',
   },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -20,12 +20,27 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
-      // { 'http-equiv': 'Content-Security-Policy', content: "img-src 'self' data: blob:; default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content: " },
+      { name: 'google-site-verification', content: '5FJ-cpS4JMzzLOCWzEhoUjCmSpEbGqXUctaZkoMy11U' },
+      { name: 'google-site-verification', content: '3NHoFsUozh2-PFLbC9OHzfTDYRm_0xqRNIpXX50CbUo' },
+        {
+        hid: 'description',
+        name: 'description',
+        content: 'nikkisuper'
+      }
+    //   { 'http-equiv': 'Content-Security-Policy', content: "img-src 'self' data: blob:; default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content: " },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+//   render: {
+//     csp: {
+//       policy: {
+//         'default-src': "'self' data: 'unsafe-eval' 'unsafe-inline'",
+//         'img-src': "'self' blob:"
+//       }
+//     }
+//   }
   },
+  
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
@@ -35,6 +50,7 @@ export default {
     { src: '~/plugins/vue-fragment.js' },
     { src: '~/plugins/vuetify.js' },
     { src: '~/plugins/carousel3d.js' },
+    { src: '~/plugins/axios.js' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

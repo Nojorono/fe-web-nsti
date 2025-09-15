@@ -1,5 +1,3 @@
-import axios from '~/plugins/axios'
-
 export default {
   /*
   http://back-api.nikkisuper.my.id/searchbar/search
@@ -92,7 +90,7 @@ RESPONSE
       */
       // eslint-disable-next-line no-useless-catch
       try {
-        const { data } = await axios.post('searchbar/search', { ...payload })
+        const { data } = await this.$axios.post('searchbar/search', { ...payload })
         return data
       } catch (e) {
         throw e
@@ -101,7 +99,7 @@ RESPONSE
     async getAllMedia({ commit }, payload) {
       // eslint-disable-next-line no-useless-catch
       try {
-        const { data } = await axios.get(
+        const { data } = await this.$axios.get(
           `media/readAll?page=${payload.page * 6}&size=${payload.size}`
         )
         commit('setMediaList', data)
@@ -112,7 +110,7 @@ RESPONSE
     async fetchMediaDetail({ commit }, id) {
       commit('setDetailMedia', {})
       try {
-        const { data } = await axios.get(`media/detail/${id}`)
+        const { data } = await this.$axios.get(`media/detail/${id}`)
         commit('setDetailMedia', data[0])
       } catch (e) {
         console.log(e)
@@ -120,18 +118,18 @@ RESPONSE
     },
     async fetchAllProducts({ commit }, payload) {
       try {
-        const { data } = await axios.get(`product/readAll`)
+        const { data } = await this.$axios.get(`product/readAll`)
         commit('setAllProducts', data)
       } catch (e) {
         console.log(e)
       }
     },
     async fetchDetailProducts({ commit }, id) {
-      const { data } = await axios.get(`product/detail/${id}`)
+      const { data } = await this.$axios.get(`product/detail/${id}`)
       commit('setDetailProdcuts', data)
     },
     async fetchAllCareer({ commit }, payload) {
-      const { data } = await axios.get(
+      const { data } = await this.$axios.get(
         `career/readAll?page=${payload.page * 6}&size=${payload.size}`
       )
       commit('setAllCareer', data)

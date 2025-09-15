@@ -8,7 +8,13 @@
         max-width="3px"
         class="v-img"
       />
-      <p>Privacy Policy</p>
+      <nuxt-link 
+        to="/privacy-policy" 
+        class="footer-link"
+        @click.native="$nuxt.$loading.start()"
+      >
+        <p>Privacy Policy</p>
+      </nuxt-link>
     </div>
     <div class="footer-bottom-bottom">
       <p>&copy; 2022 PT Nikki Super. All rights reserved.</p>
@@ -42,6 +48,22 @@ export default {
     p {
       //margin-top: 1rem;
       margin-bottom: 0;
+    }
+    .footer-link {
+      text-decoration: none;
+      color: inherit;
+      transition: opacity 0.3s ease;
+      
+      &:hover {
+        opacity: 0.8;
+      }
+      
+      p {
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
   &-bottom {
