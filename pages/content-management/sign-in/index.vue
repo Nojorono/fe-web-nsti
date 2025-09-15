@@ -73,8 +73,6 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
-
 export default {
   name: 'CmsSignIn',
   layout: 'cmsNotLoggedIn',
@@ -87,35 +85,32 @@ export default {
       validateDialogPass: false,
     }
   },
-  methods: {
-    ...mapActions(['login']),
-    clickLogin() {
-      // this.$router.push({
-      //   path: '/content-management/products',
-      // })
-      const payload = {
-        email: this.email,
-        password: this.password,
-      }
-      if (!this.email || !this.password) {
-        this.validateDialog = true
-      } else {
-        this.login(payload)
-          .then((_) => {
-            this.$router.push({
-              path: '/content-management/products',
-            })
-          })
-          .catch((e) => {
-            this.validateDialogPass = true
-          })
-      }
-    },
-  },
   head() {
     return {
       title: 'Sign In',
     }
+  },
+  methods: {
+    async clickLogin() {
+      if (!this.email || !this.password) {
+        this.validateDialog = true
+        return
+      }
+
+      try {
+        await this.$store.dispatch('logReg/login', {
+          email: this.email,
+          password: this.password,
+        })
+        
+        // Redirect to content management
+        this.$router.push({
+          path: '/content-management/products',
+        })
+      } catch (error) {
+        this.validateDialogPass = true
+      }
+    },
   },
 }
 </script>

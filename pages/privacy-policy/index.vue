@@ -63,7 +63,7 @@ export default {
     const description = this.currentMetaDescription || this.$t('privacyPolicyDescription');
     
     return {
-      title: title,
+      title,
       meta: [
         {
           hid: 'description',
@@ -105,19 +105,27 @@ export default {
 
   computed: {
     currentTitle() {
-      return this.privacyPolicy?.title || '';
+      if (!this.privacyPolicy) return '';
+      const locale = this.$i18n.locale;
+      return locale === 'en' ? this.privacyPolicy.title_en : this.privacyPolicy.title_id;
     },
 
     currentContent() {
-      return this.privacyPolicy?.content || '';
+      if (!this.privacyPolicy) return '';
+      const locale = this.$i18n.locale;
+      return locale === 'en' ? this.privacyPolicy.content_en : this.privacyPolicy.content_id;
     },
 
     currentMetaDescription() {
-      return this.privacyPolicy?.meta_description || '';
+      if (!this.privacyPolicy) return '';
+      const locale = this.$i18n.locale;
+      return locale === 'en' ? this.privacyPolicy.meta_description_en : this.privacyPolicy.meta_description_id;
     },
 
     currentMetaKeywords() {
-      return this.privacyPolicy?.meta_keywords || '';
+      if (!this.privacyPolicy) return '';
+      const locale = this.$i18n.locale;
+      return locale === 'en' ? this.privacyPolicy.meta_keywords_en : this.privacyPolicy.meta_keywords_id;
     }
   },
 
@@ -137,8 +145,7 @@ export default {
         this.loading = true;
         this.error = null;
         
-        const locale = this.$i18n.locale;
-        const response = await this.$axios.get(`/content/privacy-policy?lang=${locale}`);
+        const response = await this.$axios.get('/content/privacy-policy');
         
         if (response.data.success) {
           this.privacyPolicy = response.data.data;

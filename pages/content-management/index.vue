@@ -1,3 +1,9 @@
+<template>
+  <div class="content-management-index">
+    <!-- Redirect to sign-in page -->
+  </div>
+</template>
+
 <script>
 export default {
   name: 'ContentManagement',

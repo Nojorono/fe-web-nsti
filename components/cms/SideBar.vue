@@ -48,9 +48,7 @@
     <nuxt-link
       class="left-btn full-width privacy-policy"
       to="/content-management/privacy-policy"
-    >
-      <span class="privacy-policy-text">Privacy Policy</span>
-    </nuxt-link>
+    ></nuxt-link>
   </div>
 </template>
 
@@ -115,21 +113,9 @@ export default {
     }
   }
   &.privacy-policy {
-    background-color: #f8f9fa;
-    border: 1px solid #dee2e6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    
+    background-image: url('assets/images/cms/privacy-policy.svg');
     &:hover {
-      background-color: #e9ecef;
-    }
-    
-    .privacy-policy-text {
-      color: #495057;
-      font-weight: 500;
-      font-size: 14px;
+      background-image: url('assets/images/cms/privacy-policy-hover.svg');
     }
   }
 }

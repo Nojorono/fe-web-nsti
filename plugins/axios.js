@@ -9,6 +9,14 @@ const axiosInstance = axios.create({
 });
 
 export default ({ app, store }, inject) => {
+  // Set token from localStorage if available (client-side only)
+  if (process.client) {
+    const token = localStorage.getItem('access_token')
+    if (token) {
+      axiosInstance.defaults.headers.common.Authorization = `Bearer ${token}`
+    }
+  }
+  
   // Inject $axios
   inject('axios', axiosInstance);
   

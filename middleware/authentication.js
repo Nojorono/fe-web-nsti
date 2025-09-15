@@ -1,10 +1,12 @@
-export default function ({ store, redirect }) {
-  // If the user is not authenticated
-  // console.log(store.actions, '==============')
-  // eslint-disable-next-line no-unused-expressions
-  store.dispatch('checkToken').then((r) => {
+export default async function ({ store, redirect }) {
+  // Check token on middleware execution
+  try {
+    await store.dispatch('logReg/checkToken')
+    
     if (!store.state.logReg.authenticated) {
       return redirect('/content-management/sign-in')
     }
-  })
+  } catch (error) {
+    return redirect('/content-management/sign-in')
+  }
 }

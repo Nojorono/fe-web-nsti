@@ -1,0 +1,5 @@
+<svg width="300" height="40" viewBox="0 0 300 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="300" height="40" rx="10" fill="#C3D4E4"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M42 20C42 24.4183 38.4183 28 34 28C29.5817 28 26 24.4183 26 20C26 15.5817 29.5817 12 34 12C38.4183 12 42 15.5817 42 20ZM35 16C35 16.5523 34.5523 17 34 17C33.4477 17 33 16.5523 33 16C33 15.4477 33.4477 15 34 15C34.5523 15 35 15.4477 35 16ZM33 19C32.4477 19 32 19.4477 32 20C32 20.5523 32.4477 21 33 21V24C33 24.5523 33.4477 25 34 25H35C35.5523 25 36 24.5523 36 24C36 23.4477 35.5523 23 35 23V20C35 19.4477 34.5523 19 34 19H33Z" fill="#424242"/>
+<text x="60" y="26" font-family="Arial, sans-serif" font-size="14" fill="#202B3F" font-weight="400">Privacy Policy</text>
+</svg>
