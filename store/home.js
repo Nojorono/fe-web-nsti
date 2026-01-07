@@ -1,5 +1,3 @@
-import axios from '~/utils/axios'
-
 export default {
   /*
   http://back-api.nikkisuper.my.id/searchbar/search
@@ -93,7 +91,7 @@ RESPONSE
       */
       // eslint-disable-next-line no-useless-catch
       try {
-        const { data } = await axios.post('searchbar/search', { ...payload })
+        const { data } = await this.app.$axios.post('searchbar/search', { ...payload })
         return data
       } catch (e) {
         throw e
@@ -104,7 +102,7 @@ RESPONSE
       const page = Number(payload.page) || 0
       const size = Number(payload.size) || 6
       
-      const { data } = await axios.get(
+      const { data } = await this.app.$axios.get(
         `media/readAll?page=${page}&size=${size}`
       )
       commit('setMediaList', data)
@@ -113,7 +111,7 @@ RESPONSE
     async fetchMediaDetail({ commit }, id) {
       commit('setDetailMedia', {})
       try {
-        const { data } = await axios.get(`media/detail/${id}`)
+        const { data } = await this.app.$axios.get(`media/detail/${id}`)
         commit('setDetailMedia', data[0])
       } catch (e) {
         // Error fetching media detail
@@ -121,14 +119,14 @@ RESPONSE
     },
     async fetchAllProducts({ commit }, payload) {
       try {
-        const { data } = await axios.get(`product/readAll`)
+        const { data } = await this.app.$axios.get(`product/readAll`)
         commit('setAllProducts', data)
       } catch (e) {
         // Error fetching products
       }
     },
     async fetchDetailProducts({ commit }, id) {
-      const { data } = await axios.get(`product/detail/${id}`)
+      const { data } = await this.app.$axios.get(`product/detail/${id}`)
       commit('setDetailProdcuts', data)
     },
     async fetchAllCareer({ commit }, payload) {
@@ -136,7 +134,7 @@ RESPONSE
       const page = Number(payload.page) || 0
       const size = Number(payload.size) || 6
       
-      const { data } = await axios.get(
+      const { data } = await this.app.$axios.get(
         `career/readAll?page=${page}&size=${size}`
       )
       commit('setAllCareer', data)
