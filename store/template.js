@@ -1,7 +1,8 @@
 // import axios from '~/plugins/axios'
 
 export default {
-  state: {},
+  namespaced: true,
+  state: () => ({}),
 
   getters: {},
   mutations: {},
