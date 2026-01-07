@@ -155,12 +155,17 @@ export default {
           password: this.form.password
         });
         
-        // Show success message
-        this.$toast.success('Login successful!');
+        // Show success message (if toast plugin available)
+        if (this.$toast) {
+          this.$toast.success('Login successful!');
+        }
         
         // Redirect to content management or dashboard
-        const redirectTo = this.$route.query.redirect || '/content-management/privacy-policy';
-        this.$router.push(redirectTo);
+        const redirectTo = this.$route.query.redirect || '/content-management/products';
+        this.$router.push(redirectTo).catch(() => {
+          // If redirect fails, try default CMS page
+          this.$router.push('/content-management');
+        });
       } catch (error) {
         // Handle backend error response
         if (error.response) {

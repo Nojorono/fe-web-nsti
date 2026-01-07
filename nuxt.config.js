@@ -51,6 +51,7 @@ export default {
     { src: '~/plugins/vuetify.js' },
     { src: '~/plugins/carousel3d.js' },
     { src: '~/plugins/axios.js' },
+    { src: '~/plugins/imageUrl.js' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -160,5 +161,31 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    // Configure webpack for better HMR handling
+    extend(config, { isDev, isClient }) {
+      if (isDev && isClient) {
+        // Improve HMR connection stability
+        config.optimization = config.optimization || {}
+        config.optimization.removeAvailableModules = false
+        config.optimization.removeEmptyChunks = false
+        config.optimization.splitChunks = config.optimization.splitChunks || {}
+      }
+    },
+    // Suppress HMR warnings in development
+    quiet: false,
+    // Improve build performance
+    hardSource: false,
+  },
+  
+  // Configure development server
+  dev: process.env.NODE_ENV !== 'production',
+  
+  // Improve HMR connection
+  watchers: {
+    webpack: {
+      aggregateTimeout: 300,
+      poll: 1000,
+    },
+  },
 }

@@ -4,8 +4,8 @@
       <h1 class="defaultGolden--text">{{ $t('media.title') }}</h1>
     </div>
     <ProductsCarousel
-      v-if="$store.state.home.allProducts.length"
-      :slides="$store.state.home.allProducts"
+      v-if="getAllProducts && getAllProducts.length"
+      :slides="getAllProducts"
     ></ProductsCarousel>
   </div>
   <products-mobile v-else />
@@ -29,13 +29,13 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getAllProducts', 'getDetailProducts']),
+    ...mapGetters('home', ['getAllProducts', 'getDetailProducts']),
   },
   mounted() {
     this.fetchAllProducts()
   },
   methods: {
-    ...mapActions(['fetchAllProducts', 'fetchDetailProducts']),
+    ...mapActions('home', ['fetchAllProducts', 'fetchDetailProducts']),
   },
 }
 </script>

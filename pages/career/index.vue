@@ -70,7 +70,7 @@
           class="cursor-pointer"
         />
         <div
-          v-for="i in getAllCareer?.pagesLeft"
+          v-for="i in getAllCareer?.pagesLeft || []"
           :key="i"
           :class="
             +$route.query.page + 1 === i
@@ -93,7 +93,7 @@
         <h1>{{ $t('career.learnNgrow') }}</h1>
       </div>
       <vueper-slides
-        v-if="getAllTestimoni.length"
+        v-if="getAllTestimoni && getAllTestimoni.length"
         class="no-shadow"
         :visible-slides="3"
         :gap="3"
@@ -112,9 +112,7 @@
                 <p class="mb-5 review-text">{{ review.description }}</p>
                 <div class="review-bottom-container">
                   <img
-                    :src="
-                      'https://back-api.nikkisuper.my.id/' + review.imageName
-                    "
+                    :src="$imageUrl(review.imageName)"
                     alt="review profile picture"
                     width="140px"
                     height="140px"
@@ -136,7 +134,9 @@
           <div class="d-flex justify-end">
             <v-icon dark @click="dialog = false"> mdi-window-close </v-icon>
           </div>
+          <!-- eslint-disable vue/no-v-html -->
           <div class="content" v-html="content"></div>
+          <!-- eslint-enable vue/no-v-html -->
           <div>
             <v-btn
               rounded
@@ -206,37 +206,41 @@ export default {
       title: 'Career With Us',
     }
   },
+  computed: {
+    ...mapGetters('home', ['getAllCareer']),
+    ...mapGetters('cms', ['getAllTestimoni']),
+  },
   watch: {
     '$route.query'() {
+      const page = Number(this.$route.query.page) || 0
       this.fetchAllCareer({
-        page: this.$route.query.page,
+        page,
         size: this.size,
       })
     },
-  },
-  computed: {
-    ...mapGetters(['getAllCareer', 'getAllTestimoni']),
   },
   mounted() {
     // this.fetchAllCareer({
     //   page: this.page,
     //   size: this.size,
     // })
-    if (!this.$route.query.page) {
+    const page = Number(this.$route.query.page) || 0
+    if (!this.$route.query.page || isNaN(page)) {
       this.$router.replace({
         path: this.$route.path,
-        query: { page: +this.$route.query.page || 0 },
+        query: { page: 0 },
       })
     } else {
       this.fetchAllCareer({
-        page: this.$route.query.page,
+        page,
         size: this.size,
       })
     }
     this.fetchAllTestimoni()
   },
   methods: {
-    ...mapActions(['fetchAllCareer', 'fetchAllTestimoni']),
+    ...mapActions('home', ['fetchAllCareer']),
+    ...mapActions('cms', ['fetchAllTestimoni']),
     onClickApply(html) {
       this.dialog = true
       this.content = html
@@ -252,7 +256,7 @@ export default {
     },
     next() {
       const page = +this.$route.query.page + 1
-      if (page < this.fetchAllCareer.pagesleft) {
+      if (this.getAllCareer?.pagesLeft && page < this.getAllCareer.pagesLeft) {
         this.$router.replace({
           path: this.$route.path,
           query: { page },

@@ -34,11 +34,19 @@
         >
           <div class="zoom-transition defaultGolden--text cursor-pointer">
             <v-img
-              :src="'https://back-api.nikkisuper.my.id/' + card.imageName"
+              v-if="card.imageName"
+              :src="$imageUrl(card.imageName)"
               width="100%"
               height="100%"
               content-class="media-card-linear-gradient"
             />
+            <div
+              v-else
+              class="media-card-placeholder"
+              style="width: 100%; height: 100%; background-color: #e0e0e0; display: flex; align-items: center; justify-content: center;"
+            >
+              <span style="color: #999;">No Image</span>
+            </div>
             <div class="media-text-wrapper">
               <h5 class="mb-3">{{ card.title }}</h5>
               <h6 class="">Read More ></h6>
@@ -115,13 +123,13 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getMediaList']),
+    ...mapGetters('home', ['getMediaList']),
   },
   mounted() {
     // this.getAllMedia().then((_) => {})
   },
   methods: {
-    ...mapActions(['getAllMedia']),
+    ...mapActions('home', ['getAllMedia']),
   },
 }
 </script>

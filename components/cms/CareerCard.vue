@@ -102,7 +102,8 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['deleteCareer', 'fetchAllCareer']),
+    ...mapActions('cms', ['deleteCareer']),
+    ...mapActions('home', ['fetchAllCareer']),
     deletePost(id) {
       this.deleteCareer(id).then((_) => {
         this.fetchAllCareer({

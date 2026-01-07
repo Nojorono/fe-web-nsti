@@ -14,7 +14,7 @@
       :style="$route.fullPath !== '/' ? 'height: 76vh' : ''"
     >
       <products-carousel-mobile
-        v-if="getAllProducts.length"
+        v-if="getAllProducts && getAllProducts.length"
         :slides="getAllProducts"
       />
     </div>
@@ -70,13 +70,13 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getAllProducts', 'getDetailProducts']),
+    ...mapGetters('home', ['getAllProducts', 'getDetailProducts']),
   },
   mounted() {
     this.fetchAllProducts()
   },
   methods: {
-    ...mapActions(['fetchAllProducts', 'fetchDetailProducts']),
+    ...mapActions('home', ['fetchAllProducts', 'fetchDetailProducts']),
   },
 }
 </script>

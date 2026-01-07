@@ -2,7 +2,7 @@
   <v-col class="product-parent-wrapper ma-0 pa-0 mt-15 mb-15" cols="12">
     <h1>{{ $t('home.products.title') }}</h1>
     <div class="carousel-container">
-      <ProductsCarousel v-if="getAllProducts.length" :slides="getAllProducts" />
+      <ProductsCarousel v-if="getAllProducts && getAllProducts.length" :slides="getAllProducts" />
     </div>
   </v-col>
 </template>
@@ -48,13 +48,13 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getAllProducts', 'getDetailProducts']),
+    ...mapGetters('home', ['getAllProducts', 'getDetailProducts']),
   },
   mounted() {
     this.fetchAllProducts()
   },
   methods: {
-    ...mapActions(['fetchAllProducts', 'fetchDetailProducts']),
+    ...mapActions('home', ['fetchAllProducts', 'fetchDetailProducts']),
   },
 }
 </script>

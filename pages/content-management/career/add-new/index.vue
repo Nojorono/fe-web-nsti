@@ -62,16 +62,26 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['postCreateCareer']),
-    postBtn() {
-      const payload = {
-        title: this.title,
-        location: this.location,
-        description: this.content,
+    ...mapActions('cms', ['postCreateCareer']),
+    async postBtn() {
+      if (!this.title || !this.location || !this.content) {
+        alert('Please fill in all required fields')
+        return
       }
-      this.postCreateCareer(payload).then((_) => {
+      
+      try {
+        const payload = {
+          title: this.title,
+          location: this.location,
+          description: this.content,
+        }
+        await this.postCreateCareer(payload)
         this.$router.push({ path: '/content-management/career/' })
-      })
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.error('Error creating career:', error)
+        alert('Failed to create career. Please try again.')
+      }
     },
   },
 }

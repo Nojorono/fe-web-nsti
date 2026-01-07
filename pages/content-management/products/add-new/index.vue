@@ -37,16 +37,22 @@ export default {
   },
 
   methods: {
-    ...mapActions(['postCreateProduct']),
-    postBtn(payload) {
-      this.postCreateProduct({
-        sampleFile1: payload.imgPreview,
-        sampleFile2: payload.imgPreview2,
-        description: payload.description,
-        title: '',
-      }).then((_) => {
+    ...mapActions('cms', ['postCreateProduct']),
+    async postBtn(payload) {
+      try {
+        await this.postCreateProduct({
+          sampleFile1: payload.imgPreview,
+          sampleFile2: payload.imgPreview2,
+          description: payload.description,
+          title: '',
+        })
         this.$router.push('/content-management/products')
-      })
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.error('Error creating product:', error)
+        // You can add error notification here
+        alert('Failed to create product. Please try again.')
+      }
     },
   },
 }

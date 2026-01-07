@@ -62,7 +62,7 @@ export default {
     })
   },
   methods: {
-    ...mapActions(['getAllMedia']),
+    ...mapActions('home', ['getAllMedia']),
   },
 }
 </script>

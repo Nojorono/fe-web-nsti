@@ -95,7 +95,7 @@ export default {
     return {}
   },
   computed: {
-    ...mapGetters(['getDetailMedia']),
+    ...mapGetters('home', ['getDetailMedia']),
   },
   watch: {
     $route: {
@@ -111,8 +111,7 @@ export default {
         if (Object.keys(this.getDetailMedia).length) {
           const data = this.getDetailMedia
           this.content = data.description
-          this.imgPreview =
-            'https://back-api.nikkisuper.my.id/' + data.imageName
+          this.imgPreview = this.$imageUrl(data.imageName || '')
           this.title = data.title
           this.location = data.location
         }

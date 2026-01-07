@@ -6,34 +6,36 @@
     <div class="defaultGolden--text">
       <div class="news-date mb-10 pt-10">
         <!--        <h3>{{ newsData[$route.params.id - 1].date }}</h3>-->
-        <h3>
-          {{ getDetailMedia.location }},
+        <h3 v-if="getDetailMedia">
+          {{ getDetailMedia.location || '' }},
           {{ findDate(getDetailMedia.createdAt) }}
         </h3>
       </div>
 
       <div class="news-title my-10">
         <!--        <h1>{{ newsData[$route.params.id - 1].title }}</h1>-->
-        <h1>{{ getDetailMedia.title }}</h1>
+        <h1>{{ getDetailMedia?.title || '' }}</h1>
       </div>
     </div>
 
-    <div class="news-content">
+    <div v-if="getDetailMedia" class="news-content">
       <div class="image-content">
         <!--                  :src="newsData[$route.params.id - 1].img"
 -->
         <img
-          :src="'https://back-api.nikkisuper.my.id/' + getDetailMedia.imageName"
+          :src="$imageUrl(getDetailMedia?.imageName || '')"
           width="100%"
           height="450"
         />
       </div>
       <!--         v-html="newsData[$route.params.id - 1].data"
 -->
+      <!-- eslint-disable vue/no-v-html -->
       <div
         class="text-content defaultGray--text"
-        v-html="getDetailMedia.description"
+        v-html="getDetailMedia?.description || ''"
       ></div>
+      <!-- eslint-enable vue/no-v-html -->
     </div>
   </div>
   <detail-media-mobile v-else />
@@ -136,13 +138,13 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getDetailMedia']),
+    ...mapGetters('home', ['getDetailMedia']),
   },
   mounted() {
     this.fetchMediaDetail(this.$route.params.id)
   },
   methods: {
-    ...mapActions(['fetchMediaDetail']),
+    ...mapActions('home', ['fetchMediaDetail']),
   },
 }
 </script>

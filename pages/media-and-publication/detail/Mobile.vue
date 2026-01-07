@@ -2,29 +2,31 @@
   <div class="detail-media-parent-wrapper-mobile">
     <div class="defaultGolden--text">
       <div class="news-date mt-3">
-        <h3>
-          {{ getDetailMedia.location }},
+        <h3 v-if="getDetailMedia">
+          {{ getDetailMedia.location || '' }},
           {{ findDate(getDetailMedia.createdAt) }}
         </h3>
       </div>
 
       <div class="news-title my-5">
-        <h1>{{ getDetailMedia.title }}</h1>
+        <h1>{{ getDetailMedia?.title || '' }}</h1>
       </div>
     </div>
 
-    <div class="news-content">
+    <div v-if="getDetailMedia" class="news-content">
       <div class="image-content">
         <img
-          :src="'https://back-api.nikkisuper.my.id/' + getDetailMedia.imageName"
+          :src="$imageUrl(getDetailMedia?.imageName || '')"
           width="100%"
         />
       </div>
 
+      <!-- eslint-disable vue/no-v-html -->
       <div
         class="text-content defaultGray--text"
-        v-html="getDetailMedia.description"
+        v-html="getDetailMedia?.description || ''"
       ></div>
+      <!-- eslint-enable vue/no-v-html -->
     </div>
   </div>
 </template>
@@ -44,13 +46,13 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getDetailMedia']),
+    ...mapGetters('home', ['getDetailMedia']),
   },
   mounted() {
     this.fetchMediaDetail(this.$route.params.id)
   },
   methods: {
-    ...mapActions(['fetchMediaDetail']),
+    ...mapActions('home', ['fetchMediaDetail']),
   },
 }
 </script>

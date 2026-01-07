@@ -36,13 +36,14 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getDetailProducts']),
+    ...mapGetters('home', ['getDetailProducts']),
   },
   mounted() {
     this.fetchDetailProducts(this.$route.params.id)
   },
   methods: {
-    ...mapActions(['fetchDetailProducts', 'patchDetailProducts']),
+    ...mapActions('home', ['fetchDetailProducts']),
+    ...mapActions('cms', ['patchDetailProducts']),
     imgPreview(img) {
       this.img = img
     },

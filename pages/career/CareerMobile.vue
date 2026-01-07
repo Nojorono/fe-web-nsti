@@ -39,7 +39,7 @@
       </div>
       <div class="joblist d-flex flex-wrap justify-center">
         <div
-          v-for="(job, i) in getAllCareer.data"
+          v-for="(job, i) in getAllCareer?.data || []"
           :key="i"
           class="joblist-card my-5 px-10 py-5"
         >
@@ -70,7 +70,7 @@
           @click="prev"
         />
         <div
-          v-for="i in getAllCareer?.pagesLeft"
+          v-for="i in getAllCareer?.pagesLeft || []"
           :key="i"
           :class="
             +$route.query.page + 1 === i
@@ -102,7 +102,7 @@
         :slide-ratio="1 / 1.3"
         :dragging-distance="70"
       >
-        <vueper-slide v-for="(review, i) in getAllTestimoni" :key="i">
+        <vueper-slide v-for="(review, i) in getAllTestimoni || []" :key="i">
           <template #content>
             <div class="review-card pa-4 text-center">
               <div
@@ -111,9 +111,7 @@
                 <p class="mb-5 review-text">{{ review.description }}</p>
                 <div class="review-bottom-container">
                   <img
-                    :src="
-                      'https://back-api.nikkisuper.my.id/' + review.imageName
-                    "
+                    :src="$imageUrl(review.imageName)"
                     alt="review profile picture"
                     width="35px"
                     height="35px"
@@ -135,7 +133,9 @@
           <div class="d-flex justify-end">
             <v-icon dark @click="dialog = false"> mdi-window-close </v-icon>
           </div>
+          <!-- eslint-disable vue/no-v-html -->
           <div class="content" v-html="content"></div>
+          <!-- eslint-enable vue/no-v-html -->
           <div>
             <v-btn
               rounded
@@ -310,25 +310,28 @@ export default {
       title: 'Career With Us',
     }
   },
+  computed: {
+    ...mapGetters('home', ['getAllCareer']),
+    ...mapGetters('cms', ['getAllTestimoni']),
+  },
   watch: {
     '$route.query'() {
+      const page = Number(this.$route.query.page) || 0
       this.fetchAllCareer({
-        page: this.$route.query.page,
+        page,
         size: this.size,
       })
     },
   },
-  computed: {
-    ...mapGetters(['getAllCareer', 'getAllTestimoni']),
-  },
   mounted() {
+    const page = Number(this.$route.query.page) || 0
     this.fetchAllCareer({
-      page: this.$route.query.page,
+      page,
       size: this.size,
     })
   },
   methods: {
-    ...mapActions(['fetchAllCareer']),
+    ...mapActions('home', ['fetchAllCareer']),
     prev() {
       const page = +this.$route.query.page - 1
       if (page >= 0) {
@@ -340,7 +343,7 @@ export default {
     },
     next() {
       const page = +this.$route.query.page + 1
-      if (page < this.fetchAllCareer.pagesleft) {
+      if (this.getAllCareer?.pagesLeft && page < this.getAllCareer.pagesLeft) {
         this.$router.replace({
           path: this.$route.path,
           query: { page },

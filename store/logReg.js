@@ -11,21 +11,22 @@ export default {
   },
   actions: {
     async login({ commit }, payload) {
-      await this.$axios
-        .post('/user/login', {
+      try {
+        const { data } = await this.$axios.post('/user/login', {
           email: payload.email,
           password: payload.password,
         })
-        .then((data) => {
-          commit('setAuthenticated', true)
-          localStorage.setItem('access_token', data.data.access_token)
-          // Set axios default header for future requests
-          this.$axios.defaults.headers.common.Authorization = `Bearer ${data.data.access_token}`
-        })
-        .catch((e) => {
-          commit('setAuthenticated', false)
-          throw e
-        })
+        
+        commit('setAuthenticated', true)
+        localStorage.setItem('access_token', data.access_token)
+        // Set axios default header for future requests
+        this.$axios.defaults.headers.common.Authorization = `Bearer ${data.access_token}`
+        
+        return data
+      } catch (e) {
+        commit('setAuthenticated', false)
+        throw e
+      }
     },
     checkToken({ commit }) {
       return new Promise((resolve, reject) => {

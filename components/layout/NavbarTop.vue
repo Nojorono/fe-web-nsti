@@ -267,14 +267,21 @@ export default {
   },
   watch: {
     searchInput() {
-      this.$store
-        .dispatch('fetchSearch', {
-          text: this.searchInput,
-          limit: 5,
-        })
-        .then((data) => {
-          this.items = data
-        })
+      if (this.searchInput && this.searchInput.length > 0) {
+        this.$store
+          .dispatch('home/fetchSearch', {
+            text: this.searchInput,
+            limit: 5,
+          })
+          .then((data) => {
+            this.items = data || []
+          })
+          .catch(() => {
+            this.items = []
+          })
+      } else {
+        this.items = []
+      }
     },
   },
   methods: {

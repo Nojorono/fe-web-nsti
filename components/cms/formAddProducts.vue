@@ -113,6 +113,9 @@ export default {
   head() {
     return {}
   },
+  computed: {
+    ...mapGetters('home', ['getDetailProducts']),
+  },
   watch: {
     $route: {
       deep: true,
@@ -127,10 +130,8 @@ export default {
         if (Object.keys(this.getDetailProducts).length) {
           const data = this.getDetailProducts[0]
           this.description = data.description
-          this.imgPreview =
-            'https://back-api.nikkisuper.my.id/' + data.images[1].imageName
-          this.imgPreview2 =
-            'https://back-api.nikkisuper.my.id/' + data.images[0].imageName
+          this.imgPreview = this.$imageUrl(data.images[1]?.imageName || '')
+          this.imgPreview2 = this.$imageUrl(data.images[0]?.imageName || '')
           this.title = data.title
         }
       },
@@ -138,9 +139,6 @@ export default {
   },
   mounted() {
     this.resetForm()
-  },
-  computed: {
-    ...mapGetters(['getDetailProducts']),
   },
   methods: {
     resetForm() {

@@ -86,7 +86,7 @@ export default {
     return {}
   },
   computed: {
-    ...mapGetters(['getDetailTetimoni']),
+    ...mapGetters('cms', ['getDetailTetimoni']),
   },
   watch: {
     $route: {
@@ -102,8 +102,7 @@ export default {
         if (Object.keys(this.getDetailTetimoni).length) {
           const data = this.getDetailTetimoni
           this.content = data.description
-          this.imgPreview =
-            'https://back-api.nikkisuper.my.id/' + data.imageName
+          this.imgPreview = this.$imageUrl(data.imageName || '')
           this.title = data.title
           this.name = data.name
         }

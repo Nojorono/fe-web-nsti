@@ -37,13 +37,14 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getDetailMedia']),
+    ...mapGetters('home', ['getDetailMedia']),
   },
   mounted() {
     this.fetchMediaDetail(this.$route.params.id)
   },
   methods: {
-    ...mapActions(['fetchMediaDetail', 'patchDetailMedia']),
+    ...mapActions('home', ['fetchMediaDetail']),
+    ...mapActions('cms', ['patchDetailMedia']),
     imgPreview(img) {
       this.img = img
     },

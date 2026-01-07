@@ -22,7 +22,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getGlobalNotify']),
+    ...mapGetters('cms', ['getGlobalNotify']),
   },
 }
 </script>

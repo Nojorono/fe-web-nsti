@@ -34,29 +34,30 @@ RESPONSE
     }
 ]
    */
+  namespaced: true,
   state: {
-    mediaList: [],
+    mediaList: { data: [], pagesleft: 0, totalcontent: 0 },
     detailMedia: {},
     allProducts: [],
-    allCareer: [],
+    allCareer: { data: [], pagesLeft: 0, totalcontent: 0 },
     detailProducts: [],
   },
 
   getters: {
     getMediaList(state) {
-      return state.mediaList
+      return state.mediaList || { data: [], pagesleft: 0, totalcontent: 0 }
     },
     getDetailMedia(state) {
-      return state.detailMedia
+      return state.detailMedia || {}
     },
     getAllProducts(state) {
-      return state.allProducts
+      return state.allProducts || []
     },
     getAllCareer(state) {
-      return state.allCareer
+      return state.allCareer || { data: [], pagesLeft: 0, totalcontent: 0 }
     },
     getDetailProducts(state) {
-      return state.detailProducts
+      return state.detailProducts || []
     },
   },
   mutations: {
@@ -97,15 +98,15 @@ RESPONSE
       }
     },
     async getAllMedia({ commit }, payload) {
-      // eslint-disable-next-line no-useless-catch
-      try {
-        const { data } = await this.$axios.get(
-          `media/readAll?page=${payload.page * 6}&size=${payload.size}`
-        )
-        commit('setMediaList', data)
-      } catch (e) {
-        throw e
-      }
+      // Ensure page is a valid number
+      const page = Number(payload.page) || 0
+      const size = Number(payload.size) || 6
+      
+      const { data } = await this.$axios.get(
+        `media/readAll?page=${page}&size=${size}`
+      )
+      commit('setMediaList', data)
+      return data
     },
     async fetchMediaDetail({ commit }, id) {
       commit('setDetailMedia', {})
@@ -113,7 +114,7 @@ RESPONSE
         const { data } = await this.$axios.get(`media/detail/${id}`)
         commit('setDetailMedia', data[0])
       } catch (e) {
-        console.log(e)
+        // Error fetching media detail
       }
     },
     async fetchAllProducts({ commit }, payload) {
@@ -121,7 +122,7 @@ RESPONSE
         const { data } = await this.$axios.get(`product/readAll`)
         commit('setAllProducts', data)
       } catch (e) {
-        console.log(e)
+        // Error fetching products
       }
     },
     async fetchDetailProducts({ commit }, id) {
@@ -129,10 +130,15 @@ RESPONSE
       commit('setDetailProdcuts', data)
     },
     async fetchAllCareer({ commit }, payload) {
+      // Ensure page is a valid number
+      const page = Number(payload.page) || 0
+      const size = Number(payload.size) || 6
+      
       const { data } = await this.$axios.get(
-        `career/readAll?page=${payload.page * 6}&size=${payload.size}`
+        `career/readAll?page=${page}&size=${size}`
       )
       commit('setAllCareer', data)
+      return data
     },
   },
 }

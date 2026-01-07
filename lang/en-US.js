@@ -160,4 +160,15 @@ export default {
   lastUpdated: 'Last updated',
   noContentAvailable: 'No content available',
   errorLoadingContent: 'An error occurred while loading content',
+  login: {
+    title: 'Login',
+    description: 'Login to access the content management system',
+    password: 'Password',
+    submit: 'Login',
+    debugCredentials: 'Quick Login',
+  },
+  validation: {
+    required: 'This field is required',
+    minLength: 'Minimum {min} characters required',
+  },
 }

@@ -40,7 +40,7 @@ export default {
     this.fetchDetailTestimoni(this.$route.params.id)
   },
   methods: {
-    ...mapActions(['fetchDetailTestimoni', 'patchDetailTestimoni']),
+    ...mapActions('cms', ['fetchDetailTestimoni', 'patchDetailTestimoni']),
     postBtn(payload) {
       this.patchDetailTestimoni({
         ...payload,

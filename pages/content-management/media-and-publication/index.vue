@@ -16,7 +16,7 @@
         @deletePost="deletePost"
       />
     </div>
-    <div class="pagination">
+    <div v-if="getMediaList?.pagesleft" class="pagination">
       <!--      <img-->
       <!--        src="~/assets/images/paginate-left.svg"-->
       <!--        alt="button previous pagination"-->
@@ -112,18 +112,40 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getMediaList']),
+    ...mapGetters('home', ['getMediaList']),
   },
   watch: {
     '$route.query'() {
+      const page = Number(this.$route.query.page) || 0
       this.getAllMedia({
-        page: this.$route.query.page,
+        page,
         size: this.size,
       })
     },
   },
+  mounted() {
+    const page = Number(this.$route.query.page) || 0
+    if (!this.$route.query.page || isNaN(page)) {
+      this.$router.replace({
+        path: this.$route.path,
+        query: { page: 0 },
+      }).catch(err => {
+        // Ignore navigation duplicated errors
+        if (err.name !== 'NavigationDuplicated') {
+          // eslint-disable-next-line no-console
+          console.error('Router error:', err)
+        }
+      })
+    } else {
+      this.getAllMedia({
+        page,
+        size: this.size,
+      })
+    }
+  },
   methods: {
-    ...mapActions(['getAllMedia', 'destroyMedia']),
+    ...mapActions('home', ['getAllMedia']),
+    ...mapActions('cms', ['destroyMedia']),
     deletePost(id) {
       this.destroyMedia(id).then(() => {
         this.getAllMedia({
@@ -133,32 +155,25 @@ export default {
       })
     },
     changePage(page) {
+      const targetPage = page - 1
+      const currentPage = Number(this.$route.query.page) || 0
+      
+      // Avoid redundant navigation
+      if (targetPage === currentPage) {
+        return
+      }
+      
       this.$router.replace({
         path: this.$route.path,
-        query: { page: page - 1 },
+        query: { page: targetPage },
+      }).catch(err => {
+        // Ignore navigation duplicated errors
+        if (err.name !== 'NavigationDuplicated') {
+          // eslint-disable-next-line no-console
+          console.error('Router error:', err)
+        }
       })
     },
-  },
-  mounted() {
-    // this.getAllMedia({
-    //   page: this.$route.query.page,
-    //   size: this.size,
-    // })
-    // this.$router.replace({
-    //   path: this.$route.path,
-    //   query: { page: +this.$route.query.page || 0 },
-    // })
-    if (!this.$route.query.page) {
-      this.$router.replace({
-        path: this.$route.path,
-        query: { page: +this.$route.query.page || 0 },
-      })
-    } else {
-      this.getAllMedia({
-        page: this.$route.query.page,
-        size: this.size,
-      })
-    }
   },
 }
 </script>

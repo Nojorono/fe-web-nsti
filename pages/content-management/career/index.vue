@@ -99,7 +99,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getAllCareer']),
+    ...mapGetters('home', ['getAllCareer']),
   },
   watch: {
     '$route.query'() {
@@ -118,6 +118,12 @@ export default {
       this.$router.replace({
         path: this.$route.path,
         query: { page: +this.$route.query.page || 0 },
+      }).catch(err => {
+        // Ignore navigation duplicated errors
+        if (err.name !== 'NavigationDuplicated') {
+          // eslint-disable-next-line no-console
+          console.error('Router error:', err)
+        }
       })
     } else {
       this.fetchAllCareer({
@@ -127,11 +133,25 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['fetchAllCareer']),
+    ...mapActions('home', ['fetchAllCareer']),
     changePage(page) {
+      const targetPage = page - 1
+      const currentPage = Number(this.$route.query.page) || 0
+      
+      // Avoid redundant navigation
+      if (targetPage === currentPage) {
+        return
+      }
+      
       this.$router.replace({
         path: this.$route.path,
-        query: { page: page - 1 },
+        query: { page: targetPage },
+      }).catch(err => {
+        // Ignore navigation duplicated errors
+        if (err.name !== 'NavigationDuplicated') {
+          // eslint-disable-next-line no-console
+          console.error('Router error:', err)
+        }
       })
     },
   },

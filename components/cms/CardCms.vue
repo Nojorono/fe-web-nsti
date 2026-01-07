@@ -2,11 +2,20 @@
   <div class="card">
     <div class="img-container">
       <v-img
-        :src="'https://back-api.nikkisuper.my.id/' + card.imageName"
+        v-if="card.imageName && !imageError"
+        :src="$imageUrl(card.imageName)"
         max-width="206"
         max-height="137"
         class="img"
+        @error="handleImageError"
       />
+      <div
+        v-else
+        class="img-placeholder"
+        style="width: 206px; height: 137px; background-color: #e0e0e0; display: flex; align-items: center; justify-content: center;"
+      >
+        <span style="color: #999;">No Image</span>
+      </div>
     </div>
     <div class="card-title mt-3">
       <h3>
@@ -108,9 +117,13 @@ export default {
   data() {
     return {
       dialogDelete: false,
+      imageError: false,
     }
   },
   methods: {
+    handleImageError() {
+      this.imageError = true
+    },
     deletePost(id) {
       this.$emit('deletePost', id)
       this.dialogDelete = false

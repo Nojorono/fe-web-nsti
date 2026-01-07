@@ -1,6 +1,5 @@
-import axios from '~/plugins/axios'
-const token = localStorage.getItem('token')
 export default {
+  namespaced: true,
   state: {
     detailCareer: {},
     allTestimoni: [],
@@ -12,7 +11,7 @@ export default {
       return state.detailCareer
     },
     getAllTestimoni(state) {
-      return state.allTestimoni
+      return state.allTestimoni || []
     },
     getDetailTetimoni(state) {
       return state.detailTestimoni
@@ -40,218 +39,211 @@ export default {
       commit('setGlobalNotify', true)
 
       try {
-        await axios.post(
-          `product/create`,
-          {
-            ...payload,
+        // Create FormData for file upload
+        const formData = new FormData()
+        if (payload.sampleFile1) formData.append('sampleFile1', payload.sampleFile1)
+        if (payload.sampleFile2) formData.append('sampleFile2', payload.sampleFile2)
+        if (payload.description) formData.append('description', payload.description)
+        if (payload.title) formData.append('title', payload.title)
+
+        const response = await this.$axios.post('product/create', formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
           },
-          {
-            headers: {
-              'Content-Type': 'multipart/form-data',
-              access_token: token,
-            },
-          }
-        )
+        })
+        return response.data
       } finally {
         commit('setGlobalNotify', false)
       }
     },
     async postCreateCareer({ commit }, payload) {
       commit('setGlobalNotify', true)
-      await axios
-        .post(
-          `career/create`,
-          {
-            ...payload,
-          },
-          {
-            headers: {
-              access_token: token,
-            },
-          }
-        )
-        .finally((_) => {
-          commit('setGlobalNotify', false)
-        })
+      try {
+        const response = await this.$axios.post('career/create', payload)
+        return response.data
+      } finally {
+        commit('setGlobalNotify', false)
+      }
     },
     async deleteCareer({ commit }, payload) {
       commit('setGlobalNotify', true)
-      await axios({
-        method: 'DELETE',
-        url: `career/delete`,
-        data: {
-          id: payload,
-        },
-        headers: {
-          access_token: token,
-        },
-      }).finally((_) => {
+      try {
+        const response = await this.$axios.delete('career/delete', {
+          data: {
+            id: payload,
+          },
+        })
+        return response.data
+      } finally {
         commit('setGlobalNotify', false)
-      })
+      }
     },
     async deleteProducts({ commit }, id) {
       commit('setGlobalNotify', true)
-      await axios({
-        url: `product/delete`,
-        method: 'DElETE',
-        data: {
-          id,
-        },
-        headers: {
-          access_token: token,
-        },
-      }).finally((_) => {
+      try {
+        const response = await this.$axios.delete('product/delete', {
+          data: {
+            id,
+          },
+        })
+        return response.data
+      } finally {
         commit('setGlobalNotify', false)
-      })
+      }
     },
     async fetchDetailCareer({ commit }, id) {
-      const { data } = await axios.get(`career/detail/${id}`)
+      const { data } = await this.$axios.get(`career/detail/${id}`)
       commit('setDetailCarerr', data[0])
+      return data[0]
     },
     async patchDetailCareer({ commit }, payload) {
       commit('setGlobalNotify', true)
-      await axios({
-        url: `career/edit`,
-        method: 'PATCH',
-        data: {
-          ...payload,
-        },
-        headers: {
-          access_token: token,
-        },
-      }).finally((_) => {
+      try {
+        const response = await this.$axios.patch('career/edit', payload)
+        return response.data
+      } finally {
         commit('setGlobalNotify', false)
-      })
+      }
     },
     async postCreateMedia({ commit }, payload) {
       commit('setGlobalNotify', true)
       try {
-        await axios.post(
-          `media/create`,
-          {
-            ...payload,
+        // Create FormData for file upload
+        const formData = new FormData()
+        if (payload.sampleFile) formData.append('sampleFile', payload.sampleFile)
+        if (payload.title) formData.append('title', payload.title)
+        if (payload.description) formData.append('description', payload.description)
+        if (payload.location) formData.append('location', payload.location)
+
+        const response = await this.$axios.post('media/create', formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
           },
-          {
-            headers: {
-              Authorization: 'Bearer' + token,
-              access_token: token,
-              'Content-Type': 'multipart/form-data',
-            },
-          }
-        )
+        })
+        return response.data
       } finally {
         commit('setGlobalNotify', false)
       }
     },
     async patchDetailMedia({ commit }, payload) {
       commit('setGlobalNotify', true)
-      await axios({
-        method: 'PATCH',
-        url: `media/edit`,
-        data: {
-          ...payload,
-        },
-        headers: {
-          'Content-Type': 'multipart/form-data',
-          access_token: token,
-        },
-      })
-      commit('setGlobalNotify', false)
+      try {
+        // Create FormData for file upload
+        const formData = new FormData()
+        if (payload.sampleFile) formData.append('sampleFile', payload.sampleFile)
+        if (payload.title) formData.append('title', payload.title)
+        if (payload.description) formData.append('description', payload.description)
+        if (payload.location) formData.append('location', payload.location)
+        if (payload.id) formData.append('id', payload.id)
+
+        const response = await this.$axios.patch('media/edit', formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        })
+        return response.data
+      } finally {
+        commit('setGlobalNotify', false)
+      }
     },
     async destroyMedia({ commit }, id) {
       commit('setGlobalNotify', true)
-      await axios({
-        url: `media/delete`,
-        method: 'DElETE',
-        data: {
-          id,
-        },
-        headers: {
-          access_token: token,
-        },
-      }).finally((_) => {
+      try {
+        const response = await this.$axios.delete('media/delete', {
+          data: {
+            id,
+          },
+        })
+        return response.data
+      } finally {
         commit('setGlobalNotify', false)
-      })
+      }
     },
     async patchDetailProducts({ commit }, payload) {
       commit('setGlobalNotify', true)
-      await axios({
-        url: `product/edit`,
-        method: 'PATCH',
-        data: {
-          ...payload,
-        },
-        headers: {
-          'Content-Type': 'multipart/form-data',
-          access_token: token,
-        },
-      }).finally((_) => {
+      try {
+        // Create FormData for file upload
+        const formData = new FormData()
+        if (payload.sampleFile1) formData.append('sampleFile1', payload.sampleFile1)
+        if (payload.sampleFile2) formData.append('sampleFile2', payload.sampleFile2)
+        if (payload.description) formData.append('description', payload.description)
+        if (payload.title) formData.append('title', payload.title)
+        if (payload.id) formData.append('id', payload.id)
+
+        const response = await this.$axios.patch('product/edit', formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        })
+        return response.data
+      } finally {
         commit('setGlobalNotify', false)
-      })
+      }
     },
     // testimoni
     async fetchAllTestimoni({ commit }, payload) {
-      // eslint-disable-next-line no-useless-catch
-      try {
-        const { data } = await axios.get(`testimoni/readAll?size=100&page=0`)
-        commit('setAllTestimoni', data)
-      } catch (e) {
-        throw e
-      }
+      const { data } = await this.$axios.get(`testimoni/readAll?size=100&page=0`)
+      commit('setAllTestimoni', data)
+      return data
     },
     async postTestimoni({ commit }, payload) {
       commit('setGlobalNotify', true)
       try {
-        await axios.post(
-          `testimoni/create`,
-          {
-            ...payload,
+        // Create FormData for file upload
+        const formData = new FormData()
+        if (payload.sampleFile) formData.append('sampleFile', payload.sampleFile)
+        if (payload.name) formData.append('name', payload.name)
+        if (payload.title) formData.append('title', payload.title)
+        if (payload.description) formData.append('description', payload.description)
+
+        const response = await this.$axios.post('testimoni/create', formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
           },
-          {
-            headers: {
-              access_token: token,
-              'Content-Type': 'multipart/form-data',
-            },
-          }
-        )
+        })
+        return response.data
       } finally {
         commit('setGlobalNotify', false)
       }
     },
     async fetchDetailTestimoni({ commit }, id) {
-      const { data } = await axios.get(`testimoni/detail/${id}`)
+      const { data } = await this.$axios.get(`testimoni/detail/${id}`)
       commit('setDetailTestimoni', data[0])
+      return data[0]
     },
     async patchDetailTestimoni({ commit }, payload) {
       commit('setGlobalNotify', true)
-      await axios({
-        url: `testimoni/edit`,
-        method: 'PATCH',
-        data: {
-          ...payload,
-        },
-        headers: {
-          'Content-Type': 'multipart/form-data',
-          access_token: token,
-        },
-      }).finally((_) => {
+      try {
+        // Create FormData for file upload
+        const formData = new FormData()
+        if (payload.sampleFile) formData.append('sampleFile', payload.sampleFile)
+        if (payload.name) formData.append('name', payload.name)
+        if (payload.title) formData.append('title', payload.title)
+        if (payload.description) formData.append('description', payload.description)
+        if (payload.id) formData.append('id', payload.id)
+
+        const response = await this.$axios.patch('testimoni/edit', formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        })
+        return response.data
+      } finally {
         commit('setGlobalNotify', false)
-      })
+      }
     },
     async destroyTestimoni({ commit }, id) {
       commit('setGlobalNotify', true)
-      await axios({
-        url: `testimoni/delete`,
-        method: 'DElETE',
-        data: {
-          id,
-        },
-        headers: {
-          access_token: token,
-        },
-      }).finally((_) => {
+      try {
+        const response = await this.$axios.delete('testimoni/delete', {
+          data: {
+            id,
+          },
+        })
+        return response.data
+      } finally {
         commit('setGlobalNotify', false)
-      })
+      }
     },
   },
 }

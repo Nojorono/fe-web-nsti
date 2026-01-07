@@ -1,10 +1,9 @@
 <template>
   <div class="media-and-publication-mobile">
     <card />
-    <template></template>
     <div
       :class="
-        getMediaList.pagesleft <= 3
+        (getMediaList?.pagesleft || 0) <= 3
           ? 'pagination justify-center'
           : 'pagination justify-start'
       "
@@ -16,7 +15,7 @@
         @click="prev"
       />
       <div
-        v-for="i in getMediaList.pagesleft"
+        v-for="i in getMediaList?.pagesleft || []"
         :key="i"
         :class="
           +$route.query.page + 1 === i
@@ -55,32 +54,34 @@ export default {
       title: 'Media And Publication',
     }
   },
+  computed: {
+    ...mapGetters('home', ['getMediaList']),
+  },
   watch: {
     '$route.query'() {
+      const page = Number(this.$route.query.page) || 0
       this.getAllMedia({
-        page: this.$route.query.page,
+        page,
         size: this.size,
       })
     },
   },
-  computed: {
-    ...mapGetters(['getMediaList']),
-  },
   mounted() {
-    if (!this.$route.query.page) {
+    const page = Number(this.$route.query.page) || 0
+    if (!this.$route.query.page || isNaN(page)) {
       this.$router.replace({
         path: this.$route.path,
-        query: { page: +this.$route.query.page || 0 },
+        query: { page: 0 },
       })
     } else {
       this.getAllMedia({
-        page: this.$route.query.page,
+        page,
         size: this.size,
       })
     }
   },
   methods: {
-    ...mapActions(['getAllMedia']),
+    ...mapActions('home', ['getAllMedia']),
     prev() {
       const page = +this.$route.query.page - 1
       if (page >= 0) {
@@ -92,7 +93,7 @@ export default {
     },
     next() {
       const page = +this.$route.query.page + 1
-      if (page < this.getMediaList.pagesleft) {
+      if (this.getMediaList?.pagesleft && page < this.getMediaList.pagesleft) {
         this.$router.replace({
           path: this.$route.path,
           query: { page },

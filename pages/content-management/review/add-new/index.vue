@@ -37,11 +37,16 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['postTestimoni']),
-    postBtn(payload) {
-      this.postTestimoni(payload).then((_) => {
+    ...mapActions('cms', ['postTestimoni']),
+    async postBtn(payload) {
+      try {
+        await this.postTestimoni(payload)
         this.$router.push('/content-management/review')
-      })
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.error('Error creating testimoni:', error)
+        alert('Failed to create testimoni. Please try again.')
+      }
     },
   },
 }

@@ -40,13 +40,13 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getAllTestimoni']),
+    ...mapGetters('cms', ['getAllTestimoni']),
   },
   mounted() {
     this.fetchAllTestimoni()
   },
   methods: {
-    ...mapActions(['fetchAllTestimoni', 'destroyTestimoni']),
+    ...mapActions('cms', ['fetchAllTestimoni', 'destroyTestimoni']),
     deletePost(id) {
       this.destroyTestimoni(id).then((_) => {
         this.fetchAllTestimoni()

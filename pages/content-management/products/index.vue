@@ -83,13 +83,14 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getAllProducts']),
+    ...mapGetters('home', ['getAllProducts']),
   },
   mounted() {
     this.fetchAllProducts()
   },
   methods: {
-    ...mapActions(['fetchAllProducts', 'deleteProducts']),
+    ...mapActions('home', ['fetchAllProducts']),
+    ...mapActions('cms', ['deleteProducts']),
     deletePost(id) {
       this.deleteProducts(id).finally((_) => {
         this.fetchAllProducts()

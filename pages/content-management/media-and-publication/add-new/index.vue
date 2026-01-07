@@ -41,7 +41,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['postCreateMedia']),
+    ...mapActions('cms', ['postCreateMedia']),
     imgPreview(img) {
       this.img = img
     },
@@ -51,11 +51,18 @@ export default {
     emitBody(body) {
       this.bodyText = body
     },
-    postBtn(payload) {
-      this.postCreateMedia(payload).then((_) => {
-        this.loadingBtn = true
+    async postBtn(payload) {
+      this.loadingBtn = true
+      try {
+        await this.postCreateMedia(payload)
         this.$router.push('/content-management/media-and-publication')
-      })
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.error('Error creating media:', error)
+        alert('Failed to create media. Please try again.')
+      } finally {
+        this.loadingBtn = false
+      }
     },
   },
 }

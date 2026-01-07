@@ -59,6 +59,9 @@ export default {
       title: 'Edit Career',
     }
   },
+  computed: {
+    ...mapGetters('cms', ['getDetailCareer']),
+  },
   mounted() {
     this.fetchDetailCareer(this.$route.params.id).then((_) => {
       const data = this.getDetailCareer
@@ -69,12 +72,9 @@ export default {
       this.link = data.link
     })
   },
-  computed: {
-    ...mapGetters(['getDetailCareer']),
-  },
 
   methods: {
-    ...mapActions(['patchDetailCareer', 'fetchDetailCareer']),
+    ...mapActions('cms', ['patchDetailCareer', 'fetchDetailCareer']),
     postBtn() {
       const payload = {
         title: this.title,

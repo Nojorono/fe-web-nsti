@@ -147,4 +147,15 @@ export default {
   lastUpdated: 'Terakhir diperbarui',
   noContentAvailable: 'Konten tidak tersedia',
   errorLoadingContent: 'Terjadi kesalahan saat memuat konten',
+  login: {
+    title: 'Masuk',
+    description: 'Masuk untuk mengakses sistem manajemen konten',
+    password: 'Kata Sandi',
+    submit: 'Masuk',
+    debugCredentials: 'Login Cepat',
+  },
+  validation: {
+    required: 'Field ini wajib diisi',
+    minLength: 'Minimal {min} karakter diperlukan',
+  },
 }

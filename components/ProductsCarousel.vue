@@ -15,7 +15,7 @@
     >
       <slide v-for="(slide, i) in slides" :key="slide.id" :index="i">
         <img
-          :src="'https://back-api.nikkisuper.my.id/' + slide.imageName"
+          :src="$imageUrl(slide.imageName)"
           alt="nikki super product"
           class="cursor-pointer"
           height="auto"
@@ -38,12 +38,10 @@
         >
           <div class="dialog-img-container">
             <img
-              :src="
-                'https://back-api.nikkisuper.my.id/' +
-                linkPopup?.images[0].imageName
-              "
+              :src="$imageUrl(linkPopup?.images[0]?.imageName || '')"
               width="100%"
             />
+            <!-- eslint-disable-next-line vue/no-v-html -->
             <div class="desc-container" v-html="linkPopup?.description"></div>
           </div>
           <div class="close-btn cursor-pointer d-flex justify-start">
@@ -82,10 +80,10 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getDetailProducts']),
+    ...mapGetters('home', ['getDetailProducts']),
   },
   methods: {
-    ...mapActions(['fetchDetailProducts']),
+    ...mapActions('home', ['fetchDetailProducts']),
     clickProduct(popUp) {
       this.dialogProduct = true
       this.fetchDetailProducts(popUp.id).then((_) => {
