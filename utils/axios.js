@@ -1,8 +1,10 @@
 import axios from 'axios'
 
-const baseURL = process.env.NODE_ENV === 'development' 
-  ? 'http://localhost:3001/' 
-  : 'https://back-api.nikkisuper.my.id/';
+// Use environment variable if available, otherwise fallback to defaults
+const baseURL = process.env.API_BASE_URL || 
+  (process.env.NODE_ENV === 'development' 
+    ? 'http://localhost:3000/' 
+    : 'https://back-api.nikkisuper.my.id/');
 
 const axiosInstance = axios.create({
   baseURL,
