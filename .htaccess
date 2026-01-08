@@ -7,25 +7,10 @@
   ProxyPreserveHost On
   ProxyRequests Off
   
-  # Proxy all requests to Node.js at localhost:8002
-  # Using ProxyPass is more reliable for reverse proxy
+  # Proxy all requests to Node.js at 127.0.0.1:8002
+  # Simple ProxyPass (removed ProxyPassMatch to avoid conflicts)
   ProxyPass / http://127.0.0.1:8002/
   ProxyPassReverse / http://127.0.0.1:8002/
-  
-  # ProxyPass configuration
-  ProxyPassMatch ^(.*)$ http://127.0.0.1:8002$1
-  ProxyPassReverse ^(.*)$ http://127.0.0.1:8002$1
-</IfModule>
-
-# Alternative: Use RewriteRule if ProxyPass doesn't work
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
-  
-  # Proxy requests to Node.js (only if mod_proxy not working)
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^(.*)$ http://127.0.0.1:8002/$1 [P,L]
 </IfModule>
 
 # Enable gzip compression
