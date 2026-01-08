@@ -176,6 +176,8 @@ export default {
     quiet: false,
     // Improve build performance
     hardSource: false,
+    // Public path for static assets (default is /_nuxt/)
+    publicPath: process.env.NUXT_PUBLIC_PATH || '/_nuxt/',
   },
   
   // Configure development server
