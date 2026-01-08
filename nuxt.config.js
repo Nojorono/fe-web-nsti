@@ -5,7 +5,7 @@ export default {
   // mode: 'spa', // This is deprecated, removed
   server: {
     port: 8002,
-    host: 'localhost',
+    host: '0.0.0.0', // Listen on all interfaces (needed for reverse proxy)
   },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
