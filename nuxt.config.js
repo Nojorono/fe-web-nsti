@@ -9,6 +9,10 @@ export default {
   },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
+  
+  // Set target to 'server' for nuxt start (not 'static')
+  // This will generate build output in .nuxt/dist/client/ instead of dist/
+  target: 'server',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
