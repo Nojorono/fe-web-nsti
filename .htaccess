@@ -1,18 +1,25 @@
-# Apache configuration for Nuxt.js SPA
+# Apache configuration for Nuxt.js Server Mode
 # This file should be placed in the frontend root directory
+# For server mode (nuxt start) - Reverse proxy to Node.js
 
 RewriteEngine On
 RewriteBase /
 
-# Handle client-side routing for SPA
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /index.html [L]
-
-# Or if using proxy to Node.js (uncomment if running Nuxt in server mode)
-# RewriteCond %{REQUEST_FILENAME} !-f
-# RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteRule ^(.*)$ http://localhost:8002/$1 [P,L]
+# Enable proxy module
+<IfModule mod_proxy.c>
+  ProxyPreserveHost On
+  ProxyRequests Off
+  
+  # Proxy all requests to Node.js at localhost:8002
+  # First try to serve static files, if not found, proxy to Node.js
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ http://localhost:8002/$1 [P,L]
+  
+  # Alternative using ProxyPass (if RewriteRule doesn't work)
+  # ProxyPass / http://localhost:8002/
+  # ProxyPassReverse / http://localhost:8002/
+</IfModule>
 
 # Enable gzip compression
 <IfModule mod_deflate.c>
