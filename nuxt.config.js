@@ -59,8 +59,8 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
+    // ESLint module only in development (not needed in production)
+    ...(process.env.NODE_ENV === 'development' ? ['@nuxtjs/eslint-module'] : []),
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
   ],
