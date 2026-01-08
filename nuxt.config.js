@@ -50,7 +50,7 @@ export default {
     { src: '~/plugins/vue-fragment.js' },
     { src: '~/plugins/vuetify.js' },
     { src: '~/plugins/carousel3d.js' },
-    { src: '~/plugins/axios.js', mode: 'client' },
+    { src: '~/plugins/axios.js' },
     { src: '~/plugins/imageUrl.js' },
   ],
 

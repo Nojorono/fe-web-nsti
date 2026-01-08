@@ -1,3 +1,5 @@
+import axiosInstance from '~/utils/axios'
+
 export default {
   namespaced: true,
   state: () => ({
@@ -46,7 +48,7 @@ export default {
         if (payload.description) formData.append('description', payload.description)
         if (payload.title) formData.append('title', payload.title)
 
-        const response = await this.app.$axios.post('product/create', formData, {
+        const response = await axiosInstance.post('product/create', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -59,7 +61,7 @@ export default {
     async postCreateCareer({ commit }, payload) {
       commit('setGlobalNotify', true)
       try {
-        const response = await this.app.$axios.post('career/create', payload)
+        const response = await axiosInstance.post('career/create', payload)
         return response.data
       } finally {
         commit('setGlobalNotify', false)
@@ -68,7 +70,7 @@ export default {
     async deleteCareer({ commit }, payload) {
       commit('setGlobalNotify', true)
       try {
-        const response = await this.app.$axios.delete('career/delete', {
+        const response = await axiosInstance.delete('career/delete', {
           data: {
             id: payload,
           },
@@ -81,7 +83,7 @@ export default {
     async deleteProducts({ commit }, id) {
       commit('setGlobalNotify', true)
       try {
-        const response = await this.app.$axios.delete('product/delete', {
+        const response = await axiosInstance.delete('product/delete', {
           data: {
             id,
           },
@@ -92,14 +94,14 @@ export default {
       }
     },
     async fetchDetailCareer({ commit }, id) {
-      const { data } = await this.app.$axios.get(`career/detail/${id}`)
+      const { data } = await axiosInstance.get(`career/detail/${id}`)
       commit('setDetailCarerr', data[0])
       return data[0]
     },
     async patchDetailCareer({ commit }, payload) {
       commit('setGlobalNotify', true)
       try {
-        const response = await this.app.$axios.patch('career/edit', payload)
+        const response = await axiosInstance.patch('career/edit', payload)
         return response.data
       } finally {
         commit('setGlobalNotify', false)
@@ -115,7 +117,7 @@ export default {
         if (payload.description) formData.append('description', payload.description)
         if (payload.location) formData.append('location', payload.location)
 
-        const response = await this.app.$axios.post('media/create', formData, {
+        const response = await axiosInstance.post('media/create', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -136,7 +138,7 @@ export default {
         if (payload.location) formData.append('location', payload.location)
         if (payload.id) formData.append('id', payload.id)
 
-        const response = await this.app.$axios.patch('media/edit', formData, {
+        const response = await axiosInstance.patch('media/edit', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -149,7 +151,7 @@ export default {
     async destroyMedia({ commit }, id) {
       commit('setGlobalNotify', true)
       try {
-        const response = await this.app.$axios.delete('media/delete', {
+        const response = await axiosInstance.delete('media/delete', {
           data: {
             id,
           },
@@ -170,7 +172,7 @@ export default {
         if (payload.title) formData.append('title', payload.title)
         if (payload.id) formData.append('id', payload.id)
 
-        const response = await this.app.$axios.patch('product/edit', formData, {
+        const response = await axiosInstance.patch('product/edit', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -182,7 +184,7 @@ export default {
     },
     // testimoni
     async fetchAllTestimoni({ commit }, payload) {
-      const { data } = await this.app.$axios.get(`testimoni/readAll?size=100&page=0`)
+      const { data } = await axiosInstance.get(`testimoni/readAll?size=100&page=0`)
       commit('setAllTestimoni', data)
       return data
     },
@@ -196,7 +198,7 @@ export default {
         if (payload.title) formData.append('title', payload.title)
         if (payload.description) formData.append('description', payload.description)
 
-        const response = await this.app.$axios.post('testimoni/create', formData, {
+        const response = await axiosInstance.post('testimoni/create', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -207,7 +209,7 @@ export default {
       }
     },
     async fetchDetailTestimoni({ commit }, id) {
-      const { data } = await this.app.$axios.get(`testimoni/detail/${id}`)
+      const { data } = await axiosInstance.get(`testimoni/detail/${id}`)
       commit('setDetailTestimoni', data[0])
       return data[0]
     },
@@ -222,7 +224,7 @@ export default {
         if (payload.description) formData.append('description', payload.description)
         if (payload.id) formData.append('id', payload.id)
 
-        const response = await this.app.$axios.patch('testimoni/edit', formData, {
+        const response = await axiosInstance.patch('testimoni/edit', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -235,7 +237,7 @@ export default {
     async destroyTestimoni({ commit }, id) {
       commit('setGlobalNotify', true)
       try {
-        const response = await this.app.$axios.delete('testimoni/delete', {
+        const response = await axiosInstance.delete('testimoni/delete', {
           data: {
             id,
           },

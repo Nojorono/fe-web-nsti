@@ -1,3 +1,5 @@
+import axiosInstance from '~/utils/axios'
+
 export default {
   namespaced: true,
   state: () => ({
@@ -12,7 +14,7 @@ export default {
   actions: {
     async login({ commit }, payload) {
       try {
-        const { data } = await this.app.$axios.post('/user/login', {
+        const { data } = await axiosInstance.post('/user/login', {
           email: payload.email,
           password: payload.password,
         })
@@ -20,7 +22,7 @@ export default {
         commit('setAuthenticated', true)
         localStorage.setItem('access_token', data.access_token)
         // Set axios default header for future requests
-        this.app.$axios.defaults.headers.common.Authorization = `Bearer ${data.access_token}`
+        axiosInstance.defaults.headers.common.Authorization = `Bearer ${data.access_token}`
         
         return data
       } catch (e) {
@@ -37,7 +39,7 @@ export default {
           } else {
             commit('setAuthenticated', true)
             // Set axios default header from stored token
-            this.app.$axios.defaults.headers.common.Authorization = `Bearer ${token}`
+            axiosInstance.defaults.headers.common.Authorization = `Bearer ${token}`
           }
           resolve()
         } catch (error) {
@@ -49,7 +51,7 @@ export default {
     async register({ commit }, payload) {
       // eslint-disable-next-line no-useless-catch
       try {
-        await this.app.$axios.post(`user/register`, {
+        await axiosInstance.post(`user/register`, {
           ...payload,
         })
       } catch (e) {
